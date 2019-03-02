@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/03/02/echarts-Carousel/</loc>
+    <lastmod>2019-03-02T08:34:52.700Z</lastmod>
+    <data>
+        <display>
+        <title>echarts 实现地图联动轮播</title>
+        <pubTime>2019-03-02T07:29:32.000Z</pubTime>
+        
+        <tag>echarts(轮播)</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+          
+             
+              <breadCrumb title="echarts" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/echarts/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/12/20/base/</loc>
     <lastmod>2019-03-01T11:34:19.884Z</lastmod>
     <data>
@@ -262,30 +285,6 @@
 
     
     
-  <url>
-    <loc>http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%802/</loc>
-    <lastmod>2018-12-20T10:41:52.001Z</lastmod>
-    <data>
-        <display>
-        <title>javaScript的ECMAScript核心之API学习</title>
-        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
-        
-        <tag>ECMAScript（核心js）</tag>
-         
-        <tag>API标准库</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/javaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://yoursite.com/2018/12/20/js%E7%AE%97%E6%B3%95/</loc>
@@ -312,18 +311,17 @@
     </url>
 
     
-    
   <url>
-    <loc>http://yoursite.com/2018/12/20/f-e/</loc>
-    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
+    <loc>http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%802/</loc>
+    <lastmod>2018-12-20T10:41:52.001Z</lastmod>
     <data>
         <display>
-        <title>前端面试常见知识点</title>
-        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
+        <title>javaScript的ECMAScript核心之API学习</title>
+        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
         
-        <tag>FE</tag>
+        <tag>ECMAScript（核心js）</tag>
          
-        <tag>interview</tag>
+        <tag>API标准库</tag>
          
          
            
@@ -331,7 +329,7 @@
               <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
           
              
-              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/interview/"/>
+              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/javaScript/"/>
           
         </display>
     </data>
@@ -389,16 +387,16 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/12/20/html%E5%9F%BA%E7%A1%80/</loc>
+    <loc>http://yoursite.com/2018/12/20/f-e/</loc>
     <lastmod>2018-12-20T10:41:51.985Z</lastmod>
     <data>
         <display>
-        <title>HTML基础知识一</title>
+        <title>前端面试常见知识点</title>
         <pubTime>2018-12-20T10:41:51.985Z</pubTime>
         
-        <tag>HTML基础</tag>
+        <tag>FE</tag>
          
-        <tag>HTML笔记</tag>
+        <tag>interview</tag>
          
          
            
@@ -406,7 +404,7 @@
               <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
           
              
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/HTML/"/>
+              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/interview/"/>
           
         </display>
     </data>
@@ -430,6 +428,31 @@
           
              
               <breadCrumb title="CSS" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/12/20/html%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
+    <data>
+        <display>
+        <title>HTML基础知识一</title>
+        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
+        
+        <tag>HTML基础</tag>
+         
+        <tag>HTML笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+          
+             
+              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/HTML/"/>
           
         </display>
     </data>

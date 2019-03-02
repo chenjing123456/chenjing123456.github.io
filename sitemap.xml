@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/03/02/echarts-Carousel/</loc>
+    
+    <lastmod>2019-03-02T08:34:52.700Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/12/20/base/</loc>
     
     <lastmod>2019-03-01T11:34:19.884Z</lastmod>
@@ -72,6 +79,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%802/</loc>
+    
+    <lastmod>2018-12-20T10:41:52.001Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
@@ -86,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2018-12-20T10:41:52.001Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/12/20/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
@@ -100,9 +107,16 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%802/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/12/20/html%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
     
   </url>
   
@@ -129,13 +143,6 @@
   
   <url>
     <loc>http://yoursite.com/2018/09/25/div%E5%8D%A0%E5%B1%8F/</loc>
-    
-    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/12/20/html%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2018-12-20T10:41:51.985Z</lastmod>
     
