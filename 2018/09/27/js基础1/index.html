@@ -109,15 +109,15 @@
 <meta property="og:site_name" content="Sanr&#39;s Blog">
 <meta property="og:description" content="本文记录了本人在大三期间自学javaScript的学习笔记，自学时用到的代码均上传至giuhub。该部分主要介绍的是js基本语法，是js的核心知识点。 javaScript的基本语法 javaScript简介  12345js的历史：    javascript是1995年诞生的，当时是为了处理以前由服务器语言负责的没有填写的必填域，是否输入了有效的值的判断。由网景公司开发而成的LIVEScrip">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p88z46ccj.bkt.clouddn.com/web/defer.png">
-<meta property="og:image" content="http://p88z46ccj.bkt.clouddn.com/web/默认继承.png">
-<meta property="og:image" content="http://p88z46ccj.bkt.clouddn.com/web/1-自定义-原型链继承.png">
-<meta property="og:image" content="http://p88z46ccj.bkt.clouddn.com/web/组合.png">
-<meta property="og:updated_time" content="2018-12-20T10:41:51.985Z">
+<meta property="og:image" content="http://yoursite.com/images/web/defer.png">
+<meta property="og:image" content="http://yoursite.com/images/web/默认继承.png">
+<meta property="og:image" content="http://yoursite.com/images/web/1-自定义-原型链继承.png">
+<meta property="og:image" content="http://yoursite.com/images/web/组合.png">
+<meta property="og:updated_time" content="2019-03-01T11:32:33.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript的ECMAScript核心之语法学习">
 <meta name="twitter:description" content="本文记录了本人在大三期间自学javaScript的学习笔记，自学时用到的代码均上传至giuhub。该部分主要介绍的是js基本语法，是js的核心知识点。 javaScript的基本语法 javaScript简介  12345js的历史：    javascript是1995年诞生的，当时是为了处理以前由服务器语言负责的没有填写的必填域，是否输入了有效的值的判断。由网景公司开发而成的LIVEScrip">
-<meta name="twitter:image" content="http://p88z46ccj.bkt.clouddn.com/web/defer.png">
+<meta name="twitter:image" content="http://yoursite.com/images/web/defer.png">
 
 
 
@@ -319,7 +319,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sanr Chen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p88z46ccj.bkt.clouddn.com/avar.jpg">
+      <meta itemprop="image" content="/images/avar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -547,7 +547,7 @@ volatile    import  public
 <li>样式文件下载完成之后，构建CSSDOM，脚本文件下载完成之后，解释并执行。然后继续解析文档DOM</li>
 <li><p>完成文档解析后，将DOM和CSSDOM进行关联和映射，最后将视图渲染到浏览器窗口</p>
 </li>
-<li><p>在这一整个过程中，脚本文件的下载和执行是与文档解析同步执行的，也就是说会阻塞文档的解析，如果控制的不好，在用户体验上就会造成不同程度的影响。<br>defer and async图片：<a href="http://p88z46ccj.bkt.clouddn.com/web/defer.png" target="_blank" rel="noopener">地址</a><br><img src="http://p88z46ccj.bkt.clouddn.com/web/defer.png" alt=""></p>
+<li><p>在这一整个过程中，脚本文件的下载和执行是与文档解析同步执行的，也就是说会阻塞文档的解析，如果控制的不好，在用户体验上就会造成不同程度的影响。<br>defer and async图片：<a href="/images/web/defer.png">地址</a><br><img src="/images/web/defer.png" alt=""></p>
 </li>
 </ul>
 </li>
@@ -1236,7 +1236,7 @@ test(a);
 </li>
 <li><p>所有函数的默认原型 都是Object的实例，所以可以调用Object.prototype的方法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function Person(id,name)&#123;</span><br><span class="line">this.id = id;</span><br><span class="line">this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.sayName = function()&#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;</span><br><span class="line">var p1 = new Person(1001,&quot;ls&quot;);</span><br><span class="line">p1.sayName();</span><br><span class="line"></span><br><span class="line">p1.toString();//可以调用Object.prototype的toString方法</span><br><span class="line">console.log(Person.prototype instanceof Object);</span><br></pre></td></tr></table></figure>
-<p><img src="http://p88z46ccj.bkt.clouddn.com/web/默认继承.png" alt=""></p>
+<p><img src="/images/web/默认继承.png" alt=""></p>
 </li>
 </ul>
 </li>
@@ -1249,7 +1249,7 @@ test(a);
 <p><strong>原型链继承：子构造函数的原型指向父构造函数创建的（实例）对象。（常用）</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function Animal(id,name)&#123;</span><br><span class="line">  this.id = id;</span><br><span class="line">  this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Animal.prototype.sayName = function()&#123;</span><br><span class="line">  console.log(this.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Dog(id,name,color)&#123;</span><br><span class="line">  this.id = id;</span><br><span class="line">  this.name = name;</span><br><span class="line">  this.color = color;</span><br><span class="line">&#125;</span><br><span class="line">Dog.prototype = new Animal();</span><br><span class="line">Dog.prototype.constructor = Dog;</span><br><span class="line"></span><br><span class="line">Dog.prototype.sayColor = function()&#123;</span><br><span class="line">  console.log(this.color);</span><br><span class="line">&#125;</span><br><span class="line">var d2 = new Dog(1002,&quot;一休&quot;,&quot;yellow&quot;);</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">解析：</span><br><span class="line">  * Dog.prototype = new Animal();</span><br><span class="line">    这个操作要在创建对象之前做，不然会使创建的对象不能继承原型中的方法</span><br><span class="line">    </span><br><span class="line">  *  Dog.prototype.constructor = Dog;</span><br><span class="line">     要显示修改constructor,使它修改更彻底,如果不改变，那么new Animal这个实例本身没有constructor，会向上找它的原型，那么constructor默认就会是Animal构函。所以要显示修改它</span><br><span class="line"></span><br><span class="line">  * 如果在修改之前先创建了对象，这个对象将不会有原型中的方法，它指向默认原型。</span><br></pre></td></tr></table></figure>
-<p>图片详细地址(高清):<a href="http://p88z46ccj.bkt.clouddn.com/web/1-自定义-原型链继承.png" target="_blank" rel="noopener">原型继承</a><br><img src="http://p88z46ccj.bkt.clouddn.com/web/1-自定义-原型链继承.png" alt=""></p>
+<p>图片详细地址(高清):<a href="/images/web/1-自定义-原型链继承.png">原型继承</a><br><img src="/images/web/1-自定义-原型链继承.png" alt=""></p>
 </li>
 </ul>
 </li>
@@ -1260,7 +1260,7 @@ test(a);
 </li>
 <li><p>在创建对象之前 Dog.prototype = new Animal();</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">function Animal(id,name)&#123;</span><br><span class="line">this.id = id;</span><br><span class="line">this.name =name;</span><br><span class="line">&#125;</span><br><span class="line">Animal.prototype.sayName = function()&#123;</span><br><span class="line">console.log(this.name);</span><br><span class="line">&#125;</span><br><span class="line">function Dog(id,name,color)&#123;</span><br><span class="line">Animal.call(this,id,name);</span><br><span class="line">this.color = color;</span><br><span class="line">&#125;</span><br><span class="line">Dog.prototype = new Animal();</span><br><span class="line">Dog.prototype.constructor = Dog;</span><br><span class="line">Dog.prototype.sayColor = function()&#123;</span><br><span class="line">console.log(this.color);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Bird(id,name,type)&#123;</span><br><span class="line">Animal.call(this,id,name);</span><br><span class="line">this.type = type;</span><br><span class="line">&#125;</span><br><span class="line">Bird.prototype = new Animal();</span><br><span class="line">Bird.prototype.constructor = Bird;</span><br><span class="line">Bird.prototype.sayType = function()&#123;</span><br><span class="line">console.log(this.type);</span><br><span class="line">&#125;</span><br><span class="line">var b1 = new Bird(1001,&quot;yixiu&quot;,&quot;八哥&quot;);</span><br><span class="line">var d1 = new Bird(1001,&quot;bd&quot;,&quot;yellow&quot;);</span><br><span class="line">b1.sayName();</span><br><span class="line">b1.sayType();</span><br><span class="line">d1.sayName();</span><br><span class="line">d1.sayColor();</span><br><span class="line"></span><br><span class="line">解析：</span><br><span class="line">1.把sayName共有的方法抽象出来放到父类Animal构函的原型中，而子类构函Dog和Bird的原型都有自己特有的sayColor和sayType方法。如此实现继承，并且借用构函来减少代码的冗余问题。</span><br><span class="line"></span><br><span class="line">2.确定原型和实例的关系的方法：</span><br><span class="line">    </span><br><span class="line">      (1)原型.isPrototypeOf(instance)；只要是原型链中出现过的原型，都可以说是该原型链所派生的实例的原型</span><br><span class="line"></span><br><span class="line">        console.log(Bird.prototype.isPrototypeOf(b1));</span><br><span class="line">        console.log(Animal.prototype.isPrototypeOf(b1));</span><br><span class="line">        console.log(Object.prototype.isPrototypeOf(b1));</span><br><span class="line"></span><br><span class="line">      (2)instanceof()，判断某个实例是不是某个构造函数的实例，只要是原型链中一条完整原型链里出现的构造函数，那么就是这些出现构造函数都算是这个实例的构函，结果为true。</span><br><span class="line"></span><br><span class="line">        console.log(d1 instanceof Object);</span><br><span class="line">        console.log(d1 instanceof Dog);</span><br><span class="line">        console.log(d1 instanceof Animal);</span><br><span class="line">    </span><br><span class="line">3.构造函数中的方法 由构函创建的实例不能调用</span><br></pre></td></tr></table></figure>
-<p>图片详细地址（高清）：<a href="http://p88z46ccj.bkt.clouddn.com/web/组合.png" target="_blank" rel="noopener">组合函数</a><br><img src="http://p88z46ccj.bkt.clouddn.com/web/组合.png" alt=""></p>
+<p>图片详细地址（高清）：<a href="/images/web/组合.png">组合函数</a><br><img src="/images/web/组合.png" alt=""></p>
 </li>
 </ul>
 </li>
@@ -1416,7 +1416,7 @@ test(a);
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="http://p88z46ccj.bkt.clouddn.com/avar.jpg"
+                src="/images/avar.jpg"
                 alt="Sanr Chen" />
             
               <p class="site-author-name" itemprop="name">Sanr Chen</p>
