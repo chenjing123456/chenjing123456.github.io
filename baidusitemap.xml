@@ -4,12 +4,52 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/03/01/url-opeation/</loc>
-    <lastmod>2019-03-02T10:55:43.106Z</lastmod>
+    <loc>http://yoursite.com/2018/07/12/index/</loc>
+    <lastmod>2019-03-04T05:47:57.121Z</lastmod>
+    <data>
+        <display>
+        <title>行到水穷处</title>
+        <pubTime>2018-07-11T16:00:00.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/13/hello-world/</loc>
+    <lastmod>2019-03-04T05:36:21.321Z</lastmod>
+    <data>
+        <display>
+        <title>安逸亦或</title>
+        <pubTime>2018-06-12T16:00:00.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/02/23/url-opeation/</loc>
+    <lastmod>2019-03-04T05:32:09.113Z</lastmod>
     <data>
         <display>
         <title>浏览器输入url之后发生了什么?</title>
-        <pubTime>2019-03-01T11:25:10.783Z</pubTime>
+        <pubTime>2019-02-22T16:00:00.000Z</pubTime>
         
         <tag>前端开发</tag>
          
@@ -20,10 +60,10 @@
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/HTML/"/>
+              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
           
         </display>
     </data>
@@ -31,85 +71,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/03/01/personal/</loc>
-    <lastmod>2019-03-02T10:54:56.704Z</lastmod>
+    <loc>http://yoursite.com/2018/09/01/js%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2019-03-04T05:29:46.745Z</lastmod>
     <data>
         <display>
-        <title>Hexo + next主题的个性化配置</title>
-        <pubTime>2019-03-01T11:28:40.144Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>Next</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习杂烩" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E6%9D%82%E7%83%A9/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E6%9D%82%E7%83%A9/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/03/02/echarts-Carousel/</loc>
-    <lastmod>2019-03-02T10:54:47.116Z</lastmod>
-    <data>
-        <display>
-        <title>echarts 实现地图联动轮播</title>
-        <pubTime>2019-03-02T07:29:32.000Z</pubTime>
-        
-        <tag>echarts(轮播)</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="echarts" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/echarts/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%801/</loc>
-    <lastmod>2019-03-02T10:54:07.363Z</lastmod>
-    <data>
-        <display>
-        <title>javaScript的ECMAScript核心之语法学习</title>
-        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
-        
-        <tag>ECMAScript</tag>
-         
-        <tag>基本语法</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/javaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%802/</loc>
-    <lastmod>2019-03-02T10:53:54.716Z</lastmod>
-    <data>
-        <display>
-        <title>javaScript的ECMAScript核心之API学习</title>
-        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
+        <title>javaScript算法</title>
+        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
         
         <tag>ECMAScript（核心js）</tag>
          
@@ -118,10 +85,10 @@
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/javaScript/"/>
+              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB/javaScript/"/>
           
         </display>
     </data>
@@ -129,12 +96,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/12/20/f-e/</loc>
-    <lastmod>2019-03-02T08:54:44.187Z</lastmod>
+    <loc>http://yoursite.com/2018/08/10/f-e/</loc>
+    <lastmod>2019-03-04T05:29:15.258Z</lastmod>
     <data>
         <display>
         <title>前端面试常见知识点</title>
-        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
+        <pubTime>2018-08-09T16:00:00.000Z</pubTime>
         
         <tag>FE</tag>
          
@@ -143,10 +110,10 @@
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/interview/"/>
+              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB/interview/"/>
           
         </display>
     </data>
@@ -154,105 +121,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/12/20/base/</loc>
-    <lastmod>2019-03-01T11:34:19.884Z</lastmod>
+    <loc>http://yoursite.com/2018/09/02/elist/</loc>
+    <lastmod>2019-03-04T05:28:53.010Z</lastmod>
     <data>
         <display>
-        <title>前端必须知道的知识点</title>
-        <pubTime>2018-12-20T10:41:51.970Z</pubTime>
+        <title>搞定Elist语法检测，让世界清静</title>
+        <pubTime>2018-09-01T16:00:00.000Z</pubTime>
         
-        <tag>FE</tag>
-         
-        <tag>interview</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/interview/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/12/20/hello-world/</loc>
-    <lastmod>2019-03-01T11:33:46.909Z</lastmod>
-    <data>
-        <display>
-        <title>安逸亦或</title>
-        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
-        
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活二三事" url="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/12/20/hexo+github/</loc>
-    <lastmod>2019-03-01T11:33:21.964Z</lastmod>
-    <data>
-        <display>
-        <title>使用Hexo + Github Pages搭建个人博客</title>
-        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习杂烩" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E6%9D%82%E7%83%A9/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E6%9D%82%E7%83%A9/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/11/07/html%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/</loc>
-    <lastmod>2019-03-01T11:32:54.411Z</lastmod>
-    <data>
-        <display>
-        <title>浏览器如何渲染网页</title>
-        <pubTime>2018-11-07T07:37:13.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/03/01/renren-fast-dynamicMenuRoutes/</loc>
-    <lastmod>2019-03-01T11:26:10.585Z</lastmod>
-    <data>
-        <display>
-        <title>人人开源-动态菜单路由</title>
-        <pubTime>2019-03-01T11:26:10.584Z</pubTime>
-        
-        <tag>vue-router</tag>
+        <tag>elist</tag>
          
          
            
@@ -265,12 +141,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/03/01/XHR/</loc>
-    <lastmod>2019-03-01T11:25:10.824Z</lastmod>
+    <loc>http://yoursite.com/2018/10/25/base/</loc>
+    <lastmod>2019-03-04T05:28:28.185Z</lastmod>
     <data>
         <display>
-        <title>XMLHttpRequest详解</title>
-        <pubTime>2019-03-01T11:25:10.823Z</pubTime>
+        <title>前端必须知道的知识点</title>
+        <pubTime>2018-10-24T16:00:00.000Z</pubTime>
         
         <tag>FE</tag>
          
@@ -279,10 +155,10 @@
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/interview/"/>
+              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB/interview/"/>
           
         </display>
     </data>
@@ -290,12 +166,55 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/03/01/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2019-03-01T11:22:22.401Z</lastmod>
+    <loc>http://yoursite.com/2018/08/23/hexo+github/</loc>
+    <lastmod>2019-03-04T05:28:05.665Z</lastmod>
+    <data>
+        <display>
+        <title>使用Hexo + Github Pages搭建个人博客</title>
+        <pubTime>2018-08-22T16:00:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Other" url="http://yoursite.com/categories/Other/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://yoursite.com/categories/Other/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/27/life/</loc>
+    <lastmod>2019-03-04T05:27:06.442Z</lastmod>
+    <data>
+        <display>
+        <title>他</title>
+        <pubTime>2018-07-26T16:00:00.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/12/24/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2019-03-04T05:26:09.668Z</lastmod>
     <data>
         <display>
         <title>vue项目中登录时记住密码的功能实现</title>
-        <pubTime>2019-03-01T11:22:22.400Z</pubTime>
+        <pubTime>2018-12-23T16:00:00.000Z</pubTime>
         
         <tag>vue</tag>
          
@@ -312,22 +231,24 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/12/20/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/</loc>
-    <lastmod>2018-12-20T10:41:52.001Z</lastmod>
+    <loc>http://yoursite.com/2018/09/17/XHR/</loc>
+    <lastmod>2019-03-04T05:25:38.593Z</lastmod>
     <data>
         <display>
-        <title>数组去重的常见方法</title>
-        <pubTime>2018-12-20T10:41:52.001Z</pubTime>
+        <title>XMLHttpRequest详解</title>
+        <pubTime>2018-09-16T16:00:00.000Z</pubTime>
         
-        <tag>javaScript</tag>
+        <tag>FE</tag>
+         
+        <tag>interview</tag>
          
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/javaScript/"/>
+              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB/interview/"/>
           
         </display>
     </data>
@@ -335,66 +256,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/12/20/js%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2018-12-20T10:41:52.001Z</lastmod>
+    <loc>http://yoursite.com/2018/10/15/renren-fast-dynamicMenuRoutes/</loc>
+    <lastmod>2019-03-04T05:25:11.626Z</lastmod>
     <data>
         <display>
-        <title>javaScript算法</title>
-        <pubTime>2018-12-20T10:41:52.001Z</pubTime>
+        <title>人人开源-动态菜单路由</title>
+        <pubTime>2018-10-14T16:00:00.000Z</pubTime>
         
-        <tag>ECMAScript（核心js）</tag>
-         
-        <tag>API标准库</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/javaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-  <url>
-    <loc>http://yoursite.com/2018/12/20/html%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
-    <data>
-        <display>
-        <title>HTML基础知识一</title>
-        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
-        
-        <tag>HTML基础</tag>
-         
-        <tag>HTML笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
-          
-             
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/12/20/elist/</loc>
-    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
-    <data>
-        <display>
-        <title>搞定Elist语法检测，让世界清静</title>
-        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
-        
-        <tag>elist</tag>
+        <tag>vue-router</tag>
          
          
            
@@ -407,11 +276,96 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/27/css%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
+    <loc>http://yoursite.com/2018/11/27/personal/</loc>
+    <lastmod>2019-03-04T05:24:37.585Z</lastmod>
     <data>
         <display>
-        <title>css基础知识一</title>
+        <title>大梦谁先觉</title>
+        <pubTime>2018-11-26T16:00:00.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/10/27/life3/</loc>
+    <lastmod>2019-03-04T05:23:41.363Z</lastmod>
+    <data>
+        <display>
+        <title>修行人生</title>
+        <pubTime>2018-10-27T01:29:24.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/26/life2/</loc>
+    <lastmod>2019-03-04T05:22:35.666Z</lastmod>
+    <data>
+        <display>
+        <title>在路上</title>
+        <pubTime>2018-09-26T01:30:28.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%801/</loc>
+    <lastmod>2019-03-04T03:06:36.044Z</lastmod>
+    <data>
+        <display>
+        <title>javaScript核心ECMAScript</title>
+        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
+        
+        <tag>ECMAScript</tag>
+         
+        <tag>语法以及api</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/27/css%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2019-03-04T03:01:50.474Z</lastmod>
+    <data>
+        <display>
+        <title>css基础</title>
         <pubTime>2018-09-27T01:19:28.000Z</pubTime>
         
         <tag>CSS基础</tag>
@@ -421,10 +375,10 @@
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="CSS" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/CSS/"/>
+              <breadCrumb title="CSS" url="http://yoursite.com/categories/WEB/CSS/"/>
           
         </display>
     </data>
@@ -432,24 +386,47 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/27/dom/</loc>
-    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
+    <loc>http://yoursite.com/2018/12/20/html%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2019-03-04T02:56:54.491Z</lastmod>
     <data>
         <display>
-        <title>javaScript基础之DOM</title>
-        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
+        <title>HTML基础</title>
+        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
         
-        <tag>ECMAScript</tag>
+        <tag>HTML基础</tag>
          
-        <tag>DOM</tag>
+        <tag>HTML笔记</tag>
          
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/javaScript/"/>
+              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/03/02/echarts-Carousel/</loc>
+    <lastmod>2019-03-04T02:50:39.491Z</lastmod>
+    <data>
+        <display>
+        <title>echarts 实现地图联动轮播</title>
+        <pubTime>2019-03-02T07:29:32.000Z</pubTime>
+        
+        <tag>echarts(轮播)</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="echarts" url="http://yoursite.com/categories/WEB/echarts/"/>
           
         </display>
     </data>
@@ -458,7 +435,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/09/25/div%E5%8D%A0%E5%B1%8F/</loc>
-    <lastmod>2018-12-20T10:41:51.985Z</lastmod>
+    <lastmod>2019-03-04T02:03:52.050Z</lastmod>
     <data>
         <display>
         <title>让div占满整个屏幕的方法</title>
@@ -469,13 +446,15 @@
          
            
              
-              <breadCrumb title="WEB前端" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
           
              
-              <breadCrumb title="CSS" url="http://yoursite.com/categories/WEB%E5%89%8D%E7%AB%AF/CSS/"/>
+              <breadCrumb title="CSS" url="http://yoursite.com/categories/WEB/CSS/"/>
           
         </display>
     </data>
     </url>
 
+    
+    
 </urlset>
