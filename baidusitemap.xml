@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/07/12/index/</loc>
-    <lastmod>2019-03-04T05:47:57.121Z</lastmod>
+    <lastmod>2019-03-05T08:22:37.197Z</lastmod>
     <data>
         <display>
         <title>行到水穷处</title>
@@ -17,6 +17,29 @@
            
              
               <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/03/02/echarts-Carousel/</loc>
+    <lastmod>2019-03-05T02:36:01.066Z</lastmod>
+    <data>
+        <display>
+        <title>用echarts实现各种效果</title>
+        <pubTime>2019-03-02T07:29:32.000Z</pubTime>
+        
+        <tag>echarts</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="echarts" url="http://yoursite.com/categories/WEB/echarts/"/>
           
         </display>
     </data>
@@ -404,29 +427,6 @@
           
              
               <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/03/02/echarts-Carousel/</loc>
-    <lastmod>2019-03-04T02:50:39.491Z</lastmod>
-    <data>
-        <display>
-        <title>echarts 实现地图联动轮播</title>
-        <pubTime>2019-03-02T07:29:32.000Z</pubTime>
-        
-        <tag>echarts(轮播)</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
-          
-             
-              <breadCrumb title="echarts" url="http://yoursite.com/categories/WEB/echarts/"/>
           
         </display>
     </data>

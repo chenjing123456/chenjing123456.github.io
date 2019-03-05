@@ -11,7 +11,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
-
+<script src="/js/src/echarts-3.8.5.min.js"></script>
+<script src="/js/src/echarts-4.1.0.min.js"></script>
+<script src="/js/src/jquery-3.2.1.min.js"></script>
 <script>
     (function(){
         if(''){
@@ -61,6 +63,7 @@
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
 
 
 
@@ -286,6 +289,8 @@
  </div>
     </header>
     
+    
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -316,7 +321,7 @@
                 目前共计 22 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/API标准库/" style="font-size: 12px; color: #ccc">API标准库</a> <a href="/tags/CSS/" style="font-size: 12px; color: #ccc">CSS</a> <a href="/tags/CSS基础/" style="font-size: 12px; color: #ccc">CSS基础</a> <a href="/tags/CSS笔记/" style="font-size: 12px; color: #ccc">CSS笔记</a> <a href="/tags/ECMAScript/" style="font-size: 12px; color: #ccc">ECMAScript</a> <a href="/tags/ECMAScript（核心js）/" style="font-size: 12px; color: #ccc">ECMAScript（核心js）</a> <a href="/tags/FE/" style="font-size: 21px; color: #6f6f6f">FE</a> <a href="/tags/HTML基础/" style="font-size: 12px; color: #ccc">HTML基础</a> <a href="/tags/HTML笔记/" style="font-size: 12px; color: #ccc">HTML笔记</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/cookie/" style="font-size: 12px; color: #ccc">cookie</a> <a href="/tags/daily/" style="font-size: 30px; color: #111">daily</a> <a href="/tags/echarts-轮播/" style="font-size: 12px; color: #ccc">echarts(轮播)</a> <a href="/tags/elist/" style="font-size: 12px; color: #ccc">elist</a> <a href="/tags/interview/" style="font-size: 21px; color: #6f6f6f">interview</a> <a href="/tags/vue/" style="font-size: 12px; color: #ccc">vue</a> <a href="/tags/vue-router/" style="font-size: 12px; color: #ccc">vue-router</a> <a href="/tags/前端开发/" style="font-size: 12px; color: #ccc">前端开发</a> <a href="/tags/生活/" style="font-size: 12px; color: #ccc">生活</a> <a href="/tags/计算机基础/" style="font-size: 12px; color: #ccc">计算机基础</a> <a href="/tags/计算机网络/" style="font-size: 12px; color: #ccc">计算机网络</a> <a href="/tags/语法以及api/" style="font-size: 12px; color: #ccc">语法以及api</a>
+              <a href="/tags/API标准库/" style="font-size: 12px; color: #ccc">API标准库</a> <a href="/tags/CSS/" style="font-size: 12px; color: #ccc">CSS</a> <a href="/tags/CSS基础/" style="font-size: 12px; color: #ccc">CSS基础</a> <a href="/tags/CSS笔记/" style="font-size: 12px; color: #ccc">CSS笔记</a> <a href="/tags/ECMAScript/" style="font-size: 12px; color: #ccc">ECMAScript</a> <a href="/tags/ECMAScript（核心js）/" style="font-size: 12px; color: #ccc">ECMAScript（核心js）</a> <a href="/tags/FE/" style="font-size: 21px; color: #6f6f6f">FE</a> <a href="/tags/HTML基础/" style="font-size: 12px; color: #ccc">HTML基础</a> <a href="/tags/HTML笔记/" style="font-size: 12px; color: #ccc">HTML笔记</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/cookie/" style="font-size: 12px; color: #ccc">cookie</a> <a href="/tags/daily/" style="font-size: 30px; color: #111">daily</a> <a href="/tags/echarts/" style="font-size: 12px; color: #ccc">echarts</a> <a href="/tags/elist/" style="font-size: 12px; color: #ccc">elist</a> <a href="/tags/interview/" style="font-size: 21px; color: #6f6f6f">interview</a> <a href="/tags/vue/" style="font-size: 12px; color: #ccc">vue</a> <a href="/tags/vue-router/" style="font-size: 12px; color: #ccc">vue-router</a> <a href="/tags/前端开发/" style="font-size: 12px; color: #ccc">前端开发</a> <a href="/tags/生活/" style="font-size: 12px; color: #ccc">生活</a> <a href="/tags/计算机基础/" style="font-size: 12px; color: #ccc">计算机基础</a> <a href="/tags/计算机网络/" style="font-size: 12px; color: #ccc">计算机网络</a> <a href="/tags/语法以及api/" style="font-size: 12px; color: #ccc">语法以及api</a>
             </div>
           </div>
         
@@ -503,9 +508,6 @@
 
   
 </div>
-
-
-
   
   <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
   </span> <span class="post-meta-divider">|</span> 
@@ -518,8 +520,16 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共69.5k字</span>
+  <span class="post-count">博客全站共69.9k字</span>
 </div>
+
+<style>
+.footer{
+  position: fixed;
+    bottom: 0;
+    left: 0;
+}
+</style>
         
 
 
@@ -1011,4 +1021,5 @@
   
 
 </body>
+
 </html>
