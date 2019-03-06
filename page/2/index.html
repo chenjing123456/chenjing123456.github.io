@@ -3818,7 +3818,7 @@ echarts.extendsMap = function(id, opt) {
             zoom: 1,
             label: {
                 normal: {
-                    show: true,
+                    show: false,
                     textStyle: {
                         color: '#fff'
                     }
@@ -3895,10 +3895,25 @@ echarts.extendsMap = function(id, opt) {
             showEffectOn: 'render',
             rippleEffect: {
                 period:15,
-                scale: 4,
+                scale: 6,
                 brushType: 'fill'
             },
             hoverAnimation: true,
+            label: {
+                normal: {
+                    show: true,
+                    formatter:'{b}',
+                    offset:[10,15],
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                emphasis: {
+                    textStyle: {
+                        color: '#fff'
+                    }
+                }
+            },
             itemStyle: {
                 normal: {
                     color: '#5DBCBC',
