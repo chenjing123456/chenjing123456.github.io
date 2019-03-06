@@ -315,7 +315,12 @@
     <span id="layer15Go" class="drag ball"></span>
   </div>
 </div>
+<script>
+if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
+    $('#idhyt-surprise-ball').css('display','none');
 
+}
+</script>
 <style type="text/css">
 
 #idhyt-surprise-ball {
@@ -3356,26 +3361,33 @@
 </style>
     
     
+    
+    <div style="height:100%">
       
-<div id="content">
+<div id="contents">
     <div id="mains" style="width: 50%;height:100%;"></div>
 </div>
 <div class="title">行 到 水 穷 处 , 坐 看 云 起 时</div>
+
+
 <style type="text/css">
+
 .title{
     margin-top:10px;
-    border-top:2px solid #555;
-    border-bottom:2px solid #555;
+    font-family: georgia;
+    border-top:2px solid #ccc;
+    border-bottom:2px solid #ccc;
     height:70px;
     line-height:70px;
     width:50%;
     margin: 10px auto 0;
     border-radius:5px;
     font-size:24px;
-    color:#333;
     text-align:center;
+    text-shadow: 0 0 0.2em #000,0 0 0.2em #000;
+    color:#fff; 
 }
-#content{
+#contents{
     margin-top:100px;
     width:100%;
     height:700px;
@@ -3422,6 +3434,11 @@ var beijing ="/js/json/province/beijing.json";
 var fujian ="/js/json/province/fujian.json"; 
 var xianggang ="/js/json/province/xianggang.json"; 
 
+if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
+    $('#content,.title').css('display','none');
+
+}
+
 echarts.extendsMap = function(id, opt) {
     // 实例
     var chart = this.init(document.getElementById(id));
@@ -3464,11 +3481,11 @@ echarts.extendsMap = function(id, opt) {
         '澳门': aomen
     };
     var geoCoordMap = {
-        "磴口": [107.012225,40.337792],
-        "沈海": [123.476404,41.811854],
-        "曹妃甸": [118.504805,39.004067],
-        "唐山丰润": [118.088961,39.599362],
-        "渤海新区": [117.639472,38.365606]
+        "南昌": [116.0046,28.6633],
+        "深圳": [114.5435,22.5439],
+        "苏州": [120.6519,31.3989],
+        "厦门": [118.1689,24.6478],
+        "杭州": [119.5313,29.8773]
     };
     
     var levelColorMap = {
@@ -3714,7 +3731,7 @@ echarts.extendsMap = function(id, opt) {
             enterable:true,
             position:['60%','70%'],
             formatter:function(params, ticket, callback){
-                return '简称：'+params.data.name+'<br/>'+'机组：'+params.data.crew+'万千瓦'+'<br/>'+'公司名称：'+params.data.company+'<br/>'+'所属大区：'+params.data.region+'<br/>'+'所在位置：'+params.data.position
+                return '地点：'+params.data.name+'<br/>'+'时间：'+params.data.crew+'<br/>'+'事件：'+params.data.company+'<br/>'+'所在位置：'+params.data.position
             }
         },
         graphic: [{
@@ -3942,24 +3959,25 @@ $.getJSON(zhongguo, function(geoJson) {
             //console.log(name, option, instance);
         },
         // 数据展示            	
-        data: [{city:'内蒙古',name: "磴口",value: 2*30,crew:'2*30',company:"磴口金牛煤电",position:'内蒙古自治区巴彦淖尔市磴口县',region:'北方大区'},
-                {city:'辽宁',name: "沈海",value: 3*20,crew:'3*20',company:"沈阳沈海热电",position:'辽宁省沈阳市大东区',region:'东北大区'},
-                {city:'河北',name: "曹妃甸",value: 2*30,crew:'2*30',company:"唐山曹妃甸",position:'河北省唐山市曹妃甸工业区',region:'华北大区'},
-                {city:'河北',name: "唐山丰润",value: 2*35,crew:'2*35',company:"华润电力唐山丰润",position:'河北省唐山市路北区韩城镇',region:'华北大区'},
-                {city:'河北',name: "渤海新区",value: 2*35,crew:'2*35',company:"渤海华润电力",position:'河北省沧州市临港经济技术开发区',region:'华北大区'}]
+        data: [{city:'江西',name: "南昌",value: '2014年',crew: '2014年',company:"求学",position:'江西南昌经开区',region:'北方大区'},
+                {city:'广东',name: "深圳",value: '2018年',crew:'2018年',company:"实习",position:'广东深圳南山区',region:'东北大区'},
+                {city:'江苏',name: "苏州",value: '2017年',crew:'2017年',company:"实习",position:'江苏昆山巴城镇',region:'华北大区'},
+                {city:'福建',name: "厦门",value: '2015年',crew:'2015年',company:"旅游",position:'福建厦门',region:'华北大区'},
+                {city:'浙江',name: "杭州",value: '2019年',crew:'2019年',company:"工作",position:'浙江杭州江干区',region:'华北大区'}]
     });
 })
 
 
 $(window).on("resize", function () {
-            if(myChart){
-                myChart.resize();
-            }
-        })
+    if(myChart){
+        myChart.resize();
+    }
+})
 </script>
+    </div>
     
-
-    <main id="main" class="main">
+    
+    <main id="main" class="main" style="height:100%">
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
@@ -5765,11 +5783,7 @@ $(window).on("resize", function () {
 </div>
 
 <style>
-.footer{
-  position: fixed;
-    bottom: 0;
-    left: 0;
-}
+
 </style>
         
 
