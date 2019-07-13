@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/09/01/miniPro/</loc>
+    <lastmod>2019-07-13T07:14:05.754Z</lastmod>
+    <data>
+        <display>
+        <title>小程序登录</title>
+        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
+        
+        <tag>小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/07/12/index/</loc>
     <lastmod>2019-03-05T08:22:37.197Z</lastmod>
     <data>
