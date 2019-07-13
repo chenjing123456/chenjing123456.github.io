@@ -4,12 +4,55 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/01/miniPro/</loc>
-    <lastmod>2019-07-13T07:14:05.754Z</lastmod>
+    <loc>http://yoursite.com/2019/04/02/echarts-Carousel/</loc>
+    <lastmod>2019-07-13T07:21:57.970Z</lastmod>
+    <data>
+        <display>
+        <title>用echarts实现各种效果</title>
+        <pubTime>2019-04-02T07:29:32.000Z</pubTime>
+        
+        <tag>echarts</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="echarts" url="http://yoursite.com/categories/WEB/echarts/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/03/02/elist/</loc>
+    <lastmod>2019-07-13T07:21:45.250Z</lastmod>
+    <data>
+        <display>
+        <title>搞定Elist语法检测，让世界清静</title>
+        <pubTime>2019-03-01T16:00:00.000Z</pubTime>
+        
+        <tag>elist</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/07/10/miniPro/</loc>
+    <lastmod>2019-07-13T07:20:47.624Z</lastmod>
     <data>
         <display>
         <title>小程序登录</title>
-        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
+        <pubTime>2019-07-09T16:00:00.000Z</pubTime>
         
         <tag>小程序</tag>
          
@@ -40,29 +83,6 @@
            
              
               <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/03/02/echarts-Carousel/</loc>
-    <lastmod>2019-03-05T02:36:01.066Z</lastmod>
-    <data>
-        <display>
-        <title>用echarts实现各种效果</title>
-        <pubTime>2019-03-02T07:29:32.000Z</pubTime>
-        
-        <tag>echarts</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
-          
-             
-              <breadCrumb title="echarts" url="http://yoursite.com/categories/WEB/echarts/"/>
           
         </display>
     </data>
@@ -160,26 +180,6 @@
           
              
               <breadCrumb title="interview" url="http://yoursite.com/categories/WEB/interview/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/09/02/elist/</loc>
-    <lastmod>2019-03-04T05:28:53.010Z</lastmod>
-    <data>
-        <display>
-        <title>搞定Elist语法检测，让世界清静</title>
-        <pubTime>2018-09-01T16:00:00.000Z</pubTime>
-        
-        <tag>elist</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
           
         </display>
     </data>
