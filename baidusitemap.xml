@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/05/10/promise/</loc>
+    <lastmod>2019-07-17T05:57:18.499Z</lastmod>
+    <data>
+        <display>
+        <title>Promise使用</title>
+        <pubTime>2019-05-09T16:00:00.000Z</pubTime>
+        
+        <tag>Promise</tag>
+         
+         
+           
+             
+              <breadCrumb title="es6" url="http://yoursite.com/categories/es6/"/>
+          
+             
+              <breadCrumb title="javaScript" url="http://yoursite.com/categories/es6/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/06/27/js%E7%BB%A7%E6%89%BF/</loc>
     <lastmod>2019-07-16T08:05:59.912Z</lastmod>
     <data>
