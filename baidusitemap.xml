@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/04/15/debounAThro/</loc>
+    <lastmod>2019-07-18T05:54:18.935Z</lastmod>
+    <data>
+        <display>
+        <title>函数节流和防抖</title>
+        <pubTime>2019-04-14T16:00:00.000Z</pubTime>
+        
+        <tag>ECMAScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="javaScript" url="http://yoursite.com/categories/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/05/10/promise/</loc>
     <lastmod>2019-07-17T05:57:18.499Z</lastmod>
     <data>

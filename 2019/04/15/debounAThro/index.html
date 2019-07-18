@@ -91,7 +91,7 @@
 
 
 
-  <meta name="keywords" content="daily," />
+  <meta name="keywords" content="ECMAScript," />
 
 
 
@@ -104,18 +104,18 @@
 
 
 
-<meta name="description" content="行到水穷处，坐看云起时">
-<meta name="keywords" content="daily">
+<meta name="description" content="前言在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。常见的事件：    window对象的resize、scroll事件    拖拽时的mousemove事件    文字输入、自动完成的keyup事件    … 防抖(debounce)1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。eg:如果有人进电梯（">
+<meta name="keywords" content="ECMAScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="行到水穷处">
-<meta property="og:url" content="http://yoursite.com/2018/07/12/index/index.html">
+<meta property="og:title" content="函数节流和防抖">
+<meta property="og:url" content="http://yoursite.com/2019/04/15/debounAThro/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="行到水穷处，坐看云起时">
+<meta property="og:description" content="前言在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。常见的事件：    window对象的resize、scroll事件    拖拽时的mousemove事件    文字输入、自动完成的keyup事件    … 防抖(debounce)1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。eg:如果有人进电梯（">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T08:22:37.197Z">
+<meta property="og:updated_time" content="2019-07-18T05:54:18.935Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="行到水穷处">
-<meta name="twitter:description" content="行到水穷处，坐看云起时">
+<meta name="twitter:title" content="函数节流和防抖">
+<meta name="twitter:description" content="前言在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。常见的事件：    window对象的resize、scroll事件    拖拽时的mousemove事件    文字输入、自动完成的keyup事件    … 防抖(debounce)1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。eg:如果有人进电梯（">
 
 
 
@@ -145,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/12/index/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/15/debounAThro/"/>
 
 
 
 
 
-  <title>行到水穷处 | Sanr's Blog</title>
+  <title>函数节流和防抖 | Sanr's Blog</title>
   
 
 
@@ -315,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/12/index/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/15/debounAThro/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sanr Chen">
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">行到水穷处</h1>
+          <h1 class="post-title" itemprop="name headline">函数节流和防抖</h1>
         
 
         <div class="post-meta">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">posted</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-12T00:00:00+08:00">
-                2018-07-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T00:00:00+08:00">
+                2019-04-15
               </time>
             
 
@@ -368,8 +368,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/daily/" itemprop="url" rel="index">
-                    <span itemprop="name">daily</span>
+                  <a href="/categories/javaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript</span>
                   </a>
                 </span>
 
@@ -405,20 +405,25 @@
       
 
       
-        <blockquote><p>行到水穷处，坐看云起时</p>
-</blockquote><a id="more"></a>
-<div id="echarts1600" style="width: 81%;height: 400px;margin: 0 auto"></div>
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1600'));
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。<br>常见的事件：<br>    window对象的resize、scroll事件<br>    拖拽时的mousemove事件<br>    文字输入、自动完成的keyup事件<br>    …</p>
+<h2 id="防抖-debounce"><a href="#防抖-debounce" class="headerlink" title="防抖(debounce)"></a>防抖(debounce)</h2><p>1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。<br>eg:如果有人进电梯（触发事件），那电梯将在10秒钟后出发（执行事件监听器），这时如果又有人进电梯了（在10秒内再次触发该事件），我们又得等10秒再出发（重新计时）。</p>
+<p>2.应用场景：</p>
+<pre><code>给提交按钮添加防抖，防止表单多次提交
+输入框连续输入只在用户停止后请求数据，用函数防抖能有效减少请求次数(实时搜索防抖)
+判断scroll是否滑到底部，滚动事件+函数防抖
+</code></pre><p>3.防抖是适合多次事件一次响应的情况</p>
+<p>4.简单实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var debounce = function(idle, action)&#123;</span><br><span class="line">  var last</span><br><span class="line">  return function()&#123;</span><br><span class="line">    var ctx = this, args = arguments</span><br><span class="line">    clearTimeout(last)</span><br><span class="line">    last = setTimeout(function()&#123;</span><br><span class="line">        action.apply(ctx, args)</span><br><span class="line">    &#125;, idle)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>5.事例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//小程序实时搜索防抖</span><br><span class="line">search(res)&#123;</span><br><span class="line">        this.lastTimeStamp = res.timeStamp;</span><br><span class="line">        let _this = this;</span><br><span class="line">        setTimeout(function()&#123;</span><br><span class="line">                if(_this.lastTimeStamp == res.timeStamp)&#123;</span><br><span class="line">                    _this.entName = res.detail.value;</span><br><span class="line">                    _this.getDataList();</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;,800)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="节流-throttle"><a href="#节流-throttle" class="headerlink" title="节流(throttle)"></a>节流(throttle)</h2><p>1.预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期。<br>eg:当 1 秒内连续播放 24 张以上的图片时，在人眼的视觉中就会形成一个连贯的动画，所以在电影的播放（以前是，现在不知道）中基本是以每秒 24 张的速度播放的。<br>    或者说 第一个人进电梯之后，开始计算时间10s，不管有没有人进入电梯，10s之后电梯出发，不会重新计时。</p>
+<p>2.应用场景：</p>
+<pre><code>DOM元素拖拽
+Canvas画笔功能
+游戏中的刷新率
+</code></pre><p>3.节流是适合大量事件按时间做平均分配触发</p>
+<p>4.简单实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var throttle = function(delay, action)&#123;</span><br><span class="line">  var last = null;</span><br><span class="line">  return function()&#123;</span><br><span class="line">    var curr = +new Date()</span><br><span class="line">    if (curr - last &gt; delay|| !last)&#123;</span><br><span class="line">      action.apply(this, arguments)</span><br><span class="line">      last = curr </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>总体来看，函数防抖是某一段时间内只执行一次，而函数节流是间隔时间执行</p>
 
-        // 指定图表的配置项和数据
-        var option = 
-
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
       
     </div>
     
@@ -452,7 +457,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2018/07/12/index/" title="行到水穷处">http://yoursite.com/2018/07/12/index/</a>
+    <a href="http://yoursite.com/2019/04/15/debounAThro/" title="函数节流和防抖">http://yoursite.com/2019/04/15/debounAThro/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -467,7 +472,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/daily/" rel="tag"><i class="fa fa-tag"></i> daily</a>
+            <a href="/tags/ECMAScript/" rel="tag"><i class="fa fa-tag"></i> ECMAScript</a>
           
         </div>
       
@@ -480,8 +485,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/13/hello-world/" rel="next" title="安逸亦或">
-                <i class="fa fa-chevron-left"></i> 安逸亦或
+              <a href="/2019/04/02/echarts-Carousel/" rel="next" title="用echarts实现各种效果">
+                <i class="fa fa-chevron-left"></i> 用echarts实现各种效果
               </a>
             
           </div>
@@ -490,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/27/life/" rel="prev" title="他">
-                他 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/10/promise/" rel="prev" title="Promise使用">
+                Promise使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -549,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -663,6 +677,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防抖-debounce"><span class="nav-number">2.</span> <span class="nav-text">防抖(debounce)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节流-throttle"><span class="nav-number">3.</span> <span class="nav-text">节流(throttle)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
