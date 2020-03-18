@@ -4,6 +4,78 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/07/29/centos-1/</loc>
+    <lastmod>2019-07-29T06:29:24.662Z</lastmod>
+    <data>
+        <display>
+        <title>阿里云轻量服务器Centos 7.3开发环境配置</title>
+        <pubTime>2018-07-28T16:00:00.000Z</pubTime>
+        
+        <tag>centos</tag>
+         
+        <tag>server</tag>
+         
+         
+           
+             
+              <breadCrumb title="server" url="http://yoursite.com/categories/server/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/08/27/html%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2019-07-29T03:13:21.591Z</lastmod>
+    <data>
+        <display>
+        <title>HTML基础</title>
+        <pubTime>2018-08-26T16:00:00.000Z</pubTime>
+        
+        <tag>HTML基础</tag>
+         
+        <tag>HTML笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/27/css%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2019-07-29T03:13:17.686Z</lastmod>
+    <data>
+        <display>
+        <title>css基础</title>
+        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
+        
+        <tag>CSS基础</tag>
+         
+        <tag>CSS笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="CSS" url="http://yoursite.com/categories/WEB/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/05/10/promise/</loc>
     <lastmod>2019-07-19T02:38:23.086Z</lastmod>
     <data>
@@ -463,56 +535,6 @@
           
              
               <breadCrumb title="javaScript" url="http://yoursite.com/categories/WEB/javaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/09/27/css%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2019-03-04T03:01:50.474Z</lastmod>
-    <data>
-        <display>
-        <title>css基础</title>
-        <pubTime>2018-09-27T01:19:28.000Z</pubTime>
-        
-        <tag>CSS基础</tag>
-         
-        <tag>CSS笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
-          
-             
-              <breadCrumb title="CSS" url="http://yoursite.com/categories/WEB/CSS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/12/20/html%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2019-03-04T02:56:54.491Z</lastmod>
-    <data>
-        <display>
-        <title>HTML基础</title>
-        <pubTime>2018-12-20T10:41:51.985Z</pubTime>
-        
-        <tag>HTML基础</tag>
-         
-        <tag>HTML笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
-          
-             
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
           
         </display>
     </data>

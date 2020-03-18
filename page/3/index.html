@@ -3362,635 +3362,6 @@ if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
     
     
     
-    <div style="height:100%">
-      
-<div id="contents">
-    <div id="mains" style="width: 50%;height:100%;"></div>
-</div>
-<div class="title">行 到 水 穷 处 , 坐 看 云 起 时</div>
-
-
-<style type="text/css">
-
-.title{
-    margin-top:10px;
-    font-family: georgia;
-    border-top:2px solid #ccc;
-    border-bottom:2px solid #ccc;
-    height:70px;
-    line-height:70px;
-    width:50%;
-    margin: 10px auto 0;
-    border-radius:5px;
-    font-size:24px;
-    text-align:center;
-    text-shadow: 0 0 0.2em #000,0 0 0.2em #000;
-    color:#fff; 
-}
-#contents{
-    margin-top:100px;
-    width:100%;
-    height:700px;
-}
-#mains{
-    margin: 0 auto;
-}
-</style>
-<script src='/js/src/china.js'></script>
-<script>
-
-var zhongguo = "/js/json/china.json";
-var hainan = "/js/json/province/hainan.json";
-var xizang = "/js/json/province/xizang.json";
-var zhejiang ="/js/json/province/zhejiang.json"; 
-var yunnan ="/js/json/province/yunnan.json"; 
-var xinjiang ="/js/json/province/xinjiang.json"; 
-var tianjin ="/js/json/province/tianjin.json"; 
-var sichuan ="/js/json/province/sichuan.json"; 
-var shanxi ="/js/json/province/shanxi.json"; 
-var shangxi ="/js/json/province/shangxi.json"; 
-var shanghai ="/js/json/province/shanghai.json"; 
-var shangdong ="/js/json/province/shangdong.json"; 
-var qinghai ="/js/json/province/qinghai.json"; 
-var ningxia ="/js/json/province/ningxia.json"; 
-var neimenggu ="/js/json/province/neimenggu.json"; 
-var liaoning ="/js/json/province/liaoning.json"; 
-var jilin ="/js/json/province/jilin.json"; 
-var jiangxi ="/js/json/province/jiangxi.json"; 
-var jiangsu ="/js/json/province/jiangsu.json"; 
-var hunan ="/js/json/province/hunan.json"; 
-var hubei ="/js/json/province/hubei.json"; 
-var henan ="/js/json/province/henan.json"; 
-var heilongjiang ="/js/json/province/heilongjiang.json"; 
-var hebei ="/js/json/province/hebei.json"; 
-var guizhou ="/js/json/province/guizhou.json"; 
-var guangxi ="/js/json/province/guangxi.json"; 
-var guangdong ="/js/json/province/guangdong.json"; 
-var gansu ="/js/json/province/gansu.json"; 
-var chongqing ="/js/json/province/chongqing.json"; 
-var aomen ="/js/json/province/aomen.json"; 
-var anhui ="/js/json/province/anhui.json"; 
-var beijing ="/js/json/province/beijing.json"; 
-var fujian ="/js/json/province/fujian.json"; 
-var xianggang ="/js/json/province/xianggang.json"; 
-
-if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
-    $('#contents,.title').css('display','none');
-}
-
-echarts.extendsMap = function(id, opt) {
-    // 实例
-    var chart = this.init(document.getElementById(id));
-
-    var curGeoJson = {};
-    var cityMap = {
-        '中国': zhongguo,
-        '上海': shanghai,
-        '河北': hebei,
-        '山西': shangxi,
-        '内蒙古': neimenggu,
-        '辽宁': liaoning,
-        '吉林': jilin,
-        '黑龙江': heilongjiang,
-        '江苏': jiangsu,
-        '浙江': zhejiang,
-        '安徽': anhui,
-        '福建': fujian,
-        '江西': jiangxi,
-        '山东': shangdong,
-        '河南': henan,
-        '湖北': hubei,
-        '湖南': hunan,
-        '广东': guangdong,
-        '广西': guangxi,
-        '海南': hainan,
-        '四川': sichuan,
-        '贵州': guizhou,
-        '云南': yunnan,
-        '西藏': xizang,
-        '陕西': shanxi,
-        '甘肃': gansu,
-        '青海': qinghai,
-        '宁夏': ningxia,
-        '新疆': xinjiang,
-        '北京': beijing,
-        '天津': tianjin,
-        '重庆': chongqing,
-        '香港': xianggang,
-        '澳门': aomen
-    };
-    var geoCoordMap = {
-        "南昌": [116.0046,28.6633],
-        "深圳": [114.5435,22.5439],
-        "苏州": [120.6519,31.3989],
-        "厦门": [118.1689,24.6478],
-        "杭州": [119.5313,29.8773],
-        "上饶":[117.97,28.45]
-    };
-    
-    var levelColorMap = {
-        '1': 'rgba(241, 109, 115, .8)',
-        '2': 'rgba(255, 235, 59, .7)',
-        '3': 'rgba(147, 235, 248, 1)'
-    };
-
-    var defaultOpt = {
-        mapName: 'china', // 地图展示
-        goDown: false, // 是否下钻
-        bgColor: '#404a59', // 画布背景色
-        activeArea: [], // 区域高亮,同echarts配置项
-        data: [],
-        // 下钻回调(点击的地图名、实例对象option、实例对象)
-        callback: function(name, option, instance) {}
-    };
-    if (opt) opt = this.util.extend(defaultOpt, opt);
-
-    // 层级索引
-    var name = [opt.mapName];
-    var idx = 0;
-    var pos = {
-        leftPlus: 115,
-        leftCur: 150,
-        left: 198,
-        top: 50
-    };
-
-    var line = [
-        [0, 0],
-        [8, 11],
-        [0, 22]
-    ];
-    // style
-    var style = {
-        font: '18px "Microsoft YaHei", sans-serif',
-        textColor: '#eee',
-        lineColor: 'rgba(255,204,204, 1)'
-    };
-
-    var handleEvents = {
-        /**
-         * i 实例对象
-         * o option
-         * n 地图名
-         **/
-        resetOption: function(i, o, n) {
-            var breadcrumb = this.createBreadcrumb(n);
-            var j = name.indexOf(n);
-            var l = o.graphic.length;
-            if (j < 0) {
-                o.graphic.push(breadcrumb);
-                o.graphic[0].children[0].shape.x2 = 145;
-                o.graphic[0].children[1].shape.x2 = 145;
-                if (o.graphic.length > 2) {
-                    var cityData = [];
-                    var cityJson;
-                    for (var x = 0; x < opt.data.length; x++) {
-                        if(n === opt.data[x].city){
-                            $([opt.data[x]]).each(function(index,data){
-                                cityJson = {city:data.city,name:data.name,value:data.value,crew:data.crew,company:data.company,position:data.position,region:data.region};
-                                cityData.push(cityJson)
-                            }) 
-                        }
-                    }
-                    
-                    if(cityData!=null){
-                        o.series[0].data = handleEvents.initSeriesData(cityData);
-                    }else{
-                        o.series[0].data = [];
-                    }
-                    
-                    
-                }
-                name.push(n);
-                idx++;
-            } else {
-                o.graphic.splice(j + 2, l);
-                if (o.graphic.length <= 2) {
-                    o.graphic[0].children[0].shape.x2 = 60;
-                    o.graphic[0].children[1].shape.x2 = 60;
-                    o.series[0].data = handleEvents.initSeriesData(opt.data);
-                };
-                name.splice(j + 1, l);
-                idx = j;
-                pos.leftCur -= pos.leftPlus * (l - j - 1);
-            };
-
-            o.geo.map = n;
-            o.geo.zoom = 0.4;
-            i.clear();
-            i.setOption(o);
-            this.zoomAnimation();
-            opt.callback(n, o, i);
-        },
-
-        /**
-         * name 地图名
-         **/
-        createBreadcrumb: function(name) {
-            var cityToPinyin = {
-                '中国': 'zhongguo',
-                '上海': 'shanghai',
-                '河北': 'hebei',
-                '山西': 'shangxi',
-                '内蒙古': 'neimenggu',
-                '辽宁': 'liaoning',
-                '吉林': 'jilin',
-                '黑龙江': 'heilongjiang',
-                '江苏': 'jiangsu',
-                '浙江': 'zhejiang',
-                '安徽': 'anhui',
-                '福建': 'fujian',
-                '江西': 'jiangxi',
-                '山东': 'shangdong',
-                '河南': 'henan',
-                '湖北': 'hubei',
-                '湖南': 'hunan',
-                '广东': 'guangdong',
-                '广西': 'guangxi',
-                '海南': 'hainan',
-                '四川': 'sichuan',
-                '贵州': 'guizhou',
-                '云南': 'yunnan',
-                '西藏': 'xizang',
-                '陕西': 'shanxi',
-                '甘肃': 'gansu',
-                '青海': 'qinghai',
-                '宁夏': 'ningxia',
-                '新疆': 'xinjiang',
-                '北京': 'beijing',
-                '天津': 'tianjin',
-                '重庆': 'chongqing',
-                '香港': 'xianggang',
-                '澳门': 'aomen'
-            };
-            var breadcrumb = {
-                type: 'group',
-                id: name,
-                left: pos.leftCur + pos.leftPlus,
-                top: pos.top + 3,
-                children: [{
-                    type: 'polyline',
-                    left: -90,
-                    top: -14,
-                    shape: {
-                        points: line
-                    },
-                    style: {
-                        stroke: '#FFF',
-                        key: name
-                    },
-                    onclick: function() {
-                        var name = this.style.key;
-                        handleEvents.resetOption(chart, option, name);
-                    }
-                }, {
-                    type: 'text',
-                    left: -68,
-                    top: 'middle',
-                    style: {
-                        text: name,
-                        textAlign: 'center',
-                        fill: style.textColor,
-                        font: style.font
-                    },
-                    onclick: function() {
-                        var name = this.style.text;
-                        handleEvents.resetOption(chart, option, name);
-                    }
-                }, {
-                    type: 'text',
-                    left: -68,
-                    top: 10,
-                    style: {
-                        name: name,
-                        textAlign: 'center',
-                        fill: style.textColor,
-                        font: '12px "Microsoft YaHei", sans-serif',
-                    },
-                    onclick: function() {
-                        // console.log(this.style);
-                        var name = this.style.name;
-                        handleEvents.resetOption(chart, option, name);
-                    }
-                }]
-            }
-
-            pos.leftCur += pos.leftPlus;
-
-            return breadcrumb;
-        },
-
-       // 设置effectscatter
-        initSeriesData: function(data) {
-            var temp = [];
-            for (var i = 0; i < data.length; i++) {
-                var geoCoord = geoCoordMap[data[i].name];
-                if (geoCoord) {
-                    temp.push({
-                        name: data[i].name,
-                        value: geoCoord.concat(data[i].value),
-                        crew:data[i].crew,
-						company:data[i].company,
-						position:data[i].position,
-						region:data[i].region
-                    });
-                }
-            };
-            return temp;
-        },
-        zoomAnimation: function() {
-            var count = null;
-            var zoom = function(per) {
-                if (!count) count = per;
-                count = count + per;
-                // console.log(per,count);
-                chart.setOption({
-                    geo: {
-                        zoom: count
-                    }
-                });
-                if (count < 1) window.requestAnimationFrame(function() {
-                    zoom(0.2);
-                });
-            };
-            window.requestAnimationFrame(function() {
-                zoom(0.2);
-            });
-        }
-    };
-
-    var option = {
-        backgroundColor: opt.bgColor,
-        tooltip: {
-            show: true,
-            trigger:'item',
-            alwaysShowContent:false,
-            backgroundColor:'rgba(50,50,50,0.7)',
-            hideDelay:100,
-            triggerOn:'mousemove',
-            enterable:true,
-            position:['60%','70%'],
-            formatter:function(params, ticket, callback){
-                return '地点：'+params.data.name+'<br/>'+'时间：'+params.data.crew+'<br/>'+'事件：'+params.data.company+'<br/>'+'所在位置：'+params.data.position
-            }
-        },
-        graphic: [{
-            type: 'group',
-            left: pos.left,
-            top: pos.top - 4,
-            children: [{
-                type: 'line',
-                left: 0,
-                top: -20,
-                shape: {
-                    x1: 0,
-                    y1: 0,
-                    x2: 60,
-                    y2: 0
-                },
-                style: {
-                    stroke: style.lineColor,
-                }
-            }, {
-                type: 'line',
-                left: 0,
-                top: 20,
-                shape: {
-                    x1: 0,
-                    y1: 0,
-                    x2: 60,
-                    y2: 0
-                },
-                style: {
-                    stroke: style.lineColor,
-                }
-            }]
-        }, 
-        {
-            id: name[idx],
-            type: 'group',
-            left: pos.left + 14,
-            top: pos.top+3,
-            children: [{
-                type: 'polyline',
-                left: 90,
-                top: -12,
-                shape: {
-                    points: line
-                },
-                style: {
-                    stroke: 'transparent',
-                    key: name[0]
-                },
-                onclick: function() {
-                    var name = this.style.key;
-                    handleEvents.resetOption(chart, option, name);
-                }
-            }, {
-                type: 'text',
-                left: 0,
-                top: 'middle',
-                style: {
-                    text: '中国',
-                    textAlign: 'center',
-                    fill: style.textColor,
-                    font: style.font
-                },
-                onclick: function() {
-                    handleEvents.resetOption(chart, option, '中国');
-                }
-            }, {
-                type: 'text',
-                left: 0,
-                top: 10,
-                style: {
-                    textAlign: 'center',
-                    fill: style.textColor,
-                    font: '12px "Microsoft YaHei", sans-serif',
-                },
-                onclick: function() {
-                    handleEvents.resetOption(chart, option, '中国');
-                }
-            }]
-        }],
-        geo: {
-            map: opt.mapName,
-            roam: true,
-            zoom: 1,
-            label: {
-                normal: {
-                    show: false,
-                    textStyle: {
-                        color: '#fff'
-                    }
-                },
-                emphasis: {
-                    textStyle: {
-                        color: '#fff'
-                    }
-                }
-            },
-            itemStyle: {
-                normal: {
-                    borderColor: 'rgba(255,204,204, 1)',
-                    borderWidth: 1,
-                    areaColor: {
-                        type: 'radial',
-                        x: 0.5,
-                        y: 0.5,
-                        r: 0.8,
-                        colorStops: [{
-                            offset: 0,
-                            color: 'rgba(255,204,204, 0)' // 0% 处的颜色
-                        }, {
-                            offset: 1,
-                            color: 'rgba(255,204,204, .2)' // 100% 处的颜色
-                        }],
-                        globalCoord: false // 缺省为 false
-                    },
-                    shadowColor: 'rgba(128, 217, 248, 1)',
-                    // shadowColor: 'rgba(255, 255, 255, 1)',
-                    shadowOffsetX: -2,
-                    shadowOffsetY: 2,
-                    shadowBlur: 10
-                },
-                emphasis: {
-                    areaColor: 'rgba(255,204,204, 1)',
-                    borderWidth: 0
-                }
-            },
-            regions: opt.activeArea.map(function(item) {
-                if (typeof item !== 'string') {
-                    return {
-                        name: item.name,
-                        itemStyle: {
-                            normal: {
-                                areaColor: item.areaColor || '#389BB7'
-                            }
-                        },
-                        label: {
-                            normal: {
-                                show: item.showLabel,
-                                textStyle: {
-                                    color: '#fff'
-                                }
-                            }
-                        }
-                    }
-                } else {
-                    return {
-                        name: item,
-                        itemStyle: {
-                            normal: {
-                                borderColor: '#91e6ff',
-                                areaColor: '#389BB7'
-                            }
-                        }
-                    }
-                }
-            })
-        },
-        series: [{
-            type: 'effectScatter',
-            coordinateSystem: 'geo',
-            showEffectOn: 'render',
-            rippleEffect: {
-                period:15,
-                scale: 6,
-                brushType: 'fill'
-            },
-            hoverAnimation: true,
-            label: {
-                normal: {
-                    show: true,
-                    formatter:'{b}',
-                    offset:[10,15],
-                    textStyle: {
-                        color: '#fff'
-                    }
-                },
-                emphasis: {
-                    textStyle: {
-                        color: '#fff'
-                    }
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#5DBCBC',
-                    shadowBlur: 15,
-                    shadowColor: '#333'
-                }
-            },
-            data: handleEvents.initSeriesData(opt.data)
-        }]
-    };
-
-    chart.setOption(option);
-    // 添加事件
-    chart.on('click', function(params) {
-        var _self = this;
-        if (opt.goDown && params.name !== name[idx]) {
-            if (cityMap[params.name]) {
-                var url = cityMap[params.name];
-                $.get(url, function(response) {
-                    //console.log(response);
-                    curGeoJson = response;
-                    echarts.registerMap(params.name, response);
-                    handleEvents.resetOption(_self, option, params.name);
-                });
-            }
-        }
-    });
-
-    chart.setMap = function(mapName) {
-        var _self = this;
-        if (mapName.indexOf('市') < 0) mapName = mapName + '市';
-        var citySource = cityMap[mapName];
-        if (citySource) {
-            var url = './map/' + citySource + '.json';
-            $.get(url, function(response) {
-                // console.log(response);
-                curGeoJson = response;
-                echarts.registerMap(mapName, response);
-                handleEvents.resetOption(_self, option, mapName);
-            });
-        }
-        
-    };
-
-    return chart;
-};
-var myChart;
-$.getJSON(zhongguo, function(geoJson) {
-    echarts.registerMap('中国', geoJson);
-    myChart = echarts.extendsMap('mains', {
-        bgColor: '#555', // 画布背景色
-        mapName: '中国', // 地图名
-        goDown: true, // 是否下钻
-        // 下钻回调
-        callback: function(name, option, instance) {
-            //console.log(name, option, instance);
-        },
-        // 数据展示            	
-        data: [{city:'江西',name: "南昌",value: '2014年',crew: '2014年',company:"求学",position:'江西南昌经开区',region:'北方大区'},
-                {city:'广东',name: "深圳",value: '2018年',crew:'2018年',company:"实习",position:'广东深圳南山区',region:'东北大区'},
-                {city:'江苏',name: "苏州",value: '2017年',crew:'2017年',company:"实习",position:'江苏昆山巴城镇',region:'华北大区'},
-                {city:'福建',name: "厦门",value: '2015年',crew:'2015年',company:"旅游",position:'福建厦门',region:'华北大区'},
-                {city:'浙江',name: "杭州",value: '2019年',crew:'2019年',company:"工作",position:'浙江杭州江干区',region:'华北大区'},
-                {city:'江西',name: "上饶",value: '-年',crew:'--年',company:"出生地",position:'上饶',region:'上饶市'}]
-    });
-})
-
-
-$(window).on("resize", function () {
-    if(myChart){
-        myChart.resize();
-    }
-})
-</script>
-    </div>
-    
     
     <main id="main" class="main" style="height:100%">
       <div class="main-inner">
@@ -4129,6 +3500,161 @@ $(window).on("resize", function () {
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/10/f-e/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    <div>
+          
+    </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/29/centos-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sanr Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sanr's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/29/centos-1/" itemprop="url">阿里云轻量服务器Centos 7.3开发环境配置</a></h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">posted</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-29T00:00:00+08:00">
+                2018-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/server/" itemprop="url" rel="index">
+                    <span itemprop="name">server</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          前言最近想自己开发一个小程序，需要服务器和后台给小程序提供接口。所以记录了一下，服务器在开发前必须要准备的开发环境。本人是前端小菜鸡，后台用的是node,数据库用mysql，顺便用nginx反向代理。
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/29/centos-1/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -4688,7 +4214,7 @@ $(window).on("resize", function () {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -4699,7 +4225,7 @@ $(window).on("resize", function () {
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -4710,7 +4236,7 @@ $(window).on("resize", function () {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -4798,11 +4324,12 @@ $(window).on("resize", function () {
       <div class="footer-inner">
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Sanr Chen</span>
+  <span class="author" itemprop="copyrightHolder">Sanr Chen</span>&nbsp;&nbsp;&nbsp;
+  <span><a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备19034052号-1</a></span>
 
   
 </div>
@@ -4818,7 +4345,7 @@ $(window).on("resize", function () {
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共74.7k字</span>
+  <span class="post-count">博客全站共75.4k字</span>
 </div>
 
 <style>
