@@ -4,8 +4,68 @@
 
     
   <url>
+    <loc>http://yoursite.com/2020/04/26/otherLogin/</loc>
+    <lastmod>2020-04-26T10:01:40.913Z</lastmod>
+    <data>
+        <display>
+        <title>钉钉登录</title>
+        <pubTime>2020-04-26T09:59:36.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/08/27/html%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-04-26T09:47:32.180Z</lastmod>
+    <data>
+        <display>
+        <title>HTML基础</title>
+        <pubTime>2018-08-26T16:00:00.000Z</pubTime>
+        
+        <tag>HTML基础</tag>
+         
+        <tag>HTML笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/13/hello-world/</loc>
+    <lastmod>2020-04-26T09:47:29.056Z</lastmod>
+    <data>
+        <display>
+        <title>安逸亦或</title>
+        <pubTime>2018-06-12T16:00:00.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2020/04/26/vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E6%9D%83%E9%99%90%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2020-04-26T07:39:14.946Z</lastmod>
+    <lastmod>2020-04-26T09:47:15.369Z</lastmod>
     <data>
         <display>
         <title>vue单页面动态路由权限配置</title>
@@ -15,6 +75,101 @@
            
              
               <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/10/15/renren-fast-dynamicMenuRoutes/</loc>
+    <lastmod>2020-04-26T09:47:10.590Z</lastmod>
+    <data>
+        <display>
+        <title>人人开源-动态菜单路由</title>
+        <pubTime>2018-10-14T16:00:00.000Z</pubTime>
+        
+        <tag>vue-router</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/17/XHR/</loc>
+    <lastmod>2020-04-26T09:47:05.422Z</lastmod>
+    <data>
+        <display>
+        <title>XMLHttpRequest详解</title>
+        <pubTime>2018-09-16T16:00:00.000Z</pubTime>
+        
+        <tag>FE</tag>
+         
+        <tag>interview</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB/interview/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/02/23/url-opeation/</loc>
+    <lastmod>2020-04-26T09:47:03.089Z</lastmod>
+    <data>
+        <display>
+        <title>浏览器输入url之后发生了什么?</title>
+        <pubTime>2019-02-22T16:00:00.000Z</pubTime>
+        
+        <tag>前端开发</tag>
+         
+        <tag>计算机基础</tag>
+         
+        <tag>计算机网络</tag>
+         
+         
+           
+             
+              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
+          
+             
+              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/08/23/hexo+github/</loc>
+    <lastmod>2020-04-26T09:36:11.456Z</lastmod>
+    <data>
+        <display>
+        <title>使用Hexo + Github Pages搭建个人博客</title>
+        <pubTime>2018-08-22T16:00:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Other" url="http://yoursite.com/categories/Other/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://yoursite.com/categories/Other/Hexo/"/>
           
         </display>
     </data>
@@ -37,31 +192,6 @@
            
              
               <breadCrumb title="server" url="http://yoursite.com/categories/server/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/08/27/html%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2019-07-29T03:13:21.591Z</lastmod>
-    <data>
-        <display>
-        <title>HTML基础</title>
-        <pubTime>2018-08-26T16:00:00.000Z</pubTime>
-        
-        <tag>HTML基础</tag>
-         
-        <tag>HTML笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
-          
-             
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
           
         </display>
     </data>
@@ -243,53 +373,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/06/13/hello-world/</loc>
-    <lastmod>2019-03-04T05:36:21.321Z</lastmod>
-    <data>
-        <display>
-        <title>安逸亦或</title>
-        <pubTime>2018-06-12T16:00:00.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/02/23/url-opeation/</loc>
-    <lastmod>2019-03-04T05:32:09.113Z</lastmod>
-    <data>
-        <display>
-        <title>浏览器输入url之后发生了什么?</title>
-        <pubTime>2019-02-22T16:00:00.000Z</pubTime>
-        
-        <tag>前端开发</tag>
-         
-        <tag>计算机基础</tag>
-         
-        <tag>计算机网络</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
-          
-             
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/09/01/js%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2019-03-04T05:29:46.745Z</lastmod>
     <data>
@@ -365,29 +448,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/08/23/hexo+github/</loc>
-    <lastmod>2019-03-04T05:28:05.665Z</lastmod>
-    <data>
-        <display>
-        <title>使用Hexo + Github Pages搭建个人博客</title>
-        <pubTime>2018-08-22T16:00:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Other" url="http://yoursite.com/categories/Other/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://yoursite.com/categories/Other/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/07/27/life/</loc>
     <lastmod>2019-03-04T05:27:06.442Z</lastmod>
     <data>
@@ -418,51 +478,6 @@
         <tag>vue</tag>
          
         <tag>cookie</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/09/17/XHR/</loc>
-    <lastmod>2019-03-04T05:25:38.593Z</lastmod>
-    <data>
-        <display>
-        <title>XMLHttpRequest详解</title>
-        <pubTime>2018-09-16T16:00:00.000Z</pubTime>
-        
-        <tag>FE</tag>
-         
-        <tag>interview</tag>
-         
-         
-           
-             
-              <breadCrumb title="WEB" url="http://yoursite.com/categories/WEB/"/>
-          
-             
-              <breadCrumb title="interview" url="http://yoursite.com/categories/WEB/interview/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/10/15/renren-fast-dynamicMenuRoutes/</loc>
-    <lastmod>2019-03-04T05:25:11.626Z</lastmod>
-    <data>
-        <display>
-        <title>人人开源-动态菜单路由</title>
-        <pubTime>2018-10-14T16:00:00.000Z</pubTime>
-        
-        <tag>vue-router</tag>
          
          
            
