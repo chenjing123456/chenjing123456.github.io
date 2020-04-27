@@ -4,8 +4,103 @@
 
     
   <url>
+    <loc>http://yoursite.com/2020/04/27/%E9%92%89%E9%92%89%E7%99%BB%E5%BD%95/</loc>
+    <lastmod>2020-04-27T09:58:12.939Z</lastmod>
+    <data>
+        <display>
+        <title>钉钉登录</title>
+        <pubTime>2020-04-27T09:31:08.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/27/life/</loc>
+    <lastmod>2020-04-27T09:20:16.914Z</lastmod>
+    <data>
+        <display>
+        <title>他</title>
+        <pubTime>2018-07-26T16:00:00.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/10/27/life3/</loc>
+    <lastmod>2020-04-27T09:19:06.954Z</lastmod>
+    <data>
+        <display>
+        <title>九思</title>
+        <pubTime>2018-10-27T01:29:24.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/13/hello-world/</loc>
+    <lastmod>2020-04-27T09:19:04.204Z</lastmod>
+    <data>
+        <display>
+        <title>安逸亦或</title>
+        <pubTime>2018-06-12T16:00:00.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/11/27/personal/</loc>
+    <lastmod>2020-04-27T09:16:23.163Z</lastmod>
+    <data>
+        <display>
+        <title>大梦谁先觉</title>
+        <pubTime>2018-11-26T16:00:00.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2020/04/23/vueSingleRoutePage/</loc>
-    <lastmod>2020-04-27T08:29:57.274Z</lastmod>
+    <lastmod>2020-04-27T09:11:29.699Z</lastmod>
     <data>
         <display>
         <title>vue单页面动态路由权限配置</title>
@@ -60,26 +155,6 @@
           
              
               <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/06/13/hello-world/</loc>
-    <lastmod>2020-04-26T09:47:29.056Z</lastmod>
-    <data>
-        <display>
-        <title>安逸亦或</title>
-        <pubTime>2018-06-12T16:00:00.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
           
         </display>
     </data>
@@ -453,26 +528,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/07/27/life/</loc>
-    <lastmod>2019-03-04T05:27:06.442Z</lastmod>
-    <data>
-        <display>
-        <title>他</title>
-        <pubTime>2018-07-26T16:00:00.000Z</pubTime>
-        
-        <tag>daily</tag>
-         
-         
-           
-             
-              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/12/24/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2019-03-04T05:26:09.668Z</lastmod>
     <data>
@@ -488,46 +543,6 @@
            
              
               <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/11/27/personal/</loc>
-    <lastmod>2019-03-04T05:24:37.585Z</lastmod>
-    <data>
-        <display>
-        <title>大梦谁先觉</title>
-        <pubTime>2018-11-26T16:00:00.000Z</pubTime>
-        
-        <tag>daily</tag>
-         
-         
-           
-             
-              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/10/27/life3/</loc>
-    <lastmod>2019-03-04T05:23:41.363Z</lastmod>
-    <data>
-        <display>
-        <title>修行人生</title>
-        <pubTime>2018-10-27T01:29:24.000Z</pubTime>
-        
-        <tag>daily</tag>
-         
-         
-           
-             
-              <breadCrumb title="daily" url="http://yoursite.com/categories/daily/"/>
           
         </display>
     </data>
