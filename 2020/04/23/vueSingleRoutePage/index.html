@@ -104,18 +104,18 @@
 
 
 
-<meta name="description" content="背景公司最近涉及的亩均项目大多类似，打算做一个模块化亩均产品，提高代码复用性。采用的是vue-element-admin的单页面路由创建项目。 开始搭建项目修改路由根据后台路由权限配置动态路由">
+<meta name="description" content="背景公司最近涉及的亩均项目大多类似，打算做一个模块化亩均产品，提高代码复用性。采用的是vue-element-admin的单页面路由创建项目。 方法搭建项目使用的是vue-element-admin的基本模板搭建项目，具体的使用过程参考他的官方文档，本文主要介绍这个项目的权限路由验证 路由配置项目的路由全部在router文件夹，根据后台路由权限配置动态路由；每个模块都新建文件引入到index里。">
 <meta name="keywords" content="前端开发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue单页面动态路由权限配置">
-<meta property="og:url" content="http://yoursite.com/2020/04/26/vue单页面动态路由权限配置/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/04/23/vueSingleRoutePage/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="背景公司最近涉及的亩均项目大多类似，打算做一个模块化亩均产品，提高代码复用性。采用的是vue-element-admin的单页面路由创建项目。 开始搭建项目修改路由根据后台路由权限配置动态路由">
+<meta property="og:description" content="背景公司最近涉及的亩均项目大多类似，打算做一个模块化亩均产品，提高代码复用性。采用的是vue-element-admin的单页面路由创建项目。 方法搭建项目使用的是vue-element-admin的基本模板搭建项目，具体的使用过程参考他的官方文档，本文主要介绍这个项目的权限路由验证 路由配置项目的路由全部在router文件夹，根据后台路由权限配置动态路由；每个模块都新建文件引入到index里。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-26T09:47:15.369Z">
+<meta property="og:updated_time" content="2020-04-27T08:29:57.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue单页面动态路由权限配置">
-<meta name="twitter:description" content="背景公司最近涉及的亩均项目大多类似，打算做一个模块化亩均产品，提高代码复用性。采用的是vue-element-admin的单页面路由创建项目。 开始搭建项目修改路由根据后台路由权限配置动态路由">
+<meta name="twitter:description" content="背景公司最近涉及的亩均项目大多类似，打算做一个模块化亩均产品，提高代码复用性。采用的是vue-element-admin的单页面路由创建项目。 方法搭建项目使用的是vue-element-admin的基本模板搭建项目，具体的使用过程参考他的官方文档，本文主要介绍这个项目的权限路由验证 路由配置项目的路由全部在router文件夹，根据后台路由权限配置动态路由；每个模块都新建文件引入到index里。">
 
 
 
@@ -145,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/26/vue单页面动态路由权限配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/23/vueSingleRoutePage/"/>
 
 
 
@@ -315,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/vue单页面动态路由权限配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/vueSingleRoutePage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sanr Chen">
@@ -345,8 +345,8 @@
               
                 <span class="post-meta-item-text">posted</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-26T14:39:00+08:00">
-                2020-04-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-23T19:39:00+08:00">
+                2020-04-23
               </time>
             
 
@@ -368,8 +368,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -406,7 +406,24 @@
 
       
         <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>公司最近涉及的亩均项目大多类似，打算做一个模块化亩均产品，提高代码复用性。采用的是vue-element-admin的单页面路由创建项目。</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h4 id="搭建项目"><a href="#搭建项目" class="headerlink" title="搭建项目"></a>搭建项目</h4><h4 id="修改路由"><a href="#修改路由" class="headerlink" title="修改路由"></a>修改路由</h4><h4 id="根据后台路由权限配置动态路由"><a href="#根据后台路由权限配置动态路由" class="headerlink" title="根据后台路由权限配置动态路由"></a>根据后台路由权限配置动态路由</h4>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h4 id="搭建项目"><a href="#搭建项目" class="headerlink" title="搭建项目"></a>搭建项目</h4><p>使用的是vue-element-admin的基本模板搭建项目，具体的使用过程参考他的官方文档，本文主要介绍这个项目的权限路由验证</p>
+<h4 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h4><p>项目的路由全部在router文件夹，根据后台路由权限配置动态路由；每个模块都新建文件引入到index里。</p>
+<p>路由分为两类：</p>
+<ul>
+<li><p>constantRoutes固定路由，不因角色变量改变而一直存在的路由对象，例如首页，登录页，404页面等；</p>
+</li>
+<li><p>asyncRoutes变动路由，有权限的路由对象，一般在登录时根据当前用户的后台权限去筛选出asyncRoutes中的路由，组成当前用户的路由权限。</p>
+</li>
+<li><p>注意：404页面一定要放在最后</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.在初始router时把constantRoutes固定路由塞进去</span><br><span class="line">const createRouter = () =&gt; new Router(&#123;</span><br><span class="line">  // mode: &apos;history&apos;, // require service support</span><br><span class="line">  scrollBehavior: () =&gt; (&#123; y: 0 &#125;),</span><br><span class="line">  routes: constantRoutes</span><br><span class="line">&#125;)</span><br><span class="line">2.在登陆成功时通过addRoutes动态添加路由</span><br><span class="line">//accessRoutes-筛选后的路由权限</span><br><span class="line">router.addRoutes(accessRoutes)</span><br></pre></td></tr></table></figure>
+<h4 id="权限验证"><a href="#权限验证" class="headerlink" title="权限验证"></a>权限验证</h4><p>1.在router.beforeEach中做路由权限验证<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach(async(to, from, next) =&gt; &#123;</span><br><span class="line">  </span><br><span class="line">  NProgress.start()</span><br><span class="line">  const hasToken = getToken()</span><br><span class="line"></span><br><span class="line">  if (hasToken) &#123;</span><br><span class="line">    if (to.path === &apos;/login&apos;) &#123;</span><br><span class="line">      </span><br><span class="line">      next(&#123; path: &apos;/&apos; &#125;)</span><br><span class="line">      NProgress.done()</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      const hasRoles = store.getters.roles &amp;&amp; store.getters.roles.length &gt; 0</span><br><span class="line">      if (hasRoles) &#123;</span><br><span class="line">        next()</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          //获取用户基本信息</span><br><span class="line">          const &#123; roles &#125; = await store.dispatch(&apos;user/getInfo&apos;)</span><br><span class="line">          </span><br><span class="line">          // 获取动态路由权限</span><br><span class="line">          const accessRoutes = await store.dispatch(&apos;permission/generateRoutes&apos;, roles)</span><br><span class="line">          </span><br><span class="line">          //通过router.addRoutes给设置动态路由</span><br><span class="line">          router.addRoutes(accessRoutes)</span><br><span class="line">          next(&#123; ...to, replace: true &#125;)</span><br><span class="line">        &#125; catch (error) &#123;</span><br><span class="line">          await store.dispatch(&apos;user/resetToken&apos;)</span><br><span class="line">          Message.error(error || &apos;Has Error&apos;)</span><br><span class="line">          next(`/login?redirect=$&#123;to.path&#125;`)</span><br><span class="line">          NProgress.done()</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    if (whiteList.indexOf(to.path) !== -1) &#123;</span><br><span class="line">      next()</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      next(`/login?redirect=$&#123;to.path&#125;`)</span><br><span class="line">      NProgress.done()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>2.获取动态路由权限 :在store的permission/generateRoutes中</p>
+<p>项目的原方案（方案一）是通过roles[admin,editor]字段和本地写的router配置的route.meta.roles匹配来筛选出动态路由；但是这种方式不满足公司角色很多的情况，所以我改造了一下，根据不同角色返回权限列表筛选出动态路由（方案二）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line">import &#123; asyncRoutes, constantRoutes &#125; from &apos;@/router&apos;</span><br><span class="line">import &#123; getUserMenu,getMenuList &#125; from &quot;@/api/organization/permission&quot;;</span><br><span class="line">// asyncRoutes 前台需要获取权限的总路由</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Use meta.role to determine if the current user has permission</span><br><span class="line"> * @param roles</span><br><span class="line"> * @param route</span><br><span class="line"> */</span><br><span class="line">function hasPermission(roles, route) &#123;</span><br><span class="line">  if (route.meta &amp;&amp; route.meta.roles) &#123;</span><br><span class="line">    return roles.some(role =&gt; route.meta.roles.includes(role))</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    return true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Filter asynchronous routing tables by recursion</span><br><span class="line"> * @param routes asyncRoutes</span><br><span class="line"> * @param roles</span><br><span class="line"> */</span><br><span class="line">export function filterAsyncRoutes(routes, roles) &#123;</span><br><span class="line">  const res = []</span><br><span class="line"></span><br><span class="line">  routes.forEach(route =&gt; &#123;</span><br><span class="line">    const tmp = &#123; ...route &#125;</span><br><span class="line">    if (hasPermission(roles, tmp)) &#123;</span><br><span class="line">      if (tmp.children) &#123;</span><br><span class="line">        tmp.children = filterAsyncRoutes(tmp.children, roles)</span><br><span class="line">      &#125;</span><br><span class="line">      res.push(tmp)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//方案二</span><br><span class="line">export function filterAsyncRoutes2(menuList, asyncRoutes) &#123;</span><br><span class="line">  const res = []</span><br><span class="line">  menuList.forEach(route =&gt; &#123;</span><br><span class="line">    const tmp = &#123; ...route &#125;</span><br><span class="line">    let currentAsyn = asyncRoutes.find((v)=&gt;&#123;</span><br><span class="line">      return tmp.href == v.path</span><br><span class="line">    &#125;)</span><br><span class="line">    // console.log(tmp,currentAsyn);</span><br><span class="line">    if (currentAsyn) &#123;</span><br><span class="line">      if (tmp.sonMenu) &#123;</span><br><span class="line">        tmp.sonMenu = filterAsyncRoutes2(tmp.sonMenu,currentAsyn.sonMenu||[])</span><br><span class="line">      &#125;</span><br><span class="line">      res.push(currentAsyn)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  //404页面 必须再动态路由最后面加上</span><br><span class="line">  res.push(&#123; path: &apos;*&apos;, redirect: &apos;/404&apos;, hidden: true &#125;)</span><br><span class="line">  return res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const state = &#123;</span><br><span class="line">  routes: [],</span><br><span class="line">  appHeaderRoutes:[],//头部应用的路由列表 - 用于头部切换应用</span><br><span class="line">  currentRoute: &apos;&apos;,//当前应用名 - 用于筛选当前应用的路由对象</span><br><span class="line">  addRoutes: []</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const mutations = &#123;</span><br><span class="line">  SET_ROUTES: (state, routes) =&gt; &#123;</span><br><span class="line">    //constantRoutes-固定存在的路由  addRoutes- （过滤权限后的后台路由）</span><br><span class="line">    state.addRoutes = routes;</span><br><span class="line">    state.routes = constantRoutes.concat(routes)</span><br><span class="line">  &#125;,</span><br><span class="line">  SET_CURRENTROUTE: (state, name) =&gt; &#123;</span><br><span class="line">    state.currentRoute = name;</span><br><span class="line">  &#125;,</span><br><span class="line">  SET_APPHEADERROUTES:(state, routes) =&gt; &#123;</span><br><span class="line">    state.appHeaderRoutes = routes;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const actions = &#123;</span><br><span class="line">  setCurrentRoue(&#123;commit&#125;,item)&#123;</span><br><span class="line">    commit(&apos;SET_CURRENTROUTE&apos;, item.name)</span><br><span class="line">    let &#123;origin,pathname&#125; =  window.location;</span><br><span class="line">    window.location.href = `$&#123;origin&#125;$&#123;pathname&#125;#$&#123;item.href&#125;`</span><br><span class="line">  &#125;,</span><br><span class="line">  generateRoutes(&#123; commit &#125;, roles) &#123;</span><br><span class="line">    /**方案1.</span><br><span class="line">     * 根据roles(角色的列表) 过滤出动态路由 - 原方案</span><br><span class="line">     * */</span><br><span class="line">    // return new Promise(resolve =&gt; &#123;</span><br><span class="line">    //   let accessedRoutes;</span><br><span class="line">    //   if (roles.includes(&apos;admin&apos;)) &#123; //管理员可以看全部的asyncRoutes</span><br><span class="line">    //     accessedRoutes = asyncRoutes || []</span><br><span class="line">    //   &#125; else &#123; //其他成员只能看过滤权限后的</span><br><span class="line">    //     accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)</span><br><span class="line">    //   &#125;</span><br><span class="line">    //   //设置当前应用平台名 - 可拿到当前的路由对象</span><br><span class="line">    //   let name = accessedRoutes.length&gt;0 ? accessedRoutes[0].meta.title : &apos;系统设置&apos;;</span><br><span class="line">    //   commit(&apos;SET_ROUTES&apos;, accessedRoutes)</span><br><span class="line">    //   commit(&apos;SET_CURRENTROUTE&apos;,name)</span><br><span class="line">    //   resolve(accessedRoutes)</span><br><span class="line">    // &#125;)</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 方案2.-现在使用</span><br><span class="line">     * 后台根据不同角色返回权限列表 </span><br><span class="line">     * 前端再与asyncRoutes对比，过滤出本用户可查看的菜单权限accessedRoutes</span><br><span class="line">     * 再返回给addRoutes ；再通过router.addRoutes(accessRoutes)动态添加进router</span><br><span class="line">     * */</span><br><span class="line">    return new Promise((resolve,reject) =&gt; &#123;</span><br><span class="line">      getUserMenu().then(response =&gt; &#123;</span><br><span class="line">        let res = response.data;</span><br><span class="line">        let menuList = [], accessedRoutes = [];</span><br><span class="line">        if (res.code == &quot;000000&quot;) &#123;</span><br><span class="line">          menuList = res.data || [];</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          menuList = [];</span><br><span class="line">        &#125;</span><br><span class="line">        //设置头部应用的路由列表</span><br><span class="line">        commit(&apos;SET_APPHEADERROUTES&apos;, menuList);</span><br><span class="line">        //过滤出文件夹以外的菜单列表（二维变一维数组）</span><br><span class="line">        let menus = menuList.reduce((prev, cur, index) =&gt; &#123;</span><br><span class="line">          if (cur.sonMenu &amp;&amp; cur.sonMenu.length &gt; 0) &#123;</span><br><span class="line">            return prev.concat(cur.sonMenu);</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            return prev.concat([]);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;, [], 0);</span><br><span class="line">        // console.log(menus);</span><br><span class="line">        accessedRoutes = filterAsyncRoutes2(menus, asyncRoutes);</span><br><span class="line">        //设置当前应用平台名 - 可拿到当前的路由对象</span><br><span class="line">        let name = accessedRoutes.length &gt; 0 ? accessedRoutes[0].meta.title : &apos;系统设置&apos;;</span><br><span class="line">        let item = accessedRoutes.length &gt; 0 ? accessedRoutes[0] :&#123;&#125;</span><br><span class="line">        commit(&apos;SET_ROUTES&apos;, accessedRoutes)</span><br><span class="line">        commit(&apos;SET_CURRENTROUTE&apos;, name)</span><br><span class="line">        resolve(accessedRoutes)</span><br><span class="line">      &#125;).catch(error =&gt; &#123;</span><br><span class="line">        reject(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://panjiachen.gitee.io/vue-element-admin-site/zh/guide/" target="_blank" rel="noopener">vue-element-admin官方文档</a></p>
+
       
     </div>
     
@@ -440,7 +457,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/04/26/vue单页面动态路由权限配置/" title="vue单页面动态路由权限配置">http://yoursite.com/2020/04/26/vue单页面动态路由权限配置/</a>
+    <a href="http://yoursite.com/2020/04/23/vueSingleRoutePage/" title="vue单页面动态路由权限配置">http://yoursite.com/2020/04/23/vueSingleRoutePage/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -462,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/10/miniPro/" rel="next" title="小程序登录">
-                <i class="fa fa-chevron-left"></i> 小程序登录
+              <a href="/2020/02/26/element/" rel="next" title="element-ui 组件使用">
+                <i class="fa fa-chevron-left"></i> element-ui 组件使用
               </a>
             
           </div>
@@ -471,10 +488,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/26/otherLogin/" rel="prev" title="钉钉登录">
-                钉钉登录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -571,7 +584,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -582,7 +595,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -664,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#搭建项目"><span class="nav-number">2.0.1.</span> <span class="nav-text">搭建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改路由"><span class="nav-number">2.0.2.</span> <span class="nav-text">修改路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#根据后台路由权限配置动态路由"><span class="nav-number">2.0.3.</span> <span class="nav-text">根据后台路由权限配置动态路由</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#搭建项目"><span class="nav-number">2.0.1.</span> <span class="nav-text">搭建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路由配置"><span class="nav-number">2.0.2.</span> <span class="nav-text">路由配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#权限验证"><span class="nav-number">2.0.3.</span> <span class="nav-text">权限验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -707,7 +720,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共75.5k字</span>
+  <span class="post-count">博客全站共77.0k字</span>
 </div>
 
 <style>
