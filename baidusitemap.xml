@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/08/23/hexo+github/</loc>
+    <lastmod>2020-04-28T04:37:13.054Z</lastmod>
+    <data>
+        <display>
+        <title>使用Hexo + Github Pages搭建个人博客</title>
+        <pubTime>2018-08-22T16:00:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Other" url="http://yoursite.com/categories/Other/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://yoursite.com/categories/Other/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2020/04/27/%E9%92%89%E9%92%89%E7%99%BB%E5%BD%95/</loc>
     <lastmod>2020-04-27T09:58:12.939Z</lastmod>
     <data>
@@ -227,29 +250,6 @@
           
              
               <breadCrumb title="HTML" url="http://yoursite.com/categories/WEB/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/08/23/hexo+github/</loc>
-    <lastmod>2020-04-26T09:36:11.456Z</lastmod>
-    <data>
-        <display>
-        <title>使用Hexo + Github Pages搭建个人博客</title>
-        <pubTime>2018-08-22T16:00:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Other" url="http://yoursite.com/categories/Other/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://yoursite.com/categories/Other/Hexo/"/>
           
         </display>
     </data>
