@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/04/02/echarts-Carousel/</loc>
+    
+    <lastmod>2020-04-28T09:02:24.522Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/07/12/index/</loc>
     
-    <lastmod>2020-04-28T08:01:33.872Z</lastmod>
+    <lastmod>2020-04-28T08:14:13.464Z</lastmod>
     
   </url>
   
@@ -138,13 +145,6 @@
     <loc>http://yoursite.com/2018/08/10/f-e/</loc>
     
     <lastmod>2020-04-28T07:22:29.298Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/04/02/echarts-Carousel/</loc>
-    
-    <lastmod>2020-04-28T07:22:22.080Z</lastmod>
     
   </url>
   

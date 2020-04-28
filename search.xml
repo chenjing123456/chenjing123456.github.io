@@ -340,7 +340,7 @@
   <entry>
     <title><![CDATA[行到水穷处]]></title>
     <url>%2F2018%2F07%2F12%2Findex%2F</url>
-    <content type="text"><![CDATA[行到水穷处，坐看云起时 // 基于准备好的dom，初始化echarts实例 var myChart = echarts.init(document.getElementById('echarts7707')); // 指定图表的配置项和数据 var option = // 使用刚指定的配置项和数据显示图表。 myChart.setOption(option);]]></content>
+    <content type="text"><![CDATA[行到水穷处，坐看云起时]]></content>
       <categories>
         <category>Life</category>
         <category>idea</category>

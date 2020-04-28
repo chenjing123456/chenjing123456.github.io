@@ -4,8 +4,31 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/04/02/echarts-Carousel/</loc>
+    <lastmod>2020-04-28T09:02:24.522Z</lastmod>
+    <data>
+        <display>
+        <title>用echarts实现各种效果</title>
+        <pubTime>2019-04-02T07:29:32.000Z</pubTime>
+        
+        <tag>echarts</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://yoursite.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="echarts" url="http://yoursite.com/categories/Web/echarts/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/07/12/index/</loc>
-    <lastmod>2020-04-28T08:01:33.872Z</lastmod>
+    <lastmod>2020-04-28T08:14:13.464Z</lastmod>
     <data>
         <display>
         <title>行到水穷处</title>
@@ -473,29 +496,6 @@
           
              
               <breadCrumb title="interview" url="http://yoursite.com/categories/Web/interview/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/04/02/echarts-Carousel/</loc>
-    <lastmod>2020-04-28T07:22:22.080Z</lastmod>
-    <data>
-        <display>
-        <title>用echarts实现各种效果</title>
-        <pubTime>2019-04-02T07:29:32.000Z</pubTime>
-        
-        <tag>echarts</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://yoursite.com/categories/Web/"/>
-          
-             
-              <breadCrumb title="echarts" url="http://yoursite.com/categories/Web/echarts/"/>
           
         </display>
     </data>
