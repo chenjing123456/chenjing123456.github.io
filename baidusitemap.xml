@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>http://yoursite.com/2020/02/26/element/</loc>
+    <lastmod>2020-05-07T06:19:34.158Z</lastmod>
+    <data>
+        <display>
+        <title>element-ui 组件使用</title>
+        <pubTime>2020-02-26T11:59:00.000Z</pubTime>
+        
+        <tag>element</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
+          
+             
+              <breadCrumb title="element" url="http://yoursite.com/categories/Vue/element/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/04/02/echarts-Carousel/</loc>
     <lastmod>2020-04-28T09:02:24.522Z</lastmod>
     <data>
@@ -181,29 +204,6 @@
           
              
               <breadCrumb title="git" url="http://yoursite.com/categories/Other/git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2020/02/26/element/</loc>
-    <lastmod>2020-04-28T07:31:34.054Z</lastmod>
-    <data>
-        <display>
-        <title>element-ui 组件使用</title>
-        <pubTime>2020-02-26T11:59:00.000Z</pubTime>
-        
-        <tag>element</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="http://yoursite.com/categories/Vue/"/>
-          
-             
-              <breadCrumb title="element" url="http://yoursite.com/categories/Vue/element/"/>
           
         </display>
     </data>
