@@ -4,6 +4,29 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2018/07/12/index/</loc>
+    <lastmod>2020-05-15T07:39:20.254Z</lastmod>
+    <data>
+        <display>
+        <title>慎独</title>
+        <pubTime>2018-07-11T16:00:00.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="https://chensanr.gitee.io/categories/Life/"/>
+          
+             
+              <breadCrumb title="idea" url="https://chensanr.gitee.io/categories/Life/idea/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2018/08/23/hexo+github/</loc>
     <lastmod>2020-05-15T06:17:04.047Z</lastmod>
     <data>
@@ -66,29 +89,6 @@
           
              
               <breadCrumb title="echarts" url="https://chensanr.gitee.io/categories/Web/echarts/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2018/07/12/index/</loc>
-    <lastmod>2020-04-28T08:14:13.464Z</lastmod>
-    <data>
-        <display>
-        <title>行到水穷处</title>
-        <pubTime>2018-07-11T16:00:00.000Z</pubTime>
-        
-        <tag>daily</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="https://chensanr.gitee.io/categories/Life/"/>
-          
-             
-              <breadCrumb title="idea" url="https://chensanr.gitee.io/categories/Life/idea/"/>
           
         </display>
     </data>
