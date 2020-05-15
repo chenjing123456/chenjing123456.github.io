@@ -5,9 +5,9 @@
   <subtitle>三日的一二事</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://chensanr.gitee.io/"/>
   <updated>2020-04-28T07:28:09.918Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://chensanr.gitee.io/</id>
   
   <author>
     <name>Sanr Chen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>钉钉登录</title>
-    <link href="http://yoursite.com/2020/04/27/%E9%92%89%E9%92%89%E7%99%BB%E5%BD%95/"/>
-    <id>http://yoursite.com/2020/04/27/钉钉登录/</id>
+    <link href="https://chensanr.gitee.io/2020/04/27/%E9%92%89%E9%92%89%E7%99%BB%E5%BD%95/"/>
+    <id>https://chensanr.gitee.io/2020/04/27/钉钉登录/</id>
     <published>2020-04-27T09:31:08.000Z</published>
     <updated>2020-04-28T07:28:09.918Z</updated>
     
@@ -34,19 +34,19 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue" scheme="https://chensanr.gitee.io/categories/Vue/"/>
     
-      <category term="login" scheme="http://yoursite.com/categories/Vue/login/"/>
+      <category term="login" scheme="https://chensanr.gitee.io/categories/Vue/login/"/>
     
     
-      <category term="login" scheme="http://yoursite.com/tags/login/"/>
+      <category term="login" scheme="https://chensanr.gitee.io/tags/login/"/>
     
   </entry>
   
   <entry>
     <title>vue单页面动态路由权限配置</title>
-    <link href="http://yoursite.com/2020/04/23/vueSingleRoutePage/"/>
-    <id>http://yoursite.com/2020/04/23/vueSingleRoutePage/</id>
+    <link href="https://chensanr.gitee.io/2020/04/23/vueSingleRoutePage/"/>
+    <id>https://chensanr.gitee.io/2020/04/23/vueSingleRoutePage/</id>
     <published>2020-04-23T11:39:00.000Z</published>
     <updated>2020-04-28T07:30:08.807Z</updated>
     
@@ -61,19 +61,19 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue" scheme="https://chensanr.gitee.io/categories/Vue/"/>
     
-      <category term="vue-router" scheme="http://yoursite.com/categories/Vue/vue-router/"/>
+      <category term="vue-router" scheme="https://chensanr.gitee.io/categories/Vue/vue-router/"/>
     
     
-      <category term="vue-router" scheme="http://yoursite.com/tags/vue-router/"/>
+      <category term="vue-router" scheme="https://chensanr.gitee.io/tags/vue-router/"/>
     
   </entry>
   
   <entry>
     <title>element-ui 组件使用</title>
-    <link href="http://yoursite.com/2020/02/26/element/"/>
-    <id>http://yoursite.com/2020/02/26/element/</id>
+    <link href="https://chensanr.gitee.io/2020/02/26/element/"/>
+    <id>https://chensanr.gitee.io/2020/02/26/element/</id>
     <published>2020-02-26T11:59:00.000Z</published>
     <updated>2020-05-07T06:28:57.540Z</updated>
     
@@ -88,19 +88,19 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue" scheme="https://chensanr.gitee.io/categories/Vue/"/>
     
-      <category term="element" scheme="http://yoursite.com/categories/Vue/element/"/>
+      <category term="element" scheme="https://chensanr.gitee.io/categories/Vue/element/"/>
     
     
-      <category term="element" scheme="http://yoursite.com/tags/element/"/>
+      <category term="element" scheme="https://chensanr.gitee.io/tags/element/"/>
     
   </entry>
   
   <entry>
     <title>git</title>
-    <link href="http://yoursite.com/2020/01/28/git/"/>
-    <id>http://yoursite.com/2020/01/28/git/</id>
+    <link href="https://chensanr.gitee.io/2020/01/28/git/"/>
+    <id>https://chensanr.gitee.io/2020/01/28/git/</id>
     <published>2020-01-28T07:06:00.000Z</published>
     <updated>2020-04-28T07:31:38.951Z</updated>
     
@@ -115,19 +115,19 @@
     
     </summary>
     
-      <category term="Other" scheme="http://yoursite.com/categories/Other/"/>
+      <category term="Other" scheme="https://chensanr.gitee.io/categories/Other/"/>
     
-      <category term="git" scheme="http://yoursite.com/categories/Other/git/"/>
+      <category term="git" scheme="https://chensanr.gitee.io/categories/Other/git/"/>
     
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+      <category term="git" scheme="https://chensanr.gitee.io/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>小程序登录</title>
-    <link href="http://yoursite.com/2019/07/10/miniPro/"/>
-    <id>http://yoursite.com/2019/07/10/miniPro/</id>
+    <link href="https://chensanr.gitee.io/2019/07/10/miniPro/"/>
+    <id>https://chensanr.gitee.io/2019/07/10/miniPro/</id>
     <published>2019-07-09T16:00:00.000Z</published>
     <updated>2020-04-28T07:28:40.182Z</updated>
     
@@ -142,21 +142,21 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue" scheme="https://chensanr.gitee.io/categories/Vue/"/>
     
-      <category term="login" scheme="http://yoursite.com/categories/Vue/login/"/>
+      <category term="login" scheme="https://chensanr.gitee.io/categories/Vue/login/"/>
     
     
-      <category term="小程序" scheme="http://yoursite.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://chensanr.gitee.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
-      <category term="login" scheme="http://yoursite.com/tags/login/"/>
+      <category term="login" scheme="https://chensanr.gitee.io/tags/login/"/>
     
   </entry>
   
   <entry>
     <title>javaScript 继承</title>
-    <link href="http://yoursite.com/2019/06/27/js%E7%BB%A7%E6%89%BF/"/>
-    <id>http://yoursite.com/2019/06/27/js继承/</id>
+    <link href="https://chensanr.gitee.io/2019/06/27/js%E7%BB%A7%E6%89%BF/"/>
+    <id>https://chensanr.gitee.io/2019/06/27/js继承/</id>
     <published>2019-06-26T16:00:00.000Z</published>
     <updated>2020-04-28T07:23:46.135Z</updated>
     
@@ -171,19 +171,19 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="javaScript" scheme="http://yoursite.com/categories/Web/javaScript/"/>
+      <category term="javaScript" scheme="https://chensanr.gitee.io/categories/Web/javaScript/"/>
     
     
-      <category term="ECMAScript" scheme="http://yoursite.com/tags/ECMAScript/"/>
+      <category term="ECMAScript" scheme="https://chensanr.gitee.io/tags/ECMAScript/"/>
     
   </entry>
   
   <entry>
     <title>Promise使用</title>
-    <link href="http://yoursite.com/2019/05/10/promise/"/>
-    <id>http://yoursite.com/2019/05/10/promise/</id>
+    <link href="https://chensanr.gitee.io/2019/05/10/promise/"/>
+    <id>https://chensanr.gitee.io/2019/05/10/promise/</id>
     <published>2019-05-09T16:00:00.000Z</published>
     <updated>2020-04-28T07:20:55.175Z</updated>
     
@@ -198,19 +198,19 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="javaScript" scheme="http://yoursite.com/categories/Web/javaScript/"/>
+      <category term="javaScript" scheme="https://chensanr.gitee.io/categories/Web/javaScript/"/>
     
     
-      <category term="Promise" scheme="http://yoursite.com/tags/Promise/"/>
+      <category term="Promise" scheme="https://chensanr.gitee.io/tags/Promise/"/>
     
   </entry>
   
   <entry>
     <title>函数节流和防抖</title>
-    <link href="http://yoursite.com/2019/04/15/debounAThro/"/>
-    <id>http://yoursite.com/2019/04/15/debounAThro/</id>
+    <link href="https://chensanr.gitee.io/2019/04/15/debounAThro/"/>
+    <id>https://chensanr.gitee.io/2019/04/15/debounAThro/</id>
     <published>2019-04-14T16:00:00.000Z</published>
     <updated>2020-04-28T07:23:55.943Z</updated>
     
@@ -225,19 +225,19 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="javaScript" scheme="http://yoursite.com/categories/Web/javaScript/"/>
+      <category term="javaScript" scheme="https://chensanr.gitee.io/categories/Web/javaScript/"/>
     
     
-      <category term="ECMAScript" scheme="http://yoursite.com/tags/ECMAScript/"/>
+      <category term="ECMAScript" scheme="https://chensanr.gitee.io/tags/ECMAScript/"/>
     
   </entry>
   
   <entry>
     <title>用echarts实现各种效果</title>
-    <link href="http://yoursite.com/2019/04/02/echarts-Carousel/"/>
-    <id>http://yoursite.com/2019/04/02/echarts-Carousel/</id>
+    <link href="https://chensanr.gitee.io/2019/04/02/echarts-Carousel/"/>
+    <id>https://chensanr.gitee.io/2019/04/02/echarts-Carousel/</id>
     <published>2019-04-02T07:29:32.000Z</published>
     <updated>2020-04-28T09:02:24.522Z</updated>
     
@@ -252,19 +252,19 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="echarts" scheme="http://yoursite.com/categories/Web/echarts/"/>
+      <category term="echarts" scheme="https://chensanr.gitee.io/categories/Web/echarts/"/>
     
     
-      <category term="echarts" scheme="http://yoursite.com/tags/echarts/"/>
+      <category term="echarts" scheme="https://chensanr.gitee.io/tags/echarts/"/>
     
   </entry>
   
   <entry>
     <title>搞定Elist语法检测，让世界清静</title>
-    <link href="http://yoursite.com/2019/03/02/elist/"/>
-    <id>http://yoursite.com/2019/03/02/elist/</id>
+    <link href="https://chensanr.gitee.io/2019/03/02/elist/"/>
+    <id>https://chensanr.gitee.io/2019/03/02/elist/</id>
     <published>2019-03-01T16:00:00.000Z</published>
     <updated>2020-04-28T07:31:18.184Z</updated>
     
@@ -279,19 +279,19 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue" scheme="https://chensanr.gitee.io/categories/Vue/"/>
     
-      <category term="elist" scheme="http://yoursite.com/categories/Vue/elist/"/>
+      <category term="elist" scheme="https://chensanr.gitee.io/categories/Vue/elist/"/>
     
     
-      <category term="elist" scheme="http://yoursite.com/tags/elist/"/>
+      <category term="elist" scheme="https://chensanr.gitee.io/tags/elist/"/>
     
   </entry>
   
   <entry>
     <title>浏览器输入url之后发生了什么?</title>
-    <link href="http://yoursite.com/2019/02/23/url-opeation/"/>
-    <id>http://yoursite.com/2019/02/23/url-opeation/</id>
+    <link href="https://chensanr.gitee.io/2019/02/23/url-opeation/"/>
+    <id>https://chensanr.gitee.io/2019/02/23/url-opeation/</id>
     <published>2019-02-22T16:00:00.000Z</published>
     <updated>2020-04-28T07:22:54.297Z</updated>
     
@@ -306,23 +306,23 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="HTML" scheme="http://yoursite.com/categories/Web/HTML/"/>
+      <category term="HTML" scheme="https://chensanr.gitee.io/categories/Web/HTML/"/>
     
     
-      <category term="前端开发" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="前端开发" scheme="https://chensanr.gitee.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="计算机基础" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://chensanr.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="计算机网络" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="https://chensanr.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
   <entry>
     <title>vue项目中登录时记住密码的功能实现</title>
-    <link href="http://yoursite.com/2018/12/24/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://yoursite.com/2018/12/24/记住密码实现/</id>
+    <link href="https://chensanr.gitee.io/2018/12/24/%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://chensanr.gitee.io/2018/12/24/记住密码实现/</id>
     <published>2018-12-23T16:00:00.000Z</published>
     <updated>2020-04-28T07:28:19.166Z</updated>
     
@@ -337,23 +337,23 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue" scheme="https://chensanr.gitee.io/categories/Vue/"/>
     
-      <category term="login" scheme="http://yoursite.com/categories/Vue/login/"/>
+      <category term="login" scheme="https://chensanr.gitee.io/categories/Vue/login/"/>
     
     
-      <category term="login" scheme="http://yoursite.com/tags/login/"/>
+      <category term="login" scheme="https://chensanr.gitee.io/tags/login/"/>
     
-      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+      <category term="vue" scheme="https://chensanr.gitee.io/tags/vue/"/>
     
-      <category term="cookie" scheme="http://yoursite.com/tags/cookie/"/>
+      <category term="cookie" scheme="https://chensanr.gitee.io/tags/cookie/"/>
     
   </entry>
   
   <entry>
     <title>大梦谁先觉</title>
-    <link href="http://yoursite.com/2018/11/27/personal/"/>
-    <id>http://yoursite.com/2018/11/27/personal/</id>
+    <link href="https://chensanr.gitee.io/2018/11/27/personal/"/>
+    <id>https://chensanr.gitee.io/2018/11/27/personal/</id>
     <published>2018-11-26T16:00:00.000Z</published>
     <updated>2020-04-28T07:37:36.190Z</updated>
     
@@ -368,19 +368,19 @@
     
     </summary>
     
-      <category term="Life" scheme="http://yoursite.com/categories/Life/"/>
+      <category term="Life" scheme="https://chensanr.gitee.io/categories/Life/"/>
     
-      <category term="idea" scheme="http://yoursite.com/categories/Life/idea/"/>
+      <category term="idea" scheme="https://chensanr.gitee.io/categories/Life/idea/"/>
     
     
-      <category term="daily" scheme="http://yoursite.com/tags/daily/"/>
+      <category term="daily" scheme="https://chensanr.gitee.io/tags/daily/"/>
     
   </entry>
   
   <entry>
     <title>九思</title>
-    <link href="http://yoursite.com/2018/10/27/life3/"/>
-    <id>http://yoursite.com/2018/10/27/life3/</id>
+    <link href="https://chensanr.gitee.io/2018/10/27/life3/"/>
+    <id>https://chensanr.gitee.io/2018/10/27/life3/</id>
     <published>2018-10-27T01:29:24.000Z</published>
     <updated>2020-04-28T07:36:22.558Z</updated>
     
@@ -395,19 +395,19 @@
     
     </summary>
     
-      <category term="Life" scheme="http://yoursite.com/categories/Life/"/>
+      <category term="Life" scheme="https://chensanr.gitee.io/categories/Life/"/>
     
-      <category term="daily" scheme="http://yoursite.com/categories/Life/daily/"/>
+      <category term="daily" scheme="https://chensanr.gitee.io/categories/Life/daily/"/>
     
     
-      <category term="daily" scheme="http://yoursite.com/tags/daily/"/>
+      <category term="daily" scheme="https://chensanr.gitee.io/tags/daily/"/>
     
   </entry>
   
   <entry>
     <title>前端必须知道的知识点</title>
-    <link href="http://yoursite.com/2018/10/25/base/"/>
-    <id>http://yoursite.com/2018/10/25/base/</id>
+    <link href="https://chensanr.gitee.io/2018/10/25/base/"/>
+    <id>https://chensanr.gitee.io/2018/10/25/base/</id>
     <published>2018-10-24T16:00:00.000Z</published>
     <updated>2020-04-28T07:21:55.921Z</updated>
     
@@ -422,21 +422,21 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="interview" scheme="http://yoursite.com/categories/Web/interview/"/>
+      <category term="interview" scheme="https://chensanr.gitee.io/categories/Web/interview/"/>
     
     
-      <category term="FE" scheme="http://yoursite.com/tags/FE/"/>
+      <category term="FE" scheme="https://chensanr.gitee.io/tags/FE/"/>
     
-      <category term="interview" scheme="http://yoursite.com/tags/interview/"/>
+      <category term="interview" scheme="https://chensanr.gitee.io/tags/interview/"/>
     
   </entry>
   
   <entry>
     <title>人人开源-动态菜单路由</title>
-    <link href="http://yoursite.com/2018/10/15/renren-fast-dynamicMenuRoutes/"/>
-    <id>http://yoursite.com/2018/10/15/renren-fast-dynamicMenuRoutes/</id>
+    <link href="https://chensanr.gitee.io/2018/10/15/renren-fast-dynamicMenuRoutes/"/>
+    <id>https://chensanr.gitee.io/2018/10/15/renren-fast-dynamicMenuRoutes/</id>
     <published>2018-10-14T16:00:00.000Z</published>
     <updated>2020-04-28T07:30:22.870Z</updated>
     
@@ -451,19 +451,19 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue" scheme="https://chensanr.gitee.io/categories/Vue/"/>
     
-      <category term="vue-router" scheme="http://yoursite.com/categories/Vue/vue-router/"/>
+      <category term="vue-router" scheme="https://chensanr.gitee.io/categories/Vue/vue-router/"/>
     
     
-      <category term="vue-router" scheme="http://yoursite.com/tags/vue-router/"/>
+      <category term="vue-router" scheme="https://chensanr.gitee.io/tags/vue-router/"/>
     
   </entry>
   
   <entry>
     <title>css基础</title>
-    <link href="http://yoursite.com/2018/09/27/css%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2018/09/27/css基础/</id>
+    <link href="https://chensanr.gitee.io/2018/09/27/css%E5%9F%BA%E7%A1%80/"/>
+    <id>https://chensanr.gitee.io/2018/09/27/css基础/</id>
     <published>2018-09-27T01:19:28.000Z</published>
     <updated>2020-04-28T07:22:01.622Z</updated>
     
@@ -478,21 +478,21 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="CSS" scheme="http://yoursite.com/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://chensanr.gitee.io/categories/Web/CSS/"/>
     
     
-      <category term="CSS基础" scheme="http://yoursite.com/tags/CSS%E5%9F%BA%E7%A1%80/"/>
+      <category term="CSS基础" scheme="https://chensanr.gitee.io/tags/CSS%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="CSS笔记" scheme="http://yoursite.com/tags/CSS%E7%AC%94%E8%AE%B0/"/>
+      <category term="CSS笔记" scheme="https://chensanr.gitee.io/tags/CSS%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>javaScript核心ECMAScript</title>
-    <link href="http://yoursite.com/2018/09/27/js%E5%9F%BA%E7%A1%801/"/>
-    <id>http://yoursite.com/2018/09/27/js基础1/</id>
+    <link href="https://chensanr.gitee.io/2018/09/27/js%E5%9F%BA%E7%A1%801/"/>
+    <id>https://chensanr.gitee.io/2018/09/27/js基础1/</id>
     <published>2018-09-27T01:19:28.000Z</published>
     <updated>2020-04-28T07:21:05.055Z</updated>
     
@@ -507,21 +507,21 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="javaScript" scheme="http://yoursite.com/categories/Web/javaScript/"/>
+      <category term="javaScript" scheme="https://chensanr.gitee.io/categories/Web/javaScript/"/>
     
     
-      <category term="ECMAScript" scheme="http://yoursite.com/tags/ECMAScript/"/>
+      <category term="ECMAScript" scheme="https://chensanr.gitee.io/tags/ECMAScript/"/>
     
-      <category term="语法以及api" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95%E4%BB%A5%E5%8F%8Aapi/"/>
+      <category term="语法以及api" scheme="https://chensanr.gitee.io/tags/%E8%AF%AD%E6%B3%95%E4%BB%A5%E5%8F%8Aapi/"/>
     
   </entry>
   
   <entry>
     <title>在路上</title>
-    <link href="http://yoursite.com/2018/09/26/life2/"/>
-    <id>http://yoursite.com/2018/09/26/life2/</id>
+    <link href="https://chensanr.gitee.io/2018/09/26/life2/"/>
+    <id>https://chensanr.gitee.io/2018/09/26/life2/</id>
     <published>2018-09-26T01:30:28.000Z</published>
     <updated>2020-04-28T07:37:47.288Z</updated>
     
@@ -536,19 +536,19 @@
     
     </summary>
     
-      <category term="Life" scheme="http://yoursite.com/categories/Life/"/>
+      <category term="Life" scheme="https://chensanr.gitee.io/categories/Life/"/>
     
-      <category term="idea" scheme="http://yoursite.com/categories/Life/idea/"/>
+      <category term="idea" scheme="https://chensanr.gitee.io/categories/Life/idea/"/>
     
     
-      <category term="daily" scheme="http://yoursite.com/tags/daily/"/>
+      <category term="daily" scheme="https://chensanr.gitee.io/tags/daily/"/>
     
   </entry>
   
   <entry>
     <title>让div占满整个屏幕的方法</title>
-    <link href="http://yoursite.com/2018/09/25/div%E5%8D%A0%E5%B1%8F/"/>
-    <id>http://yoursite.com/2018/09/25/div占屏/</id>
+    <link href="https://chensanr.gitee.io/2018/09/25/div%E5%8D%A0%E5%B1%8F/"/>
+    <id>https://chensanr.gitee.io/2018/09/25/div占屏/</id>
     <published>2018-09-25T03:15:04.000Z</published>
     <updated>2020-04-28T07:22:11.383Z</updated>
     
@@ -563,12 +563,12 @@
     
     </summary>
     
-      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
     
-      <category term="CSS" scheme="http://yoursite.com/categories/Web/CSS/"/>
+      <category term="CSS" scheme="https://chensanr.gitee.io/categories/Web/CSS/"/>
     
     
-      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://chensanr.gitee.io/tags/CSS/"/>
     
   </entry>
   
