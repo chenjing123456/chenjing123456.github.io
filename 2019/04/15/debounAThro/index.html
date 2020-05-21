@@ -105,18 +105,20 @@
 
 
 
-<meta name="description" content="前言在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。常见的事件：    window对象的resize、scroll事件    拖拽时的mousemove事件    文字输入、自动完成的keyup事件    … 防抖(debounce)1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。eg:如果有人进电梯（">
+<meta name="description" content="节流和防抖">
 <meta name="keywords" content="ECMAScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="函数节流和防抖">
 <meta property="og:url" content="https://chensanr.gitee.io/2019/04/15/debounAThro/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="前言在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。常见的事件：    window对象的resize、scroll事件    拖拽时的mousemove事件    文字输入、自动完成的keyup事件    … 防抖(debounce)1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。eg:如果有人进电梯（">
+<meta property="og:description" content="节流和防抖">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-28T07:23:55.943Z">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/default.jpg">
+<meta property="og:updated_time" content="2020-05-21T03:36:31.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数节流和防抖">
-<meta name="twitter:description" content="前言在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。常见的事件：    window对象的resize、scroll事件    拖拽时的mousemove事件    文字输入、自动完成的keyup事件    … 防抖(debounce)1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。eg:如果有人进电梯（">
+<meta name="twitter:description" content="节流和防抖">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/web/default.jpg">
 
 
 
@@ -417,7 +419,10 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。<br>常见的事件：<br>    window对象的resize、scroll事件<br>    拖拽时的mousemove事件<br>    文字输入、自动完成的keyup事件<br>    …</p>
+        <blockquote><p>节流和防抖</p>
+</blockquote>
+<p><img src="/images/web/default.jpg" alt="目录"><a id="more"></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。<br>常见的事件：<br>    window对象的resize、scroll事件<br>    拖拽时的mousemove事件<br>    文字输入、自动完成的keyup事件<br>    …</p>
 <h2 id="防抖-debounce"><a href="#防抖-debounce" class="headerlink" title="防抖(debounce)"></a>防抖(debounce)</h2><p>1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。<br>eg:如果有人进电梯（触发事件），那电梯将在10秒钟后出发（执行事件监听器），这时如果又有人进电梯了（在10秒内再次触发该事件），我们又得等10秒再出发（重新计时）。</p>
 <p>2.应用场景：</p>
 <pre><code>给提交按钮添加防抖，防止表单多次提交
@@ -497,7 +502,7 @@ Canvas画笔功能
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/02/echarts-Carousel/" rel="next" title="用echarts实现各种效果">
+              <a href="/2019/03/12/echarts-Carousel/" rel="next" title="用echarts实现各种效果">
                 <i class="fa fa-chevron-left"></i> 用echarts实现各种效果
               </a>
             
@@ -595,7 +600,7 @@ Canvas画笔功能
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -742,7 +747,7 @@ Canvas画笔功能
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共80.2k字</span>
+  <span class="post-count">博客全站共80.9k字</span>
 </div>
 
 <style>

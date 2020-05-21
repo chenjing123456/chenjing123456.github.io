@@ -105,18 +105,20 @@
 
 
 
-<meta name="description" content="自动搜索 autocomplete 远程搜索 属性fetch-suggestions（从服务器获取数据） 功能：搜索企业名称 12345678910111213141516171819202122232425262728293031321.设置:fetch-suggestions&amp;lt;el-autocomplete     v-model=&amp;quot;defaultObj.entName&amp;quo">
+<meta name="description" content="element-ui 组件">
 <meta name="keywords" content="element">
 <meta property="og:type" content="article">
 <meta property="og:title" content="element-ui 组件使用">
 <meta property="og:url" content="https://chensanr.gitee.io/2020/02/26/element/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="自动搜索 autocomplete 远程搜索 属性fetch-suggestions（从服务器获取数据） 功能：搜索企业名称 12345678910111213141516171819202122232425262728293031321.设置:fetch-suggestions&amp;lt;el-autocomplete     v-model=&amp;quot;defaultObj.entName&amp;quo">
+<meta property="og:description" content="element-ui 组件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-07T06:28:57.540Z">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+<meta property="og:updated_time" content="2020-05-21T03:32:21.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="element-ui 组件使用">
-<meta name="twitter:description" content="自动搜索 autocomplete 远程搜索 属性fetch-suggestions（从服务器获取数据） 功能：搜索企业名称 12345678910111213141516171819202122232425262728293031321.设置:fetch-suggestions&amp;lt;el-autocomplete     v-model=&amp;quot;defaultObj.entName&amp;quo">
+<meta name="twitter:description" content="element-ui 组件">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
 
 
 
@@ -417,7 +419,10 @@
       
 
       
-        <h3 id="自动搜索-autocomplete"><a href="#自动搜索-autocomplete" class="headerlink" title="自动搜索 autocomplete"></a>自动搜索 autocomplete</h3><ul>
+        <blockquote><p>element-ui 组件</p>
+</blockquote>
+<p><img src="/images/vue/default.jpg" alt="目录"><a id="more"></a></p>
+<h3 id="自动搜索-autocomplete"><a href="#自动搜索-autocomplete" class="headerlink" title="自动搜索 autocomplete"></a>自动搜索 autocomplete</h3><ul>
 <li><p>远程搜索 属性fetch-suggestions（从服务器获取数据）</p>
 <p>功能：搜索企业名称</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">1.设置:fetch-suggestions</span><br><span class="line">&lt;el-autocomplete</span><br><span class="line">     v-model=&quot;defaultObj.entName&quot;</span><br><span class="line">     class=&quot;gov-input&quot;</span><br><span class="line">     :fetch-suggestions=&quot;querySearchAsync&quot;</span><br><span class="line">     value-key=&quot;entName&quot;</span><br><span class="line">     placeholder=&quot;请搜索&quot;</span><br><span class="line">     @select=&quot;handleSelect&quot;</span><br><span class="line">&gt;&lt;/el-autocomplete&gt;</span><br><span class="line"></span><br><span class="line">methods:&#123;</span><br><span class="line">  //2.远程搜索方法</span><br><span class="line">   querySearchAsync(queryString,cb)&#123;</span><br><span class="line">        queryString ? this.fuzzySearchEnt(queryString).then((results)=&gt;&#123;</span><br><span class="line">       cb(results);</span><br><span class="line">      &#125;) : [];</span><br><span class="line">   &#125;,</span><br><span class="line">   //后台接口-根据entName搜索企业</span><br><span class="line">   async fuzzySearchEnt(queryString)&#123;</span><br><span class="line">    let results = await new Promise((resolve,reject)=&gt;&#123;</span><br><span class="line">        fuzzySearchEnt(&#123;entName:queryString&#125;).then((res)=&gt;&#123;</span><br><span class="line">          if(res.code==&apos;0000&apos;)&#123;</span><br><span class="line">            resolve(res.data.results||[])</span><br><span class="line">          &#125;else&#123;</span><br><span class="line">            this.$message.error(res.msg);</span><br><span class="line">            reject()</span><br><span class="line">           &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    return results;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
@@ -451,8 +456,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">	return &#123;</span><br><span class="line">      loading: false,//加载中</span><br><span class="line">      count: 1,//页数</span><br><span class="line">      totalPages: 0,//总页数</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">    noMore() &#123;</span><br><span class="line">      //当起始页数大于总页数时停止加载</span><br><span class="line">      return this.count &gt;= this.totalPages;</span><br><span class="line">    &#125;,</span><br><span class="line">    disabled() &#123;</span><br><span class="line">      return this.loading || this.noMore;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    this.getList(1);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>methods</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">methods：&#123;</span><br><span class="line">// 分页查询待审核的直报</span><br><span class="line">  getList(pageNum) &#123;</span><br><span class="line">    if (pageNum) &#123;</span><br><span class="line">      this.count = 1;</span><br><span class="line">      this.list = [];</span><br><span class="line">    &#125;</span><br><span class="line">    let &#123; flowStatus, keyword, town &#125; = this.conditions;</span><br><span class="line">    if (flowStatus == &quot;全部&quot;) flowStatus = &quot;&quot;;</span><br><span class="line">    let params = &#123;</span><br><span class="line">      pageNum: this.count,</span><br><span class="line">      pageSize: 6, //每页查询条数</span><br><span class="line">      flowStatus,</span><br><span class="line">      keyword,</span><br><span class="line">      town</span><br><span class="line">    &#125;;</span><br><span class="line">    describeAuditEntCheckDataByPage(params).then(response =&gt; &#123;</span><br><span class="line">      let &#123; data, code &#125; = response;</span><br><span class="line">      this.list = this.list.concat(data.results); //因为每次后端返回的都是数组，所以这边把数组拼接到一起</span><br><span class="line">      this.total = data.totalRecord; //总数</span><br><span class="line">      this.totalPages = data.totalPage; //总页数</span><br><span class="line">      this.loading = false;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  load() &#123;</span><br><span class="line">    //滑到底部时进行加载</span><br><span class="line">    this.loading = true;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      this.count += 1; //页数+1</span><br><span class="line">      this.getList(); //调用接口，此时页数+1，查询下一页数据</span><br><span class="line">    &#125;, 2000);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">methods：&#123;</span><br><span class="line">// 分页查询待审核的直报</span><br><span class="line">  getList(pageNum) &#123;</span><br><span class="line">    if (pageNum) &#123;</span><br><span class="line">      this.count = 1;</span><br><span class="line">      this.list = [];</span><br><span class="line">    &#125;</span><br><span class="line">    let &#123; flowStatus, keyword, town &#125; = this.conditions;</span><br><span class="line">    if (flowStatus == &quot;全部&quot;) flowStatus = &quot;&quot;;</span><br><span class="line">    let params = &#123;</span><br><span class="line">      pageNum: this.count,</span><br><span class="line">      pageSize: 6, //每页查询条数</span><br><span class="line">      flowStatus,</span><br><span class="line">      keyword,</span><br><span class="line">      town</span><br><span class="line">    &#125;;</span><br><span class="line">    describeAuditEntCheckDataByPage(params).then(response =&gt; &#123;</span><br><span class="line">      let &#123; data, code &#125; = response;</span><br><span class="line">      this.list = this.list.concat(data.results); //因为每次后端返回的都是数组，所以这边把数组拼接到一起</span><br><span class="line">      this.total = data.totalRecord; //总数</span><br><span class="line">      this.totalPages = data.totalPage; //总页数</span><br><span class="line">      this.loading = false;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  load() &#123;</span><br><span class="line">    //滑到底部时进行加载</span><br><span class="line">    this.loading = true;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      this.count += 1; //页数+1</span><br><span class="line">      this.getList(); //调用接口，此时页数+1，查询下一页数据</span><br><span class="line">    &#125;, 2000);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -516,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/28/git/" rel="next" title="git">
-                <i class="fa fa-chevron-left"></i> git
+              <a href="/2020/01/26/life2/" rel="next" title="在路上">
+                <i class="fa fa-chevron-left"></i> 在路上
               </a>
             
           </div>
@@ -526,7 +530,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/23/vueSingleRoutePage/" rel="prev" title="vue单页面动态路由权限配置">
+              <a href="/2020/03/23/vueSingleRoutePage/" rel="prev" title="vue单页面动态路由权限配置">
                 vue单页面动态路由权限配置 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -614,7 +618,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -761,7 +765,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共80.2k字</span>
+  <span class="post-count">博客全站共80.9k字</span>
 </div>
 
 <style>

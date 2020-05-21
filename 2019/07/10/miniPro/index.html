@@ -105,21 +105,22 @@
 
 
 
-<meta name="description" content="介绍公司最近要开发一个受益人所有认查询的小程序。第一次接触，踩了很多坑，包括小程序登录获取授权信息等逻辑，故记录下来。开发工具：HBuilder 和微信开发者工具。主要采用uni-app代替原生进行开发。 实现逻辑判断授权判断用户是否已授权过。已授权则跳过授权逻辑12345678910111213isAuth()&amp;#123;    let that = this;    uni.getSettin">
+<meta name="description" content="小程序登录">
 <meta name="keywords" content="小程序,login">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小程序登录">
 <meta property="og:url" content="https://chensanr.gitee.io/2019/07/10/miniPro/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="介绍公司最近要开发一个受益人所有认查询的小程序。第一次接触，踩了很多坑，包括小程序登录获取授权信息等逻辑，故记录下来。开发工具：HBuilder 和微信开发者工具。主要采用uni-app代替原生进行开发。 实现逻辑判断授权判断用户是否已授权过。已授权则跳过授权逻辑12345678910111213isAuth()&amp;#123;    let that = this;    uni.getSettin">
+<meta property="og:description" content="小程序登录">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/login.png">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/auth.png">
-<meta property="og:updated_time" content="2020-04-28T07:28:40.182Z">
+<meta property="og:updated_time" content="2020-05-21T03:29:24.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序登录">
-<meta name="twitter:description" content="介绍公司最近要开发一个受益人所有认查询的小程序。第一次接触，踩了很多坑，包括小程序登录获取授权信息等逻辑，故记录下来。开发工具：HBuilder 和微信开发者工具。主要采用uni-app代替原生进行开发。 实现逻辑判断授权判断用户是否已授权过。已授权则跳过授权逻辑12345678910111213isAuth()&amp;#123;    let that = this;    uni.getSettin">
-<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/login.png">
+<meta name="twitter:description" content="小程序登录">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
 
 
 
@@ -420,7 +421,10 @@
       
 
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>公司最近要开发一个受益人所有认查询的小程序。第一次接触，踩了很多坑，包括小程序登录获取授权信息等逻辑，故记录下来。<br>开发工具：HBuilder 和微信开发者工具。<br>主要采用uni-app代替原生进行开发。</p>
+        <blockquote><p>小程序登录</p>
+</blockquote>
+<p><img src="/images/vue/default.jpg" alt="目录"><a id="more"></a></p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>公司最近要开发一个受益人所有认查询的小程序。第一次接触，踩了很多坑，包括小程序登录获取授权信息等逻辑，故记录下来。<br>开发工具：HBuilder 和微信开发者工具。<br>主要采用uni-app代替原生进行开发。</p>
 <h2 id="实现逻辑"><a href="#实现逻辑" class="headerlink" title="实现逻辑"></a>实现逻辑</h2><h3 id="判断授权"><a href="#判断授权" class="headerlink" title="判断授权"></a>判断授权</h3><p>判断用户是否已授权过。已授权则跳过授权逻辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">isAuth()&#123;</span><br><span class="line">    let that = this;</span><br><span class="line">    uni.getSetting(&#123;</span><br><span class="line">        success(res) &#123;</span><br><span class="line">            //res.authSetting //所有设置项</span><br><span class="line">            if(res.authSetting[&apos;scope.userInfo&apos;])&#123;//获取用户是否已授权用户信息项</span><br><span class="line">                that.isShow = false;   //this.isShow用于判断是否显示用户授权弹框</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                that.isShow = true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
 <p>uni.openSetting获取用户的当前设置，即可获取用户是否已经授权。</p>
 <h3 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h3><p>未授权则弹框进行授权登录。注意，微信未防止授权泛滥，修改了授权逻辑，必须通过按钮获取授权。<br>1.弹框代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;uni-popup :show=&quot;isShow&quot; type=&quot;middle&quot; mode=&quot;fixed&quot;&gt;</span><br><span class="line">    &lt;view class=&quot;auth-modal&quot;&gt;</span><br><span class="line">        &lt;image class=&quot;modal-img&quot; src=&quot;../../static/copy@2x.png&quot;&gt;&lt;/image&gt;</span><br><span class="line">        &lt;view class=&quot;modal-text&quot;&gt;</span><br><span class="line">            &lt;text&gt;&#123;&#123;contant[0]&#125;&#125;&lt;/text&gt;</span><br><span class="line">        &lt;/view&gt;</span><br><span class="line">        &lt;button class=&apos;modal-foot bottom&apos; plain=&apos;false&apos; type=&apos;default&apos; open-type=&quot;getUserInfo&quot; withCredentials=&quot;true&quot; lang=&quot;zh_CN&quot; @getuserinfo=&quot;getUserInfo&quot;&gt;</span><br><span class="line">            &#123;&#123;contant[1]&#125;&#125;</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/uni-popup&gt;</span><br></pre></td></tr></table></figure></p>
@@ -509,7 +513,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/28/git/" rel="prev" title="git">
+              <a href="/2019/08/28/git/" rel="prev" title="git">
                 git <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -597,7 +601,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -744,7 +748,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共80.2k字</span>
+  <span class="post-count">博客全站共80.9k字</span>
 </div>
 
 <style>

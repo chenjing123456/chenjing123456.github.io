@@ -105,18 +105,20 @@
 
 
 
-<meta name="description" content="深入了解javaScript的原型以及原型链，有利于深入理解js的内部机制。 ES5继承了解 构造函数、原型对象和实例之间的关系所有函数都是Function构造函数的实例（自定义的构造函数和函数方法） 1234567891011121314function F()&amp;#123;&amp;#125; //构造函数var f = new F();//实例F.prototype //原型对象// 构造器F.pro">
+<meta name="description" content="javaScript继承">
 <meta name="keywords" content="ECMAScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javaScript 继承">
 <meta property="og:url" content="https://chensanr.gitee.io/2019/06/27/js继承/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="深入了解javaScript的原型以及原型链，有利于深入理解js的内部机制。 ES5继承了解 构造函数、原型对象和实例之间的关系所有函数都是Function构造函数的实例（自定义的构造函数和函数方法） 1234567891011121314function F()&amp;#123;&amp;#125; //构造函数var f = new F();//实例F.prototype //原型对象// 构造器F.pro">
+<meta property="og:description" content="javaScript继承">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-28T07:23:46.135Z">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/default.jpg">
+<meta property="og:updated_time" content="2020-05-21T02:43:48.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript 继承">
-<meta name="twitter:description" content="深入了解javaScript的原型以及原型链，有利于深入理解js的内部机制。 ES5继承了解 构造函数、原型对象和实例之间的关系所有函数都是Function构造函数的实例（自定义的构造函数和函数方法） 1234567891011121314function F()&amp;#123;&amp;#125; //构造函数var f = new F();//实例F.prototype //原型对象// 构造器F.pro">
+<meta name="twitter:description" content="javaScript继承">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/web/default.jpg">
 
 
 
@@ -417,7 +419,9 @@
       
 
       
-        <p>深入了解javaScript的原型以及原型链，有利于深入理解js的内部机制。</p>
+        <blockquote><p>javaScript继承</p>
+</blockquote>
+<p><img src="/images/web/default.jpg" alt="目录"><a id="more"></a><br>深入了解javaScript的原型以及原型链，有利于深入理解js的内部机制。</p>
 <h2 id="ES5继承"><a href="#ES5继承" class="headerlink" title="ES5继承"></a>ES5继承</h2><h3 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h3><ul>
 <li><p>构造函数、原型对象和实例之间的关系<br>所有函数都是Function构造函数的实例（自定义的构造函数和函数方法）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function F()&#123;&#125; //构造函数</span><br><span class="line">var f = new F();//实例</span><br><span class="line">F.prototype //原型对象</span><br><span class="line"></span><br><span class="line">// 构造器</span><br><span class="line">F.prototype.constructor === F; // true</span><br><span class="line">F.__proto__ === Function.prototype; // true</span><br><span class="line">Function.prototype.__proto__ === Object.prototype; // true</span><br><span class="line">Object.prototype.__proto__ === null; // true</span><br><span class="line"></span><br><span class="line">// 实例</span><br><span class="line">f.__proto__ === F.prototype; // true</span><br><span class="line">F.prototype.__proto__ === Object.prototype; // true</span><br><span class="line">Object.prototype.__proto__ === null; // true</span><br></pre></td></tr></table></figure>
@@ -604,7 +608,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -751,7 +755,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共80.2k字</span>
+  <span class="post-count">博客全站共80.9k字</span>
 </div>
 
 <style>

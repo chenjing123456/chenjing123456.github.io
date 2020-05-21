@@ -105,18 +105,20 @@
 
 
 
-<meta name="description" content="钉钉内部微应用免登文档：钉钉内部微应用免登  安装 npm install dingtalk-jsapi –save  引入 import * as dd from ‘dingtalk-jsapi’;  获取微应用免登授权码，再根据code登录应用   1234567891011121314151617181920212223242526272829303132333435363738394041">
+<meta name="description" content="钉钉内部微应用免登钉钉登录">
 <meta name="keywords" content="login">
 <meta property="og:type" content="article">
 <meta property="og:title" content="钉钉登录">
 <meta property="og:url" content="https://chensanr.gitee.io/2020/04/27/钉钉登录/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="钉钉内部微应用免登文档：钉钉内部微应用免登  安装 npm install dingtalk-jsapi –save  引入 import * as dd from ‘dingtalk-jsapi’;  获取微应用免登授权码，再根据code登录应用   1234567891011121314151617181920212223242526272829303132333435363738394041">
+<meta property="og:description" content="钉钉内部微应用免登钉钉登录">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-28T07:28:09.918Z">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+<meta property="og:updated_time" content="2020-05-21T03:31:04.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="钉钉登录">
-<meta name="twitter:description" content="钉钉内部微应用免登文档：钉钉内部微应用免登  安装 npm install dingtalk-jsapi –save  引入 import * as dd from ‘dingtalk-jsapi’;  获取微应用免登授权码，再根据code登录应用   1234567891011121314151617181920212223242526272829303132333435363738394041">
+<meta name="twitter:description" content="钉钉内部微应用免登钉钉登录">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
 
 
 
@@ -417,7 +419,9 @@
       
 
       
-        <h3 id="钉钉内部微应用免登"><a href="#钉钉内部微应用免登" class="headerlink" title="钉钉内部微应用免登"></a>钉钉内部微应用免登</h3><p>文档：<a href="https://ding-doc.dingtalk.com/doc#/dev/ep7bpq" target="_blank" rel="noopener">钉钉内部微应用免登</a></p>
+        <h3 id="钉钉内部微应用免登"><a href="#钉钉内部微应用免登" class="headerlink" title="钉钉内部微应用免登"></a>钉钉内部微应用免登</h3><blockquote><p>钉钉登录</p>
+</blockquote>
+<p><img src="/images/vue/default.jpg" alt="目录"><a id="more"></a><br>文档：<a href="https://ding-doc.dingtalk.com/doc#/dev/ep7bpq" target="_blank" rel="noopener">钉钉内部微应用免登</a></p>
 <ul>
 <li><p>安装 npm install dingtalk-jsapi –save</p>
 </li>
@@ -432,7 +436,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;scan_box&quot; id=&quot;scan_box&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>2.通过公司的appid拿到二维码，<br>用户扫码-扫码成功-跳转空白页登录应用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">mounted()&#123;</span><br><span class="line">	this.codeLogin();</span><br><span class="line">&#125;,</span><br><span class="line">codeLogin()&#123;</span><br><span class="line">            let that = this;</span><br><span class="line">            api.getQrDingParam().then(res=&gt;&#123;</span><br><span class="line">//                console.log(res);</span><br><span class="line">                if(res.code == &apos;0000&apos;)&#123;</span><br><span class="line">                    //1.调用后台接口拿到公司的appid</span><br><span class="line">                    this.appid = res.data.appId;</span><br><span class="line">                    //2.在需要使用钉钉登录的地方实例以下JS对象</span><br><span class="line">                    let obj = DDLogin(&#123;</span><br><span class="line">                        id: &apos;scan_box&apos;,</span><br><span class="line">                        goto: encodeURIComponent(&apos;https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=&apos; + this.appid + &apos;&amp;response_type=code&amp;scope=snsapi_login&amp;state=STATE&amp;redirect_uri=&apos; + this.redirect_uri + &apos;&apos;),</span><br><span class="line">                        style: &apos;border:none;background-color:#FFFFFF;&apos;,</span><br><span class="line">                        width: &apos;220&apos;,</span><br><span class="line">                        height: &apos;300&apos;</span><br><span class="line">                    &#125;)</span><br><span class="line">                    let hanndleMessage = function (event) &#123;</span><br><span class="line">                        let origin = event.origin;</span><br><span class="line">                        // 判断是否来自ddLogin扫码事件</span><br><span class="line">                        if (origin === &apos;https://login.dingtalk.com&apos;) &#123;</span><br><span class="line">                            let loginTmpCode = event.data;</span><br><span class="line">                            // 这里url不用进行urlencode编码</span><br><span class="line">                            let url = &apos;https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=&apos; + that.appid + &apos;&amp;response_type=code&amp;scope=snsapi_login&amp;state=STATE&amp;redirect_uri=&apos; + that.redirect_uri + &apos;&amp;loginTmpCode=&apos; + loginTmpCode;</span><br><span class="line">                            //跳转链接到新页面</span><br><span class="line">                            window.location.href = url;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;;</span><br><span class="line">                    if (typeof window.addEventListener !== &apos;undefined&apos;) &#123; // 添加事件</span><br><span class="line">                        window.addEventListener(&apos;message&apos;, hanndleMessage, false)</span><br><span class="line">                    &#125; else if (typeof window.attachEvent !== &apos;undefined&apos;) &#123;</span><br><span class="line">                        window.attachEvent(&apos;onmessage&apos;, hanndleMessage)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    return this.$message.error(res.msg)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure></p>
 <p>3.新页面的代码：后台会在新页面带上code,根据code进行登录；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//登录接口</span><br><span class="line">		getdd()&#123;</span><br><span class="line">        		let code=getLocation().query.code;</span><br><span class="line">                api.dtalkPcQrLogin(&#123;code&#125;).then(res=&gt;&#123;</span><br><span class="line">                    if (res.code == &quot;0000&quot;) &#123;</span><br><span class="line">                        setLocalStorage(&quot;token&quot;, res.data.token.token);</span><br><span class="line">                        setLocalStorage(&quot;curl&quot;, res.data.permission);</span><br><span class="line">                        setLocalStorage(&quot;department&quot;, res.data.department);</span><br><span class="line">                        setLocalStorage(&quot;level&quot;, res.data.level);</span><br><span class="line">                        setLocalStorage(&quot;grider&quot;, res.data.grider);</span><br><span class="line">                        setLocalStorage(&quot;username&quot;, res.data.username);</span><br><span class="line">                        setLocalStorage(&quot;name&quot;, res.data.realName);</span><br><span class="line">                        setLocalStorage(&quot;permissionDing&quot;, res.data.permissionDing);</span><br><span class="line">                        document.cookie = &quot;token=&quot; + res.data.token.token;</span><br><span class="line">                        let arr = JSON.parse(res.data.permission);</span><br><span class="line">                        let item = arr[0];</span><br><span class="line">                        let child = item.child[0];</span><br><span class="line">                        if (item.url &amp;&amp; item.child.length==0) &#123;</span><br><span class="line">                            gotoGovURL(`$&#123;item.url&#125;`);</span><br><span class="line">                        &#125; else if (child) &#123;</span><br><span class="line">                            gotoGovURL(`$&#123;item.url&#125;#/$&#123;child.url&#125;`);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        this.$message(&#123;</span><br><span class="line">                            message: res.msg,</span><br><span class="line">                            type: &apos;warning&apos;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br></pre></td></tr></table></figure></p>
-<p>项目: <a href="http://lylobsysc.cet0570.com/gov/login.html#/" target="_blank" rel="noopener">登录页</a> </p>
+<p>项目: <a href="http://lylobsysc.cet0570.com/gov/login.html#/" target="_blank" rel="noopener">登录页</a></p>
 
       
     </div>
@@ -495,7 +499,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/23/vueSingleRoutePage/" rel="next" title="vue单页面动态路由权限配置">
+              <a href="/2020/03/23/vueSingleRoutePage/" rel="next" title="vue单页面动态路由权限配置">
                 <i class="fa fa-chevron-left"></i> vue单页面动态路由权限配置
               </a>
             
@@ -589,7 +593,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -736,7 +740,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共80.2k字</span>
+  <span class="post-count">博客全站共80.9k字</span>
 </div>
 
 <style>

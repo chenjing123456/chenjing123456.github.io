@@ -105,18 +105,20 @@
 
 
 
-<meta name="description" content="在开发过程中我们经常碰到页面占满整个浏览器屏幕或者背景图片填满整个屏幕的需求，它实际有两种实现方式。 设置html,body的宽高使用百分比设置html,body的宽高，html和body本身没有高度，它们的高度由子元素撑起来。 12345678910111213*&amp;#123;    margin: 0;    padding: 0;&amp;#125;html,body&amp;#123;    width:">
+<meta name="description" content="div占满整个屏幕">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="让div占满整个屏幕的方法">
 <meta property="og:url" content="https://chensanr.gitee.io/2018/09/25/div占屏/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="在开发过程中我们经常碰到页面占满整个浏览器屏幕或者背景图片填满整个屏幕的需求，它实际有两种实现方式。 设置html,body的宽高使用百分比设置html,body的宽高，html和body本身没有高度，它们的高度由子元素撑起来。 12345678910111213*&amp;#123;    margin: 0;    padding: 0;&amp;#125;html,body&amp;#123;    width:">
+<meta property="og:description" content="div占满整个屏幕">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-28T07:22:11.383Z">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/default.jpg">
+<meta property="og:updated_time" content="2020-05-21T03:36:19.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让div占满整个屏幕的方法">
-<meta name="twitter:description" content="在开发过程中我们经常碰到页面占满整个浏览器屏幕或者背景图片填满整个屏幕的需求，它实际有两种实现方式。 设置html,body的宽高使用百分比设置html,body的宽高，html和body本身没有高度，它们的高度由子元素撑起来。 12345678910111213*&amp;#123;    margin: 0;    padding: 0;&amp;#125;html,body&amp;#123;    width:">
+<meta name="twitter:description" content="div占满整个屏幕">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/web/default.jpg">
 
 
 
@@ -417,7 +419,9 @@
       
 
       
-        <p>在开发过程中我们经常碰到页面占满整个浏览器屏幕或者背景图片填满整个屏幕的需求，它实际有两种实现方式。</p>
+        <blockquote><p>div占满整个屏幕</p>
+</blockquote>
+<p><img src="/images/web/default.jpg" alt="目录"><a id="more"></a><br>在开发过程中我们经常碰到页面占满整个浏览器屏幕或者背景图片填满整个屏幕的需求，它实际有两种实现方式。</p>
 <h2 id="设置html-body的宽高"><a href="#设置html-body的宽高" class="headerlink" title="设置html,body的宽高"></a>设置html,body的宽高</h2><p>使用百分比设置html,body的宽高，html和body本身没有高度，它们的高度由子元素撑起来。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line">html,body&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">div&#123;</span><br><span class="line">    width:100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    background: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="设置定位"><a href="#设置定位" class="headerlink" title="设置定位"></a>设置定位</h2><p>介绍：css中定位元素position有五种属性：<br>    static:默认值，没有定位<br>　　absolute:绝对定位，相对于父级元素进行定位<br>　　relative:相对定位<br>　　fixed:固定定位,相对于浏览器窗口进行定位<br>　　inherit:从父元素继承定位信息　　</p>
@@ -486,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/17/XHR/" rel="next" title="XMLHttpRequest详解">
-                <i class="fa fa-chevron-left"></i> XMLHttpRequest详解
+              <a href="/2018/09/17/hexo+github/" rel="next" title="使用Hexo + Github Pages搭建个人博客">
+                <i class="fa fa-chevron-left"></i> 使用Hexo + Github Pages搭建个人博客
               </a>
             
           </div>
@@ -496,8 +500,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/26/life2/" rel="prev" title="在路上">
-                在路上 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/27/css基础/" rel="prev" title="css基础">
+                css基础 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -584,7 +588,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -731,7 +735,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共80.2k字</span>
+  <span class="post-count">博客全站共80.9k字</span>
 </div>
 
 <style>

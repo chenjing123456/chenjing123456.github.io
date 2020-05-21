@@ -105,14 +105,15 @@
 
 
 
-<meta name="description" content="人人开源是轻量级的 Spring Boot 快速开发平台，实现前后端分离，通过 token 进行数据交互。而renren-fast-vue基于vue、element-ui构建开发，实现renren-fast后台管理前端功能，提供一套更优的前端解决方案。本文就一步步解析renren-fast-vue来了解实现动态菜单路由的过程。 如果想要了解更多：  renren-fast开发文档 renren-f">
+<meta name="description" content="人人开源动态路由">
 <meta name="keywords" content="vue-router">
 <meta property="og:type" content="article">
 <meta property="og:title" content="人人开源-动态菜单路由">
 <meta property="og:url" content="https://chensanr.gitee.io/2018/10/15/renren-fast-dynamicMenuRoutes/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="人人开源是轻量级的 Spring Boot 快速开发平台，实现前后端分离，通过 token 进行数据交互。而renren-fast-vue基于vue、element-ui构建开发，实现renren-fast后台管理前端功能，提供一套更优的前端解决方案。本文就一步步解析renren-fast-vue来了解实现动态菜单路由的过程。 如果想要了解更多：  renren-fast开发文档 renren-f">
+<meta property="og:description" content="人人开源动态路由">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/renren-fast-main.png">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/1.png">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/2.png">
@@ -122,11 +123,11 @@
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/5.png">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/6.png">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/7.png">
-<meta property="og:updated_time" content="2020-04-28T07:30:22.870Z">
+<meta property="og:updated_time" content="2020-05-21T03:29:51.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人人开源-动态菜单路由">
-<meta name="twitter:description" content="人人开源是轻量级的 Spring Boot 快速开发平台，实现前后端分离，通过 token 进行数据交互。而renren-fast-vue基于vue、element-ui构建开发，实现renren-fast后台管理前端功能，提供一套更优的前端解决方案。本文就一步步解析renren-fast-vue来了解实现动态菜单路由的过程。 如果想要了解更多：  renren-fast开发文档 renren-f">
-<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/renren-fast-main.png">
+<meta name="twitter:description" content="人人开源动态路由">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
 
 
 
@@ -427,7 +428,9 @@
       
 
       
-        <p>人人开源是轻量级的 Spring Boot 快速开发平台，实现前后端分离，通过 token 进行数据交互。而renren-fast-vue基于vue、element-ui构建开发，实现renren-fast后台管理前端功能，提供一套更优的前端解决方案。本文就一步步解析renren-fast-vue来了解实现动态菜单路由的过程。</p>
+        <blockquote><p>人人开源动态路由</p>
+</blockquote>
+<p><img src="/images/vue/default.jpg" alt="目录"><a id="more"></a><br>人人开源是轻量级的 Spring Boot 快速开发平台，实现前后端分离，通过 token 进行数据交互。而renren-fast-vue基于vue、element-ui构建开发，实现renren-fast后台管理前端功能，提供一套更优的前端解决方案。本文就一步步解析renren-fast-vue来了解实现动态菜单路由的过程。</p>
 <p>如果想要了解更多：</p>
 <ul>
 <li><a href="https://www.renren.io/guide" target="_blank" rel="noopener">renren-fast开发文档</a></li>
@@ -530,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/27/css基础/" rel="next" title="css基础">
-                <i class="fa fa-chevron-left"></i> css基础
+              <a href="/2018/10/07/XHR/" rel="next" title="XMLHttpRequest详解">
+                <i class="fa fa-chevron-left"></i> XMLHttpRequest详解
               </a>
             
           </div>
@@ -628,7 +631,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -775,7 +778,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共80.2k字</span>
+  <span class="post-count">博客全站共80.9k字</span>
 </div>
 
 <style>
