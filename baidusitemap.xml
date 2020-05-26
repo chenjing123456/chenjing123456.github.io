@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2020/05/26/ES-2020-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    <lastmod>2020-05-26T03:42:26.902Z</lastmod>
+    <data>
+        <display>
+        <title>ES 2020 新特性</title>
+        <pubTime>2020-05-26T03:18:18.000Z</pubTime>
+        
+        <tag>ECMAScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2019/05/10/promise/</loc>
+    <lastmod>2020-05-26T03:00:13.110Z</lastmod>
+    <data>
+        <display>
+        <title>Promise使用</title>
+        <pubTime>2019-05-09T16:00:00.000Z</pubTime>
+        
+        <tag>Promise</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2019/11/16/jackZhou/</loc>
     <lastmod>2020-05-21T09:16:40.929Z</lastmod>
     <data>
@@ -421,29 +467,6 @@
           
              
               <breadCrumb title="daily" url="https://chensanr.gitee.io/categories/Life/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2019/05/10/promise/</loc>
-    <lastmod>2020-05-21T03:37:24.487Z</lastmod>
-    <data>
-        <display>
-        <title>Promise使用</title>
-        <pubTime>2019-05-09T16:00:00.000Z</pubTime>
-        
-        <tag>Promise</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
           
         </display>
     </data>

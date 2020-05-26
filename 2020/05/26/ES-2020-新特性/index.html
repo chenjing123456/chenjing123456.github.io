@@ -92,7 +92,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ECMAScript," />
 
 
 
@@ -105,17 +105,20 @@
 
 
 
-<meta name="description" content="少时为行 长时为恕">
-<meta name="keywords" content="前端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sanr&#39;s Blog">
-<meta property="og:url" content="https://chensanr.gitee.io/tags/git/index.html">
+<meta name="description" content="ES 2020 比较好用的几个新特性">
+<meta name="keywords" content="ECMAScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES 2020 新特性">
+<meta property="og:url" content="https://chensanr.gitee.io/2020/05/26/ES-2020-新特性/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="少时为行 长时为恕">
+<meta property="og:description" content="ES 2020 比较好用的几个新特性">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/default.jpg">
+<meta property="og:updated_time" content="2020-05-26T03:42:26.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sanr&#39;s Blog">
-<meta name="twitter:description" content="少时为行 长时为恕">
+<meta name="twitter:title" content="ES 2020 新特性">
+<meta name="twitter:description" content="ES 2020 比较好用的几个新特性">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/web/default.jpg">
 
 
 
@@ -145,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://chensanr.gitee.io/tags/git/"/>
+  <link rel="canonical" href="https://chensanr.gitee.io/2020/05/26/ES-2020-新特性/"/>
 
 
 
 
 
-  <title>标签: git | Sanr's Blog</title>
+  <title>ES 2020 新特性 | Sanr's Blog</title>
   
 
 
@@ -170,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,54 +304,231 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>git<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chensanr.gitee.io/2020/05/26/ES-2020-新特性/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sanr Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sanr's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/28/git/" itemprop="url">
-              
-                <span itemprop="name">git</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">ES 2020 新特性</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-08-28T15:06:00+08:00"
-              content="2019-08-28" >
-          08-28
-        </time>
-      </div>
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">posted</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-26T11:18:18+08:00">
+                2020-05-26
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/javaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote><p>ES 2020 比较好用的几个新特性</p>
+</blockquote>
+<p><img src="/images/web/default.jpg" alt="目录"><a id="more"></a></p>
+<h3 id="可选链式操作符-（-）"><a href="#可选链式操作符-（-）" class="headerlink" title="可选链式操作符 （?.）"></a>可选链式操作符 （?.）</h3><ul>
+<li><p>如果访问对象上不存在的属性上的属性，使用.操作符会直接报错.</p>
+</li>
+<li><p>而使用可选链式操作符 ?.，如果没有值，则返回 undefined 而不是直接报错</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let person = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">// 如果person对象不包含profile会报错</span><br><span class="line">console.log(person.profile.name ?? &quot;Anonymous&quot;); // person.profile is undefined</span><br><span class="line">// 下面的路径是可选的，如果person对象不包含profile属性直接返回&quot;Anonymous&quot;</span><br><span class="line">console.log(person?.profile?.name ?? &quot;Anonymous&quot;);</span><br><span class="line">console.log(person?.profile?.age ?? 18);</span><br><span class="line"></span><br><span class="line">var age = user &amp;&amp; user.info &amp;&amp; user.info.getAge &amp;&amp; user.info.getAge();</span><br><span class="line">var age = user?.info?.getAge?.();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="空值合并-（-）"><a href="#空值合并-（-）" class="headerlink" title="空值合并 （??）"></a>空值合并 （??）</h3><ul>
+<li><p>空值合并运算符（??）是一个逻辑运算符。当左侧操作数为 null 或 undefined 时，其返回右侧的操作数。否则返回左侧的操作数。</p>
+</li>
+<li><p>与逻辑或（||）操作符不同，逻辑或会在左操作数为 假值（0,null,undefined,’’,NAN） 时返回右侧操作数见下面的例子.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">onst foo = (null||undefined) ?? &apos;default string&apos;;</span><br><span class="line">console.log(foo);</span><br><span class="line">// expected output: &quot;default string&quot;</span><br><span class="line"></span><br><span class="line">const baz = 0||&apos;&apos;||NAN ?? 42;</span><br><span class="line">console.log(baz);</span><br><span class="line">// expected output: 0 &apos;&apos; NAN</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="globalThis"><a href="#globalThis" class="headerlink" title="globalThis"></a>globalThis</h3><p>JavaScript 在不同的环境获取全局对象有不同的方式，NodeJS 中通过 global, Web 中通过 window, self 等，有些甚至通过 this 获取，但通过 this 是及其危险的，this 在 JavaScript 中异常复杂，它严重依赖当前的执行上下文，这些无疑增加了获取全局对象的复杂性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">过去获取全局对象，可通过一个全局函数:</span><br><span class="line">var getGlobal = function () &#123;</span><br><span class="line">  if (typeof self !== &apos;undefined&apos;) &#123; return self; &#125;</span><br><span class="line">  if (typeof window !== &apos;undefined&apos;) &#123; return window; &#125;</span><br><span class="line">  if (typeof global !== &apos;undefined&apos;) &#123; return global; &#125;</span><br><span class="line">  throw new Error(&apos;unable to locate global object&apos;);</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">var globals = getGlobal();</span><br><span class="line"></span><br><span class="line">而限制 globalThis 目的就是提供一种标准化方式访问全局对象，有了 globalThis后，你可以在任意上下文，任意时刻都能获取到全局对象，不需要调用函数判断</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #666;font-size:14px;">-------------进度条到了&nbsp;<i class="fa fa-paw" style="color:rgb(90,85,85)"></i>&nbsp;感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+    <div>
+          
+            
+          
+    </div>
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Sanr Chen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://chensanr.gitee.io/2020/05/26/ES-2020-新特性/" title="ES 2020 新特性">https://chensanr.gitee.io/2020/05/26/ES-2020-新特性/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ECMAScript/" rel="tag"><i class="fa fa-tag"></i> ECMAScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/21/生活/" rel="next" title="热爱可抵岁月漫长">
+                <i class="fa fa-chevron-left"></i> 热爱可抵岁月漫长
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -356,6 +536,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTM3NC8xNTkwMQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -376,8 +565,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -490,6 +688,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#可选链式操作符-（-）"><span class="nav-number">1.</span> <span class="nav-text">可选链式操作符 （?.）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空值合并-（-）"><span class="nav-number">2.</span> <span class="nav-text">空值合并 （??）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#globalThis"><span class="nav-number">3.</span> <span class="nav-text">globalThis</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -629,6 +843,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -657,6 +875,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
