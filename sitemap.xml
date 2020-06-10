@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chensanr.gitee.io/2020/02/26/element/</loc>
+    
+    <lastmod>2020-06-09T09:34:42.129Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chensanr.gitee.io/2020/05/29/proxy/</loc>
+    
+    <lastmod>2020-06-09T07:57:22.209Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://chensanr.gitee.io/2020/01/29/web-rules/</loc>
+    
+    <lastmod>2020-05-29T09:18:41.794Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chensanr.gitee.io/2020/05/26/ES-2020-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
     
     <lastmod>2020-05-26T07:12:03.632Z</lastmod>
@@ -177,13 +198,6 @@
   </url>
   
   <url>
-    <loc>https://chensanr.gitee.io/2020/02/26/element/</loc>
-    
-    <lastmod>2020-05-21T03:32:21.610Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://chensanr.gitee.io/2018/10/15/renren-fast-dynamicMenuRoutes/</loc>
     
     <lastmod>2020-05-21T03:29:51.266Z</lastmod>
@@ -226,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://chensanr.gitee.io/categories/index.html</loc>
+    <loc>https://chensanr.gitee.io/tags/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://chensanr.gitee.io/tags/index.html</loc>
+    <loc>https://chensanr.gitee.io/categories/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
     

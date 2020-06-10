@@ -114,7 +114,8 @@
 <meta property="og:description" content="element-ui 组件">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
-<meta property="og:updated_time" content="2020-05-21T03:32:21.610Z">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/disabled-cas.png">
+<meta property="og:updated_time" content="2020-06-09T09:34:42.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="element-ui 组件使用">
 <meta name="twitter:description" content="element-ui 组件">
@@ -430,10 +431,14 @@
 </ul>
 <h3 id="选择器-select"><a href="#选择器-select" class="headerlink" title="选择器 select"></a>选择器 select</h3><h3 id="级联选择器-cascader"><a href="#级联选择器-cascader" class="headerlink" title="级联选择器 cascader"></a>级联选择器 cascader</h3><ul>
 <li><p>动态加载 属性lazyLoad</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    let that = this;</span><br><span class="line">    return &#123;</span><br><span class="line">    //1.设置在props设置lazy和lazyLoad属性</span><br><span class="line">        addProps: &#123;</span><br><span class="line">        lazy: true,</span><br><span class="line">        value: &quot;code&quot;,</span><br><span class="line">        children: &quot;childList&quot;,</span><br><span class="line">        label: &quot;name&quot;,</span><br><span class="line">        lazyLoad(node, resolve) &#123;</span><br><span class="line">          const &#123; level &#125; = node;</span><br><span class="line">          if (level === 0) &#123;//一级</span><br><span class="line">            that.queryRegions(0, resolve) </span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            that.queryRegions(node, resolve);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    let that = this;</span><br><span class="line">    return &#123;</span><br><span class="line">    //1.设置在props设置lazy和lazyLoad属性</span><br><span class="line">        addProps: &#123;</span><br><span class="line">        lazy: true,</span><br><span class="line">        value: &quot;code&quot;,</span><br><span class="line">        children: &quot;childList&quot;,</span><br><span class="line">        label: &quot;name&quot;,</span><br><span class="line">        lazyLoad(node, resolve) &#123;</span><br><span class="line">          const &#123; level &#125; = node;</span><br><span class="line">          if (level === 0) &#123;//一级</span><br><span class="line">            that.queryRegions(0, resolve) </span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            that.queryRegions(node, resolve);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br><span class="line">** 注意点：动态加载级联选择框时，如果有默认选中的需求，emitPath必须为true,既v-model绑定数组</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">methods:()&#123;</span><br><span class="line">// 调用后台接口，根据父级的code获取子集，若是一级parentCode传0 </span><br><span class="line">    queryRegions(node, resolve) &#123;</span><br><span class="line">      let parentCode = node ? node.data.code : 0;</span><br><span class="line">      queryRegions(&#123; parentCode &#125;).then(res =&gt; &#123;</span><br><span class="line">        let &#123; code, data &#125; = res.data;</span><br><span class="line">        if (code == &quot;000000&quot; &amp;&amp; data) &#123;</span><br><span class="line">          resolve(data);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          resolve([]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>远程搜索 filterable-method</p>
+</li>
+<li><p>disabled属性<br>需求：后台菜单可配置，在配置某菜单的上级菜单时，要求该菜单的上级菜单不能选中某菜单本身</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-cascader</span><br><span class="line">  :options=&quot;[&#123;id:0,name:&apos;root&apos;&#125;,...menuList]&quot;</span><br><span class="line">  v-model=&quot;menuItem.parentId&quot;</span><br><span class="line">  :show-all-levels=&quot;false&quot;</span><br><span class="line">  :props=&quot;props&quot;</span><br><span class="line">  clearable</span><br><span class="line">&gt;&lt;/el-cascader&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data()&#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    menuList:[],//菜单列表</span><br><span class="line">    value: &apos;id&apos;,</span><br><span class="line">        checkStrictly: true, // 设置父子菜单不相互关联， 确保当前此菜单不可选，但是此菜单的子菜单可以选择</span><br><span class="line">        label: &apos;name&apos;,</span><br><span class="line">        children: &apos;sonMenu&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * @description 设置当前菜单不可选中项 （上级菜单不可为本身）</span><br><span class="line">  * @param &#123;Array&#125; list 菜单列表</span><br><span class="line">  */</span><br><span class="line">setDisAbled(list) &#123;</span><br><span class="line">  let parentId = this.menuItem.id</span><br><span class="line">  for (var i = 0; i &lt;= list.length - 1; i++) &#123;</span><br><span class="line">    if (list[i].id === parentId) &#123;</span><br><span class="line">      list[i].disabled = true</span><br><span class="line">      break</span><br><span class="line">    &#125;</span><br><span class="line">    if (list[i].sonMenu &amp;&amp; list[i].sonMenu.length &gt; 0) &#123;</span><br><span class="line">      this.setDisAbled(list[i].sonMenu)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">this.setDisAbled(this.menuList) //调用即可改变menuList的不可选项配置</span><br></pre></td></tr></table></figure>
+<p><img src="/images/vue/disabled-cas.png" alt="目录"></p>
 </li>
 </ul>
 <h3 id="上传组件-upload"><a href="#上传组件-upload" class="headerlink" title="上传组件 upload"></a>上传组件 upload</h3><ul>
@@ -520,8 +525,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/26/life2/" rel="next" title="在路上">
-                <i class="fa fa-chevron-left"></i> 在路上
+              <a href="/2020/01/29/web-rules/" rel="next" title="前端编码规范">
+                <i class="fa fa-chevron-left"></i> 前端编码规范
               </a>
             
           </div>
@@ -618,7 +623,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -640,7 +645,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -765,7 +770,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共82.2k字</span>
+  <span class="post-count">博客全站共82.8k字</span>
 </div>
 
 <style>
