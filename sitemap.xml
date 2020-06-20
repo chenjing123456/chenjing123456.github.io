@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chensanr.gitee.io/2020/06/20/Amap/</loc>
+    
+    <lastmod>2020-06-20T09:45:05.026Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chensanr.gitee.io/2019/01/02/elist/</loc>
     
     <lastmod>2020-06-11T09:42:47.987Z</lastmod>
@@ -240,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://chensanr.gitee.io/tags/index.html</loc>
+    <loc>https://chensanr.gitee.io/categories/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://chensanr.gitee.io/categories/index.html</loc>
+    <loc>https://chensanr.gitee.io/tags/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
     
