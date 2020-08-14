@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[移动端兼容问题]]></title>
-    <url>%2F2020%2F08%2F14%2Fhack%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[FastClick使用]]></title>
     <url>%2F2020%2F08%2F13%2Ffastclick%2F</url>
     <content type="text"><![CDATA[了解FastClick使用 为什么使用在移动端H5开发过程中，关于点触可能会遇到如下两个问题： 手动点击与真正触发click事件会存在 300ms 的延迟 点击穿透问题（点击行为会穿透元素触发非父子关系元素的事件） 延迟是因为浏览器想知道你是否在进行双击操作；而点击穿透是因为 300ms 延迟触发时的副作用。为了能够立即响应用户的点击事件，才有了FastClick。 FastClick的使用1.安装 npm install fastclick 2.初始化FastClick实例：在main.js中引入并绑定到body123import FastClick from &apos;fastclick&apos;//初始化FastClick实例。在页面的DOM文档加载完成后FastClick.attach(document.body) 3.使用needsclick过滤特定的元素如果页面上有一些特定的元素不需要使用fastclick来立刻触发点击事件，可以在元素的class上添加needsclick:1&lt;a class=&quot;needsclick&quot;&gt;Ignored by FastClick&lt;/a&gt; 4.不需要使用fastclick的情况 对PC浏览器不需要FastClick Android版Chrome 32+浏览器，如果设置viewport meta的值为width=device-width，这时浏览器会马上发点击事件，不会延迟。 所有版本的Android Chrome浏览器，如果设置viewport meta的值有user-scalable=no（屏幕不可缩放，双击缩放事件不需要，就不会有300ms的延迟），浏览器会马上发点击事件。 IE11+浏览器设置了css的属性touch-action: manipulation，它会在某些标签（a，button等）禁止双击事件，IE10的为-ms-touch-action: manipulation 5.使用过程中存在的bug： 问题1：当使用FastClick 时，input框在ios上点击输入调取手机自带输入键盘不灵敏，有时候甚至点不出来。而安卓上完全没问题。这个原因是因为FastClick的点击穿透。解决方法：vue项目中使用fastclick时ios input点击不灵敏 12345678910111213141516171819// 添加Fastclick移除移动端点击延迟import FastClick from &apos;fastclick&apos;//FastClick的ios点击穿透解决方案FastClick.prototype.focus = function (targetElement) &#123; var length; var deviceIsWindowsPhone = navigator.userAgent.indexOf(&quot;Windows Phone&quot;) &gt;= 0; var deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) &amp;&amp; !deviceIsWindowsPhone; //兼容处理:在iOS7中，有一些元素（如date、datetime、month等）在setSelectionRange会出现TypeError //这是因为这些元素并没有selectionStart和selectionEnd的整型数字属性，所以一旦引用就会报错，因此排除这些属性才使用setSelectionRange方法 if ( deviceIsIOS &amp;&amp; targetElement.setSelectionRange &amp;&amp; targetElement.type.indexOf(&apos;date&apos;) !== 0 &amp;&amp; targetElement.type !== &apos;time&apos; &amp;&amp; targetElement.type !== &apos;month&apos; &amp;&amp; targetElement.type !== &apos;email&apos;) &#123; length = targetElement.value.length; targetElement.setSelectionRange(length, length);//修复bug ios 11.3不弹出键盘，这里加上聚焦代码，让其强制聚焦弹出键盘 targetElement.focus(); &#125; else &#123; targetElement.focus(); &#125;&#125;FastClick.attach(document.body) 问题2：ios 软键盘关闭后 页面不会回弹解决方法：解决IOS中input失焦后，页面上移，点击不了问题 12345678910111213141516171819202122var u = navigator.userAgent;var flag;var timer;var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);if (isIOS) &#123;document.body.addEventListener(&apos;focusin&apos;, () =&gt; &#123; //软键盘弹起事件 flag = true; clearTimeout(timer);&#125;)document.body.addEventListener(&apos;focusout&apos;, () =&gt; &#123; //软键盘关闭事件 flag = false; if (!flag) &#123; timer = setTimeout( ()=&gt; &#123; window.scrollTo(&#123; top: 0, left: 0, behavior: &quot;smooth&quot; &#125;)//重点 =======当键盘收起的时候让页面回到原始位置(这里的top可以根据你们个人的需求改变，并不一定要回到页面顶部) &#125;, 200); &#125; else &#123; return false; &#125;&#125;)&#125; else &#123;return false;&#125; 点击穿透现象例如页面上有A和B元素，B在A上面。在B元素的touchstart事件上注册了一个回调函数，该回调函数的作用是隐藏B元素。我们发现，当我们点击B元素，B元素被隐藏了，随后，A元素触发了click事件。移动端上面，事件执行顺序是：touchstart &gt; touchend &gt; click。而 click 事件有300ms延迟，浏览器触发了click事件，但是此时B元素不见了，所以该事件被派发到了A元素身上。如果A元素是一个链接，那此时页面就会意外地跳转。]]></content>
@@ -41,6 +36,17 @@
       <tags>
         <tag>Visualization</tag>
         <tag>高德地图</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[移动端兼容问题]]></title>
+    <url>%2F2020%2F06%2F13%2Fhack%2F</url>
+    <content type="text"><![CDATA[常见的移动端兼容问题 1.移动端屏幕1px边框问题使用伪类 + transform 实现，原理是把原先元素的 border 去掉，然后利用 :before 或者 :after 重做 border ，并 transform 的 scale 缩小一半，原先的元素相对定位，新做的 border 绝对定位。单条border样式设置：12345678910111213141516.scale-1px&#123; position: relative; border:none;&#125;.scale-1px:after&#123; content: &apos;&apos;; position: absolute; bottom: 0; background: #000; width: 100%; height: 1px; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); -webkit-transform-origin: 0 0; transform-origin: 0 0;&#125; 四条boder样式设置:1234567891011121314151617181920.scale-1px&#123; position: relative; margin-bottom: 20px; border:none;&#125;.scale-1px:after&#123; content: &apos;&apos;; position: absolute; top: 0; left: 0; border: 1px solid #000; -webkit-box-sizing: border-box; box-sizing: border-box; width: 200%; height: 200%; -webkit-transform: scale(0.5); transform: scale(0.5); -webkit-transform-origin: left top; transform-origin: left top;&#125;]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>移动端</tag>
       </tags>
   </entry>
   <entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chensanr.gitee.io/"/>
-  <updated>2020-08-14T08:16:50.238Z</updated>
+  <updated>2020-08-14T08:09:25.595Z</updated>
   <id>https://chensanr.gitee.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>移动端兼容问题</title>
-    <link href="https://chensanr.gitee.io/2020/08/14/hack/"/>
-    <id>https://chensanr.gitee.io/2020/08/14/hack/</id>
-    <published>2020-08-14T08:16:45.000Z</published>
-    <updated>2020-08-14T08:16:50.238Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>FastClick使用</title>
@@ -116,6 +95,30 @@
       <category term="Visualization" scheme="https://chensanr.gitee.io/tags/Visualization/"/>
     
       <category term="高德地图" scheme="https://chensanr.gitee.io/tags/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端兼容问题</title>
+    <link href="https://chensanr.gitee.io/2020/06/13/hack/"/>
+    <id>https://chensanr.gitee.io/2020/06/13/hack/</id>
+    <published>2020-06-13T04:21:26.000Z</published>
+    <updated>2020-08-14T09:20:02.034Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>常见的移动端兼容问题</p></blockquote><p><img src="/images/web/default.jpg" alt="目录"><a id="more"></a></p><p>1.移动端屏幕1px边框问题<br>使用伪类 + transform 实现，原理是把原先元素的 border 去掉，然后利用 :before 或者 :after 重做 border ，并 transform 的 scale 缩小一半，原先的元素相对定位，新做的 border 绝对定位。<br>单条border样式设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.scale-1px&#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  border:none;</span><br><span class="line">&#125;</span><br><span class="line">.scale-1px:after&#123;</span><br><span class="line">  content: &apos;&apos;;</span><br><span class="line">  position: absolute;</span><br><span class="line">  bottom: 0;</span><br><span class="line">  background: #000;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 1px;</span><br><span class="line">  -webkit-transform: scaleY(0.5);</span><br><span class="line">  transform: scaleY(0.5);</span><br><span class="line">  -webkit-transform-origin: 0 0;</span><br><span class="line">  transform-origin: 0 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>四条boder样式设置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">.scale-1px&#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  margin-bottom: 20px;</span><br><span class="line">  border:none;</span><br><span class="line">&#125;</span><br><span class="line">.scale-1px:after&#123;</span><br><span class="line">  content: &apos;&apos;;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0;</span><br><span class="line">  left: 0;</span><br><span class="line">  border: 1px solid #000;</span><br><span class="line">  -webkit-box-sizing: border-box;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">  width: 200%;</span><br><span class="line">  height: 200%;</span><br><span class="line">  -webkit-transform: scale(0.5);</span><br><span class="line">  transform: scale(0.5);</span><br><span class="line">  -webkit-transform-origin: left top;</span><br><span class="line">  transform-origin: left top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;常见的移动端兼容问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/images/web/default.jpg&quot; alt=&quot;目录&quot;&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="https://chensanr.gitee.io/categories/Web/"/>
+    
+    
+      <category term="移动端" scheme="https://chensanr.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
     
   </entry>
   
