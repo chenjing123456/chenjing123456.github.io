@@ -4,8 +4,33 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2020/08/15/rem/</loc>
+    <lastmod>2020-08-15T07:10:45.135Z</lastmod>
+    <data>
+        <display>
+        <title>单位适配</title>
+        <pubTime>2020-08-15T02:30:28.000Z</pubTime>
+        
+        <tag>rem</tag>
+         
+        <tag>vw</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="https://chensanr.gitee.io/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2020/06/13/hack/</loc>
-    <lastmod>2020-08-14T09:20:02.034Z</lastmod>
+    <lastmod>2020-08-14T10:00:26.231Z</lastmod>
     <data>
         <display>
         <title>移动端兼容问题</title>
@@ -347,26 +372,6 @@
           
              
               <breadCrumb title="element" url="https://chensanr.gitee.io/categories/Vue/element/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2020/05/29/proxy/</loc>
-    <lastmod>2020-06-09T07:57:22.209Z</lastmod>
-    <data>
-        <display>
-        <title>proxy</title>
-        <pubTime>2020-05-29T08:30:28.000Z</pubTime>
-        
-        <tag>proxy</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
           
         </display>
     </data>
