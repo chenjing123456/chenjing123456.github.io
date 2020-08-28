@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2020/08/26/vue-config/</loc>
+    <lastmod>2020-08-28T06:24:30.120Z</lastmod>
+    <data>
+        <display>
+        <title>vue项目配置框架</title>
+        <pubTime>2020-08-26T08:42:43.000Z</pubTime>
+        
+        <tag>vue-cli</tag>
+         
+        <tag>node</tag>
+         
+        <tag>webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
+          
+             
+              <breadCrumb title="config" url="https://chensanr.gitee.io/categories/Vue/config/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2020/08/15/rem/</loc>
     <lastmod>2020-08-15T07:10:45.135Z</lastmod>
     <data>

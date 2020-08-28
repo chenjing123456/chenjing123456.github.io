@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://chensanr.gitee.io/2020/08/26/vue-config/</loc>
+    
+    <lastmod>2020-08-28T06:24:30.120Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://chensanr.gitee.io/2020/08/15/rem/</loc>
     
     <lastmod>2020-08-15T07:10:45.135Z</lastmod>
@@ -268,14 +275,14 @@
   </url>
   
   <url>
-    <loc>https://chensanr.gitee.io/tags/index.html</loc>
+    <loc>https://chensanr.gitee.io/categories/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://chensanr.gitee.io/categories/index.html</loc>
+    <loc>https://chensanr.gitee.io/tags/index.html</loc>
     
     <lastmod>2018-12-20T10:41:52.001Z</lastmod>
     
