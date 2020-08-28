@@ -4,6 +4,56 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
+    <lastmod>2020-08-28T07:59:17.775Z</lastmod>
+    <data>
+        <display>
+        <title>小程序登录</title>
+        <pubTime>2019-07-09T16:00:00.000Z</pubTime>
+        
+        <tag>login</tag>
+         
+        <tag>小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
+          
+             
+              <breadCrumb title="login" url="https://chensanr.gitee.io/categories/Vue/login/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/08/15/rem/</loc>
+    <lastmod>2020-08-28T06:43:22.688Z</lastmod>
+    <data>
+        <display>
+        <title>单位适配</title>
+        <pubTime>2020-08-15T02:30:28.000Z</pubTime>
+        
+        <tag>rem</tag>
+         
+        <tag>vw</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="https://chensanr.gitee.io/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2020/08/26/vue-config/</loc>
     <lastmod>2020-08-28T06:24:30.120Z</lastmod>
     <data>
@@ -24,31 +74,6 @@
           
              
               <breadCrumb title="config" url="https://chensanr.gitee.io/categories/Vue/config/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2020/08/15/rem/</loc>
-    <lastmod>2020-08-15T07:10:45.135Z</lastmod>
-    <data>
-        <display>
-        <title>单位适配</title>
-        <pubTime>2020-08-15T02:30:28.000Z</pubTime>
-        
-        <tag>rem</tag>
-         
-        <tag>vw</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="CSS" url="https://chensanr.gitee.io/categories/Web/CSS/"/>
           
         </display>
     </data>
@@ -829,31 +854,6 @@
           
              
               <breadCrumb title="vue-router" url="https://chensanr.gitee.io/categories/Vue/vue-router/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
-    <lastmod>2020-05-21T03:29:24.914Z</lastmod>
-    <data>
-        <display>
-        <title>小程序登录</title>
-        <pubTime>2019-07-09T16:00:00.000Z</pubTime>
-        
-        <tag>小程序</tag>
-         
-        <tag>login</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
-          
-             
-              <breadCrumb title="login" url="https://chensanr.gitee.io/categories/Vue/login/"/>
           
         </display>
     </data>
