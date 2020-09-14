@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2020/08/03/fastclick/</loc>
+    <lastmod>2020-09-14T07:29:11.618Z</lastmod>
+    <data>
+        <display>
+        <title>FastClick使用</title>
+        <pubTime>2020-08-03T11:10:28.000Z</pubTime>
+        
+        <tag>ECMAScript</tag>
+         
+        <tag>FastClick</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/09/14/content-type/</loc>
+    <lastmod>2020-09-14T07:27:24.282Z</lastmod>
+    <data>
+        <display>
+        <title>Post请求Content-type的几种常见类型</title>
+        <pubTime>2020-09-14T03:46:28.000Z</pubTime>
+        
+        <tag>content-type</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
     <lastmod>2020-08-28T07:59:17.775Z</lastmod>
     <data>
@@ -94,31 +142,6 @@
            
              
               <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2020/08/13/fastclick/</loc>
-    <lastmod>2020-08-14T08:09:25.595Z</lastmod>
-    <data>
-        <display>
-        <title>FastClick使用</title>
-        <pubTime>2020-08-13T11:10:28.000Z</pubTime>
-        
-        <tag>ECMAScript</tag>
-         
-        <tag>FastClick</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
           
         </display>
     </data>

@@ -92,7 +92,7 @@
 
 
 
-  <meta name="keywords" content="ECMAScript,FastClick," />
+  <meta name="keywords" content="content-type," />
 
 
 
@@ -105,19 +105,25 @@
 
 
 
-<meta name="description" content="了解FastClick使用">
-<meta name="keywords" content="ECMAScript,FastClick">
+<meta name="description" content="介绍Content-type的作用和使用方法">
+<meta name="keywords" content="content-type">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FastClick使用">
-<meta property="og:url" content="https://chensanr.gitee.io/2020/08/13/fastclick/index.html">
+<meta property="og:title" content="Post请求Content-type的几种常见类型">
+<meta property="og:url" content="https://chensanr.gitee.io/2020/09/14/content-type/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="了解FastClick使用">
+<meta property="og:description" content="介绍Content-type的作用和使用方法">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chensanr.gitee.io/images/web/default.jpg">
-<meta property="og:updated_time" content="2020-08-14T08:09:25.595Z">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/website/form1.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/website/form.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/website/form-data1.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/website/form-data.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/website/json1.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/website/json.png">
+<meta property="og:updated_time" content="2020-09-14T07:27:24.282Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FastClick使用">
-<meta name="twitter:description" content="了解FastClick使用">
+<meta name="twitter:title" content="Post请求Content-type的几种常见类型">
+<meta name="twitter:description" content="介绍Content-type的作用和使用方法">
 <meta name="twitter:image" content="https://chensanr.gitee.io/images/web/default.jpg">
 
 
@@ -148,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="https://chensanr.gitee.io/2020/08/13/fastclick/"/>
+  <link rel="canonical" href="https://chensanr.gitee.io/2020/09/14/content-type/"/>
 
 
 
 
 
-  <title>FastClick使用 | Sanr's Blog</title>
+  <title>Post请求Content-type的几种常见类型 | Sanr's Blog</title>
   
 
 
@@ -318,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://chensanr.gitee.io/2020/08/13/fastclick/">
+    <link itemprop="mainEntityOfPage" href="https://chensanr.gitee.io/2020/09/14/content-type/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sanr Chen">
@@ -335,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FastClick使用</h1>
+          <h1 class="post-title" itemprop="name headline">Post请求Content-type的几种常见类型</h1>
         
 
         <div class="post-meta">
@@ -348,8 +354,8 @@
               
                 <span class="post-meta-item-text">posted</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-13T19:10:28+08:00">
-                2020-08-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-14T11:46:28+08:00">
+                2020-09-14
               </time>
             
 
@@ -419,31 +425,34 @@
       
 
       
-        <blockquote><p>了解FastClick使用</p>
+        <blockquote><p>介绍Content-type的作用和使用方法</p>
 </blockquote>
 <p><img src="/images/web/default.jpg" alt="目录"><a id="more"></a></p>
-<h2 id="为什么使用"><a href="#为什么使用" class="headerlink" title="为什么使用"></a>为什么使用</h2><p>在移动端H5开发过程中，关于点触可能会遇到如下两个问题：</p>
-<ul>
-<li>手动点击与真正触发click事件会存在 300ms 的延迟</li>
-<li>点击穿透问题（点击行为会穿透元素触发非父子关系元素的事件）</li>
+<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>是Http的实体首部字段，用于说明请求或返回的消息主体是用何种方式编码，在request header和response header里都可以有。本文介绍一般跟后台开发时经常会使用到的几种常用content-type类型。</p>
+<h2 id="几个常用类型"><a href="#几个常用类型" class="headerlink" title="几个常用类型"></a>几个常用类型</h2><h3 id="application-x-www-form-urlencoded"><a href="#application-x-www-form-urlencoded" class="headerlink" title="application/x-www-form-urlencoded"></a>application/x-www-form-urlencoded</h3><ul>
+<li>表现：<br>表单格式，浏览器的原生form表单提交或者返回数据。<br>前台数据的格式：<br><img src="/images/web/website/form1.png" alt="目录"><br>提交数据时传给后台的格式，按照 key1=val1&amp;key2=val2 的方式进行编码，key和val都进行了URL转码。<br><img src="/images/web/website/form.png" alt="目录"></li>
+<li><p>使用：关键是把数据格式转换成key1=val1&amp;key2=val2的形式：<br>方法一：URLSearchParams对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let data = new URLSearchParams();</span><br><span class="line">data.append(&apos;username&apos;, &apos;admin&apos;);</span><br><span class="line">data.append(&apos;password&apos;, &apos;123456&apos;);</span><br><span class="line"></span><br><span class="line">axios(&#123;</span><br><span class="line">    url: &apos;/OAuth/oauth/token&apos;,</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    data: data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>方法二：利用qs将参数转换为query参数,<br>引入 qs ，这个库是 axios 里面包含的，不需要再下载了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import qs from &apos;qs&apos;</span><br><span class="line"> axios(&#123;</span><br><span class="line">     method: &apos;post&apos;,</span><br><span class="line">     url: &apos;/api/dtalkLogin&apos;, // 路径</span><br><span class="line">     data: &#123;</span><br><span class="line">         code</span><br><span class="line">     &#125;,</span><br><span class="line">     transformRequest: [function (data) &#123;</span><br><span class="line">         let ret = &apos;&apos;;</span><br><span class="line">         ret = qs.stringify(data);</span><br><span class="line">         return ret;</span><br><span class="line">     &#125;],</span><br><span class="line">     headers: &#123;</span><br><span class="line">         &apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> 或者：</span><br><span class="line"> var data = &#123;</span><br><span class="line">     username: &quot;admin&quot;,</span><br><span class="line">     password: &quot;123456&quot;</span><br><span class="line"> &#125;</span><br><span class="line"> axios(&#123;</span><br><span class="line">     url: &apos;/OAuth/oauth/token&apos;,</span><br><span class="line">     method: &apos;post&apos;,</span><br><span class="line">     headers: &#123;</span><br><span class="line">         &apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;</span><br><span class="line">     &#125;,</span><br><span class="line">     data: qs.stringify(data)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>延迟是因为浏览器想知道你是否在进行双击操作；而点击穿透是因为 300ms 延迟触发时的副作用。<br>为了能够立即响应用户的点击事件，才有了FastClick。</p>
-<h2 id="FastClick的使用"><a href="#FastClick的使用" class="headerlink" title="FastClick的使用"></a>FastClick的使用</h2><p>1.安装 npm install fastclick</p>
-<p>2.初始化FastClick实例：<br>在main.js中引入并绑定到body<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import FastClick from &apos;fastclick&apos;</span><br><span class="line">//初始化FastClick实例。在页面的DOM文档加载完成后</span><br><span class="line">FastClick.attach(document.body)</span><br></pre></td></tr></table></figure></p>
-<p>3.使用needsclick过滤特定的元素<br>如果页面上有一些特定的元素不需要使用fastclick来立刻触发点击事件，可以在元素的class上添加needsclick:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=&quot;needsclick&quot;&gt;Ignored by FastClick&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
-<p>4.不需要使用fastclick的情况</p>
-<ul>
-<li>对PC浏览器不需要FastClick</li>
-<li>Android版Chrome 32+浏览器，如果设置viewport meta的值为width=device-width，这时浏览器会马上发点击事件，不会延迟。</li>
-<li>所有版本的Android Chrome浏览器，如果设置viewport meta的值有user-scalable=no（屏幕不可缩放，双击缩放事件不需要，就不会有300ms的延迟），浏览器会马上发点击事件。</li>
-<li>IE11+浏览器设置了css的属性touch-action: manipulation，它会在某些标签（a，button等）禁止双击事件，IE10的为-ms-touch-action: manipulation</li>
+<h3 id="multipart-form-data"><a href="#multipart-form-data" class="headerlink" title="multipart/form-data"></a>multipart/form-data</h3><ul>
+<li><p>表现：<br>常见的 POST 数据提交的方式。通常文件上传时，必须让 form 的 enctype 等于这个值。<br>请求头如下：<br>生成了一个 boundary 用于分割不同的字段，<br>然后 Content-Type 里指明了数据是以 multipart/form-data 来编码，<br>消息主体里按照字段个数又分为多个结构类似的部分，每部分都是以 –boundary 开始，紧接着是内容描述信息，<br>最后是字段具体内容（文本或二进制）。如果传输的是文件，还要包含文件名和文件类型信息。<br>前台数据的格式：<br><img src="/images/web/website/form-data1.png" alt="目录"><br>提交数据时传给后台的格式如下：<br><img src="/images/web/website/form-data.png" alt="目录"></p>
+</li>
+<li><p>使用：一般用来上传文件，指定传输数据为二进制数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">let data = new FormData();</span><br><span class="line">data.append(&apos;file&apos;, fileObj);</span><br><span class="line">data.append(&apos;username&apos;, &apos;admin&apos;);</span><br><span class="line">data.append(&apos;password&apos;, &apos;123456&apos;);</span><br><span class="line"></span><br><span class="line">axios(&#123;</span><br><span class="line">    url: &apos;/XXXX/XXXX&apos;,</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        &apos;Content-Type&apos;: &apos;multipart/form-data&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    data: data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>5.使用过程中存在的bug：</p>
-<p>问题1：当使用FastClick 时，input框在ios上点击输入调取手机自带输入键盘不灵敏，有时候甚至点不出来。而安卓上完全没问题。这个原因是因为FastClick的点击穿透。<br>解决方法：<a href="https://www.jianshu.com/p/0df7a6f48c8a" target="_blank" rel="noopener">vue项目中使用fastclick时ios input点击不灵敏</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 添加Fastclick移除移动端点击延迟</span><br><span class="line">import FastClick from &apos;fastclick&apos;</span><br><span class="line">//FastClick的ios点击穿透解决方案</span><br><span class="line">FastClick.prototype.focus = function (targetElement) &#123;</span><br><span class="line">  var length;</span><br><span class="line"></span><br><span class="line">  var deviceIsWindowsPhone = navigator.userAgent.indexOf(&quot;Windows Phone&quot;) &gt;= 0;</span><br><span class="line">  var deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) &amp;&amp; !deviceIsWindowsPhone;  </span><br><span class="line">    //兼容处理:在iOS7中，有一些元素（如date、datetime、month等）在setSelectionRange会出现TypeError    </span><br><span class="line">    //这是因为这些元素并没有selectionStart和selectionEnd的整型数字属性，所以一旦引用就会报错，因此排除这些属性才使用setSelectionRange方法</span><br><span class="line">  if ( deviceIsIOS &amp;&amp; targetElement.setSelectionRange &amp;&amp; targetElement.type.indexOf(&apos;date&apos;) !== 0 &amp;&amp; targetElement.type !== &apos;time&apos; &amp;&amp; targetElement.type !== &apos;month&apos; &amp;&amp; targetElement.type !== &apos;email&apos;) &#123; </span><br><span class="line">    length = targetElement.value.length; </span><br><span class="line">    targetElement.setSelectionRange(length, length);//修复bug ios 11.3不弹出键盘，这里加上聚焦代码，让其强制聚焦弹出键盘    </span><br><span class="line">    targetElement.focus(); </span><br><span class="line">  &#125; else &#123; </span><br><span class="line">    targetElement.focus(); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">FastClick.attach(document.body)</span><br></pre></td></tr></table></figure>
-<p>问题2：ios 软键盘关闭后 页面不会回弹<br>解决方法：<a href="https://segmentfault.com/a/1190000018028182?utm_source=tag-newest" target="_blank" rel="noopener">解决IOS中input失焦后，页面上移，点击不了问题</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var u = navigator.userAgent;</span><br><span class="line">var flag;</span><br><span class="line">var timer;</span><br><span class="line">var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);</span><br><span class="line">if (isIOS) &#123;</span><br><span class="line">document.body.addEventListener(&apos;focusin&apos;, () =&gt; &#123;  //软键盘弹起事件</span><br><span class="line">    flag = true;</span><br><span class="line">    clearTimeout(timer);</span><br><span class="line">&#125;)</span><br><span class="line">document.body.addEventListener(&apos;focusout&apos;, () =&gt; &#123; //软键盘关闭事件</span><br><span class="line">    flag = false;</span><br><span class="line">    if (!flag) &#123;</span><br><span class="line">    timer = setTimeout( ()=&gt; &#123;</span><br><span class="line">        window.scrollTo(&#123; top: 0, left: 0, behavior: &quot;smooth&quot; &#125;)//重点  =======当键盘收起的时候让页面回到原始位置(这里的top可以根据你们个人的需求改变，并不一定要回到页面顶部)</span><br><span class="line">    &#125;, 200);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">    return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="点击穿透现象"><a href="#点击穿透现象" class="headerlink" title="点击穿透现象"></a>点击穿透现象</h2><p>例如页面上有A和B元素，B在A上面。在B元素的touchstart事件上注册了一个回调函数，该回调函数的作用是隐藏B元素。我们发现，当我们点击B元素，B元素被隐藏了，随后，A元素触发了click事件。<br>移动端上面，事件执行顺序是：touchstart &gt; touchend &gt; click。而 click 事件有300ms延迟，浏览器触发了click事件，但是此时B元素不见了，所以该事件被派发到了A元素身上。如果A元素是一个链接，那此时页面就会意外地跳转。</p>
+<h3 id="application-json"><a href="#application-json" class="headerlink" title="application/json"></a>application/json</h3><ul>
+<li><p>表现：<br>消息主体是序列化后的 JSON 字符串，可以方便的提交复杂的结构化数据<br>前台数据的格式：<br><img src="/images/web/website/json1.png" alt="目录"><br>提交数据时传给后台的格式如下：<br><img src="/images/web/website/json.png" alt="目录"></p>
+</li>
+<li><p>使用：application/json是Axios默认的Content-Type。它声明了请求体中的数据将会以json字符串的形式发送到后端。<br>在请求的时候，需要将需要传给后台的数据JSON序列化即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">    url: &apos;/XXXX/XXXX&apos;,</span><br><span class="line">    method: &apos;post&apos;,</span><br><span class="line">    //axios默认Content-Type是json,这段可不写</span><br><span class="line">    //headers: &#123;</span><br><span class="line">       // &apos;Content-Type&apos;: &apos;application/json&apos;</span><br><span class="line">    //&#125;,</span><br><span class="line">    data: JSON.stringify(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="封装使用"><a href="#封装使用" class="headerlink" title="封装使用"></a>封装使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">// 修改响应数据</span><br><span class="line">axios.defaults.transformRequest = [function (data, headers) &#123;</span><br><span class="line">  // 添加 Authorization 头信息</span><br><span class="line">  // console.log(data)</span><br><span class="line"></span><br><span class="line">  //Object.assign(headers, &#123; &apos;token&apos;: window.localStorage.getItem(&apos;token&apos;) &#125;)</span><br><span class="line"></span><br><span class="line">  if (data === undefined) &#123;</span><br><span class="line">    return</span><br><span class="line">  &#125;</span><br><span class="line">  //FormData 格式（文件上传）</span><br><span class="line">  if (data instanceof FormData) &#123;</span><br><span class="line">    headers[&apos;Content-Type&apos;] = &apos;multipart/form-data;charset=UTF-8&apos;</span><br><span class="line">    return data</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //emulateJSON自定义参数，没有配置时为json(默认)</span><br><span class="line">  if (!data.emulateJSON) &#123; </span><br><span class="line">    headers[&apos;Content-Type&apos;] = &apos;application/json;charset=UTF-8&apos;</span><br><span class="line">    for (let v in data) &#123;</span><br><span class="line">      data[v] == null ? data[v] = &apos;&apos; : data[v]</span><br><span class="line">    &#125;</span><br><span class="line">    return JSON.stringify(data)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    delete data.emulateJSON</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //emulateJSON为true时，则为表单格式（使用URLSearchParams把参数转化成key1=val1&amp;key2=val2的形式）</span><br><span class="line">  // 处理请求体编码</span><br><span class="line">  headers[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded;charset=UTF-8&apos;</span><br><span class="line"></span><br><span class="line">  let params = new URLSearchParams()</span><br><span class="line">  Object.keys(data).forEach(function (key) &#123;</span><br><span class="line">    if (Object.prototype.toString.call(data[key]) === &apos;[object Object]&apos;) &#123;</span><br><span class="line">      for (let [k, v] of Object.entries(data[key])) &#123;</span><br><span class="line">        params.append(`$&#123;key&#125;[$&#123;k&#125;]`, v)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; else if (Array.isArray(data[key])) &#123;</span><br><span class="line">      // 传arr时</span><br><span class="line">      for (let v of data[key]) &#123;</span><br><span class="line">        params.append(key, v)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      params.append(key, data[key] == null ? &apos; &apos; : data[key])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  return params.toString()</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="http://www.axios-js.com/zh-cn/docs/#axios-patch-url-data-config-1" target="_blank" rel="noopener">axios中文文档|axios中文网</a> , <a href="https://www.jianshu.com/p/ba40da728806" target="_blank" rel="noopener">Content-type的几种常见类型</a></p>
 
       
     </div>
@@ -478,7 +487,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://chensanr.gitee.io/2020/08/13/fastclick/" title="FastClick使用">https://chensanr.gitee.io/2020/08/13/fastclick/</a>
+    <a href="https://chensanr.gitee.io/2020/09/14/content-type/" title="Post请求Content-type的几种常见类型">https://chensanr.gitee.io/2020/09/14/content-type/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -493,9 +502,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ECMAScript/" rel="tag"><i class="fa fa-tag"></i> ECMAScript</a>
-          
-            <a href="/tags/FastClick/" rel="tag"><i class="fa fa-tag"></i> FastClick</a>
+            <a href="/tags/content-type/" rel="tag"><i class="fa fa-tag"></i> content-type</a>
           
         </div>
       
@@ -508,8 +515,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/12/website/" rel="next" title="收集web项目常见的库和网站">
-                <i class="fa fa-chevron-left"></i> 收集web项目常见的库和网站
+              <a href="/2020/08/26/vue-config/" rel="next" title="vue项目配置框架">
+                <i class="fa fa-chevron-left"></i> vue项目配置框架
               </a>
             
           </div>
@@ -517,10 +524,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/08/15/rem/" rel="prev" title="单位适配">
-                单位适配 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -606,7 +609,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -628,7 +631,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -710,7 +713,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么使用"><span class="nav-number">1.</span> <span class="nav-text">为什么使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FastClick的使用"><span class="nav-number">2.</span> <span class="nav-text">FastClick的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点击穿透现象"><span class="nav-number">3.</span> <span class="nav-text">点击穿透现象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#是什么"><span class="nav-number">1.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#几个常用类型"><span class="nav-number">2.</span> <span class="nav-text">几个常用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#application-x-www-form-urlencoded"><span class="nav-number">2.1.</span> <span class="nav-text">application/x-www-form-urlencoded</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multipart-form-data"><span class="nav-number">2.2.</span> <span class="nav-text">multipart/form-data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application-json"><span class="nav-number">2.3.</span> <span class="nav-text">application/json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装使用"><span class="nav-number">2.4.</span> <span class="nav-text">封装使用</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -753,7 +756,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共94.1k字</span>
+  <span class="post-count">博客全站共95.1k字</span>
 </div>
 
 <style>
