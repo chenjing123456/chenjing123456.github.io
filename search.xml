@@ -213,7 +213,7 @@
   <entry>
     <title><![CDATA[git]]></title>
     <url>%2F2019%2F08%2F28%2Fgit%2F</url>
-    <content type="text"><![CDATA[git学习 常用命令 合并分支 场景：当前dev分支,dev分支要合并到线上master分支 123456789git branch 查看当前分支 git checkout master 切换到要合并的分支git pull 拉最新代码git merge dev 把dev合并到当前master分支git push 把更新推送到远程 版本回退 1234567891011git reset --hard 简洁/完整哈希索引值 ：回到指定哈希值所对应的版本git reset --hard HEAD：强制工作区、暂存区、本地库为当前HEAD指针所在的版本 git reset --hard HEAD^：后退一个版本(上一个版本) tip：一个^表示回退一个版本git reset --hard HEAD~1：后退一个版本 tip：波浪线~后面的数字表示后退几个版本]]></content>
+    <content type="text"><![CDATA[git学习 常用命令 合并分支 场景：当前dev分支,dev分支要合并到线上master分支 12345678910111213141516171819202122git branch 查看当前分支 git branch -r 查看远程分支git branch -a 查看所有分支（本地和远程）git branch &lt;branchname&gt; //新建分支git branch -m &lt;oldbranch&gt; &lt;newbranch&gt; //重命名本地分支git branch -d &lt;branchname&gt; //删除本地分支git checkout &lt;branchname&gt; 切换到要合并的分支git pull 拉最新代码git merge dev 把dev合并到当前分支git push 把更新推送到远程git branch -d -r &lt;branchname&gt; //删除远程分支，删除后还需推送到服务器git push origin:&lt;branchname&gt; //删除后推送至服务器 版本回退 1234567891011git reset --hard 简洁/完整哈希索引值 ：回到指定哈希值所对应的版本git reset --hard HEAD：强制工作区、暂存区、本地库为当前HEAD指针所在的版本 git reset --hard HEAD^：后退一个版本(上一个版本) tip：一个^表示回退一个版本git reset --hard HEAD~1：后退一个版本 tip：波浪线~后面的数字表示后退几个版本 拉取远程分支到本地（本地无远程分支dev,想拉取同名dev分支到本地） 12345678910111.首先把远程分支先拉到本地git fetch origin dev（dev为远程仓库的分支名）2.在本地创建分支dev并切换到该分支，然后跟远程的origin地址上的dev分支关联起来git checkout -b dev(本地分支名称) origin/dev(远程分支名称) 注：origin/dev表示跟远程的origin地址上的dev分支关联起来3.把远程某个分支上的内容都拉取到本地git pull origin dev(远程分支名称)4.再git add ,git commit ,git push代码]]></content>
       <categories>
         <category>Other</category>
         <category>git</category>
