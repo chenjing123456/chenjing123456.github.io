@@ -5,10 +5,10 @@
     
   <url>
     <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
-    <lastmod>2020-10-13T09:58:33.220Z</lastmod>
+    <lastmod>2020-10-16T08:03:37.658Z</lastmod>
     <data>
         <display>
-        <title>小程序登录</title>
+        <title>uniapp</title>
         <pubTime>2019-07-09T16:00:00.000Z</pubTime>
         
         <tag>login</tag>
@@ -29,8 +29,106 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2020/08/26/vue-config/</loc>
+    <lastmod>2020-10-16T07:58:04.220Z</lastmod>
+    <data>
+        <display>
+        <title>vue项目配置框架</title>
+        <pubTime>2020-08-26T08:42:43.000Z</pubTime>
+        
+        <tag>vue-cli</tag>
+         
+        <tag>node</tag>
+         
+        <tag>webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
+          
+             
+              <breadCrumb title="config" url="https://chensanr.gitee.io/categories/Vue/config/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/09/13/index/</loc>
+    <lastmod>2020-10-16T07:56:54.779Z</lastmod>
+    <data>
+        <display>
+        <title>慎独</title>
+        <pubTime>2020-09-12T16:00:00.000Z</pubTime>
+        
+        <tag>daily</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="https://chensanr.gitee.io/categories/Life/"/>
+          
+             
+              <breadCrumb title="idea" url="https://chensanr.gitee.io/categories/Life/idea/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/06/20/Amap/</loc>
+    <lastmod>2020-10-16T07:55:25.668Z</lastmod>
+    <data>
+        <display>
+        <title>高德地图实战</title>
+        <pubTime>2020-06-20T07:06:00.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>高德地图</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="Visualization" url="https://chensanr.gitee.io/categories/Web/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2018/09/17/hexo+github/</loc>
+    <lastmod>2020-10-16T07:55:20.571Z</lastmod>
+    <data>
+        <display>
+        <title>使用Hexo + Github Pages搭建个人博客</title>
+        <pubTime>2018-09-16T16:00:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Other" url="https://chensanr.gitee.io/categories/Other/"/>
+          
+             
+              <breadCrumb title="Hexo" url="https://chensanr.gitee.io/categories/Other/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2019/08/28/git/</loc>
-    <lastmod>2020-10-09T07:45:24.168Z</lastmod>
+    <lastmod>2020-10-16T07:55:12.461Z</lastmod>
     <data>
         <display>
         <title>git</title>
@@ -125,33 +223,6 @@
 
     
   <url>
-    <loc>https://chensanr.gitee.io/2020/08/26/vue-config/</loc>
-    <lastmod>2020-08-28T06:24:30.120Z</lastmod>
-    <data>
-        <display>
-        <title>vue项目配置框架</title>
-        <pubTime>2020-08-26T08:42:43.000Z</pubTime>
-        
-        <tag>vue-cli</tag>
-         
-        <tag>node</tag>
-         
-        <tag>webpack</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
-          
-             
-              <breadCrumb title="config" url="https://chensanr.gitee.io/categories/Vue/config/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://chensanr.gitee.io/2020/06/13/hack/</loc>
     <lastmod>2020-08-14T10:00:26.231Z</lastmod>
     <data>
@@ -213,31 +284,6 @@
           
              
               <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2020/06/20/Amap/</loc>
-    <lastmod>2020-07-31T03:24:10.691Z</lastmod>
-    <data>
-        <display>
-        <title>高德地图实战</title>
-        <pubTime>2020-06-20T07:06:00.000Z</pubTime>
-        
-        <tag>Visualization</tag>
-         
-        <tag>高德地图</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="Visualization" url="https://chensanr.gitee.io/categories/Web/Visualization/"/>
           
         </display>
     </data>
@@ -594,29 +640,6 @@
 
     
   <url>
-    <loc>https://chensanr.gitee.io/2018/09/17/hexo+github/</loc>
-    <lastmod>2020-05-21T04:47:46.898Z</lastmod>
-    <data>
-        <display>
-        <title>使用Hexo + Github Pages搭建个人博客</title>
-        <pubTime>2018-09-16T16:00:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Other" url="https://chensanr.gitee.io/categories/Other/"/>
-          
-             
-              <breadCrumb title="Hexo" url="https://chensanr.gitee.io/categories/Other/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://chensanr.gitee.io/2018/10/07/XHR/</loc>
     <lastmod>2020-05-21T04:14:31.196Z</lastmod>
     <data>
@@ -662,29 +685,6 @@
           
              
               <breadCrumb title="HTML" url="https://chensanr.gitee.io/categories/Web/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2019/09/13/index/</loc>
-    <lastmod>2020-05-21T04:12:50.333Z</lastmod>
-    <data>
-        <display>
-        <title>慎独</title>
-        <pubTime>2019-09-12T16:00:00.000Z</pubTime>
-        
-        <tag>daily</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="https://chensanr.gitee.io/categories/Life/"/>
-          
-             
-              <breadCrumb title="idea" url="https://chensanr.gitee.io/categories/Life/idea/"/>
           
         </display>
     </data>

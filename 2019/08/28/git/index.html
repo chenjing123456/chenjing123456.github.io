@@ -105,19 +105,19 @@
 
 
 
-<meta name="description" content="git学习">
+<meta name="description" content="git命令日常学习">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git">
 <meta property="og:url" content="https://chensanr.gitee.io/2019/08/28/git/index.html">
 <meta property="og:site_name" content="Sanr&#39;s Blog">
-<meta property="og:description" content="git学习">
+<meta property="og:description" content="git命令日常学习">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chensanr.gitee.io/images/other/hexo/default.jpg">
-<meta property="og:updated_time" content="2020-10-09T07:45:24.168Z">
+<meta property="og:updated_time" content="2020-10-16T07:55:12.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git">
-<meta name="twitter:description" content="git学习">
+<meta name="twitter:description" content="git命令日常学习">
 <meta name="twitter:image" content="https://chensanr.gitee.io/images/other/hexo/default.jpg">
 
 
@@ -339,7 +339,7 @@
         
 
         <div class="post-meta">
-          
+           <i class="fa fa-thumb-tack"></i> <font color=7D26CD>top</font> <span class="post-meta-divider">|</span> 
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -419,18 +419,26 @@
       
 
       
-        <blockquote><p>git学习</p>
+        <blockquote><p>git命令日常学习</p>
 </blockquote>
 <p><img src="/images/other/hexo/default.jpg" alt="目录"><a id="more"></a></p>
-<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><ul>
+<h1 id="初始化操作"><a href="#初始化操作" class="headerlink" title="初始化操作"></a>初始化操作</h1>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init 初始化仓库（.git）</span><br><span class="line">git add . 把文件添加到缓存区</span><br><span class="line">git commit -m &apos;&apos; 把缓存区文件提交到仓库 </span><br><span class="line">git status 查看当前仓库状态</span><br><span class="line">git log 查看版本历史提交记录</span><br></pre></td></tr></table></figure>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">git branch 查看当前分支 </span><br><span class="line"></span><br><span class="line">git branch -r 查看远程分支</span><br><span class="line"></span><br><span class="line">git branch -a 查看所有分支（本地和远程）</span><br><span class="line"></span><br><span class="line">git branch &lt;branchname&gt; //新建分支</span><br><span class="line"></span><br><span class="line">git branch -m &lt;oldbranch&gt; &lt;newbranch&gt; //重命名本地分支</span><br><span class="line"></span><br><span class="line">git branch -d &lt;branchname&gt; //删除本地分支</span><br><span class="line"></span><br><span class="line">git branch -d -r &lt;branchname&gt; //删除远程分支，删除后还需推送到服务器</span><br><span class="line">git push origin:&lt;branchname&gt;  //删除后推送至服务器</span><br></pre></td></tr></table></figure>
+<h2 id="常用场景"><a href="#常用场景" class="headerlink" title="常用场景"></a>常用场景</h2><ul>
+<li><p>关联远程库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1.先有本地库，后有远程库时。把本地仓库关联到远程库。（本地和远程都有库）</span><br><span class="line">(1) 在远程创建一个仓库（空仓库，不勾选readme.txt文件）</span><br><span class="line"></span><br><span class="line">(2) 在本地init了的仓库里运行关联仓库命令， git remote add origin 远程仓库地址</span><br><span class="line"></span><br><span class="line">(3) 关联后，使用命令git push -u origin master 进行第一次提交</span><br><span class="line"></span><br><span class="line">另外也可以关联多个远程仓库地址：关联多个远程仓库时，只需要取不同的远程仓库名，再push到不同远程仓库名上即可</span><br><span class="line">git remote add gitlab gitlab地址</span><br><span class="line">git push gitlab(远程仓库名) master(分支)</span><br><span class="line"></span><br><span class="line">2.本地无库，远程有库，从远程仓库克隆即可（推荐使用）</span><br><span class="line">git clone 远程仓库地址</span><br><span class="line"></span><br><span class="line">3.取消关联</span><br><span class="line">git remote remove origin/gitlab(远程仓库名)</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>合并分支</p>
 <p>场景：当前dev分支,dev分支要合并到线上master分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">git branch 查看当前分支 </span><br><span class="line"></span><br><span class="line">git branch -r 查看远程分支</span><br><span class="line"></span><br><span class="line">git branch -a 查看所有分支（本地和远程）</span><br><span class="line"></span><br><span class="line">git branch &lt;branchname&gt; //新建分支</span><br><span class="line"></span><br><span class="line">git branch -m &lt;oldbranch&gt; &lt;newbranch&gt; //重命名本地分支</span><br><span class="line"></span><br><span class="line">git branch -d &lt;branchname&gt; //删除本地分支</span><br><span class="line"></span><br><span class="line">git checkout &lt;branchname&gt; 切换到要合并的分支</span><br><span class="line"></span><br><span class="line">git pull 拉最新代码</span><br><span class="line"></span><br><span class="line">git merge dev 把dev合并到当前分支</span><br><span class="line"></span><br><span class="line">git push 把更新推送到远程</span><br><span class="line"></span><br><span class="line">git branch -d -r &lt;branchname&gt; //删除远程分支，删除后还需推送到服务器</span><br><span class="line">git push origin:&lt;branchname&gt;  //删除后推送至服务器</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branchname&gt; 切换到要合并的分支</span><br><span class="line"></span><br><span class="line">git pull 拉最新代码</span><br><span class="line"></span><br><span class="line">git merge dev 把dev合并到当前分支</span><br><span class="line"></span><br><span class="line">git push 把更新推送到远程</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
-<li><p>版本回退</p>
+<li><p>版本回退<br>HEAD表示当前版本（最新提交版本），HEAD^表示上一版本</p>
+<p>回退命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 简洁/完整哈希索引值   ：回到指定哈希值所对应的版本</span><br><span class="line"></span><br><span class="line">git reset --hard HEAD：强制工作区、暂存区、本地库为当前HEAD指针所在的版本</span><br><span class="line"></span><br><span class="line">  git reset --hard HEAD^：后退一个版本(上一个版本)</span><br><span class="line"></span><br><span class="line">  tip：一个^表示回退一个版本</span><br><span class="line"></span><br><span class="line">git reset --hard HEAD~1：后退一个版本</span><br><span class="line"></span><br><span class="line">  tip：波浪线~后面的数字表示后退几个版本</span><br></pre></td></tr></table></figure>
+<p>回退场景：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1.在add 和 commit之前。想把当前工作区的修改返回原来状态用此命令。</span><br><span class="line">git chackout -- file(文件名)</span><br><span class="line">适用乱改文件后未进行git add和commit</span><br><span class="line"></span><br><span class="line">2.把暂存区的修改回退到工作区</span><br><span class="line">git reset HEAD file(文件名)</span><br><span class="line">适用乱改文件后add操作但是没有commit，可以使用git reset HEAD file(文件名)回到工作区，若是需要再回到最原来状态需要git checkout -- file</span><br><span class="line"></span><br><span class="line">3.回退版本，已经add和commit了之后的操作则需要</span><br><span class="line">git reset --hard 版本号/HEAD^</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>拉取远程分支到本地（本地无远程分支dev,想拉取同名dev分支到本地）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.首先把远程分支先拉到本地</span><br><span class="line">git fetch origin dev（dev为远程仓库的分支名）</span><br><span class="line"></span><br><span class="line">2.在本地创建分支dev并切换到该分支，然后跟远程的origin地址上的dev分支关联起来</span><br><span class="line">git checkout -b dev(本地分支名称) origin/dev(远程分支名称)   </span><br><span class="line">注：origin/dev表示跟远程的origin地址上的dev分支关联起来</span><br><span class="line"></span><br><span class="line">3.把远程某个分支上的内容都拉取到本地</span><br><span class="line">git pull origin dev(远程分支名称)</span><br><span class="line"></span><br><span class="line">4.再git add ,git commit ,git push代码</span><br></pre></td></tr></table></figure></li>
@@ -497,8 +505,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/10/miniPro/" rel="next" title="小程序登录">
-                <i class="fa fa-chevron-left"></i> 小程序登录
+              <a href="/2019/07/10/miniPro/" rel="next" title="uniapp">
+                <i class="fa fa-chevron-left"></i> uniapp
               </a>
             
           </div>
@@ -507,8 +515,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/09/13/index/" rel="prev" title="慎独">
-                慎独 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/29/centos-1/" rel="prev" title="阿里云轻量服务器Centos 7.3开发环境配置">
+                阿里云轻量服务器Centos 7.3开发环境配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -699,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化操作"><span class="nav-number">1.</span> <span class="nav-text">初始化操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用场景"><span class="nav-number">2.1.</span> <span class="nav-text">常用场景</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -742,7 +750,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共95.4k字</span>
+  <span class="post-count">博客全站共98.4k字</span>
 </div>
 
 <style>
