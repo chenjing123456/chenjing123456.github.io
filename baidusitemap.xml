@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>https://chensanr.gitee.io/2018/09/01/js%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-10-26T09:10:12.694Z</lastmod>
+    <data>
+        <display>
+        <title>javaScript算法</title>
+        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
+        
+        <tag>ECMAScript（核心js）</tag>
+         
+        <tag>API标准库</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/07/12/website/</loc>
+    <lastmod>2020-10-26T06:43:44.874Z</lastmod>
+    <data>
+        <display>
+        <title>收集web项目常见的库和网站</title>
+        <pubTime>2020-07-12T09:19:28.000Z</pubTime>
+        
+        <tag>web项目</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="https://chensanr.gitee.io/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
     <lastmod>2020-10-26T05:54:54.280Z</lastmod>
     <data>
@@ -45,29 +93,6 @@
           
              
               <breadCrumb title="vue-router" url="https://chensanr.gitee.io/categories/Vue/vue-router/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2020/07/12/website/</loc>
-    <lastmod>2020-10-23T07:47:47.457Z</lastmod>
-    <data>
-        <display>
-        <title>收集web项目常见的库和网站</title>
-        <pubTime>2020-07-12T09:19:28.000Z</pubTime>
-        
-        <tag>web项目</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="CSS" url="https://chensanr.gitee.io/categories/Web/CSS/"/>
           
         </display>
     </data>
@@ -904,31 +929,6 @@
           
              
               <breadCrumb title="login" url="https://chensanr.gitee.io/categories/Vue/login/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2018/09/01/js%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-05-21T02:44:00.001Z</lastmod>
-    <data>
-        <display>
-        <title>javaScript算法</title>
-        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
-        
-        <tag>ECMAScript（核心js）</tag>
-         
-        <tag>API标准库</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
           
         </display>
     </data>
