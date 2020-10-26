@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
-    <lastmod>2020-10-19T02:22:28.464Z</lastmod>
+    <lastmod>2020-10-26T05:54:54.280Z</lastmod>
     <data>
         <display>
         <title>uniapp</title>
@@ -22,6 +22,52 @@
           
              
               <breadCrumb title="login" url="https://chensanr.gitee.io/categories/Vue/login/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/03/23/vueSingleRoutePage/</loc>
+    <lastmod>2020-10-26T05:54:40.824Z</lastmod>
+    <data>
+        <display>
+        <title>vue单页面动态路由权限配置</title>
+        <pubTime>2020-03-23T11:39:00.000Z</pubTime>
+        
+        <tag>vue-router</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
+          
+             
+              <breadCrumb title="vue-router" url="https://chensanr.gitee.io/categories/Vue/vue-router/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/07/12/website/</loc>
+    <lastmod>2020-10-23T07:47:47.457Z</lastmod>
+    <data>
+        <display>
+        <title>收集web项目常见的库和网站</title>
+        <pubTime>2020-07-12T09:19:28.000Z</pubTime>
+        
+        <tag>web项目</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="https://chensanr.gitee.io/categories/Web/CSS/"/>
           
         </display>
     </data>
@@ -236,29 +282,6 @@
            
              
               <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2020/07/12/website/</loc>
-    <lastmod>2020-08-14T07:34:56.662Z</lastmod>
-    <data>
-        <display>
-        <title>收集web项目常见的库和网站</title>
-        <pubTime>2020-07-12T09:19:28.000Z</pubTime>
-        
-        <tag>web项目</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="CSS" url="https://chensanr.gitee.io/categories/Web/CSS/"/>
           
         </display>
     </data>
@@ -585,29 +608,6 @@
           
              
               <breadCrumb title="daily" url="https://chensanr.gitee.io/categories/Life/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2020/03/23/vueSingleRoutePage/</loc>
-    <lastmod>2020-05-21T05:33:24.702Z</lastmod>
-    <data>
-        <display>
-        <title>vue单页面动态路由权限配置</title>
-        <pubTime>2020-03-23T11:39:00.000Z</pubTime>
-        
-        <tag>vue-router</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
-          
-             
-              <breadCrumb title="vue-router" url="https://chensanr.gitee.io/categories/Vue/vue-router/"/>
           
         </display>
     </data>
