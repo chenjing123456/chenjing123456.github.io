@@ -4,24 +4,47 @@
 
     
   <url>
-    <loc>https://chensanr.gitee.io/2018/09/01/js%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-10-26T09:10:12.694Z</lastmod>
+    <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
+    <lastmod>2020-12-29T06:38:34.857Z</lastmod>
     <data>
         <display>
-        <title>javaScript算法</title>
-        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
+        <title>uniapp</title>
+        <pubTime>2019-07-09T16:00:00.000Z</pubTime>
         
-        <tag>ECMAScript（核心js）</tag>
+        <tag>小程序</tag>
          
-        <tag>API标准库</tag>
+        <tag>uniapp</tag>
          
          
            
              
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
           
              
-              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
+              <breadCrumb title="login" url="https://chensanr.gitee.io/categories/Vue/login/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2020/02/26/element/</loc>
+    <lastmod>2020-12-19T10:02:02.423Z</lastmod>
+    <data>
+        <display>
+        <title>element-ui 组件使用</title>
+        <pubTime>2020-02-26T11:59:00.000Z</pubTime>
+        
+        <tag>element</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
+          
+             
+              <breadCrumb title="element" url="https://chensanr.gitee.io/categories/Vue/element/"/>
           
         </display>
     </data>
@@ -30,7 +53,7 @@
     
   <url>
     <loc>https://chensanr.gitee.io/2020/07/12/website/</loc>
-    <lastmod>2020-10-26T06:43:44.874Z</lastmod>
+    <lastmod>2020-11-26T01:53:35.531Z</lastmod>
     <data>
         <display>
         <title>收集web项目常见的库和网站</title>
@@ -52,24 +75,72 @@
 
     
   <url>
-    <loc>https://chensanr.gitee.io/2019/07/10/miniPro/</loc>
-    <lastmod>2020-10-26T05:54:54.280Z</lastmod>
+    <loc>https://chensanr.gitee.io/2018/09/01/dataStructure/</loc>
+    <lastmod>2020-10-29T03:28:20.952Z</lastmod>
     <data>
         <display>
-        <title>uniapp</title>
-        <pubTime>2019-07-09T16:00:00.000Z</pubTime>
+        <title>数据结构与算法</title>
+        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
         
-        <tag>小程序</tag>
-         
-        <tag>uniapp</tag>
+        <tag>数据结构</tag>
          
          
            
              
-              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
+              <breadCrumb title="Other" url="https://chensanr.gitee.io/categories/Other/"/>
           
              
-              <breadCrumb title="login" url="https://chensanr.gitee.io/categories/Vue/login/"/>
+              <breadCrumb title="learn" url="https://chensanr.gitee.io/categories/Other/learn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2018/08/27/html%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-10-28T06:59:17.768Z</lastmod>
+    <data>
+        <display>
+        <title>HTML基础</title>
+        <pubTime>2018-08-26T16:00:00.000Z</pubTime>
+        
+        <tag>HTML基础</tag>
+         
+        <tag>HTML笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="HTML" url="https://chensanr.gitee.io/categories/Web/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://chensanr.gitee.io/2018/09/01/js%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-10-28T05:56:18.703Z</lastmod>
+    <data>
+        <display>
+        <title>javaScript算法</title>
+        <pubTime>2018-08-31T16:00:00.000Z</pubTime>
+        
+        <tag>ECMAScript（核心js）</tag>
+         
+        <tag>API标准库</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
+          
+             
+              <breadCrumb title="javaScript" url="https://chensanr.gitee.io/categories/Web/javaScript/"/>
           
         </display>
     </data>
@@ -548,29 +619,6 @@
 
     
   <url>
-    <loc>https://chensanr.gitee.io/2020/02/26/element/</loc>
-    <lastmod>2020-06-11T06:35:24.977Z</lastmod>
-    <data>
-        <display>
-        <title>element-ui 组件使用</title>
-        <pubTime>2020-02-26T11:59:00.000Z</pubTime>
-        
-        <tag>element</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://chensanr.gitee.io/categories/Vue/"/>
-          
-             
-              <breadCrumb title="element" url="https://chensanr.gitee.io/categories/Vue/element/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://chensanr.gitee.io/2020/05/26/ES-2020-%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
     <lastmod>2020-05-26T07:12:03.632Z</lastmod>
     <data>
@@ -633,31 +681,6 @@
           
              
               <breadCrumb title="daily" url="https://chensanr.gitee.io/categories/Life/daily/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://chensanr.gitee.io/2018/08/27/html%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2020-05-21T05:32:33.226Z</lastmod>
-    <data>
-        <display>
-        <title>HTML基础</title>
-        <pubTime>2018-08-26T16:00:00.000Z</pubTime>
-        
-        <tag>HTML基础</tag>
-         
-        <tag>HTML笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="https://chensanr.gitee.io/categories/Web/"/>
-          
-             
-              <breadCrumb title="HTML" url="https://chensanr.gitee.io/categories/Web/HTML/"/>
           
         </display>
     </data>

@@ -115,7 +115,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
 <meta property="og:image" content="https://chensanr.gitee.io/images/vue/disabled-cas.png">
-<meta property="og:updated_time" content="2020-06-11T06:35:24.977Z">
+<meta property="og:updated_time" content="2020-12-19T10:02:02.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="element-ui 组件使用">
 <meta name="twitter:description" content="element-ui 组件">
@@ -436,6 +436,9 @@
 </li>
 <li><p>远程搜索 filterable-method</p>
 </li>
+<li><p>多选并且只能选中最后一级 disabled属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">  &lt;el-cascader</span><br><span class="line">  :options=&quot;industry&quot;</span><br><span class="line">  :props=&quot;&#123;</span><br><span class="line">    label: &quot;name&quot;,</span><br><span class="line">    children: &quot;child&quot;,</span><br><span class="line">    value: &quot;name&quot;,</span><br><span class="line">    checkStrictly: true,</span><br><span class="line">    emitPath: false,</span><br><span class="line">    multiple: true,</span><br><span class="line">    &#125;&quot;</span><br><span class="line">  :show-all-levels=&quot;false&quot;</span><br><span class="line">  popper-class=&quot;cascaderIndustry&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &lt;/el-cascader&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1.设置除最后一项其余的disabled属性都不可选的方法</span><br><span class="line">/**</span><br><span class="line"> * @description 数组嵌套 级联数据设置disabled，最后一项数据设置可选,其余为不可选</span><br><span class="line"> * @author xiaomeng</span><br><span class="line"> * @param &#123;String&#125; childStr 数组的每个数据项里用来接收children的字段</span><br><span class="line"> * @param &#123;Array&#125; arr 要处理的源数组</span><br><span class="line"> * @return &#123;Array&#125; 返回处理后的数组</span><br><span class="line"> */</span><br><span class="line">export const handleChildDisAbled = (arr, childStr) =&gt; &#123;</span><br><span class="line">  const handledArr = arr.map(item =&gt; &#123;</span><br><span class="line">    if (!item[childStr] || item[childStr].length === 0) &#123;</span><br><span class="line">      item[childStr] = null</span><br><span class="line">      item[&apos;disabled&apos;] = false</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      const childArr = handleChildDisAbled(item[childStr], childStr)</span><br><span class="line">      item[childStr] = childArr</span><br><span class="line">      item[&apos;disabled&apos;] = true</span><br><span class="line">    &#125;</span><br><span class="line">    return item</span><br><span class="line">  &#125;)</span><br><span class="line">  return handledArr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2. this.industry = handleChildDisAbled(data,&apos;child&apos;)</span><br><span class="line"></span><br><span class="line">3.设置样式，除最后一级之外，其余的多选框都隐藏</span><br><span class="line"></span><br><span class="line">//适用行业</span><br><span class="line">.cascaderIndustry &#123;</span><br><span class="line">  .el-checkbox__input.is-disabled .el-checkbox__inner &#123;</span><br><span class="line">    display: none !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>disabled属性<br>需求：后台菜单可配置，在配置某菜单的上级菜单时，要求该菜单的上级菜单不能选中某菜单本身</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-cascader</span><br><span class="line">  :options=&quot;[&#123;id:0,name:&apos;root&apos;&#125;,...menuList]&quot;</span><br><span class="line">  v-model=&quot;menuItem.parentId&quot;</span><br><span class="line">  :show-all-levels=&quot;false&quot;</span><br><span class="line">  :props=&quot;props&quot;</span><br><span class="line">  clearable</span><br><span class="line">&gt;&lt;/el-cascader&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data()&#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    menuList:[],//菜单列表</span><br><span class="line">    value: &apos;id&apos;,</span><br><span class="line">        checkStrictly: true, // 设置父子菜单不相互关联， 确保当前此菜单不可选，但是此菜单的子菜单可以选择</span><br><span class="line">        label: &apos;name&apos;,</span><br><span class="line">        children: &apos;sonMenu&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * @description 设置当前菜单不可选中项 （上级菜单不可为本身）</span><br><span class="line">  * @param &#123;Array&#125; list 菜单列表</span><br><span class="line">  */</span><br><span class="line">setDisAbled(list) &#123;</span><br><span class="line">  let parentId = this.menuItem.id</span><br><span class="line">  for (var i = 0; i &lt;= list.length - 1; i++) &#123;</span><br><span class="line">    if (list[i].id === parentId) &#123;</span><br><span class="line">      list[i].disabled = true</span><br><span class="line">      break</span><br><span class="line">    &#125;</span><br><span class="line">    if (list[i].sonMenu &amp;&amp; list[i].sonMenu.length &gt; 0) &#123;</span><br><span class="line">      this.setDisAbled(list[i].sonMenu)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">this.setDisAbled(this.menuList) //调用即可改变menuList的不可选项配置</span><br></pre></td></tr></table></figure>
 <p><img src="/images/vue/disabled-cas.png" alt="目录"></p>
@@ -623,7 +626,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -634,7 +637,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -645,7 +648,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -770,7 +773,7 @@
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共99.9k字</span>
+  <span class="post-count">博客全站共100.7k字</span>
 </div>
 
 <style>
