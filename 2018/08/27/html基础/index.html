@@ -115,7 +115,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chensanr.gitee.io/images/web/default.jpg">
 <meta property="og:image" content="https://chensanr.gitee.io/images/wechat/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20181107173706.png">
-<meta property="og:updated_time" content="2020-10-28T06:59:17.768Z">
+<meta property="og:updated_time" content="2021-02-26T07:22:18.265Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML基础">
 <meta name="twitter:description" content="HTML基础知识">
@@ -1121,7 +1121,7 @@ disabled
 
         非IE:兼容DOM的浏览器默认会将 event对象传入到事件处理函数function中。
 
-            兼容：event = event || document.event;
+            兼容：event = event || window.event;
     2)event的属性：
 
         *非IE版本中event对象的属性和方法：
@@ -1197,6 +1197,16 @@ disabled
         *
         target 指的是你真正的操作对象，即使后面经过冒泡，target会一直指向你点击的目标对象
         而 currentTarget在冒泡时它的值是会跟随你的事件绑定的对象改变而改变
+
+    5)常见兼容
+      获得event对象兼容性写法 
+      event || (event = window.event);
+      获得target兼容型写法 
+      event.target||event.srcElement
+      阻止浏览器默认行为兼容性写法 
+      event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+      阻止冒泡写法 
+      event.stopPropagation ? event.stopPropagation() : (event.cancelBubble = true);
 
 7.事件类型
     UI事件：
@@ -1390,8 +1400,8 @@ disabled
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/01/dataStructure/" rel="prev" title="数据结构与算法">
-                数据结构与算法 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/01/js算法/" rel="prev" title="javaScript算法">
+                javaScript算法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1625,7 +1635,7 @@ disabled
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共103.6k字</span>
+  <span class="post-count">博客全站共104.1k字</span>
 </div>
 
 <style>

@@ -114,7 +114,7 @@
 <meta property="og:description" content="css基础">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://chensanr.gitee.io/images/web/default.jpg">
-<meta property="og:updated_time" content="2020-05-21T03:36:45.603Z">
+<meta property="og:updated_time" content="2021-03-01T07:32:23.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css基础">
 <meta name="twitter:description" content="css基础">
@@ -460,7 +460,7 @@
 <li><p>浮动的特点：<br> 1)脱离文档流，浮动一个元素，飘在原来位置的上面，并不是飘在页面的左上角，如果后面还有(不浮动)元素会顶上去。<br> <strong>浮动元素浮动之后的位置跟浮动元素浮动之前在文档流的位置有关。</strong><br> 2)同方向上的浮动，先浮动的在前面，后浮动的在后面。<br> 3)不同方向的浮动，左浮动找左浮动，右浮动找右浮动。</p>
 </li>
 <li>浮动中的左右边距问题：<br> 正常情况下，没有浮动，两个相邻元素的上下margin取较大者，<br> 如果两个元素都浮动，两个相邻元素的左右margin不共用，累加。</li>
-<li><p>浮动对父元素的影响：<br>如果子元素都浮动的话，父级没有高度，跟父级同一级别的之后元素会上顶被覆盖；如果父级想有高度，父级使用overflow:hiddeen;就有高度，不影响布局.<br>如果只是想不影响之后的布局，在之后布局的元素内部。使用clear:both;父级来清除浮动，它是没有高度的。<br> （clear：both是同一级别的元素进行清除浮动）</p>
+<li><p>浮动对父元素的影响：<br>如果子元素都浮动的话，父级没有高度，跟父级同一级别的之后元素会上顶被覆盖；如果父级想有高度，父级使用overflow:hidden;就有高度，不影响布局.<br>如果只是想不影响之后的布局，在之后布局的元素内部。使用clear:both;父级来清除浮动，它是没有高度的。<br> （clear：both是同一级别的元素进行清除浮动）</p>
 <p> eg:如果父元素包裹两个子元素，子元素都浮动，那么父元素没有高度，</p>
 <pre><code>如果想让父元素有高度，使用overflow:hidden;那么不影响跟父元素同一级别的元素（后面元素）布局
  div (parent)        overflow:hidden;
@@ -552,7 +552,7 @@ full-width:等宽，中文和英文之间等宽
 <pre><code>如果想写多个阴影，则用逗号隔开
 水平方向正值向右，负值向左
 </code></pre></li>
-<li><p>列表<br> 默认样式 ：ul有一个上下margin 16px;有有一个padding-left为40px；</p>
+<li><p>列表<br> 默认样式 ：ul有一个上下margin 16px;有一个padding-left为40px；</p>
 <pre><code>dl有一个上下margin 16px;没有padding-left；dd有margin-left 为40px;
 p 有上下margin为16px;
 </code></pre><p> list-style-type</p>
@@ -585,7 +585,7 @@ outside 主框外
 <li><p>background-clip:图片裁剪的范围<br>border-box  背景图片从border结束 默认<br>padding-box 背景图片从padding结束<br>content-box  背景图片从content结束<br><strong>一般background-origin和background-clip一起使用，并且通常都设置成开始和结束是相同的地方</strong></p>
 </li>
 <li><p>background-attachment 将图片绑定到什么上<br>fixed 绑定到视口上,从body开始。 不随文档流的移动而移动，在视口位置固定不动<br>scroll 默认，绑定到某个元素上 ，这个元素的图片不会随着元素内容的移动而移动<br>local 绑定到元素内容上，这张背景图会随着元素内容的移动而移动</p>
-<p>速记属性<br>书写连写 background:image repeat;           background:url() no-repeat;</p>
+<p>速记属性<br>书写连写 background:color url() position/size repeat;</p>
 </li>
 </ul>
 </li>
@@ -609,7 +609,7 @@ outside 主框外
 </li>
 <li><p>其他样式</p>
 <ul>
-<li>outline(速记属性) outline:width style color;<br>外边框 不占用空间<br> outline-width<br> outline-style<br> outline-color<br>outline与border的区别<br>border占用空间，会影响盒子的大小<br>outline不占用空间，不会影响盒子的大小，一般在border之外的部分展示，不会影响下面的布局</li>
+<li>outline(速记属性) outline:color style width;<br>外边框 不占用空间<br> outline-width<br> outline-style<br> outline-color<br>outline与border的区别<br>border占用空间，会影响盒子的大小<br>outline不占用空间，不会影响盒子的大小，一般在border之外的部分展示，不会影响下面的布局</li>
 <li><p>display展现形式</p>
 <p>行内元素最好不要直接过渡到块级元素，可以变成行内块级元素。也不要设置margin和padding.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">inline 行内展示 在一行显示，不可设置宽高</span><br><span class="line">block 块级展示 独占一行，可以设置宽高，不设置时默认浏览器的宽度</span><br><span class="line">inline-block 行内块级展示 在一行展示，并且可以设置宽高</span><br><span class="line">none  元素隐藏，不占据屏幕空间</span><br></pre></td></tr></table></figure>
@@ -1110,7 +1110,7 @@ skewY(deg)
 <div class="theme-info">
   <div class="powered-by"> 
   </div>
-  <span class="post-count">博客全站共103.6k字</span>
+  <span class="post-count">博客全站共104.1k字</span>
 </div>
 
 <style>
