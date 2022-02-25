@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "20615c0a"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="vue-cli,node,webpack," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Sanr's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="有时候vue单页面项目配置不满足开发需求，需要进行多页面项目配置，多端单页面和多端多页面的项目配置，本文详细介绍了单页，多页面，多端多页等项目配置的方法。">
+<meta name="keywords" content="vue-cli,node,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue项目配置框架">
+<meta property="og:url" content="https://chensanr.gitee.io/2020/08/26/vue-config/index.html">
+<meta property="og:site_name" content="Sanr&#39;s Blog">
+<meta property="og:description" content="有时候vue单页面项目配置不满足开发需求，需要进行多页面项目配置，多端单页面和多端多页面的项目配置，本文详细介绍了单页，多页面，多端多页等项目配置的方法。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/config3.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/config4.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/config.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/config1.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/config2.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/config5.png">
+<meta property="og:updated_time" content="2022-01-25T09:14:59.643Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue项目配置框架">
+<meta name="twitter:description" content="有时候vue单页面项目配置不满足开发需求，需要进行多页面项目配置，多端单页面和多端多页面的项目配置，本文详细介绍了单页，多页面，多端多页等项目配置的方法。">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chensanr.gitee.io/2020/08/26/vue-config/"/>
+
+
+
+
+
+  <title>vue项目配置框架 | Sanr's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sanr's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">三日的一二事</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chensanr.gitee.io/2020/08/26/vue-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sanr Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sanr's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vue项目配置框架</h1>
+        
+
+        <div class="post-meta">
+           <i class="fa fa-thumb-tack"></i> <font color=7D26CD>置顶</font> <span class="post-meta-divider">|</span> 
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-26T16:42:43+08:00">
+                2020-08-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/config/" itemprop="url" rel="index">
+                    <span itemprop="name">config</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,815
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote><p>有时候vue单页面项目配置不满足开发需求，需要进行多页面项目配置，多端单页面和多端多页面的项目配置，本文详细介绍了单页，多页面，多端多页等项目配置的方法。</p>
+</blockquote>
+<p><img src="/images/vue/default.jpg" alt="目录"><a id="more"></a></p>
+<h2 id="配置项目的前期准备"><a href="#配置项目的前期准备" class="headerlink" title="配置项目的前期准备"></a>配置项目的前期准备</h2><h3 id="知识要点储备"><a href="#知识要点储备" class="headerlink" title="知识要点储备"></a>知识要点储备</h3><p>vue项目的配置主要涉及到node,vue-cli和webpack，建议先阅读一下下面官方的配置文档</p>
+<ul>
+<li><a href="http://nodejs.cn/api/process.html#process_process_env" target="_blank" rel="noopener">node的process模块和fs模块</a></li>
+<li><a href="https://cli.vuejs.org/zh/config/" target="_blank" rel="noopener">vue-cli的webpack配置参考</a></li>
+<li><a href="https://webpack.docschina.org/configuration/dev-server/#devserverindex" target="_blank" rel="noopener">webpack配置</a></li>
+</ul>
+<h3 id="配置参数publicPath"><a href="#配置参数publicPath" class="headerlink" title="配置参数publicPath"></a>配置参数publicPath</h3><p>1.publicPath参数：表示布置应用包时的基本url，详情请查阅<a href="https://cli.vuejs.org/zh/config/#publicpath" target="_blank" rel="noopener">publicpath的官方介绍</a><br>这个参数主要出现在两个地方：</p>
+<ul>
+<li>output：资源输出配置项，影响打包资源生成的路径，用于生产环境。设置了该项配置将会为资源添加一个前缀</li>
+<li>devServer：静态资源服务配置项，即生成的静态文件所在的位置，影响资源在本地开发环境的访问，用于开发环境。</li>
+</ul>
+<p>在output里面设置了publicPath以后，若是devServer里面没有设置publicPath，则使用webpack-dev-server 在进行打包时生成的静态文件所在的位置以及引用资源的前缀都是output.publicPath里面设置的值。</p>
+<div style="color: #409eff;background-color: #ecf5ff;padding:4px 10px;border-radius:4px">* publicPath设置为空字符串 (‘’) 或是相对路径 (‘./‘)，这样所有的资源都会被链接为相对路径，这样打出来的包可以被部署在任意路径</div>
+
+
+<p>2.举例：在vue.config.js配置文件设置</p>
+<p>eg1:推荐写法，生产环境配置为相对路径’’,开发环境时devServer和output的publicPath设置为/。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    publicPath: process.env.NODE_ENV === &apos;production&apos; ? &apos;&apos; : &apos;/&apos;, </span><br><span class="line">    devServer:&#123;</span><br><span class="line">        //不设置时取外面output的publicPath</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>打包之后的路径可放置任意路径。打包后的文件前缀如下<br><img src="/images/vue/config3.png" alt="目录"><br>在本地环境生成的静态文件所在的位置/，即静态文件都存放在当前域名下<br><img src="/images/vue/config4.png" alt="目录"></p>
+<p>eg2:在本地环境里和html里引入的静态资源都是同一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    publicPath:  &apos;/gov/&apos;,</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        //不设置时取外面output的publicPath</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/vue/config.png" alt="目录"></p>
+<p>eg3:在本地环境里和html里引入的静态资源不同<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    publicPath: &apos;/outputdist/&apos;</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        publicPath: &apos;/dist/&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/vue/config1.png" alt="目录"><br>如此在本地环境/dist/里（访问localhost:9001/dist），会导致html里带有/outputdist/前缀的文件都找不到<br><img src="/images/vue/config2.png" alt="目录"></p>
+<p>参考详解：<br>webpack中的publicPath的用法:<a href="https://juejin.im/post/6844903686632636423" target="_blank" rel="noopener">webpack中的publicPath的用法</a><br>webpack配置文件中publicPath和contentBase:<a href="https://blog.csdn.net/wang839305939/article/details/85855967" target="_blank" rel="noopener">webpack配置文件中publicPath和contentBase</a></p>
+<h3 id="static和assets"><a href="#static和assets" class="headerlink" title="static和assets"></a>static和assets</h3><p>1.static中的文件是不会经过webpack编译的，一般建议存放一些外部第三方（公用）的静态资源文件。<br>2.assets因为会经过webpack编译，建议是存放一些只有组件自己使用到的静态资源。</p>
+<p>详解参考:<a href="http://vuejs-templates.github.io/webpack/static.html" target="_blank" rel="noopener">Static Assets</a></p>
+<h3 id="pages和chunks参数"><a href="#pages和chunks参数" class="headerlink" title="pages和chunks参数"></a>pages和chunks参数</h3><p>1.pages参数，多页面应用配置。详情请参考<a href="https://cli.vuejs.org/zh/config/#pages" target="_blank" rel="noopener">pages的官方介绍</a><br>其值应该是一个对象，对象的 key 是入口的名字，对应的value值有两种情况：</p>
+<ul>
+<li>一个指定了 entry, template, filename, title 和 chunks 的对象</li>
+<li>一个指定其 entry 的字符串</li>
+</ul>
+<p>2.pages的chunks参数</p>
+<ul>
+<li>在vue-cli3中vue.config.js中的pages参数是会编译到webpack的插件html-webpack-plugin的配置中。即pages.chunks就是插件html-webpack-plugin对应的pages.chunks参数。</li>
+<li>插件html-webpack-plugin,会自动帮你生成一个html文件并引用相关的assets文件<br>插件html-webpack-plugin的几个参数：<ul>
+<li>title:生成文件的标题</li>
+<li>filename:生成html文件的文件名</li>
+<li>template:模板文件，生成的html文件是根据这个特定的模板文件生成的</li>
+<li>minify:对html文件压缩</li>
+<li>hash:给生成的js文件独特的hash值</li>
+<li>favicon:给文件生成favicon（路径）</li>
+<li>entry:入口文件</li>
+<li>chunks:针对多入口文件，当你有多个入口时，对应会生成多个编译后的js文件,chunks选项可以决定是否都使用这些生成的js文件。<br><div style="color: #409eff;background-color: #ecf5ff;padding:4px 10px;border-radius:4px">* chunks默认会在生成的html文件中引用所有的js文件，当然你可以指定引入哪些特定的文件。例如：有两个入口文件，生成了两个js文件，如果不指定对应的chunks，则每个生成的html文件中会都引入这两个js文件</div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">eg:在下文中的多页面配置中设置了如下这种pages配置：</span><br><span class="line">对应的文件引入对应的js和chunk-vendors，chunk-common。</span><br><span class="line">function getPages () &#123;</span><br><span class="line">  let obj = &#123;&#125;</span><br><span class="line">  let &#123; html: &#123; filename: template &#125;, js: &#123; filename: entry &#125; &#125; = getCreateConfig(process.env.selfDirName)</span><br><span class="line">  Object.entries(fileName).forEach(([k, v]) =&gt; &#123;</span><br><span class="line">      obj[k] = &#123;</span><br><span class="line">      entry: entry.replace(/\$&#123;filename&#125;/g, k),</span><br><span class="line">      template: template.replace(/\$&#123;filename&#125;/g, k),</span><br><span class="line">      filename: isProd ? `$&#123;k&#125;.html` : `$&#123;process.env.selfDirName&#125;/$&#123;k&#125;.html`, // process.env.NODE_ENV === &apos;production&apos; ?`$&#123;v&#125;.html`:`$&#123;process.env.selfDirName&#125;/$&#123;v&#125;.html`,</span><br><span class="line">      title: &apos;&apos;,</span><br><span class="line">      favicon: path.join(__dirname, &apos;./public/favicon.ico&apos;),</span><br><span class="line">      chunks: [&apos;chunk-vendors&apos;, &apos;chunk-common&apos;, `$&#123;k&#125;`]</span><br><span class="line">      // multihtmlCache: true</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  return obj</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.参考:<br>pages.chunks的参数的意义:<a href="https://segmentfault.com/q/1010000016925412/a-1020000016946034" target="_blank" rel="noopener">pages.chunks的参数的意义-Hello_World20的回答</a><br>html-webpack-plugin用法全解:<a href="https://segmentfault.com/a/1190000007294861#articleHeader9" target="_blank" rel="noopener">html-webpack-plugin用法全解</a></p>
+<h2 id="单页面配置"><a href="#单页面配置" class="headerlink" title="单页面配置"></a>单页面配置</h2><p>顾名思义，单页面配置就是我们新建项目时默认建的项目配置，整个项目只有一个页面组成，通过vue-router进行路由配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  publicPath: &apos;/&apos;,</span><br><span class="line">  outputDir: &apos;dist&apos;,// 打包时生成的生产环境构建文件的目录</span><br><span class="line">  assetsDir: &apos;static&apos;, //打包后的 css、js 等静态文件目录名,相对于outputDir</span><br><span class="line">  lintOnSave: process.env.NODE_ENV === &apos;development&apos;,</span><br><span class="line">  // lintOnSave: true,//取消ESLint 校验</span><br><span class="line">  productionSourceMap: false,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    port: &apos;9001&apos;,</span><br><span class="line">    open: true,</span><br><span class="line">    overlay: &#123;</span><br><span class="line">      warnings: false,</span><br><span class="line">      errors: true</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  chainWebpack(config)&#123;//把当前项目的根目录的static备份到打包目录的static目录下面</span><br><span class="line">      config</span><br><span class="line">      .plugin(&apos;copy&apos;)</span><br><span class="line">      .init((CopyWebpackPlugin) =&gt; new CopyWebpackPlugin([&#123;</span><br><span class="line"></span><br><span class="line">        from: path.resolve(__dirname, &apos;./static&apos;),</span><br><span class="line">        to: path.resolve(__dirname, &apos;./dist/static&apos;)</span><br><span class="line">      &#125;])).end()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>打包后生成的dist目录如下：<br>/static的文件和处理后的js和css等被打包到/dist/static<br><img src="/images/vue/config5.png" alt="目录"><br>查看完整代码的地址:<a href="https://github.com/chenjing123456/single-page" target="_blank" rel="noopener">https://github.com/chenjing123456/single-page</a></p>
+<h2 id="多页面配置"><a href="#多页面配置" class="headerlink" title="多页面配置"></a>多页面配置</h2><p>多页面配置中最重要的和单页面不一样的配置就是pages参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  publicPath: &apos;/&apos;,</span><br><span class="line">  outputDir: &apos;dist&apos;,// 打包时生成的生产环境构建文件的目录</span><br><span class="line">  assetsDir: &apos;static&apos;, //打包后的 css、js 等静态文件目录名,相对于outputDir</span><br><span class="line">  pages:&#123;</span><br><span class="line">    index:&#123;</span><br><span class="line">      entry: path.join(__dirname, `./src/views/index/index.js`),</span><br><span class="line">      template: path.join(__dirname, &apos;./src/views/index/index.html&apos;),</span><br><span class="line">      chunks:[&apos;chunk-vendors&apos;, &apos;chunk-common&apos;, &apos;index&apos;]</span><br><span class="line">    &#125;,</span><br><span class="line">    login:&#123;</span><br><span class="line">      entry: path.join(__dirname, `./src/views/login/login.js`),</span><br><span class="line">      template: path.join(__dirname, &apos;./src/views/login/index.html&apos;),</span><br><span class="line">      chunks:[&apos;chunk-vendors&apos;, &apos;chunk-common&apos;, &apos;login&apos;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  lintOnSave: process.env.NODE_ENV === &apos;development&apos;,</span><br><span class="line">  // lintOnSave: true,//取消ESLint 校验</span><br><span class="line">  productionSourceMap: false,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    port: &apos;9001&apos;,</span><br><span class="line">    open: true,</span><br><span class="line">    overlay: &#123;</span><br><span class="line">      warnings: false,</span><br><span class="line">      errors: true</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  chainWebpack(config)&#123;//把当前项目的根目录的static备份到打包目录的static目录下面</span><br><span class="line">      config</span><br><span class="line">      .plugin(&apos;copy&apos;)</span><br><span class="line">      .init((CopyWebpackPlugin) =&gt; new CopyWebpackPlugin([&#123;</span><br><span class="line"></span><br><span class="line">        from: path.resolve(__dirname, &apos;./static&apos;),</span><br><span class="line">        to: path.resolve(__dirname, &apos;./dist/static&apos;)</span><br><span class="line">      &#125;])).end()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果页面很多可以把pages参数单独提出来<br>查看完整代码的地址:<a href="https://github.com/chenjing123456/single-pages" target="_blank" rel="noopener">https://github.com/chenjing123456/single-pages</a></p>
+<h2 id="多端单页面配置"><a href="#多端单页面配置" class="headerlink" title="多端单页面配置"></a>多端单页面配置</h2><p>1.前提：不管是多端单页还是多端多页，获取文件的方式都是一致的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">fileName文件对应是文件入口的列表，getPages方法获取的是全部页面的配置，</span><br><span class="line">function getPages () &#123;</span><br><span class="line">  let obj = &#123;&#125;</span><br><span class="line">  let &#123; html: &#123; filename: template &#125;, js: &#123; filename: entry &#125; &#125; = getCreateConfig(process.env.selfDirName)</span><br><span class="line">  Object.entries(fileName).forEach(([k, v]) =&gt; &#123;</span><br><span class="line">    obj[k] = &#123;</span><br><span class="line">      entry: entry.replace(/\$&#123;filename&#125;/g, k),</span><br><span class="line">      template: template.replace(/\$&#123;filename&#125;/g, k),</span><br><span class="line">      filename: isProd ? `$&#123;k&#125;.html` : `$&#123;process.env.selfDirName&#125;/$&#123;k&#125;.html`, // process.env.NODE_ENV === &apos;production&apos; ?`$&#123;v&#125;.html`:`$&#123;process.env.selfDirName&#125;/$&#123;v&#125;.html`,</span><br><span class="line">      title: &apos;&apos;,</span><br><span class="line">      favicon: path.join(__dirname, &apos;./public/favicon.ico&apos;),</span><br><span class="line">      chunks: [&apos;chunk-vendors&apos;, &apos;chunk-common&apos;, `$&#123;k&#125;`]</span><br><span class="line">      // multihtmlCache: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  return obj</span><br><span class="line">&#125;</span><br><span class="line">let pages = getPages()</span><br></pre></td></tr></table></figure></p>
+<p>2.多端多页配置跟多端单页配置中的区别</p>
+<ul>
+<li>配置pages如下：若是多端多页则pages拿到全部页面，多端单页pages拿到的是当前环境的页面</li>
+<li>多端单页在创建文件时在create.js是用的是createProj()，而多端单页createProj(pathname)。<div style="color: #409eff;background-color: #ecf5ff;padding:4px 10px;border-radius:4px">多端单页是默认创建了fielName文件中所有的页面文件，而多端指定了一个pathname，指定你需要创建文件的端，再匹配当前端（即fileName[pathname]）里所有的页面文件</div>
+
+
+</li>
+</ul>
+<p>3.多页面项目配置，遵循一个页面一个端原则创建文件夹和文件，创建文件的规则写在配置文件夹config里。</p>
+<ul>
+<li>在config/fileName文件 新增一个文件名(相当于新建一个页面文件)</li>
+<li>在根目录创建进程文件，规定当前进程对象(eg:.env.gov .env.govDev)</li>
+<li>在package.json 文件创建script脚本命令，包括启动命令和打包命令 (eg:”vue-cli-service serve –open –mode govDev)</li>
+<li>在config/template创建模板文件</li>
+<li>运行npm run create 或者node ./create/index.js，新建的文件夹和文件即生成</li>
+</ul>
+<p>文件夹config内部是通过fileName指定文件夹和文件名，然后自动生成文件夹以及文件的配置<br>vue.config.js文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  publicPath: process.env.NODE_ENV === &apos;production&apos; ? &apos;&apos; : &apos;/&apos;,</span><br><span class="line">  outputDir: &apos;dist/&apos; + process.env.selfDirName, // + process.env.selfDirName,</span><br><span class="line">  assetsDir: &apos;static&apos;, //打包后的 css、js 等静态文件目录名,相对于outputDir</span><br><span class="line">  lintOnSave: process.env.NODE_ENV === &apos;development&apos;,</span><br><span class="line">  pages:&#123;[process.env.selfDirName]:pages[process.env.selfDirName]&#125;, // 当前运行环境的入口文件的配置，只打包运行当前环境的页面（仅有一个页面）</span><br><span class="line">  // lintOnSave: true,//取消ESLint 校验</span><br><span class="line">  productionSourceMap: false,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    contentBase: path.join(__dirname, process.env.selfDirName),</span><br><span class="line">    port: process.env.port,</span><br><span class="line">  &#125;,</span><br><span class="line">  chainWebpack(config)&#123;//生产环境把当前项目的根目录的static备份到dist/static目录下面</span><br><span class="line">      let staticPath = &apos;&apos;</span><br><span class="line">    if (process.env.NODE_ENV === &apos;production&apos;) &#123;</span><br><span class="line">      config.devtool = &apos;eval-source-map&apos;</span><br><span class="line">      staticPath = path.resolve(__dirname, `./dist/` + `static`)</span><br><span class="line">      // staticPath = path.resolve(__dirname, `./dist/` + process.env.selfDirName + `/static`)</span><br><span class="line">      // config.plugins = [...config.plugins,new BundleAnalyzerPlugin()]</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      staticPath = &apos;static&apos;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config</span><br><span class="line">    // .plugin(&apos;harddisk&apos;)</span><br><span class="line">    // .use(HtmlWebpackHarddiskPlugin).end()</span><br><span class="line">      .plugin(&apos;copy&apos;)</span><br><span class="line">      .init((CopyWebpackPlugin) =&gt; new CopyWebpackPlugin([&#123;</span><br><span class="line"></span><br><span class="line">        from: path.resolve(__dirname, &apos;./static&apos;),</span><br><span class="line">        to: staticPath</span><br><span class="line">      &#125;])).end()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>查看完整代码的地址:<a href="https://github.com/chenjing123456/muli-page" target="_blank" rel="noopener">https://github.com/chenjing123456/muli-page</a></p>
+<h2 id="多端多页面配置"><a href="#多端多页面配置" class="headerlink" title="多端多页面配置"></a>多端多页面配置</h2><p>多页面项目配置，遵循一个端多个页面原则创建文件夹和文件，创建文件的规则写在配置文件夹config里。</p>
+<ul>
+<li>在config/fileName文件 新增端和文件名</li>
+<li>在根目录创建进程文件，规定当前进程对象(eg:.env.gov .env.govDev)</li>
+<li>在package.json 文件创建script脚本命令，包括启动命令和打包命令 (eg:”vue-cli-service serve –open –mode govDev)</li>
+<li>在config/template创建模板文件</li>
+<li>运行npm run new gov ，或者可以node createGov.js 创建某个端的多页面文件</li>
+</ul>
+<p>文件夹config内部是通过fileName指定文件夹和文件名，然后自动生成文件夹以及文件的配置<br>vue.config.js文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  publicPath: process.env.NODE_ENV === &apos;production&apos; ? &apos;&apos; : &apos;/&apos;,</span><br><span class="line">  outputDir: &apos;dist/&apos; + process.env.selfDirName, // + process.env.selfDirName,</span><br><span class="line">  assetsDir: &apos;static&apos;, //打包后的 css、js 等静态文件目录名,相对于outputDir</span><br><span class="line">  lintOnSave: process.env.NODE_ENV === &apos;development&apos;,</span><br><span class="line">  // lintOnSave: true,//取消ESLint 校验</span><br><span class="line">  productionSourceMap: false,</span><br><span class="line">  pages, //所有页面的配置</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    contentBase: path.join(__dirname, process.env.selfDirName),</span><br><span class="line">    port: process.env.port,</span><br><span class="line">  &#125;,</span><br><span class="line">  chainWebpack(config)&#123;//生产环境把当前项目的根目录的static备份到dist/static目录下面</span><br><span class="line">      let staticPath = &apos;&apos;</span><br><span class="line">    if (process.env.NODE_ENV === &apos;production&apos;) &#123;</span><br><span class="line">      config.devtool = &apos;eval-source-map&apos;</span><br><span class="line">      staticPath = path.resolve(__dirname, `./dist/` + `static`)</span><br><span class="line">      // staticPath = path.resolve(__dirname, `./dist/` + process.env.selfDirName + `/static`)</span><br><span class="line">      // config.plugins = [...config.plugins,new BundleAnalyzerPlugin()]</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      staticPath = &apos;static&apos;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    config</span><br><span class="line">    // .plugin(&apos;harddisk&apos;)</span><br><span class="line">    // .use(HtmlWebpackHarddiskPlugin).end()</span><br><span class="line">      .plugin(&apos;copy&apos;)</span><br><span class="line">      .init((CopyWebpackPlugin) =&gt; new CopyWebpackPlugin([&#123;</span><br><span class="line"></span><br><span class="line">        from: path.resolve(__dirname, &apos;./static&apos;),</span><br><span class="line">        to: staticPath</span><br><span class="line">      &#125;])).end()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>查看完整代码的地址:<a href="https://github.com/chenjing123456/muli-pages" target="_blank" rel="noopener">https://github.com/chenjing123456/muli-pages</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #666;font-size:14px;">-------------进度条到了&nbsp;<i class="fa fa-paw" style="color:rgb(90,85,85)"></i>&nbsp;感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+    <div>
+          
+            
+          
+    </div>
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Sanr Chen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://chensanr.gitee.io/2020/08/26/vue-config/" title="vue项目配置框架">https://chensanr.gitee.io/2020/08/26/vue-config/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue-cli/" rel="tag"><i class="fa fa-tag"></i> vue-cli</a>
+          
+            <a href="/tags/node/" rel="tag"><i class="fa fa-tag"></i> node</a>
+          
+            <a href="/tags/webpack/" rel="tag"><i class="fa fa-tag"></i> webpack</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/12/website/" rel="next" title="收集web项目常见的库和网站">
+                <i class="fa fa-chevron-left"></i> 收集web项目常见的库和网站
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/13/index/" rel="prev" title="慎独">
+                慎独 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTM3NC8xNTkwMQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avar.jpg"
+                alt="Sanr Chen" />
+            
+              <p class="site-author-name" itemprop="name">Sanr Chen</p>
+              <p class="site-description motion-element" itemprop="description">少时为行 长时为恕</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chenjing123456" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1474189135@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.daqianduan.com/" title="大前端" target="_blank">大前端</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.w3cplus.com/" title="w3cplus" target="_blank">w3cplus</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置项目的前期准备"><span class="nav-number">1.</span> <span class="nav-text">配置项目的前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#知识要点储备"><span class="nav-number">1.1.</span> <span class="nav-text">知识要点储备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置参数publicPath"><span class="nav-number">1.2.</span> <span class="nav-text">配置参数publicPath</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static和assets"><span class="nav-number">1.3.</span> <span class="nav-text">static和assets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pages和chunks参数"><span class="nav-number">1.4.</span> <span class="nav-text">pages和chunks参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单页面配置"><span class="nav-number">2.</span> <span class="nav-text">单页面配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多页面配置"><span class="nav-number">3.</span> <span class="nav-text">多页面配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多端单页面配置"><span class="nav-number">4.</span> <span class="nav-text">多端单页面配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多端多页面配置"><span class="nav-number">5.</span> <span class="nav-text">多端多页面配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sanr Chen</span>
+
+  
+</div>
+
+
+
+  
+  <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+  </span> <span class="post-meta-divider">|</span> 
+  <span id="busuanzi_container_site_uv">总访客&nbsp;<span id="busuanzi_value_site_uv"></span></span> 
+  <span class="post-meta-divider">|</span> 
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"> 
+  </div>
+  <span class="post-count">博客全站共106.2k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

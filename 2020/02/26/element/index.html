@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "20615c0a"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="element," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Sanr's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="element-ui 组件">
+<meta name="keywords" content="element">
+<meta property="og:type" content="article">
+<meta property="og:title" content="element-ui 组件使用">
+<meta property="og:url" content="https://chensanr.gitee.io/2020/02/26/element/index.html">
+<meta property="og:site_name" content="Sanr&#39;s Blog">
+<meta property="og:description" content="element-ui 组件">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/disabled-cas.png">
+<meta property="og:updated_time" content="2022-01-25T09:14:59.640Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="element-ui 组件使用">
+<meta name="twitter:description" content="element-ui 组件">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chensanr.gitee.io/2020/02/26/element/"/>
+
+
+
+
+
+  <title>element-ui 组件使用 | Sanr's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sanr's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">三日的一二事</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chensanr.gitee.io/2020/02/26/element/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sanr Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sanr's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">element-ui 组件使用</h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-26T19:59:00+08:00">
+                2020-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/element/" itemprop="url" rel="index">
+                    <span itemprop="name">element</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,841
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  15
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote><p>element-ui 组件</p>
+</blockquote>
+<p><img src="/images/vue/default.jpg" alt="目录"><a id="more"></a></p>
+<h3 id="自动搜索-autocomplete"><a href="#自动搜索-autocomplete" class="headerlink" title="自动搜索 autocomplete"></a>自动搜索 autocomplete</h3><ul>
+<li><p>远程搜索 属性fetch-suggestions（从服务器获取数据）</p>
+<p>功能：搜索企业名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">1.设置:fetch-suggestions</span><br><span class="line">&lt;el-autocomplete</span><br><span class="line">     v-model=&quot;defaultObj.entName&quot;</span><br><span class="line">     class=&quot;gov-input&quot;</span><br><span class="line">     :fetch-suggestions=&quot;querySearchAsync&quot;</span><br><span class="line">     value-key=&quot;entName&quot;</span><br><span class="line">     placeholder=&quot;请搜索&quot;</span><br><span class="line">     @select=&quot;handleSelect&quot;</span><br><span class="line">&gt;&lt;/el-autocomplete&gt;</span><br><span class="line"></span><br><span class="line">methods:&#123;</span><br><span class="line">  //2.远程搜索方法</span><br><span class="line">   querySearchAsync(queryString,cb)&#123;</span><br><span class="line">        queryString ? this.fuzzySearchEnt(queryString).then((results)=&gt;&#123;</span><br><span class="line">       cb(results);</span><br><span class="line">      &#125;) : [];</span><br><span class="line">   &#125;,</span><br><span class="line">   //后台接口-根据entName搜索企业</span><br><span class="line">   async fuzzySearchEnt(queryString)&#123;</span><br><span class="line">    let results = await new Promise((resolve,reject)=&gt;&#123;</span><br><span class="line">        fuzzySearchEnt(&#123;entName:queryString&#125;).then((res)=&gt;&#123;</span><br><span class="line">          if(res.code==&apos;0000&apos;)&#123;</span><br><span class="line">            resolve(res.data.results||[])</span><br><span class="line">          &#125;else&#123;</span><br><span class="line">            this.$message.error(res.msg);</span><br><span class="line">            reject()</span><br><span class="line">           &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    return results;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="时间选择器-date-picker"><a href="#时间选择器-date-picker" class="headerlink" title="时间选择器 date-picker"></a>时间选择器 date-picker</h3><ul>
+<li>开始时间不限制，结束时间不小于当前时间；开始时间小于结束时间。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line">  &lt;el-col :span=&quot;12&quot;&gt;</span><br><span class="line">    &lt;el-form-item label=&quot;公示日期&quot; prop=&quot;publicityTimeStart&quot;&gt;</span><br><span class="line">      &lt;el-date-picker clearable :type=&quot;dateType&quot; placeholder=&quot;选择开始时间&quot; :format=&quot;dateFormat&quot; :value-format=&quot;dateFormat&quot; v-model=&quot;ruleForm.publicityTimeStart&quot; :picker-options=&quot;pickerOptions0&quot; style=&quot;width: 100%;&quot;&gt; &lt;/el-date-picker&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">  &lt;/el-col&gt;</span><br><span class="line">  &lt;el-col class=&quot;line&quot; style=&quot;text-align:center&quot; :span=&quot;2&quot;&gt;-&lt;/el-col&gt;</span><br><span class="line">  &lt;el-col :span=&quot;10&quot;&gt;</span><br><span class="line">    &lt;el-form-item label=&quot;&quot; prop=&quot;publicityTimeEnd&quot; class=&quot;publicityTimeEnd&quot;&gt;</span><br><span class="line">      &lt;el-date-picker :type=&quot;dateType&quot; placeholder=&quot;选择结束时间&quot; :format=&quot;dateFormat&quot; :value-format=&quot;dateFormat&quot; v-model=&quot;ruleForm.publicityTimeEnd&quot; :picker-options=&quot;pickerOptions1&quot; style=&quot;width: 100%;&quot; clearable&gt; &lt;/el-date-picker&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">  &lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br><span class="line"></span><br><span class="line">export default class ConfirmDialog extends Vue &#123;</span><br><span class="line">  dateFormat: string = &apos;yyyy-MM-dd&apos;;</span><br><span class="line">  dateType: string = &apos;date&apos;;</span><br><span class="line">  ruleForm: &#123; publicityTimeStart: string; publicityTimeEnd: string; title: string; content: string; id: any &#125; = &#123;</span><br><span class="line">    id: null,</span><br><span class="line">    title: &apos;&apos;,</span><br><span class="line">    content: &apos;&apos;,</span><br><span class="line">    publicityTimeStart: &apos;&apos;,</span><br><span class="line">    publicityTimeEnd: &apos;&apos;,</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">  //pickerOptions:&#123;</span><br><span class="line">    // 此处调用this this的指向不是vue实例 而是undefined</span><br><span class="line">   // disabledDate()&#123;&#125;</span><br><span class="line">  //&#125;</span><br><span class="line">  get pickerOptions0() &#123;</span><br><span class="line">    //用计算属性解决this指向问题</span><br><span class="line">    let that = this;</span><br><span class="line">    return &#123;</span><br><span class="line">      disabledDate: (time) =&gt; &#123;</span><br><span class="line">        let endDateVal = new Date(that.ruleForm.publicityTimeEnd).getTime();</span><br><span class="line">        if (endDateVal) &#123;</span><br><span class="line">          return time.getTime() &gt; endDateVal - 8.64e7;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  get pickerOptions1() &#123;</span><br><span class="line">    let that = this;</span><br><span class="line">    return &#123;</span><br><span class="line">      disabledDate(time) &#123;</span><br><span class="line">        let beginDateVal = new Date(that.ruleForm.publicityTimeStart).getTime();</span><br><span class="line">        if (beginDateVal) &#123;</span><br><span class="line">          // 等于的时候是临界值00:00:00  一天= 8.64e7毫秒</span><br><span class="line">          if (beginDateVal &lt; Date.now()) &#123;</span><br><span class="line">            return time.getTime() &lt; Date.now();</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            return time.getTime() &lt; beginDateVal;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          return time.getTime() &lt; Date.now();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="级联选择器-cascader"><a href="#级联选择器-cascader" class="headerlink" title="级联选择器 cascader"></a>级联选择器 cascader</h3><ul>
+<li><p>动态加载 属性lazyLoad</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    let that = this;</span><br><span class="line">    return &#123;</span><br><span class="line">    //1.设置在props设置lazy和lazyLoad属性</span><br><span class="line">        addProps: &#123;</span><br><span class="line">        lazy: true,</span><br><span class="line">        value: &quot;code&quot;,</span><br><span class="line">        children: &quot;childList&quot;,</span><br><span class="line">        label: &quot;name&quot;,</span><br><span class="line">        lazyLoad(node, resolve) &#123;</span><br><span class="line">          const &#123; level &#125; = node;</span><br><span class="line">          if (level === 0) &#123;//一级</span><br><span class="line">            that.queryRegions(0, resolve) </span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            that.queryRegions(node, resolve);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br><span class="line">** 注意点：动态加载级联选择框时，如果有默认选中的需求，emitPath必须为true,既v-model绑定数组并且checkStrictly: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">methods:()&#123;</span><br><span class="line">// 调用后台接口，根据父级的code获取子集，若是一级parentCode传0 </span><br><span class="line">    queryRegions(node, resolve) &#123;</span><br><span class="line">      let parentCode = node ? node.data.code : 0;</span><br><span class="line">      queryRegions(&#123; parentCode &#125;).then(res =&gt; &#123;</span><br><span class="line">        let &#123; code, data &#125; = res.data;</span><br><span class="line">        if (code == &quot;000000&quot; &amp;&amp; data) &#123;</span><br><span class="line">          resolve(data);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          resolve([]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>远程搜索 filterable-method</p>
+</li>
+<li><p>多选并且只能选中最后一级 disabled属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">  &lt;el-cascader</span><br><span class="line">  :options=&quot;industry&quot;</span><br><span class="line">  :props=&quot;&#123;</span><br><span class="line">    label: &quot;name&quot;,</span><br><span class="line">    children: &quot;child&quot;,</span><br><span class="line">    value: &quot;name&quot;,</span><br><span class="line">    checkStrictly: true,</span><br><span class="line">    emitPath: false,</span><br><span class="line">    multiple: true,</span><br><span class="line">    &#125;&quot;</span><br><span class="line">  :show-all-levels=&quot;false&quot;</span><br><span class="line">  popper-class=&quot;cascaderIndustry&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &lt;/el-cascader&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1.设置除最后一项其余的disabled属性都不可选的方法</span><br><span class="line">/**</span><br><span class="line"> * @description 数组嵌套 级联数据设置disabled，最后一项数据设置可选,其余为不可选</span><br><span class="line"> * @author xiaomeng</span><br><span class="line"> * @param &#123;String&#125; childStr 数组的每个数据项里用来接收children的字段</span><br><span class="line"> * @param &#123;Array&#125; arr 要处理的源数组</span><br><span class="line"> * @return &#123;Array&#125; 返回处理后的数组</span><br><span class="line"> */</span><br><span class="line">export const handleChildDisAbled = (arr, childStr) =&gt; &#123;</span><br><span class="line">  const handledArr = arr.map(item =&gt; &#123;</span><br><span class="line">    if (!item[childStr] || item[childStr].length === 0) &#123;</span><br><span class="line">      item[childStr] = null</span><br><span class="line">      item[&apos;disabled&apos;] = false</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      const childArr = handleChildDisAbled(item[childStr], childStr)</span><br><span class="line">      item[childStr] = childArr</span><br><span class="line">      item[&apos;disabled&apos;] = true</span><br><span class="line">    &#125;</span><br><span class="line">    return item</span><br><span class="line">  &#125;)</span><br><span class="line">  return handledArr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2. this.industry = handleChildDisAbled(data,&apos;child&apos;)</span><br><span class="line"></span><br><span class="line">3.设置样式，除最后一级之外，其余的多选框都隐藏</span><br><span class="line"></span><br><span class="line">//适用行业</span><br><span class="line">.cascaderIndustry &#123;</span><br><span class="line">  .el-checkbox__input.is-disabled .el-checkbox__inner &#123;</span><br><span class="line">    display: none !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>disabled属性<br>需求：后台菜单可配置，在配置某菜单的上级菜单时，要求该菜单的上级菜单不能选中某菜单本身</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-cascader</span><br><span class="line">  :options=&quot;[&#123;id:0,name:&apos;root&apos;&#125;,...menuList]&quot;</span><br><span class="line">  v-model=&quot;menuItem.parentId&quot;</span><br><span class="line">  :show-all-levels=&quot;false&quot;</span><br><span class="line">  :props=&quot;props&quot;</span><br><span class="line">  clearable</span><br><span class="line">&gt;&lt;/el-cascader&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data()&#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    menuList:[],//菜单列表</span><br><span class="line">    value: &apos;id&apos;,</span><br><span class="line">        checkStrictly: true, // 设置父子菜单不相互关联， 确保当前此菜单不可选，但是此菜单的子菜单可以选择</span><br><span class="line">        label: &apos;name&apos;,</span><br><span class="line">        children: &apos;sonMenu&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">  * @description 设置当前菜单不可选中项 （上级菜单不可为本身）</span><br><span class="line">  * @param &#123;Array&#125; list 菜单列表</span><br><span class="line">  */</span><br><span class="line">setDisAbled(list) &#123;</span><br><span class="line">  let parentId = this.menuItem.id</span><br><span class="line">  for (var i = 0; i &lt;= list.length - 1; i++) &#123;</span><br><span class="line">    if (list[i].id === parentId) &#123;</span><br><span class="line">      list[i].disabled = true</span><br><span class="line">      break</span><br><span class="line">    &#125;</span><br><span class="line">    if (list[i].sonMenu &amp;&amp; list[i].sonMenu.length &gt; 0) &#123;</span><br><span class="line">      this.setDisAbled(list[i].sonMenu)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">this.setDisAbled(this.menuList) //调用即可改变menuList的不可选项配置</span><br></pre></td></tr></table></figure>
+<p><img src="/images/vue/disabled-cas.png" alt="目录"></p>
+</li>
+</ul>
+<h3 id="表格全选问题-el-table"><a href="#表格全选问题-el-table" class="headerlink" title="表格全选问题 el-table"></a>表格全选问题 el-table</h3><p>需求：要求全选时选中同一个工作流的数据</p>
+<ul>
+<li><p>vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;section class=&quot;ctable&quot;&gt;</span><br><span class="line">    &lt;el-table</span><br><span class="line">      ref=&quot;multipleTable&quot;</span><br><span class="line">      :data=&quot;tableData&quot;</span><br><span class="line">      style=&quot;width: 100%&quot;</span><br><span class="line">      @select-all=&quot;selectAll&quot;</span><br><span class="line">      @select=&quot;handleSelectionChange&quot;</span><br><span class="line">    &gt;</span><br><span class="line">      &lt;el-table-column type=&quot;selection&quot; width=&quot;55&quot; :selectable=&quot;selectable&quot;&gt;</span><br><span class="line">      &lt;/el-table-column&gt;</span><br><span class="line">      &lt;el-table-column label=&quot;流程名称&quot; width=&quot;180&quot;&gt;</span><br><span class="line">        &lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">          &lt;div</span><br><span class="line">            class=&quot;processName&quot;</span><br><span class="line">            :title=&quot;scope.row.processName&quot;</span><br><span class="line">            @click=&quot;gotoDetail(scope.row)&quot;</span><br><span class="line">          &gt;</span><br><span class="line">            &#123;&#123; scope.row.processName &#125;&#125;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/template&gt;</span><br><span class="line">      &lt;/el-table-column&gt;</span><br><span class="line">    &lt;/el-table&gt;</span><br><span class="line">  &lt;/section&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>data</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">// 手动勾选数据行的 Checkbox 时触发的事件</span><br><span class="line">handleSelectionChange(val) &#123;</span><br><span class="line">  this.multipleSelection = val;</span><br><span class="line">&#125;,</span><br><span class="line">// 全选点击事件</span><br><span class="line">selectAll(val) &#123;</span><br><span class="line">  const that = this;</span><br><span class="line">  if (this.tableData.length === 1) &#123;</span><br><span class="line">    this.multipleSelection = val;</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  const len = this.multipleSelection.length;</span><br><span class="line">  // 没有选中项</span><br><span class="line">  if (len === 0) &#123;</span><br><span class="line">    const item = this.tableData[0];</span><br><span class="line">    const filterList = this.tableData.filter(</span><br><span class="line">      v =&gt; v.processDefinitionId === item.processDefinitionId</span><br><span class="line">    );</span><br><span class="line">    // 所有数据不在同一工作流</span><br><span class="line">    if (filterList &amp;&amp; filterList.length !== this.tableData.length) &#123;</span><br><span class="line">      this.$warnMsg(&apos;只有数据都属于同一个工作流，才能全选&apos;);</span><br><span class="line">      this.multipleSelection = [];</span><br><span class="line">      this.$refs.multipleTable.clearSelection();</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      this.multipleSelection = [...this.tableData];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    // 有选中项</span><br><span class="line">    const currentItem = this.multipleSelection[0];</span><br><span class="line">    const filterCurrList = this.tableData.filter(</span><br><span class="line">      v =&gt; v.processDefinitionId === currentItem.processDefinitionId</span><br><span class="line">    );</span><br><span class="line">    // 选中项 === 可以被选中项（processDefinitionId相同的） --&gt;相当于取消全选操作</span><br><span class="line">    if (filterCurrList.length === len) &#123;</span><br><span class="line">      this.multipleSelection = [];</span><br><span class="line">      this.$refs.multipleTable.clearSelection();</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 选中项 !== 可以被选中项   --&gt;相当于全选操作（把所有可以被选中项 勾选）</span><br><span class="line">      filterCurrList.forEach(row =&gt; &#123;</span><br><span class="line">        that.$refs.multipleTable.setCurrentRow(row);</span><br><span class="line">      &#125;);</span><br><span class="line">      this.multipleSelection = [...filterCurrList];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  // console.log(this.multipleSelection, &apos;finally&apos;);</span><br><span class="line">&#125;,</span><br><span class="line">selectable(row) &#123;</span><br><span class="line">  //默认没有选中项，是全部都可以选中；如果已经有选中项时，则只有processDefinitionId相同的才能被选中。</span><br><span class="line">  if (</span><br><span class="line">    this.multipleSelection.length &gt; 0 &amp;&amp;</span><br><span class="line">    row.processDefinitionId !==</span><br><span class="line">      this.multipleSelection[0].processDefinitionId</span><br><span class="line">  ) &#123;</span><br><span class="line">    return false;</span><br><span class="line">  &#125;</span><br><span class="line">  return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="无限滚动-InfiniteScroll"><a href="#无限滚动-InfiniteScroll" class="headerlink" title="无限滚动 InfiniteScroll"></a>无限滚动 InfiniteScroll</h3><p>调用后台使用步骤：</p>
+<ul>
+<li><p>vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;info-list&quot; v-infinite-scroll=&quot;load&quot; infinite-scroll-disabled=&quot;disabled&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;info-item&quot; v-for=&quot;(item,index) in list&quot; :key=&quot;index&quot; @click=&quot;gotoDetail(item)&quot;&gt;</span><br><span class="line">          &lt;div class=&quot;info-left&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;info-left-h&quot;&gt;</span><br><span class="line">              &lt;span class=&quot;entName&quot;&gt;&#123;&#123;item.entName&#125;&#125;&lt;/span&gt;</span><br><span class="line">              &lt;span class=&quot;creditCode&quot;&gt;&#123;&#123;item.creditCode&#125;&#125;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;info-left-b&quot;&gt;</span><br><span class="line">              &lt;span&gt;注册地址：&lt;/span&gt;</span><br><span class="line">              &lt;span class=&quot;add&quot;&gt;&#123;&#123;item.address&#125;&#125;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;info-right&quot;&gt;</span><br><span class="line">            &lt;span&gt;审核状态&lt;/span&gt;</span><br><span class="line">            &lt;span class=&quot;status&quot;&gt;&#123;&#123;item.flowStatus&#125;&#125;&lt;/span&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div v-if=&quot;loading&quot; class=&quot;loading&quot;&gt;</span><br><span class="line">          &lt;span&gt;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div v-if=&quot;noMore&quot; class=&quot;data-text&quot;&gt;没有更多了&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      </span><br><span class="line">      属性 ：</span><br><span class="line">      v-infinite-scroll表示滚动加载</span><br><span class="line">      infinite-scroll-disabled	是否禁用（起始页数大于等于总页数时停止加载）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>data</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">	return &#123;</span><br><span class="line">      loading: false,//加载中</span><br><span class="line">      count: 1,//页数</span><br><span class="line">      totalPages: 0,//总页数</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">    noMore() &#123;</span><br><span class="line">      //当起始页数大于总页数时停止加载</span><br><span class="line">      return this.count &gt;= this.totalPages;</span><br><span class="line">    &#125;,</span><br><span class="line">    disabled() &#123;</span><br><span class="line">      return this.loading || this.noMore;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    this.getList(1);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>methods</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">methods：&#123;</span><br><span class="line">// 分页查询待审核的直报</span><br><span class="line">  getList(pageNum) &#123;</span><br><span class="line">    if (pageNum) &#123;</span><br><span class="line">      this.count = 1;</span><br><span class="line">      this.list = [];</span><br><span class="line">    &#125;</span><br><span class="line">    let &#123; flowStatus, keyword, town &#125; = this.conditions;</span><br><span class="line">    if (flowStatus == &quot;全部&quot;) flowStatus = &quot;&quot;;</span><br><span class="line">    let params = &#123;</span><br><span class="line">      pageNum: this.count,</span><br><span class="line">      pageSize: 6, //每页查询条数</span><br><span class="line">      flowStatus,</span><br><span class="line">      keyword,</span><br><span class="line">      town</span><br><span class="line">    &#125;;</span><br><span class="line">    describeAuditEntCheckDataByPage(params).then(response =&gt; &#123;</span><br><span class="line">      let &#123; data, code &#125; = response;</span><br><span class="line">      this.list = this.list.concat(data.results); //因为每次后端返回的都是数组，所以这边把数组拼接到一起</span><br><span class="line">      this.total = data.totalRecord; //总数</span><br><span class="line">      this.totalPages = data.totalPage; //总页数</span><br><span class="line">      this.loading = false;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  load() &#123;</span><br><span class="line">    //滑到底部时进行加载</span><br><span class="line">    this.loading = true;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      this.count += 1; //页数+1</span><br><span class="line">      this.getList(); //调用接口，此时页数+1，查询下一页数据</span><br><span class="line">    &#125;, 2000);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="上传组件-upload"><a href="#上传组件-upload" class="headerlink" title="上传组件 upload"></a>上传组件 upload</h3><ul>
+<li><p>手动上传 http-request方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">//功能：上传文件</span><br><span class="line">//1:vue</span><br><span class="line">&lt;el-upload</span><br><span class="line">            class=&quot;upload-demo&quot;</span><br><span class="line">            ref=&quot;upload&quot;</span><br><span class="line">            drag</span><br><span class="line">            :show-file-list=&quot;false&quot;</span><br><span class="line">            :limit=&quot;1&quot;</span><br><span class="line">            :file-list=&quot;fileList&quot;</span><br><span class="line">            :http-request=&quot;httpRequest&quot;</span><br><span class="line">            action=&quot;#&quot;</span><br><span class="line">            accept=&quot;.xls, .xlsx&quot;</span><br><span class="line">          &gt;</span><br><span class="line">            &lt;div class=&quot;preview&quot;&gt;</span><br><span class="line">              &lt;div</span><br><span class="line">                class=&quot;fail_icon&quot;</span><br><span class="line">                v-bind:key=&quot;jobnumberKey&quot;</span><br><span class="line">                v-if=&quot;uploadStatus == &apos;fail&apos;&amp;&amp;isShowText&quot;</span><br><span class="line">                @click.stop=&quot;shuan()&quot;</span><br><span class="line">              &gt;</span><br><span class="line">                &lt;i class=&quot;el-icon-circle-close&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;span&gt;上传失败&lt;/span&gt;</span><br><span class="line">              &lt;/div&gt;</span><br><span class="line">              &lt;div</span><br><span class="line">                class=&quot;success_icon&quot;</span><br><span class="line">                v-bind:key=&quot;jobnumberKey&quot;</span><br><span class="line">                v-if=&quot;uploadStatus == &apos;success&apos;&amp;&amp;isShowText&quot;</span><br><span class="line">                @click.stop=&quot;shuan()&quot;</span><br><span class="line">              &gt;</span><br><span class="line">                &lt;i class=&quot;el-icon-circle-check&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;span&gt;上传成功&lt;/span&gt;</span><br><span class="line">              &lt;/div&gt;</span><br><span class="line">              &lt;i</span><br><span class="line">                :class=&quot;[&apos;iconfont&apos;, &apos;iconyulan&apos;,isPreview?&apos;isPreview&apos;:&apos;&apos;]&quot;</span><br><span class="line">                @click.stop=&quot;previewOnHtml&quot;</span><br><span class="line">              &gt;&lt;/i&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div v-if=&quot;uploadStatus == &apos;wait&apos;&quot; class=&quot;wait&quot;&gt;</span><br><span class="line">              &lt;i class=&quot;iconfont iconshangchuanwenjian&quot; /&gt;</span><br><span class="line">              &lt;div class=&quot;el-upload__text&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;status_cen&quot;&gt;将文件拖拽至此&lt;/span&gt;</span><br><span class="line">                &lt;div class=&quot;status&quot;&gt;</span><br><span class="line">                  或</span><br><span class="line">                  &lt;span style=&quot;color:#0091FF&quot;&gt;点击上传&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">              &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div v-if=&quot;uploadStatus == &apos;success&apos;&quot; class=&quot;success&quot;&gt;</span><br><span class="line">              &lt;i class=&quot;iconfont iconexcelbiaodan&quot; /&gt;</span><br><span class="line">              &lt;div class=&quot;el-upload__text&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;status_cen&quot;&gt;&#123;&#123;fileName&#125;&#125;&lt;/span&gt;</span><br><span class="line">                &lt;div class=&quot;status&quot;&gt;</span><br><span class="line">                  &lt;span style=&quot;color:#0091FF&quot;&gt;重新上传&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">              &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div v-if=&quot;uploadStatus == &apos;uploading&apos;&quot;&gt;</span><br><span class="line">              &lt;i class=&quot;iconfont iconexcelbiaodan&quot; /&gt;</span><br><span class="line">              &lt;div class=&quot;el-upload__text&quot;&gt;</span><br><span class="line">                &lt;el-progress class=&quot;progress&quot; :show-text=&quot;false&quot; :percentage=&quot;progressPercent&quot;&gt;&lt;/el-progress&gt;</span><br><span class="line">                &lt;div class=&quot;status&quot;&gt;</span><br><span class="line">                  &lt;span&gt;正在上传...&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">              &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div v-if=&quot;uploadStatus == &apos;fail&apos;&quot; class=&quot;fail&quot;&gt;</span><br><span class="line">              &lt;i class=&quot;iconfont iconexcelbiaodan fail_icon&quot; /&gt;</span><br><span class="line">              &lt;div class=&quot;el-upload__text&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;status_cen&quot;&gt;&#123;&#123;fileName&#125;&#125;&lt;/span&gt;</span><br><span class="line">                &lt;div class=&quot;status&quot;&gt;</span><br><span class="line">                  &lt;span style=&quot;color:#0091FF&quot;&gt;重新上传&lt;/span&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">              &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;el-upload__tip&quot; slot=&quot;tip&quot;&gt;</span><br><span class="line">              &lt;ul&gt;</span><br><span class="line">                &lt;li v-for=&quot;(item) in tips&quot; :key=&quot;item&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;</span><br><span class="line">              &lt;/ul&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">          &lt;/el-upload&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//2.data</span><br><span class="line">    data()&#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        jobnumberKey: +new Date(),</span><br><span class="line">        uploadStatus: &quot;wait&quot;,</span><br><span class="line">        isShowText: false,</span><br><span class="line">        progressPercent: 0,//上传进度</span><br><span class="line">        fileName:&quot;&quot;,</span><br><span class="line">        fileList:[]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">//3.methods</span><br><span class="line">  methods:&#123;</span><br><span class="line">    //上传失败-刷新</span><br><span class="line">    shuan() &#123;</span><br><span class="line">      this.isShowText = false;</span><br><span class="line">      this.jobnumberKey = +new Date(); //强制刷新</span><br><span class="line">    &#125;,</span><br><span class="line">    // config 是自带参数。 this.$refs.upload.submit() 会自动调用 httpRequest方法.在里面取得file</span><br><span class="line">    httpRequest(file) &#123;</span><br><span class="line">      let that = this;</span><br><span class="line">      that.uploadStatus = &quot;uploading&quot;; //上传中</span><br><span class="line">      let fd = new FormData();</span><br><span class="line">      let fileObj = file.file;</span><br><span class="line">      fd.append(&quot;file&quot;, fileObj);</span><br><span class="line">      fd.append(&quot;labelId&quot;, this.labelId);</span><br><span class="line">      fd.append(&quot;updateType&quot;, this.updateType);</span><br><span class="line">      that.fileName = file.file.name;</span><br><span class="line">      const config = &#123;</span><br><span class="line">        headers: &#123; Authorization: this.token &#125;,</span><br><span class="line">        onUploadProgress: progressEvent =&gt; &#123;</span><br><span class="line">          // progressEvent.loaded:已上传文件大小</span><br><span class="line">          // progressEvent.total:被上传文件的总大小</span><br><span class="line">          this.progressPercent = Number(</span><br><span class="line">            ((progressEvent.loaded / progressEvent.total) * 100).toFixed(2)</span><br><span class="line">          );</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">     //调用后台上传方法</span><br><span class="line">     uploadLabelFile(fd, config)</span><br><span class="line">        .then(res =&gt; &#123;</span><br><span class="line">          if (res.code === &quot;000000&quot;) &#123;</span><br><span class="line">            that.uploadStatus = &quot;success&quot;;</span><br><span class="line">            that.fileId = res.data;</span><br><span class="line">            that.fileList = [];</span><br><span class="line">            that.isPreview = true;</span><br><span class="line">            that.isShowText = true;</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            that.uploadStatus = &quot;fail&quot;;</span><br><span class="line">            that.fileList = [];</span><br><span class="line">            that.isPreview = false;</span><br><span class="line">            that.isShowText = true;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(res =&gt; &#123;</span><br><span class="line">          that.uploadStatus = &quot;fail&quot;;</span><br><span class="line">          that.fileList = [];</span><br><span class="line">          that.isPreview = false;</span><br><span class="line">          that.isShowText = true;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传组件在表单验证时的必填项的验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  //设置prop属性</span><br><span class="line">  &lt;el-form-item prop=&quot;attachmentList&quot; label=&quot;租赁合同：&quot; required&gt;</span><br><span class="line">  &lt;el-upload</span><br><span class="line">    action=&quot;/api/ent/file/upload&quot;</span><br><span class="line">    list-type=&quot;picture-card&quot;</span><br><span class="line">    accept=&quot;.jpg, .png, .jpeg&quot;</span><br><span class="line">    :on-remove=&quot;(file,fileList)=&gt;handleRemove(file,fileList,&apos;in&apos;)&quot;</span><br><span class="line">    :file-list=&quot;rentInItem.attachmentList&quot;</span><br><span class="line">    :on-success=&quot;(data)=&gt;uploadSuccess(data,&apos;in&apos;)&quot;</span><br><span class="line">  &gt;</span><br><span class="line">    &lt;i class=&quot;el-icon-plus&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;/el-upload&gt;</span><br><span class="line">&lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">  //设置自定义的验证方式</span><br><span class="line">		var validatorRentImg = (rule, value, callback) =&gt; &#123;</span><br><span class="line">    if (value.length === 0) &#123;</span><br><span class="line">      callback(new Error(&quot;请上传租赁合同&quot;));</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      callback();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  return &#123;</span><br><span class="line">    rules: &#123;</span><br><span class="line">      attachmentList: [&#123; validator: validatorRentImg, trigger: &quot;change&quot; &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    rentInItem: &#123;</span><br><span class="line">      lessor: &quot;&quot;,</span><br><span class="line">      lessorCreditCode: &quot;&quot;,</span><br><span class="line">      lessorEntType: &quot;&quot;,</span><br><span class="line">      areaOfInLand: &quot;&quot;,</span><br><span class="line">      rentPeriod: &quot;&quot;,</span><br><span class="line">      attachmentList: []</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #666;font-size:14px;">-------------进度条到了&nbsp;<i class="fa fa-paw" style="color:rgb(90,85,85)"></i>&nbsp;感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+    <div>
+          
+            
+          
+    </div>
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Sanr Chen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://chensanr.gitee.io/2020/02/26/element/" title="element-ui 组件使用">https://chensanr.gitee.io/2020/02/26/element/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/element/" rel="tag"><i class="fa fa-tag"></i> element</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/29/web-rules/" rel="next" title="前端编码规范">
+                <i class="fa fa-chevron-left"></i> 前端编码规范
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/21/生活/" rel="prev" title="热爱可抵岁月漫长">
+                热爱可抵岁月漫长 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTM3NC8xNTkwMQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avar.jpg"
+                alt="Sanr Chen" />
+            
+              <p class="site-author-name" itemprop="name">Sanr Chen</p>
+              <p class="site-description motion-element" itemprop="description">少时为行 长时为恕</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chenjing123456" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1474189135@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.daqianduan.com/" title="大前端" target="_blank">大前端</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.w3cplus.com/" title="w3cplus" target="_blank">w3cplus</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动搜索-autocomplete"><span class="nav-number">1.</span> <span class="nav-text">自动搜索 autocomplete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间选择器-date-picker"><span class="nav-number">2.</span> <span class="nav-text">时间选择器 date-picker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#级联选择器-cascader"><span class="nav-number">3.</span> <span class="nav-text">级联选择器 cascader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格全选问题-el-table"><span class="nav-number">4.</span> <span class="nav-text">表格全选问题 el-table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无限滚动-InfiniteScroll"><span class="nav-number">5.</span> <span class="nav-text">无限滚动 InfiniteScroll</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传组件-upload"><span class="nav-number">6.</span> <span class="nav-text">上传组件 upload</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sanr Chen</span>
+
+  
+</div>
+
+
+
+  
+  <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+  </span> <span class="post-meta-divider">|</span> 
+  <span id="busuanzi_container_site_uv">总访客&nbsp;<span id="busuanzi_value_site_uv"></span></span> 
+  <span class="post-meta-divider">|</span> 
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"> 
+  </div>
+  <span class="post-count">博客全站共106.2k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

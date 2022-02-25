@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "20615c0a"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="login,[object Object],Vue," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Sanr's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="记录前端项目实战中遇到的情况以及处理方式">
+<meta name="keywords" content="login,[object Object],Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端问题实战">
+<meta property="og:url" content="https://chensanr.gitee.io/2021/02/16/fe-practice/index.html">
+<meta property="og:site_name" content="Sanr&#39;s Blog">
+<meta property="og:description" content="记录前端项目实战中遇到的情况以及处理方式">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/vue-router-page.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/renren-fast-main.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/1.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/2.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/3.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/4.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/8.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/5.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/6.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/7.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/10.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/13.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/vue/12.png">
+<meta property="og:updated_time" content="2022-02-25T09:34:22.438Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端问题实战">
+<meta name="twitter:description" content="记录前端项目实战中遇到的情况以及处理方式">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/vue/default.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chensanr.gitee.io/2021/02/16/fe-practice/"/>
+
+
+
+
+
+  <title>前端问题实战 | Sanr's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sanr's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">三日的一二事</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chensanr.gitee.io/2021/02/16/fe-practice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sanr Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sanr's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端问题实战</h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-02-16T17:22:00+08:00">
+                2021-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  11,242
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  52
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote><p>记录前端项目实战中遇到的情况以及处理方式</p>
+</blockquote>
+<p><img src="/images/vue/default.jpg" alt="目录"> <a id="more"></a></p>
+<h1 id="钉钉登录"><a href="#钉钉登录" class="headerlink" title="钉钉登录"></a>钉钉登录</h1><h2 id="钉钉内部微应用免登"><a href="#钉钉内部微应用免登" class="headerlink" title="钉钉内部微应用免登"></a>钉钉内部微应用免登</h2><p>文档：<a href="https://ding-doc.dingtalk.com/doc#/dev/ep7bpq" target="_blank" rel="noopener">钉钉内部微应用免登</a></p>
+<ul>
+<li>安装 npm install dingtalk-jsapi –save</li>
+<li>引入 import * as dd from ‘dingtalk-jsapi’;</li>
+<li>获取微应用免登授权码，再根据code登录应用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">export const ddLogin = ()=&gt;&#123;</span><br><span class="line">    return new Promise((resolve,reject)=&gt;&#123;</span><br><span class="line">        axios.post(&apos;/api/dtalk/getDingParam&apos;).then((res)=&gt;&#123;</span><br><span class="line">            if (res.data.code == &apos;0000&apos;) &#123;</span><br><span class="line">                let corpId = res.data.data.corpId;//公司的corpId</span><br><span class="line">                dd.ready(function() &#123;</span><br><span class="line">                //获取微应用免登授权码</span><br><span class="line">                    dd.runtime.permission.requestAuthCode(&#123;</span><br><span class="line">                        corpId: corpId, // 企业id</span><br><span class="line">                        onSuccess: function (info) &#123;</span><br><span class="line">                            let code = info.code; // 通过该免登授权码可以获取用户身份</span><br><span class="line">                            // alert(code,corpId);</span><br><span class="line">                            axios(&#123;</span><br><span class="line">                                method: &apos;post&apos;,</span><br><span class="line">                                url: &apos;/api/dtalkLogin&apos;, // 路径</span><br><span class="line">                                data: &#123;</span><br><span class="line">                                    code</span><br><span class="line">                                &#125;,</span><br><span class="line">                                transformRequest: [function (data) &#123;</span><br><span class="line">                                    let ret = &apos;&apos;;</span><br><span class="line">                                    ret = qs.stringify(data);</span><br><span class="line">                                    return ret;</span><br><span class="line">                                &#125;],</span><br><span class="line">                                headers: &#123;</span><br><span class="line">                                    &apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;).then(res=&gt;&#123;</span><br><span class="line">                                if(res.data.code == &apos;0000&apos;)&#123;</span><br><span class="line">                                    setLocalStorage(&apos;token&apos;,res.data.data.token.token);</span><br><span class="line">                                    setLocalStorage(&quot;curl&quot;, res.data.data.permission);</span><br><span class="line">                                    setLocalStorage(&quot;grider&quot;, res.data.data.grider);</span><br><span class="line">                                    setLocalStorage(&quot;permissionDing&quot;, res.data.data.permissionDing);</span><br><span class="line">                                    setLocalStorage(&quot;level&quot;, res.data.data.level);</span><br><span class="line">                                    resolve(res.data);</span><br><span class="line">                                &#125;else&#123;</span><br><span class="line">                                    // _this.$router.go(-1);</span><br><span class="line">                                    Toast(&apos;登录失败&apos;);</span><br><span class="line">                                    location.href = localStorage.getItem(&quot;loginUrl&quot;);//登录页</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;)</span><br><span class="line">                        &#125;,</span><br><span class="line">                        onFail: function (err) &#123;</span><br><span class="line">                            Toast(err.errorMessage);</span><br><span class="line">                            location.href = localStorage.getItem(&quot;loginUrl&quot;);//登录页</span><br><span class="line">                            reject();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                Toast(&apos;登录失败&apos;);</span><br><span class="line">                location.href = localStorage.getItem(&quot;loginUrl&quot;);//登录页</span><br><span class="line">                reject();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第三方网站钉钉扫码登录"><a href="#第三方网站钉钉扫码登录" class="headerlink" title="第三方网站钉钉扫码登录"></a>第三方网站钉钉扫码登录</h2><p>采用官网中的方式二 ：支持网站将钉钉登录二维码内嵌到自己页面中<br>文档：<a href="https://ding-doc.dingtalk.com/doc#/serverapi2/kymkv6/jfDu3" target="_blank" rel="noopener">第三方网站钉钉扫码登录</a></p>
+<p>1.创建一个div，用于显示钉钉带过来的二维码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;scan_box&quot; id=&quot;scan_box&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>2.通过公司的appid拿到二维码，<br>用户扫码-扫码成功-跳转空白页登录应用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">mounted()&#123;</span><br><span class="line"> this.codeLogin();</span><br><span class="line">&#125;,</span><br><span class="line">codeLogin()&#123;</span><br><span class="line">            let that = this;</span><br><span class="line">            api.getQrDingParam().then(res=&gt;&#123;</span><br><span class="line">//                console.log(res);</span><br><span class="line">                if(res.code == &apos;0000&apos;)&#123;</span><br><span class="line">                    //1.调用后台接口拿到公司的appid</span><br><span class="line">                    this.appid = res.data.appId;</span><br><span class="line">                    //2.在需要使用钉钉登录的地方实例以下JS对象</span><br><span class="line">                    let obj = DDLogin(&#123;</span><br><span class="line">                        id: &apos;scan_box&apos;,</span><br><span class="line">                        goto: encodeURIComponent(&apos;https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=&apos; + this.appid + &apos;&amp;response_type=code&amp;scope=snsapi_login&amp;state=STATE&amp;redirect_uri=&apos; + this.redirect_uri + &apos;&apos;),</span><br><span class="line">                        style: &apos;border:none;background-color:#FFFFFF;&apos;,</span><br><span class="line">                        width: &apos;220&apos;,</span><br><span class="line">                        height: &apos;300&apos;</span><br><span class="line">                    &#125;)</span><br><span class="line">                    let hanndleMessage = function (event) &#123;</span><br><span class="line">                        let origin = event.origin;</span><br><span class="line">                        // 判断是否来自ddLogin扫码事件</span><br><span class="line">                        if (origin === &apos;https://login.dingtalk.com&apos;) &#123;</span><br><span class="line">                            let loginTmpCode = event.data;</span><br><span class="line">                            // 这里url不用进行urlencode编码</span><br><span class="line">                            let url = &apos;https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=&apos; + that.appid + &apos;&amp;response_type=code&amp;scope=snsapi_login&amp;state=STATE&amp;redirect_uri=&apos; + that.redirect_uri + &apos;&amp;loginTmpCode=&apos; + loginTmpCode;</span><br><span class="line">                            //跳转链接到新页面</span><br><span class="line">                            window.location.href = url;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;;</span><br><span class="line">                    if (typeof window.addEventListener !== &apos;undefined&apos;) &#123; // 添加事件</span><br><span class="line">                        window.addEventListener(&apos;message&apos;, hanndleMessage, false)</span><br><span class="line">                    &#125; else if (typeof window.attachEvent !== &apos;undefined&apos;) &#123;</span><br><span class="line">                        window.attachEvent(&apos;onmessage&apos;, hanndleMessage)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    return this.$message.error(res.msg)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+<p>3.新页面的代码：后台会在新页面带上code,根据code进行登录；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//登录接口</span><br><span class="line">  getdd()&#123;</span><br><span class="line">          let code=getLocation().query.code;</span><br><span class="line">                api.dtalkPcQrLogin(&#123;code&#125;).then(res=&gt;&#123;</span><br><span class="line">                    if (res.code == &quot;0000&quot;) &#123;</span><br><span class="line">                        setLocalStorage(&quot;token&quot;, res.data.token.token);</span><br><span class="line">                        setLocalStorage(&quot;curl&quot;, res.data.permission);</span><br><span class="line">                        setLocalStorage(&quot;department&quot;, res.data.department);</span><br><span class="line">                        setLocalStorage(&quot;level&quot;, res.data.level);</span><br><span class="line">                        setLocalStorage(&quot;grider&quot;, res.data.grider);</span><br><span class="line">                        setLocalStorage(&quot;username&quot;, res.data.username);</span><br><span class="line">                        setLocalStorage(&quot;name&quot;, res.data.realName);</span><br><span class="line">                        setLocalStorage(&quot;permissionDing&quot;, res.data.permissionDing);</span><br><span class="line">                        document.cookie = &quot;token=&quot; + res.data.token.token;</span><br><span class="line">                        let arr = JSON.parse(res.data.permission);</span><br><span class="line">                        let item = arr[0];</span><br><span class="line">                        let child = item.child[0];</span><br><span class="line">                        if (item.url &amp;&amp; item.child.length==0) &#123;</span><br><span class="line">                            gotoGovURL(`$&#123;item.url&#125;`);</span><br><span class="line">                        &#125; else if (child) &#123;</span><br><span class="line">                            gotoGovURL(`$&#123;item.url&#125;#/$&#123;child.url&#125;`);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        this.$message(&#123;</span><br><span class="line">                            message: res.msg,</span><br><span class="line">                            type: &apos;warning&apos;</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br></pre></td></tr></table></figure>
+<p>项目: <a href="http://lylobsysc.cet0570.com/gov/login.html#/" target="_blank" rel="noopener">登录页</a></p>
+<h1 id="vue单页面动态路由权限配置"><a href="#vue单页面动态路由权限配置" class="headerlink" title="vue单页面动态路由权限配置"></a>vue单页面动态路由权限配置</h1><h2 id="搭建项目"><a href="#搭建项目" class="headerlink" title="搭建项目"></a>搭建项目</h2><p>使用的是vue-element-admin的基本模板搭建项目，具体的使用过程参考他的官方文档，本文主要介绍这个项目的权限路由验证</p>
+<h2 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h2><p>项目的路由全部在router文件夹，根据后台路由权限配置动态路由；每个模块都新建文件引入到index里。</p>
+<p>路由分为两类：</p>
+<ul>
+<li>constantRoutes固定路由，不因角色变量改变而一直存在的路由对象，例如首页，登录页，404页面等；</li>
+<li>asyncRoutes变动路由，有权限的路由对象，一般在登录时根据当前用户的后台权限去筛选出asyncRoutes中的路由，组成当前用户的路由权限。</li>
+<li>注意：404页面一定要放在最后</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.在初始router时把constantRoutes固定路由塞进去</span><br><span class="line">const createRouter = () =&gt; new Router(&#123;</span><br><span class="line">  // mode: &apos;history&apos;, // require service support</span><br><span class="line">  scrollBehavior: () =&gt; (&#123; y: 0 &#125;),</span><br><span class="line">  routes: constantRoutes</span><br><span class="line">&#125;)</span><br><span class="line">2.在登陆成功时通过addRoutes动态添加路由</span><br><span class="line">//accessRoutes-筛选后的路由权限</span><br><span class="line">router.addRoutes(accessRoutes)</span><br></pre></td></tr></table></figure>
+<h2 id="权限验证"><a href="#权限验证" class="headerlink" title="权限验证"></a>权限验证</h2><p>1.在router.beforeEach中做路由权限验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach(async(to, from, next) =&gt; &#123;</span><br><span class="line">  </span><br><span class="line">  NProgress.start()</span><br><span class="line">  const hasToken = getToken()</span><br><span class="line"></span><br><span class="line">  if (hasToken) &#123;</span><br><span class="line">    if (to.path === &apos;/login&apos;) &#123;</span><br><span class="line">  </span><br><span class="line">      next(&#123; path: &apos;/&apos; &#125;)</span><br><span class="line">      NProgress.done()</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      const hasRoles = store.getters.roles &amp;&amp; store.getters.roles.length &gt; 0</span><br><span class="line">      if (hasRoles) &#123;</span><br><span class="line">        next()</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          //获取用户基本信息</span><br><span class="line">          const &#123; roles &#125; = await store.dispatch(&apos;user/getInfo&apos;)</span><br><span class="line">  </span><br><span class="line">          // 获取动态路由权限</span><br><span class="line">          const accessRoutes = await store.dispatch(&apos;permission/generateRoutes&apos;, roles)</span><br><span class="line">  </span><br><span class="line">          //通过router.addRoutes给设置动态路由</span><br><span class="line">          router.addRoutes(accessRoutes)</span><br><span class="line">          next(&#123; ...to, replace: true &#125;)</span><br><span class="line">        &#125; catch (error) &#123;</span><br><span class="line">          await store.dispatch(&apos;user/resetToken&apos;)</span><br><span class="line">          Message.error(error || &apos;Has Error&apos;)</span><br><span class="line">          next(`/login?redirect=$&#123;to.path&#125;`)</span><br><span class="line">          NProgress.done()</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    if (whiteList.indexOf(to.path) !== -1) &#123;</span><br><span class="line">      next()</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      next(`/login?redirect=$&#123;to.path&#125;`)</span><br><span class="line">      NProgress.done()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>2.获取动态路由权限 :在store的permission/generateRoutes中</p>
+<p>项目的原方案（方案一）是通过roles[admin,editor]字段和本地写的router配置的route.meta.roles匹配来筛选出动态路由；但是这种方式不满足公司角色很多的情况，所以我改造了一下，根据不同角色返回权限列表筛选出动态路由（方案二）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line">import &#123; asyncRoutes, constantRoutes &#125; from &apos;@/router&apos;</span><br><span class="line">import &#123; getUserMenu,getMenuList &#125; from &quot;@/api/organization/permission&quot;;</span><br><span class="line">// asyncRoutes 前台需要获取权限的总路由</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Use meta.role to determine if the current user has permission</span><br><span class="line"> * @param roles</span><br><span class="line"> * @param route</span><br><span class="line"> */</span><br><span class="line">function hasPermission(roles, route) &#123;</span><br><span class="line">  if (route.meta &amp;&amp; route.meta.roles) &#123;</span><br><span class="line">    return roles.some(role =&gt; route.meta.roles.includes(role))</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    return true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Filter asynchronous routing tables by recursion</span><br><span class="line"> * @param routes asyncRoutes</span><br><span class="line"> * @param roles</span><br><span class="line"> */</span><br><span class="line">export function filterAsyncRoutes(routes, roles) &#123;</span><br><span class="line">  const res = []</span><br><span class="line"></span><br><span class="line">  routes.forEach(route =&gt; &#123;</span><br><span class="line">    const tmp = &#123; ...route &#125;</span><br><span class="line">    if (hasPermission(roles, tmp)) &#123;</span><br><span class="line">      if (tmp.children) &#123;</span><br><span class="line">        tmp.children = filterAsyncRoutes(tmp.children, roles)</span><br><span class="line">      &#125;</span><br><span class="line">      res.push(tmp)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  return res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//方案二</span><br><span class="line">export function filterAsyncRoutes2(menuList, asyncRoutes) &#123;</span><br><span class="line">  const res = []</span><br><span class="line">  menuList.forEach(route =&gt; &#123;</span><br><span class="line">    const tmp = &#123; ...route &#125;</span><br><span class="line">    let currentAsyn = asyncRoutes.find((v)=&gt;&#123;</span><br><span class="line">      return tmp.href == v.path</span><br><span class="line">    &#125;)</span><br><span class="line">    // console.log(tmp,currentAsyn);</span><br><span class="line">    if (currentAsyn) &#123;</span><br><span class="line">      if (tmp.sonMenu) &#123;</span><br><span class="line">        tmp.sonMenu = filterAsyncRoutes2(tmp.sonMenu,currentAsyn.sonMenu||[])</span><br><span class="line">      &#125;</span><br><span class="line">      res.push(currentAsyn)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  //404页面 必须再动态路由最后面加上</span><br><span class="line">  res.push(&#123; path: &apos;*&apos;, redirect: &apos;/404&apos;, hidden: true &#125;)</span><br><span class="line">  return res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">const state = &#123;</span><br><span class="line">  routes: [],</span><br><span class="line">  appHeaderRoutes:[],//头部应用的路由列表 - 用于头部切换应用</span><br><span class="line">  currentRoute: &apos;&apos;,//当前应用名 - 用于筛选当前应用的路由对象</span><br><span class="line">  addRoutes: []</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const mutations = &#123;</span><br><span class="line">  SET_ROUTES: (state, routes) =&gt; &#123;</span><br><span class="line">    //constantRoutes-固定存在的路由  addRoutes- （过滤权限后的后台路由）</span><br><span class="line">    state.addRoutes = routes;</span><br><span class="line">    state.routes = constantRoutes.concat(routes)</span><br><span class="line">  &#125;,</span><br><span class="line">  SET_CURRENTROUTE: (state, name) =&gt; &#123;</span><br><span class="line">    state.currentRoute = name;</span><br><span class="line">  &#125;,</span><br><span class="line">  SET_APPHEADERROUTES:(state, routes) =&gt; &#123;</span><br><span class="line">    state.appHeaderRoutes = routes;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const actions = &#123;</span><br><span class="line">  setCurrentRoue(&#123;commit&#125;,item)&#123;</span><br><span class="line">    commit(&apos;SET_CURRENTROUTE&apos;, item.name)</span><br><span class="line">    let &#123;origin,pathname&#125; =  window.location;</span><br><span class="line">    window.location.href = `$&#123;origin&#125;$&#123;pathname&#125;#$&#123;item.href&#125;`</span><br><span class="line">  &#125;,</span><br><span class="line">  generateRoutes(&#123; commit &#125;, roles) &#123;</span><br><span class="line">    /**方案1.</span><br><span class="line">     * 根据roles(角色的列表) 过滤出动态路由 - 原方案</span><br><span class="line">     * */</span><br><span class="line">    // return new Promise(resolve =&gt; &#123;</span><br><span class="line">    //   let accessedRoutes;</span><br><span class="line">    //   if (roles.includes(&apos;admin&apos;)) &#123; //管理员可以看全部的asyncRoutes</span><br><span class="line">    //     accessedRoutes = asyncRoutes || []</span><br><span class="line">    //   &#125; else &#123; //其他成员只能看过滤权限后的</span><br><span class="line">    //     accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)</span><br><span class="line">    //   &#125;</span><br><span class="line">    //   //设置当前应用平台名 - 可拿到当前的路由对象</span><br><span class="line">    //   let name = accessedRoutes.length&gt;0 ? accessedRoutes[0].meta.title : &apos;系统设置&apos;;</span><br><span class="line">    //   commit(&apos;SET_ROUTES&apos;, accessedRoutes)</span><br><span class="line">    //   commit(&apos;SET_CURRENTROUTE&apos;,name)</span><br><span class="line">    //   resolve(accessedRoutes)</span><br><span class="line">    // &#125;)</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 方案2.-现在使用</span><br><span class="line">     * 后台根据不同角色返回权限列表 </span><br><span class="line">     * 前端再与asyncRoutes对比，过滤出本用户可查看的菜单权限accessedRoutes</span><br><span class="line">     * 再返回给addRoutes ；再通过router.addRoutes(accessRoutes)动态添加进router</span><br><span class="line">     * */</span><br><span class="line">    return new Promise((resolve,reject) =&gt; &#123;</span><br><span class="line">      getUserMenu().then(response =&gt; &#123;</span><br><span class="line">        let res = response.data;</span><br><span class="line">        let menuList = [], accessedRoutes = [];</span><br><span class="line">        if (res.code == &quot;000000&quot;) &#123;</span><br><span class="line">          menuList = res.data || [];</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          menuList = [];</span><br><span class="line">        &#125;</span><br><span class="line">        //设置头部应用的路由列表</span><br><span class="line">        commit(&apos;SET_APPHEADERROUTES&apos;, menuList);</span><br><span class="line">        //过滤出文件夹以外的菜单列表（二维变一维数组）</span><br><span class="line">        let menus = menuList.reduce((prev, cur, index) =&gt; &#123;</span><br><span class="line">          if (cur.sonMenu &amp;&amp; cur.sonMenu.length &gt; 0) &#123;</span><br><span class="line">            return prev.concat(cur.sonMenu);</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            return prev.concat([]);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;, [], 0);</span><br><span class="line">        // console.log(menus);</span><br><span class="line">        accessedRoutes = filterAsyncRoutes2(menus, asyncRoutes);</span><br><span class="line">        //设置当前应用平台名 - 可拿到当前的路由对象</span><br><span class="line">        let name = accessedRoutes.length &gt; 0 ? accessedRoutes[0].meta.title : &apos;系统设置&apos;;</span><br><span class="line">        let item = accessedRoutes.length &gt; 0 ? accessedRoutes[0] :&#123;&#125;</span><br><span class="line">        commit(&apos;SET_ROUTES&apos;, accessedRoutes)</span><br><span class="line">        commit(&apos;SET_CURRENTROUTE&apos;, name)</span><br><span class="line">        resolve(accessedRoutes)</span><br><span class="line">      &#125;).catch(error =&gt; &#123;</span><br><span class="line">        reject(error)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下：<br><img src="/images/vue/vue-router-page.png" alt=""><br>切换头部应用台菜单的时候 左侧菜单栏会相应改变；当前用户的路由权限通过filterAsyncRoutes2来筛选。</p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p><a href="https://panjiachen.gitee.io/vue-element-admin-site/zh/guide/" target="_blank" rel="noopener">vue-element-admin官方文档</a></p>
+<p><a href="https://github.com/chenjing123456/vue-singe-frame" target="_blank" rel="noopener">项目完整代码</a></p>
+<h1 id="人人开源-动态菜单路由"><a href="#人人开源-动态菜单路由" class="headerlink" title="人人开源-动态菜单路由"></a>人人开源-动态菜单路由</h1><p>人人开源是轻量级的 Spring Boot 快速开发平台，实现前后端分离，通过 token 进行数据交互。而renren-fast-vue基于vue、element-ui构建开发，实现renren-fast后台管理前端功能，提供一套更优的前端解决方案。本文就一步步解析renren-fast-vue来了解实现动态菜单路由的过程。</p>
+<p>如果想要了解更多：</p>
+<ul>
+<li><a href="https://www.renren.io/guide" target="_blank" rel="noopener">renren-fast开发文档</a></li>
+<li><a href="https://github.com/daxiongYang/renren-fast-vue" target="_blank" rel="noopener">renren-fast-vue地址</a></li>
+</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>  想要在本机启动项目，必须把项目克隆到本地</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/daxiongYang/renren-fast-vue</span><br></pre></td></tr></table></figure>
+<p>  进入文件夹renren-fast-vue 安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd renren-fast-vue</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>  整个项目的目录结构如下：<br>  <img src="/images/vue/renren-fast-main.png" alt="目录"></p>
+<h2 id="解析动态菜单路由"><a href="#解析动态菜单路由" class="headerlink" title="解析动态菜单路由"></a>解析动态菜单路由</h2><ol>
+<li>数据请求都是通过token来进行交互的，所以先获取token<br>*在登录页面，登录获取token<br><img src="/images/vue/1.png" alt="目录"><ul>
+<li>把token设置到请求头中<br><img src="/images/vue/2.png" alt="目录"></li>
+<li>登陆成功进入main页面<br>主页面是上左右整体布局，右布局main-content是菜单路由跳转的显示内容区<br><img src="/images/vue/3.png" alt="目录"></li>
+</ul>
+</li>
+<li>分析路由构成</li>
+</ol>
+<ul>
+<li><p>路由分为全局路由和主入口路由。主入口路由{path:’/‘,children:动态菜单路由}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">// 一.全局路由(无需嵌套上左右整体布局)</span><br><span class="line">const globalRoutes = [</span><br><span class="line">&#123; path: &apos;/404&apos;, component: _import(&apos;common/404&apos;), name: &apos;404&apos;, meta: &#123; title: &apos;404未找到&apos; &#125; &#125;,</span><br><span class="line">&#123; path: &apos;/login&apos;, component: _import(&apos;common/login&apos;), name: &apos;login&apos;, meta: &#123; title: &apos;登录&apos; &#125; &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">// 二.主入口路由(需嵌套上左右整体布局)</span><br><span class="line">const mainRoutes = &#123;</span><br><span class="line">path: &apos;/&apos;,</span><br><span class="line">component: _import(&apos;main&apos;),</span><br><span class="line">name: &apos;main&apos;,</span><br><span class="line">redirect: &#123; name: &apos;home&apos; &#125;, //重定向到home       /==&gt;/home</span><br><span class="line">meta: &#123; title: &apos;主入口整体布局&apos; &#125;,</span><br><span class="line">children: [</span><br><span class="line">    // 通过meta对象设置路由展示方式</span><br><span class="line">    // 1. isTab: 是否通过tab展示内容, true: 是, false: 否</span><br><span class="line">    // 2. iframeUrl: 是否通过iframe嵌套展示内容, &apos;以http[s]://开头&apos;: 是, &apos;&apos;: 否</span><br><span class="line">    // 提示: 如需要通过iframe嵌套展示内容, 但不通过tab打开, 请自行创建组件使用iframe处理!</span><br><span class="line">    &#123; path: &apos;/home&apos;, component: _import(&apos;common/home&apos;), name: &apos;home&apos;, meta: &#123; title: &apos;首页&apos; &#125; &#125;</span><br><span class="line">    //添加动态菜单路由</span><br><span class="line">],</span><br><span class="line">// 三.全局导航守卫 有token并正确则进入主页，失败进入登录页（初次使用时或token过期等时）</span><br><span class="line">beforeEnter (to, from, next) &#123; </span><br><span class="line">    let token = Vue.cookie.get(&apos;token&apos;)</span><br><span class="line">    if (!token || !/\S/.test(token)) &#123;</span><br><span class="line">    clearLoginInfo()</span><br><span class="line">    next(&#123; name: &apos;login&apos; &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    next()</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断当前路由类型 的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    /**</span><br><span class="line">* 判断当前路由类型, global: 全局路由, main: 主入口路由</span><br><span class="line">* 全局路由, 可以直接访问</span><br><span class="line">* @param &#123;*&#125; route 当前路由</span><br><span class="line">*/</span><br><span class="line">function fnCurrentRouteType (route) &#123;</span><br><span class="line">// console.log(route);</span><br><span class="line">var temp = []</span><br><span class="line">for (var i = 0; i &lt; globalRoutes.length; i++) &#123;</span><br><span class="line">    if (route.path === globalRoutes[i].path) &#123;</span><br><span class="line">    return &apos;global&apos;</span><br><span class="line">    &#125; else if (globalRoutes[i].children &amp;&amp; globalRoutes[i].children.length &gt;= 1) &#123;</span><br><span class="line">    temp = temp.concat(globalRoutes[i].children)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">return temp.length &gt;= 1 ? fnCurrentRouteType(route, temp) : &apos;main&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加动态(菜单)路由 的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line">* 添加动态(菜单)路由</span><br><span class="line">* @param &#123;*&#125; menuList 后台获取的菜单列表</span><br><span class="line">* @param &#123;*&#125; routes 递归创建的动态(菜单)路由</span><br><span class="line">*/</span><br><span class="line">function fnAddDynamicMenuRoutes (menuList = [], routes = []) &#123;</span><br><span class="line">var temp = []</span><br><span class="line">// console.log(menuList.length)</span><br><span class="line">for (var i = 0; i &lt; menuList.length; i++) &#123;</span><br><span class="line">    if (menuList[i].list &amp;&amp; menuList[i].list.length &gt;= 1) &#123;</span><br><span class="line">    temp = temp.concat(menuList[i].list)</span><br><span class="line">    &#125; else if (menuList[i].url &amp;&amp; /\S/.test(menuList[i].url)) &#123;</span><br><span class="line">    menuList[i].url = menuList[i].url.replace(/^\//, &apos;&apos;)</span><br><span class="line">    // console.log(menuList[i].url);</span><br><span class="line">    var route = &#123;</span><br><span class="line">        path: menuList[i].url.replace(&apos;/&apos;, &apos;-&apos;),</span><br><span class="line">        component: null,</span><br><span class="line">        name: menuList[i].url.replace(&apos;/&apos;, &apos;-&apos;),</span><br><span class="line">        meta: &#123;</span><br><span class="line">        menuId: menuList[i].menuId,</span><br><span class="line">        title: menuList[i].name,</span><br><span class="line">        isDynamic: true,</span><br><span class="line">        isTab: false, </span><br><span class="line">        //isTab:true 显示上方的tab按钮</span><br><span class="line">        iframeUrl: &apos;&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // url以http[s]://开头, 通过iframe展示</span><br><span class="line">    if (isURL(menuList[i].url)) &#123;</span><br><span class="line">        route[&apos;path&apos;] = `i-$&#123;menuList[i].menuId&#125;`</span><br><span class="line">        route[&apos;name&apos;] = `i-$&#123;menuList[i].menuId&#125;`</span><br><span class="line">        route[&apos;meta&apos;][&apos;iframeUrl&apos;] = menuList[i].url</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">        route[&apos;component&apos;] = _import(`modules/$&#123;menuList[i].url&#125;`) || null</span><br><span class="line">        &#125; catch (e) &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    routes.push(route)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">if (temp.length &gt;= 1) &#123; //表示menuList[i][j]项里面还有嵌套的菜单</span><br><span class="line">    fnAddDynamicMenuRoutes(temp, routes)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    //当temp没有时 表示所有菜单都已经遍历过 结束递归</span><br><span class="line">    mainRoutes.name = &apos;main-dynamic&apos;</span><br><span class="line">    mainRoutes.children = routes</span><br><span class="line">    router.addRoutes([</span><br><span class="line">    mainRoutes,</span><br><span class="line">    &#123; path: &apos;*&apos;, redirect: &#123; name: &apos;404&apos; &#125; &#125;</span><br><span class="line">    ])</span><br><span class="line">    //动态菜单路由存到本地</span><br><span class="line">    sessionStorage.setItem(&apos;dynamicMenuRoutes&apos;, JSON.stringify(mainRoutes.children || &apos;[]&apos;)) </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>router构成<br>1.路由跳转前先判断是否已经添加过动态路由或者跳向全局路由，如果不是就需要添加动态路由。<br>2.添加动态路由</p>
+</li>
+<li>请求菜单列表</li>
+<li>调用添加路由方法，对获取到的菜单列表的每一项进行路由转化（递归调用的方式）。把转化后的routes对象存入mainRoutes主入口路由的children中，实现动态菜单路由。</li>
+<li><p>把菜单列表和权限存入本地</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">const router = new Router(&#123;</span><br><span class="line">  mode: &apos;hash&apos;,</span><br><span class="line">  scrollBehavior: () =&gt; (&#123; y: 0 &#125;), //定位在最上面</span><br><span class="line">  isAddDynamicMenuRoutes: false, // 是否已经添加动态(菜单)路由</span><br><span class="line">  routes: globalRoutes.concat(mainRoutes) //把全局路由和主入口路由合并到router</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  //全局前置守卫</span><br><span class="line">  router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">  // 添加动态(菜单)路由</span><br><span class="line">  // 1. 已经添加 or 全局路由, 直接访问</span><br><span class="line">  // 2. 获取菜单列表, 添加并保存本地存储</span><br><span class="line">  if (router.options.isAddDynamicMenuRoutes || fnCurrentRouteType(to) === &apos;global&apos;) &#123;</span><br><span class="line">      next()</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">      //一 .请求菜单列表</span><br><span class="line">      http(&#123;</span><br><span class="line">      url: http.adornUrl(&apos;/sys/menu/nav&apos;),</span><br><span class="line">      method: &apos;get&apos;,</span><br><span class="line">      params: http.adornParams()</span><br><span class="line">      &#125;).then((&#123;data&#125;) =&gt; &#123;</span><br><span class="line">      if (data &amp;&amp; data.code === 0) &#123;</span><br><span class="line">          // 二 .添加动态菜单路由到mainRoutes.children中</span><br><span class="line">          fnAddDynamicMenuRoutes(data.menuList)</span><br><span class="line">          router.options.isAddDynamicMenuRoutes = true</span><br><span class="line">          // 三 .把菜单列表和权限存入本地</span><br><span class="line">          sessionStorage.setItem(&apos;menuList&apos;, JSON.stringify(data.menuList || &apos;[]&apos;))</span><br><span class="line">          sessionStorage.setItem(&apos;permissions&apos;, JSON.stringify(data.permissions || &apos;[]&apos;))</span><br><span class="line">          next(&#123; ...to, replace: true &#125;)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">          sessionStorage.setItem(&apos;menuList&apos;, &apos;[]&apos;)</span><br><span class="line">          sessionStorage.setItem(&apos;permissions&apos;, &apos;[]&apos;)</span><br><span class="line">          next()</span><br><span class="line">      &#125;</span><br><span class="line">      &#125;).catch((e) =&gt; &#123;</span><br><span class="line">      console.log(`%c$&#123;e&#125; 请求菜单列表和权限失败，跳转至登录页！！`, &apos;color:blue&apos;)</span><br><span class="line">      router.push(&#123; name: &apos;login&apos; &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  export default router</span><br></pre></td></tr></table></figure>
+<p>生成的路由构成如下所示：<br>第一第二个是全局路由，第三个是动态生成的菜单路由<br><img src="/images/vue/4.png" alt="目录"></p>
+</li>
+</ul>
+<h2 id="根据路由跳转"><a href="#根据路由跳转" class="headerlink" title="根据路由跳转"></a>根据路由跳转</h2><p>  在main-sidebar文件中 获取菜单列表menulist和动态菜单路由dynamicMenuRoutes<br>  <img src="/images/vue/8.png" alt="目录"><br>  在main-sidebar父组件中传递菜单列表中的项和动态菜单路由给子组件main-sidebar-sub-menu<br>  <img src="/images/vue/5.png" alt="目录"><br>  在子组件main-sidebar-sub-menu中，若传递过来的menu项有list并大于1则重新进入子组件的循环中<br>  <img src="/images/vue/6.png" alt="目录"><br>  没有则根据menu.id筛选出对应的动态菜单路由项，直接跳转至相应的路由<br>  <img src="/images/vue/7.png" alt="目录"></p>
+<h1 id="搞定Elist语法检测，让世界清静"><a href="#搞定Elist语法检测，让世界清静" class="headerlink" title="搞定Elist语法检测，让世界清静"></a>搞定Elist语法检测，让世界清静</h1><p>最近在学习renrenfast Vue 项目，把代码clone下来运行的时候，一直报ESlint语法检测里的警告，令人头大。为了耳根清净，特意去学习了一下ESlint的规则配置。<br>使用vue-cli创建的项目默认情况下它的elist配置：</p>
+<ul>
+<li>代码末尾不能加分号</li>
+<li>代码中不能存在多行空行</li>
+<li>代码中不能存在声明了但未使用的变量</li>
+<li>tab键不能使用，必须换成两个空格</li>
+</ul>
+<p>事实上，在我们写代码的过程中各自有各自的代码习惯和风格，所以学习语法规范elist制定自己喜欢的检测风格必不可少，当然你没有强迫症的话也是无所谓的。</p>
+<h2 id="关闭elist"><a href="#关闭elist" class="headerlink" title="关闭elist"></a>关闭elist</h2><p>关闭vue-cli脚手架,就是把 build/webpack.base.conf.js 配置文件中的eslint rules注释掉即可。<br>如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      // &#123;</span><br><span class="line">      //   test: /\.(js|vue)$/,</span><br><span class="line">      //   loader: &apos;eslint-loader&apos;,</span><br><span class="line">      //   enforce: &apos;pre&apos;,</span><br><span class="line">      //   include: [resolve(&apos;src&apos;), resolve(&apos;test&apos;)],</span><br><span class="line">      //   options: &#123;</span><br><span class="line">      //     formatter: require(&apos;eslint-friendly-formatter&apos;)</span><br><span class="line">      //   &#125;</span><br><span class="line">      // &#125;,</span><br><span class="line">  </span><br><span class="line">      ...</span><br><span class="line">     ]</span><br><span class="line">     ...</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义配置"><a href="#自定义配置" class="headerlink" title="自定义配置"></a>自定义配置</h2><p>若是要保留eslint的语法检测，就在项目根目录里创建一个文件名以 .eslintrc.* 为名的配置文件。</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>如下附上我的配置：其中 rules 就是配置规则的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  root: true,</span><br><span class="line">  parser: &apos;babel-eslint&apos;,</span><br><span class="line">  parserOptions: &#123;</span><br><span class="line">    sourceType: &apos;module&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  env: &#123;</span><br><span class="line">    browser: true,</span><br><span class="line">  &#125;,</span><br><span class="line">  // https://github.com/standard/standard/blob/master/docs/RULES-en.md</span><br><span class="line">  extends: &apos;standard&apos;,</span><br><span class="line">  // required to lint *.vue files</span><br><span class="line">  plugins: [</span><br><span class="line">    &apos;html&apos;</span><br><span class="line">  ],</span><br><span class="line">  // add your custom rules here</span><br><span class="line">  rules: &#123;</span><br><span class="line">    // allow async-await</span><br><span class="line">    &apos;generator-star-spacing&apos;: &apos;off&apos;,</span><br><span class="line">    // allow debugger during development</span><br><span class="line">    &apos;no-debugger&apos;: process.env.NODE_ENV === &apos;production&apos; ? &apos;error&apos; : &apos;off&apos;,</span><br><span class="line">    &quot;no-unused-vars&quot;: [2, &#123; </span><br><span class="line">      // 允许声明未使用变量</span><br><span class="line">      &quot;vars&quot;: &quot;local&quot;,</span><br><span class="line">      // 参数不检查</span><br><span class="line">      &quot;args&quot;: &quot;none&quot; </span><br><span class="line">    &#125;],</span><br><span class="line">    // 关闭语句强制分号结尾</span><br><span class="line">    &quot;semi&quot;: [0],</span><br><span class="line">    //空行最多不能超过100行</span><br><span class="line">    &quot;no-multiple-empty-lines&quot;: [0, &#123;&quot;max&quot;: 100&#125;],</span><br><span class="line">    //关闭禁止混用tab和空格</span><br><span class="line">    &quot;no-mixed-spaces-and-tabs&quot;: [0],</span><br><span class="line">    &apos;arrow-parens&apos;: 0,</span><br><span class="line">    &quot;no-trailing-spaces&quot;: 0,//一行结束后面有空格</span><br><span class="line">    &quot;spaced-comment&quot;: 0,//注释风格要不要有空格什么的</span><br><span class="line">    &quot;space-before-function-paren&quot;: [0, &quot;always&quot;],//函数定义时括号前面要不要有空格</span><br><span class="line">    &quot;key-spacing&quot;: [0, &#123; &quot;beforeColon&quot;: false, &quot;afterColon&quot;: true &#125;],//对象字面量中冒号的前后空格</span><br><span class="line">    &quot;space-in-parens&quot;: [0, &quot;never&quot;],//小括号里面要不要有空格</span><br><span class="line">    &quot;comma-spacing&quot;: 0,//逗号前后的空格</span><br><span class="line">    &quot;space-infix-ops&quot;: 0,//中缀操作符周围要不要有空格</span><br><span class="line">    &quot;no-unused-vars&quot;:0,</span><br><span class="line">    &apos;keyword-spacing&apos;:0,</span><br><span class="line">    &quot;eqeqeq&quot;: 0,//必须使用全等</span><br><span class="line">    // &quot;space-after-keywords&quot;: [0, &quot;always&quot;],//关键字后面是否要空一格</span><br><span class="line">    &quot;space-before-blocks&quot;: [0, &quot;always&quot;],//不以新行开始的块&#123;前面要不要有空格</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置参数值"><a href="#配置参数值" class="headerlink" title="配置参数值"></a>配置参数值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;off&quot;或者0    //关闭规则关闭</span><br><span class="line">&quot;warn&quot;或者1    //在打开的规则作为警告（不影响退出代码）</span><br><span class="line">&quot;error&quot;或者2    //把规则作为一个错误（退出代码触发时为1）</span><br></pre></td></tr></table></figure>
+<h3 id="常见规则列表"><a href="#常见规则列表" class="headerlink" title="常见规则列表"></a>常见规则列表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br></pre></td><td class="code"><pre><span class="line">&quot;no-alert&quot;: 0,//禁止使用alert confirm prompt</span><br><span class="line">&quot;no-array-constructor&quot;: 2,//禁止使用数组构造器</span><br><span class="line">&quot;no-bitwise&quot;: 0,//禁止使用按位运算符</span><br><span class="line">&quot;no-caller&quot;: 1,//禁止使用arguments.caller或arguments.callee</span><br><span class="line">&quot;no-catch-shadow&quot;: 2,//禁止catch子句参数与外部作用域变量同名</span><br><span class="line">&quot;no-class-assign&quot;: 2,//禁止给类赋值</span><br><span class="line">&quot;no-cond-assign&quot;: 2,//禁止在条件表达式中使用赋值语句</span><br><span class="line">&quot;no-console&quot;: 2,//禁止使用console</span><br><span class="line">&quot;no-const-assign&quot;: 2,//禁止修改const声明的变量</span><br><span class="line">&quot;no-constant-condition&quot;: 2,//禁止在条件中使用常量表达式 if(true) if(1)</span><br><span class="line">&quot;no-continue&quot;: 0,//禁止使用continue</span><br><span class="line">&quot;no-control-regex&quot;: 2,//禁止在正则表达式中使用控制字符</span><br><span class="line">&quot;no-debugger&quot;: 2,//禁止使用debugger</span><br><span class="line">&quot;no-delete-var&quot;: 2,//不能对var声明的变量使用delete操作符</span><br><span class="line">&quot;no-div-regex&quot;: 1,//不能使用看起来像除法的正则表达式/=foo/</span><br><span class="line">&quot;no-dupe-keys&quot;: 2,//在创建对象字面量时不允许键重复 &#123;a:1,a:1&#125;</span><br><span class="line">&quot;no-dupe-args&quot;: 2,//函数参数不能重复</span><br><span class="line">&quot;no-duplicate-case&quot;: 2,//switch中的case标签不能重复</span><br><span class="line">&quot;no-else-return&quot;: 2,//如果if语句里面有return,后面不能跟else语句</span><br><span class="line">&quot;no-empty&quot;: 2,//块语句中的内容不能为空</span><br><span class="line">&quot;no-empty-character-class&quot;: 2,//正则表达式中的[]内容不能为空</span><br><span class="line">&quot;no-empty-label&quot;: 2,//禁止使用空label</span><br><span class="line">&quot;no-eq-null&quot;: 2,//禁止对null使用==或!=运算符</span><br><span class="line">&quot;no-eval&quot;: 1,//禁止使用eval</span><br><span class="line">&quot;no-ex-assign&quot;: 2,//禁止给catch语句中的异常参数赋值</span><br><span class="line">&quot;no-extend-native&quot;: 2,//禁止扩展native对象</span><br><span class="line">&quot;no-extra-bind&quot;: 2,//禁止不必要的函数绑定</span><br><span class="line">&quot;no-extra-boolean-cast&quot;: 2,//禁止不必要的bool转换</span><br><span class="line">&quot;no-extra-parens&quot;: 2,//禁止非必要的括号</span><br><span class="line">&quot;no-extra-semi&quot;: 2,//禁止多余的冒号</span><br><span class="line">&quot;no-fallthrough&quot;: 1,//禁止switch穿透</span><br><span class="line">&quot;no-floating-decimal&quot;: 2,//禁止省略浮点数中的0 .5 3.</span><br><span class="line">&quot;no-func-assign&quot;: 2,//禁止重复的函数声明</span><br><span class="line">&quot;no-implicit-coercion&quot;: 1,//禁止隐式转换</span><br><span class="line">&quot;no-implied-eval&quot;: 2,//禁止使用隐式eval</span><br><span class="line">&quot;no-inline-comments&quot;: 0,//禁止行内备注</span><br><span class="line">&quot;no-inner-declarations&quot;: [2, &quot;functions&quot;],//禁止在块语句中使用声明（变量或函数）</span><br><span class="line">&quot;no-invalid-regexp&quot;: 2,//禁止无效的正则表达式</span><br><span class="line">&quot;no-invalid-this&quot;: 2,//禁止无效的this，只能用在构造器，类，对象字面量</span><br><span class="line">&quot;no-irregular-whitespace&quot;: 2,//不能有不规则的空格</span><br><span class="line">&quot;no-iterator&quot;: 2,//禁止使用__iterator__ 属性</span><br><span class="line">&quot;no-label-var&quot;: 2,//label名不能与var声明的变量名相同</span><br><span class="line">&quot;no-labels&quot;: 2,//禁止标签声明</span><br><span class="line">&quot;no-lone-blocks&quot;: 2,//禁止不必要的嵌套块</span><br><span class="line">&quot;no-lonely-if&quot;: 2,//禁止else语句内只有if语句</span><br><span class="line">&quot;no-loop-func&quot;: 1,//禁止在循环中使用函数（如果没有引用外部变量不形成闭包就可以）</span><br><span class="line">&quot;no-mixed-requires&quot;: [0, false],//声明时不能混用声明类型</span><br><span class="line">&quot;no-mixed-spaces-and-tabs&quot;: [2, false],//禁止混用tab和空格</span><br><span class="line">&quot;linebreak-style&quot;: [0, &quot;windows&quot;],//换行风格</span><br><span class="line">&quot;no-multi-spaces&quot;: 1,//不能用多余的空格</span><br><span class="line">&quot;no-multi-str&quot;: 2,//字符串不能用\换行</span><br><span class="line">&quot;no-multiple-empty-lines&quot;: [1, &#123;&quot;max&quot;: 2&#125;],//空行最多不能超过2行</span><br><span class="line">&quot;no-native-reassign&quot;: 2,//不能重写native对象</span><br><span class="line">&quot;no-negated-in-lhs&quot;: 2,//in 操作符的左边不能有!</span><br><span class="line">&quot;no-nested-ternary&quot;: 0,//禁止使用嵌套的三目运算</span><br><span class="line">&quot;no-new&quot;: 1,//禁止在使用new构造一个实例后不赋值</span><br><span class="line">&quot;no-new-func&quot;: 1,//禁止使用new Function</span><br><span class="line">&quot;no-new-object&quot;: 2,//禁止使用new Object()</span><br><span class="line">&quot;no-new-require&quot;: 2,//禁止使用new require</span><br><span class="line">&quot;no-new-wrappers&quot;: 2,//禁止使用new创建包装实例，new String new Boolean new Number</span><br><span class="line">&quot;no-obj-calls&quot;: 2,//不能调用内置的全局对象，比如Math() JSON()</span><br><span class="line">&quot;no-octal&quot;: 2,//禁止使用八进制数字</span><br><span class="line">&quot;no-octal-escape&quot;: 2,//禁止使用八进制转义序列</span><br><span class="line">&quot;no-param-reassign&quot;: 2,//禁止给参数重新赋值</span><br><span class="line">&quot;no-path-concat&quot;: 0,//node中不能使用__dirname或__filename做路径拼接</span><br><span class="line">&quot;no-plusplus&quot;: 0,//禁止使用++，--</span><br><span class="line">&quot;no-process-env&quot;: 0,//禁止使用process.env</span><br><span class="line">&quot;no-process-exit&quot;: 0,//禁止使用process.exit()</span><br><span class="line">&quot;no-proto&quot;: 2,//禁止使用__proto__属性</span><br><span class="line">&quot;no-redeclare&quot;: 2,//禁止重复声明变量</span><br><span class="line">&quot;no-regex-spaces&quot;: 2,//禁止在正则表达式字面量中使用多个空格 /foo bar/</span><br><span class="line">&quot;no-restricted-modules&quot;: 0,//如果禁用了指定模块，使用就会报错</span><br><span class="line">&quot;no-return-assign&quot;: 1,//return 语句中不能有赋值表达式</span><br><span class="line">&quot;no-script-url&quot;: 0,//禁止使用javascript:void(0)</span><br><span class="line">&quot;no-self-compare&quot;: 2,//不能比较自身</span><br><span class="line">&quot;no-sequences&quot;: 0,//禁止使用逗号运算符</span><br><span class="line">&quot;no-shadow&quot;: 2,//外部作用域中的变量不能与它所包含的作用域中的变量或参数同名</span><br><span class="line">&quot;no-shadow-restricted-names&quot;: 2,//严格模式中规定的限制标识符不能作为声明时的变量名使用</span><br><span class="line">&quot;no-spaced-func&quot;: 2,//函数调用时 函数名与()之间不能有空格</span><br><span class="line">&quot;no-sparse-arrays&quot;: 2,//禁止稀疏数组， [1,,2]</span><br><span class="line">&quot;no-sync&quot;: 0,//nodejs 禁止同步方法</span><br><span class="line">&quot;no-ternary&quot;: 0,//禁止使用三目运算符</span><br><span class="line">&quot;no-trailing-spaces&quot;: 1,//一行结束后面不要有空格</span><br><span class="line">&quot;no-this-before-super&quot;: 0,//在调用super()之前不能使用this或super</span><br><span class="line">&quot;no-throw-literal&quot;: 2,//禁止抛出字面量错误 throw &quot;error&quot;;</span><br><span class="line">&quot;no-undef&quot;: 1,//不能有未定义的变量</span><br><span class="line">&quot;no-undef-init&quot;: 2,//变量初始化时不能直接给它赋值为undefined</span><br><span class="line">&quot;no-undefined&quot;: 2,//不能使用undefined</span><br><span class="line">&quot;no-unexpected-multiline&quot;: 2,//避免多行表达式</span><br><span class="line">&quot;no-underscore-dangle&quot;: 1,//标识符不能以_开头或结尾</span><br><span class="line">&quot;no-unneeded-ternary&quot;: 2,//禁止不必要的嵌套 var isYes = answer === 1 ? true : false;</span><br><span class="line">&quot;no-unreachable&quot;: 2,//不能有无法执行的代码</span><br><span class="line">&quot;no-unused-expressions&quot;: 2,//禁止无用的表达式</span><br><span class="line">&quot;no-unused-vars&quot;: [2, &#123;&quot;vars&quot;: &quot;all&quot;, &quot;args&quot;: &quot;after-used&quot;&#125;],//不能有声明后未被使用的变量或参数</span><br><span class="line">&quot;no-use-before-define&quot;: 2,//未定义前不能使用</span><br><span class="line">&quot;no-useless-call&quot;: 2,//禁止不必要的call和apply</span><br><span class="line">&quot;no-void&quot;: 2,//禁用void操作符</span><br><span class="line">&quot;no-var&quot;: 0,//禁用var，用let和const代替</span><br><span class="line">&quot;no-warning-comments&quot;: [1, &#123; &quot;terms&quot;: [&quot;todo&quot;, &quot;fixme&quot;, &quot;xxx&quot;], &quot;location&quot;: &quot;start&quot; &#125;],//不能有警告备注</span><br><span class="line">&quot;no-with&quot;: 2,//禁用with</span><br><span class="line"></span><br><span class="line">&quot;array-bracket-spacing&quot;: [2, &quot;never&quot;],//是否允许非空数组里面有多余的空格</span><br><span class="line">&quot;arrow-parens&quot;: 0,//箭头函数用小括号括起来</span><br><span class="line">&quot;arrow-spacing&quot;: 0,//=&gt;的前/后括号</span><br><span class="line">&quot;accessor-pairs&quot;: 0,//在对象中使用getter/setter</span><br><span class="line">&quot;block-scoped-var&quot;: 0,//块语句中使用var</span><br><span class="line">&quot;brace-style&quot;: [1, &quot;1tbs&quot;],//大括号风格</span><br><span class="line">&quot;callback-return&quot;: 1,//避免多次调用回调什么的</span><br><span class="line">&quot;camelcase&quot;: 2,//强制驼峰法命名</span><br><span class="line">&quot;comma-dangle&quot;: [2, &quot;never&quot;],//对象字面量项尾不能有逗号</span><br><span class="line">&quot;comma-spacing&quot;: 0,//逗号前后的空格</span><br><span class="line">&quot;comma-style&quot;: [2, &quot;last&quot;],//逗号风格，换行时在行首还是行尾</span><br><span class="line">&quot;complexity&quot;: [0, 11],//循环复杂度</span><br><span class="line">&quot;computed-property-spacing&quot;: [0, &quot;never&quot;],//是否允许计算后的键名什么的</span><br><span class="line">&quot;consistent-return&quot;: 0,//return 后面是否允许省略</span><br><span class="line">&quot;consistent-this&quot;: [2, &quot;that&quot;],//this别名</span><br><span class="line">&quot;constructor-super&quot;: 0,//非派生类不能调用super，派生类必须调用super</span><br><span class="line">&quot;curly&quot;: [2, &quot;all&quot;],//必须使用 if()&#123;&#125; 中的&#123;&#125;</span><br><span class="line">&quot;default-case&quot;: 2,//switch语句最后必须有default</span><br><span class="line">&quot;dot-location&quot;: 0,//对象访问符的位置，换行的时候在行首还是行尾</span><br><span class="line">&quot;dot-notation&quot;: [0, &#123; &quot;allowKeywords&quot;: true &#125;],//避免不必要的方括号</span><br><span class="line">&quot;eol-last&quot;: 0,//文件以单一的换行符结束</span><br><span class="line">&quot;eqeqeq&quot;: 2,//必须使用全等</span><br><span class="line">&quot;func-names&quot;: 0,//函数表达式必须有名字</span><br><span class="line">&quot;func-style&quot;: [0, &quot;declaration&quot;],//函数风格，规定只能使用函数声明/函数表达式</span><br><span class="line">&quot;generator-star-spacing&quot;: 0,//生成器函数*的前后空格</span><br><span class="line">&quot;guard-for-in&quot;: 0,//for in循环要用if语句过滤</span><br><span class="line">&quot;handle-callback-err&quot;: 0,//nodejs 处理错误</span><br><span class="line">&quot;id-length&quot;: 0,//变量名长度</span><br><span class="line">&quot;indent&quot;: [2, 4],//缩进风格</span><br><span class="line">&quot;init-declarations&quot;: 0,//声明时必须赋初值</span><br><span class="line">&quot;key-spacing&quot;: [0, &#123; &quot;beforeColon&quot;: false, &quot;afterColon&quot;: true &#125;],//对象字面量中冒号的前后空格</span><br><span class="line">&quot;lines-around-comment&quot;: 0,//行前/行后备注</span><br><span class="line">&quot;max-depth&quot;: [0, 4],//嵌套块深度</span><br><span class="line">&quot;max-len&quot;: [0, 80, 4],//字符串最大长度</span><br><span class="line">&quot;max-nested-callbacks&quot;: [0, 2],//回调嵌套深度</span><br><span class="line">&quot;max-params&quot;: [0, 3],//函数最多只能有3个参数</span><br><span class="line">&quot;max-statements&quot;: [0, 10],//函数内最多有几个声明</span><br><span class="line">&quot;new-cap&quot;: 2,//函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用</span><br><span class="line">&quot;new-parens&quot;: 2,//new时必须加小括号</span><br><span class="line">&quot;newline-after-var&quot;: 2,//变量声明后是否需要空一行</span><br><span class="line">&quot;object-curly-spacing&quot;: [0, &quot;never&quot;],//大括号内是否允许不必要的空格</span><br><span class="line">&quot;object-shorthand&quot;: 0,//强制对象字面量缩写语法</span><br><span class="line">&quot;one-var&quot;: 1,//连续声明</span><br><span class="line">&quot;operator-assignment&quot;: [0, &quot;always&quot;],//赋值运算符 += -=什么的</span><br><span class="line">&quot;operator-linebreak&quot;: [2, &quot;after&quot;],//换行时运算符在行尾还是行首</span><br><span class="line">&quot;padded-blocks&quot;: 0,//块语句内行首行尾是否要空行</span><br><span class="line">&quot;prefer-const&quot;: 0,//首选const</span><br><span class="line">&quot;prefer-spread&quot;: 0,//首选展开运算</span><br><span class="line">&quot;prefer-reflect&quot;: 0,//首选Reflect的方法</span><br><span class="line">&quot;quotes&quot;: [1, &quot;single&quot;],//引号类型 `` &quot;&quot; &apos;&apos;</span><br><span class="line">&quot;quote-props&quot;:[2, &quot;always&quot;],//对象字面量中的属性名是否强制双引号</span><br><span class="line">&quot;radix&quot;: 2,//parseInt必须指定第二个参数</span><br><span class="line">&quot;id-match&quot;: 0,//命名检测</span><br><span class="line">&quot;require-yield&quot;: 0,//生成器函数必须有yield</span><br><span class="line">&quot;semi&quot;: [2, &quot;always&quot;],//语句强制分号结尾</span><br><span class="line">&quot;semi-spacing&quot;: [0, &#123;&quot;before&quot;: false, &quot;after&quot;: true&#125;],//分号前后空格</span><br><span class="line">&quot;sort-vars&quot;: 0,//变量声明时排序</span><br><span class="line">&quot;space-after-keywords&quot;: [0, &quot;always&quot;],//关键字后面是否要空一格</span><br><span class="line">&quot;space-before-blocks&quot;: [0, &quot;always&quot;],//不以新行开始的块&#123;前面要不要有空格</span><br><span class="line">&quot;space-before-function-paren&quot;: [0, &quot;always&quot;],//函数定义时括号前面要不要有空格</span><br><span class="line">&quot;space-in-parens&quot;: [0, &quot;never&quot;],//小括号里面要不要有空格</span><br><span class="line">&quot;space-infix-ops&quot;: 0,//中缀操作符周围要不要有空格</span><br><span class="line">&quot;space-return-throw-case&quot;: 2,//return throw case后面要不要加空格</span><br><span class="line">&quot;space-unary-ops&quot;: [0, &#123; &quot;words&quot;: true, &quot;nonwords&quot;: false &#125;],//一元运算符的前/后要不要加空格</span><br><span class="line">&quot;spaced-comment&quot;: 0,//注释风格要不要有空格什么的</span><br><span class="line">&quot;strict&quot;: 2,//使用严格模式</span><br><span class="line">&quot;use-isnan&quot;: 2,//禁止比较时使用NaN，只能用isNaN()</span><br><span class="line">&quot;valid-jsdoc&quot;: 0,//jsdoc规则</span><br><span class="line">&quot;valid-typeof&quot;: 2,//必须使用合法的typeof的值</span><br><span class="line">&quot;vars-on-top&quot;: 2,//var必须放在作用域顶部</span><br><span class="line">&quot;wrap-iife&quot;: [2, &quot;inside&quot;],//立即执行函数表达式的小括号风格</span><br><span class="line">&quot;wrap-regex&quot;: 0,//正则表达式字面量用小括号包起来</span><br><span class="line">&quot;yoda&quot;: [2, &quot;never&quot;]//禁止尤达条件</span><br></pre></td></tr></table></figure>
+<p>示例：我们模块化项目的elist</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  root: true,</span><br><span class="line">  parserOptions: &#123;</span><br><span class="line">    parser: &apos;babel-eslint&apos;,</span><br><span class="line">    sourceType: &apos;module&apos;</span><br><span class="line">  &#125;,</span><br><span class="line">  env: &#123;</span><br><span class="line">    browser: true,</span><br><span class="line">    node: true,</span><br><span class="line">    es6: true,</span><br><span class="line">  &#125;,</span><br><span class="line">  extends: [&apos;plugin:vue/essential&apos;, &apos;eslint:recommended&apos;],</span><br><span class="line"></span><br><span class="line">  // add your custom rules here</span><br><span class="line">  //it is base on https://github.com/vuejs/eslint-config-vue</span><br><span class="line">  rules: &#123;</span><br><span class="line">    &quot;vue/max-attributes-per-line&quot;: [2, &#123;</span><br><span class="line">      &quot;singleline&quot;: 10,</span><br><span class="line">      &quot;multiline&quot;: &#123;</span><br><span class="line">        &quot;max&quot;: 1,</span><br><span class="line">        &quot;allowFirstLine&quot;: false</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    &quot;vue/singleline-html-element-content-newline&quot;: &quot;off&quot;,</span><br><span class="line">    &quot;vue/multiline-html-element-content-newline&quot;:&quot;off&quot;,</span><br><span class="line">    &quot;vue/name-property-casing&quot;: [&quot;error&quot;, &quot;PascalCase&quot;],</span><br><span class="line">    &quot;vue/no-v-html&quot;: &quot;off&quot;,</span><br><span class="line">    &apos;accessor-pairs&apos;: 2,</span><br><span class="line">    &apos;arrow-spacing&apos;: [2, &#123;</span><br><span class="line">      &apos;before&apos;: true,</span><br><span class="line">      &apos;after&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;block-spacing&apos;: [2, &apos;always&apos;],</span><br><span class="line">    &apos;brace-style&apos;: [2, &apos;1tbs&apos;, &#123;</span><br><span class="line">      &apos;allowSingleLine&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;camelcase&apos;: [0, &#123;</span><br><span class="line">      &apos;properties&apos;: &apos;always&apos;</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;comma-dangle&apos;: [2, &apos;never&apos;],</span><br><span class="line">    &apos;comma-spacing&apos;: [2, &#123;</span><br><span class="line">      &apos;before&apos;: false,</span><br><span class="line">      &apos;after&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;comma-style&apos;: [2, &apos;last&apos;],</span><br><span class="line">    &apos;constructor-super&apos;: 2,</span><br><span class="line">    &apos;curly&apos;: [2, &apos;multi-line&apos;],</span><br><span class="line">    &apos;dot-location&apos;: [2, &apos;property&apos;],</span><br><span class="line">    &apos;eol-last&apos;: 2,</span><br><span class="line">    // &apos;eqeqeq&apos;: [&quot;error&quot;, &quot;always&quot;, &#123;&quot;null&quot;: &quot;ignore&quot;&#125;],</span><br><span class="line">    &apos;generator-star-spacing&apos;: [2, &#123;</span><br><span class="line">      &apos;before&apos;: true,</span><br><span class="line">      &apos;after&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;handle-callback-err&apos;: [2, &apos;^(err|error)$&apos;],</span><br><span class="line">    &apos;indent&apos;: [2, 2, &#123;</span><br><span class="line">      &apos;SwitchCase&apos;: 1</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;jsx-quotes&apos;: [2, &apos;prefer-single&apos;],</span><br><span class="line">    &apos;key-spacing&apos;: [2, &#123;</span><br><span class="line">      &apos;beforeColon&apos;: false,</span><br><span class="line">      &apos;afterColon&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;keyword-spacing&apos;: [2, &#123;</span><br><span class="line">      &apos;before&apos;: true,</span><br><span class="line">      &apos;after&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;new-cap&apos;: [2, &#123;</span><br><span class="line">      &apos;newIsCap&apos;: true,</span><br><span class="line">      &apos;capIsNew&apos;: false</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;new-parens&apos;: 2,</span><br><span class="line">    &apos;no-array-constructor&apos;: 2,</span><br><span class="line">    &apos;no-caller&apos;: 2,</span><br><span class="line">    &apos;no-console&apos;: &apos;off&apos;,</span><br><span class="line">    &apos;no-class-assign&apos;: 2,</span><br><span class="line">    &apos;no-cond-assign&apos;: 2,</span><br><span class="line">    &apos;no-const-assign&apos;: 2,</span><br><span class="line">    &apos;no-control-regex&apos;: 0,</span><br><span class="line">    &apos;no-delete-var&apos;: 2,</span><br><span class="line">    &apos;no-dupe-args&apos;: 2,</span><br><span class="line">    &apos;no-dupe-class-members&apos;: 2,</span><br><span class="line">    &apos;no-dupe-keys&apos;: 2,</span><br><span class="line">    &apos;no-duplicate-case&apos;: 2,</span><br><span class="line">    &apos;no-empty-character-class&apos;: 2,</span><br><span class="line">    &apos;no-empty-pattern&apos;: 2,</span><br><span class="line">    &apos;no-eval&apos;: 2,</span><br><span class="line">    &apos;no-ex-assign&apos;: 2,</span><br><span class="line">    &apos;no-extend-native&apos;: 2,</span><br><span class="line">    &apos;no-extra-bind&apos;: 2,</span><br><span class="line">    &apos;no-extra-boolean-cast&apos;: 2,</span><br><span class="line">    &apos;no-extra-parens&apos;: [2, &apos;functions&apos;],</span><br><span class="line">    &apos;no-fallthrough&apos;: 2,</span><br><span class="line">    &apos;no-floating-decimal&apos;: 2,</span><br><span class="line">    &apos;no-func-assign&apos;: 2,</span><br><span class="line">    &apos;no-implied-eval&apos;: 2,</span><br><span class="line">    &apos;no-inner-declarations&apos;: [2, &apos;functions&apos;],</span><br><span class="line">    &apos;no-invalid-regexp&apos;: 2,</span><br><span class="line">    &apos;no-irregular-whitespace&apos;: 2,</span><br><span class="line">    &apos;no-iterator&apos;: 2,</span><br><span class="line">    &apos;no-label-var&apos;: 2,</span><br><span class="line">    &apos;no-labels&apos;: [2, &#123;</span><br><span class="line">      &apos;allowLoop&apos;: false,</span><br><span class="line">      &apos;allowSwitch&apos;: false</span><br><span class="line">    &#125;],</span><br><span class="line">    // &apos;no-lone-blocks&apos;: 2,</span><br><span class="line">    &apos;no-mixed-spaces-and-tabs&apos;: 2,</span><br><span class="line">    // &apos;no-multi-spaces&apos;: 2,</span><br><span class="line">    &apos;no-multi-str&apos;: 2,</span><br><span class="line">    &apos;no-multiple-empty-lines&apos;: [2, &#123;</span><br><span class="line">      &apos;max&apos;: 1</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;no-native-reassign&apos;: 2,</span><br><span class="line">    &apos;no-negated-in-lhs&apos;: 2,</span><br><span class="line">    &apos;no-new-object&apos;: 2,</span><br><span class="line">    &apos;no-new-require&apos;: 2,</span><br><span class="line">    &apos;no-new-symbol&apos;: 2,</span><br><span class="line">    &apos;no-new-wrappers&apos;: 2,</span><br><span class="line">    &apos;no-obj-calls&apos;: 2,</span><br><span class="line">    &apos;no-octal&apos;: 2,</span><br><span class="line">    &apos;no-octal-escape&apos;: 2,</span><br><span class="line">    &apos;no-path-concat&apos;: 2,</span><br><span class="line">    &apos;no-proto&apos;: 2,</span><br><span class="line">    &apos;no-redeclare&apos;: 2,</span><br><span class="line">    &apos;no-regex-spaces&apos;: 2,</span><br><span class="line">    &apos;no-return-assign&apos;: [2, &apos;except-parens&apos;],</span><br><span class="line">    &quot;no-self-assign&quot;:0,</span><br><span class="line">    &apos;no-self-compare&apos;: 2,</span><br><span class="line">    &apos;no-sequences&apos;: 2,</span><br><span class="line">    &apos;no-shadow-restricted-names&apos;: 2,</span><br><span class="line">    &apos;no-spaced-func&apos;: 2,</span><br><span class="line">    &apos;no-sparse-arrays&apos;: 2,</span><br><span class="line">    &apos;no-this-before-super&apos;: 2,</span><br><span class="line">    &apos;no-throw-literal&apos;: 2,</span><br><span class="line">    &apos;no-trailing-spaces&apos;: 2,</span><br><span class="line">    &apos;no-undef&apos;: 2,</span><br><span class="line">    &apos;no-undef-init&apos;: 2,</span><br><span class="line">    &apos;no-unexpected-multiline&apos;: 2,</span><br><span class="line">    &apos;no-unmodified-loop-condition&apos;: 2,</span><br><span class="line">    &apos;no-unneeded-ternary&apos;: [2, &#123;</span><br><span class="line">      &apos;defaultAssignment&apos;: false</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;no-unreachable&apos;: 2,</span><br><span class="line">    &apos;no-unsafe-finally&apos;: 2,</span><br><span class="line">    &apos;no-unused-vars&apos;: 0,</span><br><span class="line">    &apos;no-useless-call&apos;: 2,</span><br><span class="line">    &apos;no-useless-computed-key&apos;: 2,</span><br><span class="line">    &apos;no-useless-constructor&apos;: 2,</span><br><span class="line">    &apos;no-useless-escape&apos;: 0,</span><br><span class="line">    &apos;no-whitespace-before-property&apos;: 2,</span><br><span class="line">    &apos;no-with&apos;: 2,</span><br><span class="line">    &apos;one-var&apos;: [2, &#123;</span><br><span class="line">      &apos;initialized&apos;: &apos;never&apos;</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;operator-linebreak&apos;: [2, &apos;after&apos;, &#123;</span><br><span class="line">      &apos;overrides&apos;: &#123;</span><br><span class="line">        &apos;?&apos;: &apos;before&apos;,</span><br><span class="line">        &apos;:&apos;: &apos;before&apos;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;padded-blocks&apos;: [2, &apos;never&apos;],</span><br><span class="line">    &apos;quotes&apos;: [2, &apos;single&apos;, &#123;</span><br><span class="line">      &apos;avoidEscape&apos;: true,</span><br><span class="line">      &apos;allowTemplateLiterals&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;semi&apos;: [2, &apos;never&apos;],</span><br><span class="line">    &apos;semi-spacing&apos;: [2, &#123;</span><br><span class="line">      &apos;before&apos;: false,</span><br><span class="line">      &apos;after&apos;: true</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;space-before-blocks&apos;: [2, &apos;always&apos;],</span><br><span class="line">    &apos;space-before-function-paren&apos;: [2, &apos;never&apos;],</span><br><span class="line">    &apos;space-in-parens&apos;: [2, &apos;never&apos;],</span><br><span class="line">    &apos;space-infix-ops&apos;: 2,</span><br><span class="line">    &apos;space-unary-ops&apos;: [2, &#123;</span><br><span class="line">      &apos;words&apos;: true,</span><br><span class="line">      &apos;nonwords&apos;: false</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;spaced-comment&apos;: [2, &apos;always&apos;, &#123;</span><br><span class="line">      &apos;markers&apos;: [&apos;global&apos;, &apos;globals&apos;, &apos;eslint&apos;, &apos;eslint-disable&apos;, &apos;*package&apos;, &apos;!&apos;, &apos;,&apos;]</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;template-curly-spacing&apos;: [2, &apos;never&apos;],</span><br><span class="line">    &apos;use-isnan&apos;: 2,</span><br><span class="line">    &apos;valid-typeof&apos;: 2,</span><br><span class="line">    &apos;wrap-iife&apos;: [2, &apos;any&apos;],</span><br><span class="line">    &apos;yield-star-spacing&apos;: [2, &apos;both&apos;],</span><br><span class="line">    &apos;yoda&apos;: [2, &apos;never&apos;],</span><br><span class="line">    &apos;prefer-const&apos;: 0,</span><br><span class="line">    &apos;no-debugger&apos;: process.env.NODE_ENV === &apos;production&apos; ? 2 : 0,</span><br><span class="line">    &apos;object-curly-spacing&apos;: [2, &apos;always&apos;, &#123;</span><br><span class="line">      objectsInObjects: false</span><br><span class="line">    &#125;],</span><br><span class="line">    &apos;array-bracket-spacing&apos;: [2, &apos;never&apos;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="https://segmentfault.com/a/1190000008742240" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008742240</a></p>
+<h1 id="让div占满整个屏幕的方法"><a href="#让div占满整个屏幕的方法" class="headerlink" title="让div占满整个屏幕的方法"></a>让div占满整个屏幕的方法</h1><p>在开发过程中我们经常碰到页面占满整个浏览器屏幕或者背景图片填满整个屏幕的需求，它实际有两种实现方式。</p>
+<h2 id="设置html-body的宽高"><a href="#设置html-body的宽高" class="headerlink" title="设置html,body的宽高"></a>设置html,body的宽高</h2><p>使用百分比设置html,body的宽高，html和body本身没有高度，它们的高度由子元素撑起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br><span class="line">html,body&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">div&#123;</span><br><span class="line">    width:100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    background: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="设置定位"><a href="#设置定位" class="headerlink" title="设置定位"></a>设置定位</h2><p>介绍：css中定位元素position有五种属性：<br>    static:默认值，没有定位<br>　　absolute:绝对定位，相对于父级元素进行定位<br>　　relative:相对定位<br>　　fixed:固定定位,相对于浏览器窗口进行定位<br>　　inherit:从父元素继承定位信息　　</p>
+<p>使用absolute/fixed可以实现窗口自适应：</p>
+<p>方法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;   </span><br><span class="line">&#125;</span><br><span class="line">div&#123;</span><br><span class="line">    width:100%;  </span><br><span class="line">    height: 100%;  </span><br><span class="line">    position: absolute/fixed;</span><br><span class="line">    top:0;left:0;(可写可不写，默认)</span><br><span class="line">    background: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0  </span><br><span class="line">&#125;</span><br><span class="line">div&#123;   </span><br><span class="line">    position: absolute/fixed;</span><br><span class="line">    top:0;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    overflow:hidden;</span><br><span class="line">    background: yellow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="给网站设置背景图"><a href="#给网站设置背景图" class="headerlink" title="给网站设置背景图"></a>给网站设置背景图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#login &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    overflow: hidden;</span><br><span class="line"></span><br><span class="line">    background-color: rgba(38, 50, 56, .6);</span><br><span class="line">    background-image: url(~@/assets/img/login_bg.png);</span><br><span class="line">    background-size: 100% 100%;</span><br><span class="line">    background-position: center center;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="vue项目中登录时记住密码的功能实现"><a href="#vue项目中登录时记住密码的功能实现" class="headerlink" title="vue项目中登录时记住密码的功能实现"></a>vue项目中登录时记住密码的功能实现</h1><p>在项目登录过程中往往需要实现记住密码的功能，将账号和密码保存到本地浏览器，下次登陆自动显示到表单内。使用户可以在规定时间内不需要输入用户名和密码直接登录。</p>
+<p>登录页如图：<br><img src="/images/vue/10.png" alt="目录"><br>点击记住密码时，下次登录用户名和密码会自动填写。</p>
+<h2 id="WebStorage和cookie"><a href="#WebStorage和cookie" class="headerlink" title="WebStorage和cookie"></a>WebStorage和cookie</h2><h3 id="WebStorage和cookie-1"><a href="#WebStorage和cookie-1" class="headerlink" title="WebStorage和cookie"></a>WebStorage和cookie</h3><p>Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。<br>但是Cookie也是不可以或缺的,Cookie的作用是与服务器进行交互,作为HTTP规范的一部分而存在 ;而Web Storage仅仅是为了在本地“存储”数据而生.</p>
+<p>WebStorage的好处：<br>1)减少网络流量：一旦数据保存在本地后，就可以避免再向服务器请求数据，因此减少不必要的数据请求，减少数据在浏览器和服务器间不必要地来回传递；</p>
+<p>2)快速显示数据：性能好，从本地读数据比通过网络从服务器获得数据快得多，本地数据可以即时获得。再加上网页本身也可以有缓存，因此整个页面和数据都在本地的话，可以立即显示；</p>
+<p>3)临时存储：很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后数据就可以丢弃了，这种情况使用sessionStorage非常方便。</p>
+<h3 id="web-storage下的两种类型"><a href="#web-storage下的两种类型" class="headerlink" title="web storage下的两种类型"></a>web storage下的两种类型</h3><p>WebStorage是HTML5中本地存储的解决方案之一，在HTML5引入WebStorage这个概念之前，浏览器兼容的本地存储方案就只有使用cookie。<br>WebStorage提供两种类型的API：localStorage和sessionStorage，其中，localStorage在本地永久性存储数据，除非显式将其删除或清空，sessionStorage存储的数据只在会话期间有效，关闭浏览器则自动删除。</p>
+<h3 id="sessionStorage-、localStorage-和-cookie三者异同"><a href="#sessionStorage-、localStorage-和-cookie三者异同" class="headerlink" title="sessionStorage 、localStorage 和 cookie三者异同"></a>sessionStorage 、localStorage 和 cookie三者异同</h3><p>共同点：都是保存在浏览器端，且同源的。</p>
+<p>区别：</p>
+<p>1) cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下；</p>
+<p>2)存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大；</p>
+<p>3)数据有效期不同。sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭；</p>
+<p>4)作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的；</p>
+<p>5)WebStorage支持事件通知机制，可以将数据更新的通知发送给监听者；</p>
+<p>6)WebStorage 的 api 接口使用更方便。</p>
+<h3 id="localStorage的API"><a href="#localStorage的API" class="headerlink" title="localStorage的API"></a>localStorage的API</h3><p>1)setItem存储value<br>用途：将value存储到key字段<br>用法：.setItem( key, value)<br>代码示例：<br>localStorage.setItem(“site”, “js8.in”);</p>
+<p>2)getItem获取value<br>用途：获取指定key本地存储的值<br>用法：.getItem(key)<br>代码示例：<br>var site = localStorage.getItem(“site”);</p>
+<p>3)removeItem删除key<br>用途：删除指定key本地存储的值<br>用法：.removeItem(key)<br>代码示例：<br>localStorage.removeItem(“site”);</p>
+<p>4)clear清除所有的key/value<br>用途：清除所有的key/value<br>用法：.clear()</p>
+<h2 id="cookie和localStorage两种方式"><a href="#cookie和localStorage两种方式" class="headerlink" title="cookie和localStorage两种方式"></a>cookie和localStorage两种方式</h2><p>在login.vue登录页面html部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form ref=&quot;dataForm&quot; :model=&quot;dataForm&quot; :rules=&quot;dataRule&quot;  @keyup.enter.native=&quot;dataFormSubmit()&quot;&gt;</span><br><span class="line">    &lt;el-form-item prop=&quot;userName&quot;&gt;</span><br><span class="line">    &lt;el-input v-model=&quot;dataForm.userName&quot; placeholder=&quot;用户名&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">    &lt;el-form-item prop=&quot;password&quot;&gt;</span><br><span class="line">    &lt;el-input type=&quot;password&quot; v-model=&quot;dataForm.password&quot; placeholder=&quot;密码&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">    &lt;el-form-item prop=&quot;captcha&quot;&gt;</span><br><span class="line">    &lt;el-input v-model=&quot;dataForm.captcha&quot; placeholder=&quot;验证码&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;div class=&quot;login_captcha&quot; @click=&quot;getCaptcha()&quot;&gt;</span><br><span class="line">        &lt;img width=&quot;61px&quot; height=&quot;22px&quot; :src=&quot;captchaPath&quot; @click=&quot;getCaptcha()&quot; alt=&quot;&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">    &lt;div class=&quot;login-rememb&quot;&gt;</span><br><span class="line">    &lt;div @click=&quot;isRemeber&quot;&gt;</span><br><span class="line">        &lt;img v-if=&quot;ischecked == 0&quot; src=&quot;~@/assets/img/checkbox_unselected.png&quot; alt=&quot;&quot;&gt;</span><br><span class="line">        &lt;img v-if=&quot;ischecked == 1&quot; src=&quot;~@/assets/img/checkbox_selected.png&quot; alt=&quot;&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;login-rememb-text&quot;&gt;</span><br><span class="line">        记住密码</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;login-btn-sub&quot; @click=&quot;dataFormSubmit()&quot;&gt;</span><br><span class="line">    &lt;div&gt;登录&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/el-form&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="把数据保存到cookie里"><a href="#把数据保存到cookie里" class="headerlink" title="把数据保存到cookie里"></a>把数据保存到cookie里</h2><p>1.进入登录页面时，先获取cookie里的数据，如果有数据则自动填充到表单内。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//页面加载调用获取cookie值</span><br><span class="line">  mounted()&#123;</span><br><span class="line">    this.getCookie()</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>2.在登录时，判断是否需要记住密码，如果是则设置cookie值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(this.ischecked==1)&#123;</span><br><span class="line">    //判断是否选中记住密码，选中则设置cookie</span><br><span class="line">    //传入账号名，密码，和保存天数3个参数</span><br><span class="line">      this.setCookie(name,pass,7);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>在login.vue登录页面script部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">  let Base64 = require(&apos;js-base64&apos;).Base64</span><br><span class="line">  export default &#123;</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        dataForm: &#123;</span><br><span class="line">          userName: &apos;&apos;,</span><br><span class="line">          password: &apos;&apos;,</span><br><span class="line">          uuid: &apos;&apos;,</span><br><span class="line">          captcha: &apos;&apos;</span><br><span class="line">        &#125;,</span><br><span class="line">        dataRule: &#123;</span><br><span class="line">          userName: [</span><br><span class="line">            &#123; required: true, message: &apos;帐号不能为空&apos;, trigger: &apos;blur&apos; &#125;</span><br><span class="line">          ],</span><br><span class="line">          password: [</span><br><span class="line">            &#123; required: true, message: &apos;密码不能为空&apos;, trigger: &apos;blur&apos; &#125;</span><br><span class="line">          ],</span><br><span class="line">          captcha: [</span><br><span class="line">            &#123; required: true, message: &apos;验证码不能为空&apos;, trigger: &apos;blur&apos; &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        ischecked: 0,</span><br><span class="line">        captchaPath: &apos;&apos;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    methods: &#123;</span><br><span class="line">      isRemeber()&#123;</span><br><span class="line">        if(this.ischecked == 0)&#123;</span><br><span class="line">          this.ischecked = 1</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">          this.ischecked = 0</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      // 提交表单</span><br><span class="line">      dataFormSubmit () &#123;</span><br><span class="line">        this.$refs[&apos;dataForm&apos;].validate((valid) =&gt; &#123;</span><br><span class="line">          if (valid) &#123;</span><br><span class="line"></span><br><span class="line">            if(this.ischecked==1)&#123;</span><br><span class="line">              //判断是否选中记住密码，选中则设置cookie</span><br><span class="line">              //传入账号名，密码，和保存天数3个参数</span><br><span class="line">                this.setCookie(name,pass,7);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            //axios请求登录接口</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">  </span><br><span class="line">    //设置cookie</span><br><span class="line">    setCookie(c_name,c_pwd,exdays) &#123;</span><br><span class="line">        var exdate=new Date();//获取时间</span><br><span class="line">        exdate.setTime(exdate.getTime() + 24*60*60*1000*exdays);//保存的天数</span><br><span class="line">        //字符串拼接cookie</span><br><span class="line">        window.document.cookie=&quot;userName&quot;+ &quot;=&quot; +c_name+&quot;;path=/;expires=&quot;+exdate.toGMTString();</span><br><span class="line">        window.document.cookie=&quot;userPwd&quot;+&quot;=&quot;+c_pwd+&quot;;path=/;expires=&quot;+exdate.toGMTString();</span><br><span class="line">    &#125;,</span><br><span class="line">    //读取cookie</span><br><span class="line">    getCookie:function () &#123;</span><br><span class="line">        if (document.cookie.length&gt;0) &#123;</span><br><span class="line">        var arr=document.cookie.split(&apos;; &apos;);//这里显示的格式需要切割一下自己可输出看下</span><br><span class="line">        for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">            var arr2=arr[i].split(&apos;=&apos;);//再次切割</span><br><span class="line">            //判断查找相对应的值</span><br><span class="line">            if(arr2[0]==&apos;userName&apos;)&#123;</span><br><span class="line">                this.ruleForm.userName=arr2[1];//保存到保存数据的地方</span><br><span class="line">            &#125;else if(arr2[0]==&apos;userPwd&apos;)&#123;</span><br><span class="line">                this.ruleForm.password=arr2[1];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    //清除cookie</span><br><span class="line">    clearCookie:function () &#123;</span><br><span class="line">        this.setCookie(&quot;&quot;,&quot;&quot;,-1);//修改2值都为空，天数为负1天就好了</span><br><span class="line">    &#125;,</span><br><span class="line">    //页面加载调用获取cookie值</span><br><span class="line">    mounted()&#123;</span><br><span class="line">        this.getCookie()</span><br><span class="line">        this.getCaptcha()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="vue-cookie包"><a href="#vue-cookie包" class="headerlink" title="vue-cookie包"></a>vue-cookie包</h3><p>安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-cookie --save</span><br></pre></td></tr></table></figure>
+<p>在main.js中引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import VueCookie from &apos;vue-cookie&apos;  </span><br><span class="line">Vue.use(VueCookie)</span><br></pre></td></tr></table></figure>
+<p>在login.vue登录页面script部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">let Base64 = require(&apos;js-base64&apos;).Base64</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      dataForm: &#123;</span><br><span class="line">        userName: &apos;&apos;,</span><br><span class="line">        password: &apos;&apos;,</span><br><span class="line">        uuid: &apos;&apos;,</span><br><span class="line">        captcha: &apos;&apos;</span><br><span class="line">      &#125;,</span><br><span class="line">      dataRule: &#123;</span><br><span class="line">        userName: [</span><br><span class="line">          &#123; required: true, message: &apos;帐号不能为空&apos;, trigger: &apos;blur&apos; &#125;</span><br><span class="line">        ],</span><br><span class="line">        password: [</span><br><span class="line">          &#123; required: true, message: &apos;密码不能为空&apos;, trigger: &apos;blur&apos; &#125;</span><br><span class="line">        ],</span><br><span class="line">        captcha: [</span><br><span class="line">          &#123; required: true, message: &apos;验证码不能为空&apos;, trigger: &apos;blur&apos; &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      ischecked: 0,</span><br><span class="line">      captchaPath: &apos;&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created () &#123;</span><br><span class="line">    this.getCaptcha()</span><br><span class="line">    this.getCookie() //页面加载调用获取cookie值</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    isRemeber()&#123;</span><br><span class="line">      if(this.ischecked == 0)&#123;</span><br><span class="line">        this.ischecked = 1</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        this.ischecked = 0</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 提交表单</span><br><span class="line">    dataFormSubmit () &#123;</span><br><span class="line">      this.$refs[&apos;dataForm&apos;].validate((valid) =&gt; &#123;</span><br><span class="line">        if (valid) &#123;</span><br><span class="line"></span><br><span class="line">          if(this.ischecked==1)&#123;</span><br><span class="line">            //判断是否选中记住密码，选中则设置cookie</span><br><span class="line">            this.$cookie.set(&apos;userName&apos;,this.dataForm.userName)</span><br><span class="line">            this.$cookie.set(&apos;password&apos;,this.dataForm.password)</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          //axios请求登录接口</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">  //页面加载调用获取cookie值</span><br><span class="line">    getCookie()&#123;</span><br><span class="line">      this.dataForm.userName = this.$cookie.get(&apos;userName&apos;)</span><br><span class="line">      this.dataForm.password = this.$cookie.get(&apos;password&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  //清楚cookie值</span><br><span class="line">  clearCookie:function () &#123;</span><br><span class="line">      Vue.cookie.delete(&apos;userName&apos;)</span><br><span class="line">      Vue.cookie.delete(&apos;password&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如图所示：<br><img src="/images/vue/13.png" alt="目录"></p>
+<h2 id="把数据保存在localStorage里"><a href="#把数据保存在localStorage里" class="headerlink" title="把数据保存在localStorage里"></a>把数据保存在localStorage里</h2><p>1.进入登录页面时，先获取本地localStorage里的数据，如果有数据则自动填充到表单内。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//页面加载调用获取localStorage值</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    this.getlocalStorage()</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p>2.在登录时，判断是否需要记住密码，如果是则设置localStorage值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (this.ischecked==1) &#123;</span><br><span class="line">  _this.setlocalStorage(_this.ruleForm.username, _this.ruleForm.password)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  _this.clearlocalStorage()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在login.vue登录页面script部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// 当刷新页面时候获取一下localStorage里存的值</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    this.getlocalStorage()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    // 当记住密码的checbox选中时，像localStorage里存入一下用户输入的用户名和密码</span><br><span class="line">    submitForm(formName) &#123;</span><br><span class="line">      const _this = this</span><br><span class="line">      if (this.ischecked==1) &#123;</span><br><span class="line">        _this.setlocalStorage(_this.ruleForm.username, _this.ruleForm.password)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        _this.clearlocalStorage()</span><br><span class="line">      &#125;</span><br><span class="line">      //与后端请求代码，暂时还没有请求地址，先省略了</span><br><span class="line">      console.log(&apos;登陆成功&apos;)</span><br><span class="line">    &#125;,</span><br><span class="line">    //设置。像localStorage里存入从页面获取的用户名和密码</span><br><span class="line">    setlocalStorage(c_name, c_pwd) &#123;</span><br><span class="line">      localStorage.siteName = c_name</span><br><span class="line">      localStorage.sitePassword = c_pwd</span><br><span class="line">    &#125;,</span><br><span class="line">    //获取</span><br><span class="line">    getlocalStorage: function() &#123;</span><br><span class="line">      this.ruleForm.username = localStorage.getItem(localStorage.key(1)) //保存到保存数据的地方</span><br><span class="line">      this.ruleForm.password = localStorage.getItem(localStorage.key(2))</span><br><span class="line">    &#125;,</span><br><span class="line">    // 点击忘记密码，清空localStorage里的存储</span><br><span class="line">    clear: function() &#123;</span><br><span class="line">      this.setlocalStorage(&apos;&apos;, &apos;&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如图：<br><img src="/images/vue/12.png" alt="目录"></p>
+<p>参考文章：<br>cookie:<a href="https://blog.csdn.net/qq_38903950/article/details/78274079" target="_blank" rel="noopener">https://blog.csdn.net/qq_38903950/article/details/78274079</a><br>localStorage:<a href="https://blog.csdn.net/hx_1199/article/details/80270783" target="_blank" rel="noopener">https://blog.csdn.net/hx_1199/article/details/80270783</a><br>webStorage:<a href="https://blog.csdn.net/yq_oxygen/article/details/51913582" target="_blank" rel="noopener">https://blog.csdn.net/yq_oxygen/article/details/51913582</a></p>
+<h1 id="防抖和节流"><a href="#防抖和节流" class="headerlink" title="防抖和节流"></a>防抖和节流</h1><p>在实际开发过程中，由于事件频繁被触发，频繁执行DOM操作、资源加载等重行为，会导致浏览器崩溃等情况。<br>常见的事件：<br>    window对象的resize、scroll事件<br>    拖拽时的mousemove事件<br>    文字输入、自动完成的keyup事件<br>    …</p>
+<h2 id="防抖-debounce"><a href="#防抖-debounce" class="headerlink" title="防抖(debounce)"></a>防抖(debounce)</h2><p>1.当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。<br>eg:如果有人进电梯（触发事件），那电梯将在10秒钟后出发（执行事件监听器），这时如果又有人进电梯了（在10秒内再次触发该事件），我们又得等10秒再出发（重新计时）。</p>
+<p>2.应用场景：</p>
+<pre><code>给提交按钮添加防抖，防止表单多次提交
+输入框连续输入只在用户停止后请求数据，用函数防抖能有效减少请求次数(实时搜索防抖)
+判断scroll是否滑到底部，滚动事件+函数防抖
+</code></pre><p>3.防抖是适合多次事件一次响应的情况</p>
+<p>4.简单实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var debounce = function(idle, action)&#123;</span><br><span class="line">  var last</span><br><span class="line">  return function()&#123;</span><br><span class="line">    var ctx = this, args = arguments</span><br><span class="line">    clearTimeout(last)</span><br><span class="line">    last = setTimeout(function()&#123;</span><br><span class="line">        action.apply(ctx, args)</span><br><span class="line">    &#125;, idle)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>5.事例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//uniapp小程序实时搜索防抖</span><br><span class="line">search(res)&#123;</span><br><span class="line">        this.lastTimeStamp = res.timeStamp;</span><br><span class="line">        let _this = this;</span><br><span class="line">        setTimeout(function()&#123;</span><br><span class="line">                if(_this.lastTimeStamp == res.timeStamp)&#123;</span><br><span class="line">                    _this.entName = res.detail.value;</span><br><span class="line">                    _this.getDataList();</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;,800)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="节流-throttle"><a href="#节流-throttle" class="headerlink" title="节流(throttle)"></a>节流(throttle)</h2><p>1.预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期。<br>eg:当 1 秒内连续播放 24 张以上的图片时，在人眼的视觉中就会形成一个连贯的动画，所以在电影的播放（以前是，现在不知道）中基本是以每秒 24 张的速度播放的。<br>    或者说 第一个人进电梯之后，开始计算时间10s，不管有没有人进入电梯，10s之后电梯出发，不会重新计时。</p>
+<p>2.应用场景：</p>
+<pre><code>DOM元素拖拽
+Canvas画笔功能
+游戏中的刷新率
+</code></pre><p>3.节流是适合大量事件按时间做平均分配触发</p>
+<p>4.简单实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var throttle = function(delay, action)&#123;</span><br><span class="line">  var last = null;</span><br><span class="line">  return function()&#123;</span><br><span class="line">    var curr = +new Date()</span><br><span class="line">    if (curr - last &gt; delay|| !last)&#123;</span><br><span class="line">      action.apply(this, arguments)</span><br><span class="line">      last = curr </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总体来看，函数防抖是某一段时间内只执行一次，而函数节流是间隔时间执行</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #666;font-size:14px;">-------------进度条到了&nbsp;<i class="fa fa-paw" style="color:rgb(90,85,85)"></i>&nbsp;感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+    <div>
+          
+            
+          
+    </div>
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Sanr Chen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://chensanr.gitee.io/2021/02/16/fe-practice/" title="前端问题实战">https://chensanr.gitee.io/2021/02/16/fe-practice/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/login/" rel="tag"><i class="fa fa-tag"></i> login</a>
+          
+            <a href="/tags/object-Object/" rel="tag"><i class="fa fa-tag"></i> [object Object]</a>
+          
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/01/22/fe-base/" rel="next" title="前端基础">
+                <i class="fa fa-chevron-left"></i> 前端基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/02/25/fe-high/" rel="prev" title="前端基础进阶">
+                前端基础进阶 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTM3NC8xNTkwMQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avar.jpg"
+                alt="Sanr Chen" />
+            
+              <p class="site-author-name" itemprop="name">Sanr Chen</p>
+              <p class="site-description motion-element" itemprop="description">少时为行 长时为恕</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chenjing123456" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1474189135@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.daqianduan.com/" title="大前端" target="_blank">大前端</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.w3cplus.com/" title="w3cplus" target="_blank">w3cplus</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#钉钉登录"><span class="nav-number">1.</span> <span class="nav-text">钉钉登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#钉钉内部微应用免登"><span class="nav-number">1.1.</span> <span class="nav-text">钉钉内部微应用免登</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方网站钉钉扫码登录"><span class="nav-number">1.2.</span> <span class="nav-text">第三方网站钉钉扫码登录</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue单页面动态路由权限配置"><span class="nav-number">2.</span> <span class="nav-text">vue单页面动态路由权限配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建项目"><span class="nav-number">2.1.</span> <span class="nav-text">搭建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由配置"><span class="nav-number">2.2.</span> <span class="nav-text">路由配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权限验证"><span class="nav-number">2.3.</span> <span class="nav-text">权限验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档"><span class="nav-number">2.4.</span> <span class="nav-text">文档</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#人人开源-动态菜单路由"><span class="nav-number">3.</span> <span class="nav-text">人人开源-动态菜单路由</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析动态菜单路由"><span class="nav-number">3.2.</span> <span class="nav-text">解析动态菜单路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据路由跳转"><span class="nav-number">3.3.</span> <span class="nav-text">根据路由跳转</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搞定Elist语法检测，让世界清静"><span class="nav-number">4.</span> <span class="nav-text">搞定Elist语法检测，让世界清静</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭elist"><span class="nav-number">4.1.</span> <span class="nav-text">关闭elist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义配置"><span class="nav-number">4.2.</span> <span class="nav-text">自定义配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">4.2.1.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置参数值"><span class="nav-number">4.2.2.</span> <span class="nav-text">配置参数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见规则列表"><span class="nav-number">4.2.3.</span> <span class="nav-text">常见规则列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">4.2.4.</span> <span class="nav-text">参考文章</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#让div占满整个屏幕的方法"><span class="nav-number">5.</span> <span class="nav-text">让div占满整个屏幕的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置html-body的宽高"><span class="nav-number">5.1.</span> <span class="nav-text">设置html,body的宽高</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置定位"><span class="nav-number">5.2.</span> <span class="nav-text">设置定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给网站设置背景图"><span class="nav-number">5.3.</span> <span class="nav-text">给网站设置背景图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue项目中登录时记住密码的功能实现"><span class="nav-number">6.</span> <span class="nav-text">vue项目中登录时记住密码的功能实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WebStorage和cookie"><span class="nav-number">6.1.</span> <span class="nav-text">WebStorage和cookie</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WebStorage和cookie-1"><span class="nav-number">6.1.1.</span> <span class="nav-text">WebStorage和cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web-storage下的两种类型"><span class="nav-number">6.1.2.</span> <span class="nav-text">web storage下的两种类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sessionStorage-、localStorage-和-cookie三者异同"><span class="nav-number">6.1.3.</span> <span class="nav-text">sessionStorage 、localStorage 和 cookie三者异同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localStorage的API"><span class="nav-number">6.1.4.</span> <span class="nav-text">localStorage的API</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie和localStorage两种方式"><span class="nav-number">6.2.</span> <span class="nav-text">cookie和localStorage两种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把数据保存到cookie里"><span class="nav-number">6.3.</span> <span class="nav-text">把数据保存到cookie里</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie"><span class="nav-number">6.3.1.</span> <span class="nav-text">cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-cookie包"><span class="nav-number">6.3.2.</span> <span class="nav-text">vue-cookie包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把数据保存在localStorage里"><span class="nav-number">6.4.</span> <span class="nav-text">把数据保存在localStorage里</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#防抖和节流"><span class="nav-number">7.</span> <span class="nav-text">防抖和节流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#防抖-debounce"><span class="nav-number">7.1.</span> <span class="nav-text">防抖(debounce)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节流-throttle"><span class="nav-number">7.2.</span> <span class="nav-text">节流(throttle)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sanr Chen</span>
+
+  
+</div>
+
+
+
+  
+  <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+  </span> <span class="post-meta-divider">|</span> 
+  <span id="busuanzi_container_site_uv">总访客&nbsp;<span id="busuanzi_value_site_uv"></span></span> 
+  <span class="post-meta-divider">|</span> 
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"> 
+  </div>
+  <span class="post-count">博客全站共106.2k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

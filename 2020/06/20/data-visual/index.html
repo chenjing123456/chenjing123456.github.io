@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "20615c0a"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Visualization,高德地图," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Sanr's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="遇到的数据可视化内容实战">
+<meta name="keywords" content="Visualization,高德地图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据可视化">
+<meta property="og:url" content="https://chensanr.gitee.io/2020/06/20/data-visual/index.html">
+<meta property="og:site_name" content="Sanr&#39;s Blog">
+<meta property="og:description" content="遇到的数据可视化内容实战">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://chensanr.gitee.io/images/other/hexo/default.jpg">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/visable/jz1.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/visable/jz2.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/visable/jz3.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/visable/build1.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/visable/build2.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/visable/build3.png">
+<meta property="og:image" content="https://chensanr.gitee.io/images/web/GIF.gif">
+<meta property="og:image" content="https://chensanr.gitee.io/images/other/hexo/green.png">
+<meta property="og:updated_time" content="2022-02-25T07:50:06.783Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据可视化">
+<meta name="twitter:description" content="遇到的数据可视化内容实战">
+<meta name="twitter:image" content="https://chensanr.gitee.io/images/other/hexo/default.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://chensanr.gitee.io/2020/06/20/data-visual/"/>
+
+
+
+
+
+  <title>数据可视化 | Sanr's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sanr's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">三日的一二事</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chensanr.gitee.io/2020/06/20/data-visual/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sanr Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sanr's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据可视化</h1>
+        
+
+        <div class="post-meta">
+           <i class="fa fa-thumb-tack"></i> <font color=7D26CD>置顶</font> <span class="post-meta-divider">|</span> 
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-20T15:06:00+08:00">
+                2020-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/" itemprop="url" rel="index">
+                    <span itemprop="name">Web</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web/Visualization/" itemprop="url" rel="index">
+                    <span itemprop="name">Visualization</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5,783
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  31
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote><p>遇到的数据可视化内容实战</p>
+</blockquote>
+<p><img src="/images/other/hexo/default.jpg" alt="目录"><a id="more"></a></p>
+<h1 id="高德地图"><a href="#高德地图" class="headerlink" title="高德地图"></a>高德地图</h1><h2 id="1-创建行政区域"><a href="#1-创建行政区域" class="headerlink" title="1.创建行政区域"></a>1.创建行政区域</h2><h3 id="创建背景地图"><a href="#创建背景地图" class="headerlink" title="创建背景地图"></a>创建背景地图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//初始化背景地图(创建的完整中国地图，作为某块区域地图的背景)</span><br><span class="line">export const mapInit = (id = &apos;index-overView&apos;, opts = &#123;&#125;,styleId=&apos;amap://styles/f147564119361754e6372bfbef57548a&apos;) =&gt; &#123;</span><br><span class="line">    map = new AMap.Map(id, Object.assign(&#123;</span><br><span class="line">        mapStyle: styleId,</span><br><span class="line">        zoom: 8,</span><br><span class="line">        center:[119.92388,36.251768],</span><br><span class="line">        pitch: 50,</span><br><span class="line">        viewMode: &apos;3D&apos;,</span><br><span class="line">        features: [&apos;bg&apos;, &apos;road&apos;],</span><br><span class="line">    &#125;, opts));</span><br><span class="line">    return map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="查询行政区并绘制"><a href="#查询行政区并绘制" class="headerlink" title="查询行政区并绘制"></a>查询行政区并绘制</h3><p>行政区查询服务文档：<a href="https://lbs.amap.com/api/javascript-api/reference/search#m_AMap.DistrictSearch" target="_blank" rel="noopener">AMap.DistrictSearch 行政区查询</a></p>
+<p>由于行政区查询服务只能具体查询到区县及以上，所以绘制不同级别有不同对应方式：</p>
+<ol>
+<li><p>绘制区县的行政区域<br>eg:绘制出胶州市（县级市）的行政区域<br>涉及的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">//渲染边界线</span><br><span class="line">export const renderPolyline = (bounds, &#123;</span><br><span class="line">    strokeColor,</span><br><span class="line">    strokeWeight</span><br><span class="line">&#125; = &#123;</span><br><span class="line">    strokeColor: &apos;#FFFEC43B&apos;,</span><br><span class="line">    strokeWeight: 4</span><br><span class="line">&#125;) =&gt; &#123;</span><br><span class="line">    console.log(bounds);</span><br><span class="line">    if (!bounds || (bounds &amp;&amp; bounds.length == 0)) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    let arr = []</span><br><span class="line">    for (var i = 0, l = bounds.length; i &lt; l; i++) &#123;</span><br><span class="line">        let p = new AMap.Polyline(&#123;</span><br><span class="line">            path: bounds[i],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">        arr.push(p)</span><br><span class="line">    &#125;</span><br><span class="line">    var overlayGroup = new AMap.OverlayGroup(arr);</span><br><span class="line">    overlayGroup.setOptions(&#123;</span><br><span class="line">        strokeColor: strokeColor,</span><br><span class="line">        strokeWeight: strokeWeight,</span><br><span class="line">    &#125;);</span><br><span class="line">    map.add(overlayGroup);</span><br><span class="line">    //添加高度面</span><br><span class="line">    var object3Dlayer = new AMap.Object3DLayer(&#123;zIndex:1&#125;);</span><br><span class="line">    map.add(object3Dlayer)</span><br><span class="line">    var height = 0;</span><br><span class="line">    var color = &apos;rgba(155, 90, 0, 0.08)&apos;;//rgba</span><br><span class="line">    var wall = new AMap.Object3D.Wall(&#123;</span><br><span class="line">        path:bounds,</span><br><span class="line">        height:height,</span><br><span class="line">        color:color,</span><br><span class="line">    &#125;);</span><br><span class="line">    wall.transparent = true</span><br><span class="line">    object3Dlayer.add(wall)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//创建行政查询对象</span><br><span class="line">const district = new AMap.DistrictSearch(&#123;</span><br><span class="line">    level: &apos;district&apos;,</span><br><span class="line">    showbiz: false,</span><br><span class="line">    extensions: &apos;all&apos;,</span><br><span class="line">    subdistrict: 1</span><br><span class="line">&#125;);</span><br><span class="line">//根据名字查询</span><br><span class="line">district.search(&apos;胶州市&apos;, function (status, result) &#123;</span><br><span class="line">  if (status == &quot;complete&quot;) &#123;</span><br><span class="line">      let &#123; adcode, center, districtList, level, name, boundaries &#125; = result.districtList[0];</span><br><span class="line">      let originalBounds = boundaries;//boundaries返回行政区的边界坐标集合，为经纬度的二维数组</span><br><span class="line">      let bounds = originalBounds.filter(v =&gt; v.length &gt; 300);</span><br><span class="line">      if (bounds) &#123;</span><br><span class="line">          renderPolyline(bounds, &#123;</span><br><span class="line">              strokeColor: &apos;blue&apos;,</span><br><span class="line">              strokeWeight: 4</span><br><span class="line">          &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">      </span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>图示：胶州市（县级市）<img src="/images/web/visable/jz1.png" alt="目录"></p>
+</li>
+<li><p>绘制行政区划大于区县上的行政区域<br>eg:绘制出青岛市或者山东省（胶州市的上级或上上级）内的行政区域，district.search可查找出省市下面边界信息boundaries，所以可以直接使用district.search直接循环查找当前区域下面的行政区域然后绘制出来。<br>涉及的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//获取行政区域下面的信息（boundaries行政区的边界坐标集合，districtList下级行政区信息列表）</span><br><span class="line">export const getBounds = (&#123;</span><br><span class="line">      searchName,</span><br><span class="line">      opts</span><br><span class="line">  &#125;) =&gt; &#123;</span><br><span class="line">    if (opts) &#123;</span><br><span class="line">        opts.level &amp;&amp; district.setLevel(opts.level);</span><br><span class="line">        opts.subdistrict &amp;&amp; district.setSubdistrict(opts.subdistrict);</span><br><span class="line">    &#125;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">      district.search(searchName, function (status, result) &#123;</span><br><span class="line">          if (status == &quot;complete&quot;) &#123;</span><br><span class="line">              let &#123; adcode, center, districtList, level, name, boundaries &#125; = result.districtList[0];</span><br><span class="line">              resolve(&#123;</span><br><span class="line">                  adcode,</span><br><span class="line">                  center: [center.lng, center.lat],</span><br><span class="line">                  districtList,</span><br><span class="line">                  boundaries,</span><br><span class="line">                  name,</span><br><span class="line">                  level</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">              reject(result)</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export const filterBounds = (res) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        bounds: res.boundaries,</span><br><span class="line">        name: res.name,</span><br><span class="line">        adcode: res.adcode,</span><br><span class="line">        center: res.center</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">* 渲染行政覆盖物</span><br><span class="line">* citys 城市名称数组：[]</span><br><span class="line">* opts</span><br><span class="line">* usePolyline : 是否使用边界线，默认true</span><br><span class="line">* polyLineOpts : 边界线配置项</span><br><span class="line">* polygonOpts : 覆盖物配置项</span><br><span class="line">* mapClearFlag:是否清空所有覆盖物标志，默认为空清空所有</span><br><span class="line">* linearColor:各区块颜色是否为渐变</span><br><span class="line">* commonFillColor: 各区块颜色不一样，由polygonOpts设置各区块样式</span><br><span class="line">*  */</span><br><span class="line">export const rendPolygon = (&#123;</span><br><span class="line">        citys,</span><br><span class="line">        opts,</span><br><span class="line">        usePolyline = true,</span><br><span class="line">        polyLineOpts = &#123;&#125;,</span><br><span class="line">        polygonOpts = &#123;&#125;,</span><br><span class="line">        mapClearFlag = true,</span><br><span class="line">        linearColor = false,</span><br><span class="line">        commonFillColor=false,</span><br><span class="line">    &#125; = &#123;</span><br><span class="line">    citys,</span><br><span class="line">    opts,</span><br><span class="line">    usePolyline,</span><br><span class="line">    polyLineOpts,</span><br><span class="line">    polygonOpts,</span><br><span class="line">    linearColor,</span><br><span class="line">    commonFillColor</span><br><span class="line">&#125;) =&gt; &#123;</span><br><span class="line">    </span><br><span class="line">    if (mapClearFlag) &#123;</span><br><span class="line">        // map.clearMap();</span><br><span class="line">    &#125;</span><br><span class="line">    let polygons = [];</span><br><span class="line">    return Promise.all(citys.map((v) =&gt; &#123; //获取边界线经纬度</span><br><span class="line">        return getBounds(&#123;</span><br><span class="line">            searchName: v,</span><br><span class="line">            opts</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)).then(res =&gt; &#123; //过滤边界线经纬度</span><br><span class="line">        return res.map(v =&gt; &#123;</span><br><span class="line">            return filterBounds(v)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;).then(res =&gt; &#123; //绘制polygon和polyline</span><br><span class="line">        res.map((&#123;</span><br><span class="line">                    bounds,</span><br><span class="line">                    name,</span><br><span class="line">                    adcode,</span><br><span class="line">                &#125;) =&gt; &#123;</span><br><span class="line">            let v = bounds;</span><br><span class="line">            let Opt = opts;</span><br><span class="line">            for (let i = 0, l = v.length; i &lt; l; i++) &#123;</span><br><span class="line">                </span><br><span class="line">                let opts = &#123;</span><br><span class="line">                    strokeWeight: 3,</span><br><span class="line">                    path: v[i],</span><br><span class="line">                    fillOpacity: 0.5,</span><br><span class="line">                    fillColor: &apos;rgba(195, 244, 255, 0.46)&apos;,</span><br><span class="line">                    strokeColor: &apos;#0015A5&apos;,</span><br><span class="line">                    strokeOpacity: 1</span><br><span class="line">                &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                opts.strokeOpacity = (usePolyline ? 0.6 : 0)</span><br><span class="line">                opts.extData = &#123;</span><br><span class="line">                    areaName: name,</span><br><span class="line">                    adcode: adcode,</span><br><span class="line">                    ...opts.extData</span><br><span class="line">                &#125;</span><br><span class="line">                opts = &#123;...opts,...polygonOpts&#125;</span><br><span class="line">                // console.log(&apos;11111111111111111&apos;+name);</span><br><span class="line">                let polygon = new AMap.Polygon(opts);</span><br><span class="line">                polygons.push(polygon);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">        map.add(polygons);</span><br><span class="line">        </span><br><span class="line">        let streets = res.map(v =&gt; &#123; return &#123;name: v.name, center: v.center&#125; &#125;);</span><br><span class="line"></span><br><span class="line">        return &#123;polygons, streets&#125;;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">initMap(para) &#123;</span><br><span class="line">  let that = this;</span><br><span class="line">  getBounds(&#123;</span><br><span class="line">      searchName: para,</span><br><span class="line">  &#125;).then(res =&gt; &#123;</span><br><span class="line">      let originalBounds = res.boundaries;</span><br><span class="line">      setLocalStorage(&apos;originalBounds&apos;,JSON.stringify(originalBounds));</span><br><span class="line">      this.citysCenter = res.districtList.map(item =&gt; &#123;</span><br><span class="line">          return &#123;</span><br><span class="line">              name:item.name,</span><br><span class="line">              center:item.center</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      this.citys = this.citysCenter.map(v =&gt; v.name);</span><br><span class="line">      let opts = &#123;</span><br><span class="line">          level: &apos;district&apos;,</span><br><span class="line">          subdistrict: 1</span><br><span class="line">      &#125;;</span><br><span class="line">      rendPolygon(&#123;</span><br><span class="line">          citys: this.citys,</span><br><span class="line">          opts,</span><br><span class="line">          usePolyline: true,</span><br><span class="line">          polygonOpts: &#123;</span><br><span class="line">              fillColor:&apos;rgba(195, 244, 255, 1)&apos;,</span><br><span class="line">              strokeOpacity:0.6,</span><br><span class="line">              strokeColor: &apos;#0015A5&apos;,</span><br><span class="line">              strokeWeight: 4,</span><br><span class="line">          &#125;,</span><br><span class="line">          polyLineOpts:&#123;</span><br><span class="line"></span><br><span class="line">          &#125;,</span><br><span class="line">          mapClearFlag: true,</span><br><span class="line">          linearColor:false,</span><br><span class="line">      &#125;).then((&#123;polygons, streets&#125;) =&gt; &#123;</span><br><span class="line">          let that = this;</span><br><span class="line">          that.polygonList = polygons;</span><br><span class="line">          that.streets = streets;</span><br><span class="line">          if(this.currentUrl == &apos;landAnalysis&apos;)&#123;</span><br><span class="line">                polygons.map(cu=&gt;&#123;</span><br><span class="line">                    cu.off(&apos;click&apos;,this.polygonClick)</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                polygons.map(cu=&gt;&#123;</span><br><span class="line">                    cu.on(&apos;click&apos;,this.polygonClick)</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">          // 设置区县文字</span><br><span class="line">          this.map.add(</span><br><span class="line">              streets.map((city,i)=&gt;&#123;</span><br><span class="line">                  let citys = new AMap.Text(&#123;</span><br><span class="line">                      text: city.name,</span><br><span class="line">                      cursor: &apos;default&apos;,</span><br><span class="line">                      position: city.center,</span><br><span class="line">                      color: &apos;white&apos;</span><br><span class="line">                  &#125;)</span><br><span class="line">                  citys.setStyle(&#123;</span><br><span class="line">                      &apos;background-color&apos;: &apos;transparent&apos;,</span><br><span class="line">                      color: &apos;#0015A5&apos;,</span><br><span class="line">                      &apos;font-size&apos;: &apos;50%&apos;,</span><br><span class="line">                      border: &apos;none&apos;</span><br><span class="line">                  &#125;);</span><br><span class="line">                  return citys</span><br><span class="line">              &#125;)</span><br><span class="line">          )</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>图示：青岛市<img src="/images/web/visable/jz2.png" alt="目录"></p>
+</li>
+<li><p>绘制区县下的街道等行政区域<br>eg:绘制出胶州市（县级市）下面街道的行政区域，district.search查不出区县下面行政区域的边界信息boundaries，所以需要自己提供每个街道乡镇的边界信息。<br>文件./lngLat/amap.jiaozhou放胶州市下的街镇以及各街镇边界信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export const jiaozhou = &#123;</span><br><span class="line">  &quot;citycode&quot;:&quot;0532&quot;,&quot;adcode&quot;:&quot;370281&quot;,&quot;name&quot;:&quot;胶州市&quot;,&quot;polyline&quot;:&quot;&quot;,&quot;districts&quot;:[</span><br><span class="line">    &quot;citycode&quot;:&quot;0532&quot;,&quot;adcode&quot;:&quot;370281&quot;,&quot;name&quot;:&quot;阜安街道&quot;,&quot;polyline&quot;:&quot;&quot;,&quot;districts&quot;:[],....</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>涉及的方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br></pre></td><td class="code"><pre><span class="line">先拿到胶州市下乡镇的边界信息</span><br><span class="line">import &#123;</span><br><span class="line">    jiaozhou</span><br><span class="line">&#125; from &quot;./lngLat/amap.jiaozhou&quot;</span><br><span class="line"></span><br><span class="line">let jzMapper = &#123;&#125;</span><br><span class="line">jiaozhou.districts.map(v =&gt; &#123;</span><br><span class="line">    jzMapper[v.name] = v</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const mapper = &#123;</span><br><span class="line">    ...jzMapper,//把胶州下面所有的街镇放在mapper里面</span><br><span class="line">&#125;</span><br><span class="line">const processMapper = &#123;&#125;</span><br><span class="line">const district = new AMap.DistrictSearch(&#123;</span><br><span class="line">    level: &apos;province&apos;,</span><br><span class="line">    showbiz: false,</span><br><span class="line">    extensions: &apos;all&apos;,</span><br><span class="line">    subdistrict: 3</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">function createLngLat(polyline) &#123;</span><br><span class="line">    let result = []</span><br><span class="line">    let arr = polyline.split(&quot;|&quot;).filter(v =&gt; v.length);</span><br><span class="line">    let arr1 = arr.map(v =&gt; &#123;</span><br><span class="line">        return v.split(&quot;;&quot;).map(v1 =&gt; v1.split(&quot;,&quot;).map(v2 =&gt; (v2 - 0)))</span><br><span class="line">    &#125;)</span><br><span class="line">    result = arr1.filter(v =&gt; v.length &gt; 0)</span><br><span class="line"></span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br><span class="line">function processLngLat(districts) &#123;</span><br><span class="line">    return districts.map(v =&gt; &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            adcode: v.adcode,</span><br><span class="line">            center: v.center.split(&quot;,&quot;).map(v =&gt; (v - 0)),</span><br><span class="line">            districtList: processLngLat(v.districts),</span><br><span class="line">            boundaries: (v.polyline ? createLngLat(v.polyline) : []),</span><br><span class="line">            name: v.name,</span><br><span class="line">            level: v.level</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function createAMapResponse(areaName) &#123;</span><br><span class="line">    let districts = mapper[areaName].districts;</span><br><span class="line">    let v = mapper[areaName];</span><br><span class="line">    processMapper[areaName] = &#123;</span><br><span class="line">        adcode: v.adcode,</span><br><span class="line">        center: v.center.split(&quot;,&quot;).map(v =&gt; (v - 0)),</span><br><span class="line">        districtList: processLngLat(v.districts),</span><br><span class="line">        boundaries: (v.polyline ? createLngLat(v.polyline) : []),</span><br><span class="line">        name: v.name,</span><br><span class="line">        level: v.level</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return processMapper[areaName]</span><br><span class="line">&#125;</span><br><span class="line">export const getBounds = (&#123;</span><br><span class="line">                              searchName,</span><br><span class="line">                              opts</span><br><span class="line">                          &#125;) =&gt; &#123;</span><br><span class="line">    if (opts) &#123;</span><br><span class="line">        opts.level &amp;&amp; district.setLevel(opts.level);</span><br><span class="line">        opts.subdistrict &amp;&amp; district.setSubdistrict(opts.subdistrict);</span><br><span class="line">    &#125;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        if (processMapper[searchName]) &#123;</span><br><span class="line">            resolve(processMapper[searchName])</span><br><span class="line">        &#125; else if (mapper[searchName]) &#123;//如果是胶州的街镇则取自定义的街镇边界信息</span><br><span class="line">            resolve(createAMapResponse(searchName))</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            district.search(searchName, function (status, result) &#123;</span><br><span class="line">                console.log(result);</span><br><span class="line">                if (status == &quot;complete&quot;) &#123;</span><br><span class="line">                    let &#123; adcode, center, districtList, level, name, boundaries &#125; = result.districtList[0];</span><br><span class="line">                    resolve(&#123;</span><br><span class="line">                        adcode,</span><br><span class="line">                        center: [center.lng, center.lat],</span><br><span class="line">                        districtList,</span><br><span class="line">                        boundaries,</span><br><span class="line">                        name,</span><br><span class="line">                        level</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    reject(result)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">export const filterBounds = (res) =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        bounds: res.boundaries,</span><br><span class="line">        name: res.name,</span><br><span class="line">        adcode: res.adcode,</span><br><span class="line">        center: res.center</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line">* 渲染行政覆盖物</span><br><span class="line">* citys 城市名称数组：[]</span><br><span class="line">* opts</span><br><span class="line">* usePolyline : 是否使用边界线，默认true</span><br><span class="line">* polyLineOpts : 边界线配置项</span><br><span class="line">* polygonOpts : 覆盖物配置项</span><br><span class="line">* mapClearFlag:是否清空所有覆盖物标志，默认为空清空所有</span><br><span class="line">* linearColor:各区块颜色是否为渐变</span><br><span class="line">* commonFillColor: 各区块颜色不一样，由polygonOpts设置各区块样式</span><br><span class="line">*  */</span><br><span class="line">export const rendPolygon = (&#123;</span><br><span class="line">      citys,</span><br><span class="line">      opts,</span><br><span class="line">      usePolyline = true,</span><br><span class="line">      polyLineOpts = &#123;&#125;,</span><br><span class="line">      polygonOpts = &#123;&#125;,</span><br><span class="line">      mapClearFlag = true,</span><br><span class="line">      linearColor = false,</span><br><span class="line">      commonFillColor=false,</span><br><span class="line">  &#125; = &#123;</span><br><span class="line">    citys,</span><br><span class="line">    opts,</span><br><span class="line">    usePolyline,</span><br><span class="line">    polyLineOpts,</span><br><span class="line">    polygonOpts,</span><br><span class="line">    linearColor,</span><br><span class="line">    commonFillColor</span><br><span class="line">&#125;) =&gt; &#123;</span><br><span class="line">    </span><br><span class="line">    if (mapClearFlag) &#123;</span><br><span class="line">        // map.clearMap();</span><br><span class="line">    &#125;</span><br><span class="line">    let polygons = [];</span><br><span class="line">    return Promise.all(citys.map((v) =&gt; &#123; //获取边界线经纬度</span><br><span class="line">        return getBounds(&#123;</span><br><span class="line">            searchName: v,</span><br><span class="line">            opts</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)).then(res =&gt; &#123; //过滤边界线经纬度</span><br><span class="line">        </span><br><span class="line">        return res.map(v =&gt; &#123;</span><br><span class="line">            return filterBounds(v)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;).then(res =&gt; &#123; //绘制polygon和polyline</span><br><span class="line">        res.map((&#123;</span><br><span class="line">                bounds,</span><br><span class="line">                name,</span><br><span class="line">                adcode,</span><br><span class="line">            &#125;) =&gt; &#123;</span><br><span class="line">            let v = bounds;</span><br><span class="line">            let Opt = opts;</span><br><span class="line">            for (let i = 0, l = v.length; i &lt; l; i++) &#123;</span><br><span class="line">                let opts = &#123;</span><br><span class="line">                    strokeWeight: 3,</span><br><span class="line">                    path: v[i],</span><br><span class="line">                    fillOpacity: 0.5,</span><br><span class="line">                    fillColor: &apos;rgba(195, 244, 255, 0.46)&apos;,</span><br><span class="line">                    strokeColor: &apos;#0015A5&apos;,</span><br><span class="line">                    strokeOpacity: 1</span><br><span class="line">                &#125;;</span><br><span class="line">                opts.strokeOpacity = (usePolyline ? 0.6 : 0)</span><br><span class="line">                opts.extData = &#123;</span><br><span class="line">                    areaName: name,</span><br><span class="line">                    adcode: adcode,</span><br><span class="line">                    ...opts.extData</span><br><span class="line">                &#125;</span><br><span class="line">                opts = &#123;...opts,...polygonOpts&#125;</span><br><span class="line">                let polygon = new AMap.Polygon(opts);</span><br><span class="line">                polygons.push(polygon);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">            // for (let i = 0, l = v.length; i &lt; l; i++) &#123;</span><br><span class="line">            //     if(usePolyline)&#123;</span><br><span class="line">            //         // console.log(v[i])</span><br><span class="line">            //         let opts = &#123;</span><br><span class="line">            //             path:v[i],</span><br><span class="line">            //             strokeColor:&apos;#FFFEC43B&apos;,</span><br><span class="line">            //             strokeWeight:2,</span><br><span class="line">            //             strokeOpacity:.3,</span><br><span class="line">            //             map:map</span><br><span class="line">            //         &#125;</span><br><span class="line">            //         Object.assign(opts,polyLineOpts);</span><br><span class="line">            //         new AMap.Polyline(opts)</span><br><span class="line">            //     &#125;</span><br><span class="line">            //</span><br><span class="line">            // &#125;</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">        map.add(polygons);</span><br><span class="line">        let streets = res.map(v =&gt; &#123; return &#123;name: v.name, center: v.center&#125; &#125;);</span><br><span class="line">        return &#123;polygons, streets&#125;;</span><br><span class="line">    &#125;)</span><br><span class="line">    // return polygons;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">mounted()&#123;</span><br><span class="line">    this.map = mapInit(&apos;map-main&apos;,&#123;viewMode: &apos;3D&apos;,&#125;,&apos;amap://styles/069da364079e3b5bdce1f621f8ac52ea&apos;);</span><br><span class="line">    if(this.map)&#123;</span><br><span class="line">        this.setMapCenterSpot(120.02382574526537,36.212799916381756);</span><br><span class="line">        this.setMapZoom(10.9);</span><br><span class="line">        this.setMapPitch(50);</span><br><span class="line">        this.initMap(&apos;胶州市&apos;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">initMap(para) &#123;</span><br><span class="line">    let that = this;</span><br><span class="line">    getBounds(&#123;</span><br><span class="line">        searchName: para,</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line">        //let originalBounds = res.boundaries;</span><br><span class="line">        //setLocalStorage(&apos;originalBounds&apos;,JSON.stringify(originalBounds));</span><br><span class="line">        this.citysCenter = res.districtList.map(item =&gt; &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                name:item.name,</span><br><span class="line">                center:item.center</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        this.citys = this.citysCenter.map(v =&gt; v.name);</span><br><span class="line">        //let bounds = originalBounds.filter(v =&gt; v.length &gt; 300);</span><br><span class="line">        let opts = &#123;</span><br><span class="line">            level: &apos;district&apos;,</span><br><span class="line">            subdistrict: 1</span><br><span class="line">        &#125;;</span><br><span class="line">        // if (bounds) &#123;</span><br><span class="line">        //     renderPolyline(bounds, &#123;</span><br><span class="line">        //         strokeColor: &apos;red&apos;,</span><br><span class="line">        //         strokeWeight: 4</span><br><span class="line">        //     &#125;)</span><br><span class="line">        // &#125;</span><br><span class="line">        rendPolygon(&#123;</span><br><span class="line">            citys: this.citys,</span><br><span class="line">            opts,</span><br><span class="line">            usePolyline: true,</span><br><span class="line">            polygonOpts: &#123;</span><br><span class="line">                fillColor:&apos;rgba(195, 244, 255, 1)&apos;,</span><br><span class="line">                strokeOpacity:0.6,</span><br><span class="line">                strokeColor: &apos;#0015A5&apos;,</span><br><span class="line">                strokeWeight: 4,</span><br><span class="line">            &#125;,</span><br><span class="line">            polyLineOpts:&#123;&#125;,</span><br><span class="line">            mapClearFlag: true,</span><br><span class="line">            linearColor:false,</span><br><span class="line">        &#125;).then((&#123;polygons, streets&#125;) =&gt; &#123;</span><br><span class="line">            let that = this;</span><br><span class="line">            that.polygonList = polygons;</span><br><span class="line">            that.streets = streets;</span><br><span class="line">            // 设置区县文字</span><br><span class="line">            this.map.add(</span><br><span class="line">                streets.map((city,i)=&gt;&#123;</span><br><span class="line">                    let citys = new AMap.Text(&#123;</span><br><span class="line">                        text: city.name,</span><br><span class="line">                        cursor: &apos;default&apos;,</span><br><span class="line">                        position: city.center,</span><br><span class="line">                        color: &apos;white&apos;</span><br><span class="line">                    &#125;)</span><br><span class="line">                    citys.setStyle(&#123;</span><br><span class="line">                        &apos;background-color&apos;: &apos;transparent&apos;,</span><br><span class="line">                        color: &apos;#0015A5&apos;,</span><br><span class="line">                        &apos;font-size&apos;: &apos;50%&apos;,</span><br><span class="line">                        border: &apos;none&apos;</span><br><span class="line">                    &#125;);</span><br><span class="line">                    return citys</span><br><span class="line">                &#125;)</span><br><span class="line">            )</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>图示：胶州市下的镇街<img src="/images/web/visable/jz3.png" alt="目录"></p>
+</li>
+</ol>
+<p>上面三种方式概括了大部分行政区域绘制的情况，其中第三种属于通用性方式，通过第三种方式可以绘制出大部分行政区域的地图。<br>若是需要绘制其他区县级行政区域只需按照格式替换相应json文件即可。</p>
+<p>完整代码地址：<a href="https://gitee.com/Chensanr/daily-code/tree/master/visable/qdjz" target="_blank" rel="noopener">胶州市区域绘制</a></p>
+<h2 id="2-楼宇图层-AMap-Buildings"><a href="#2-楼宇图层-AMap-Buildings" class="headerlink" title="2.楼宇图层 - AMap.Buildings"></a>2.楼宇图层 - AMap.Buildings</h2><h3 id="功能1：根据不同图例的范围显示楼宇不同的颜色"><a href="#功能1：根据不同图例的范围显示楼宇不同的颜色" class="headerlink" title="功能1：根据不同图例的范围显示楼宇不同的颜色"></a>功能1：根据不同图例的范围显示楼宇不同的颜色</h3><p><img src="/images/web/visable/build1.png" alt="目录"></p>
+<p>template组件:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;landAnalysis&quot; class=&quot;analysis-container mapAnalysis&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;select-position&quot;&gt;</span><br><span class="line">      &lt;el-autocomplete</span><br><span class="line">        class=&quot;decision-input&quot;</span><br><span class="line">        v-model=&quot;keyword&quot;</span><br><span class="line">        :fetch-suggestions=&quot;querySearchAsync1&quot;</span><br><span class="line">        value-key=&quot;entName&quot;</span><br><span class="line">        prefix-icon=&quot;el-icon-search&quot;</span><br><span class="line">        clearable</span><br><span class="line">        :trigger-on-focus=&quot;false&quot;</span><br><span class="line">        placeholder=&quot;请输入企业名称进行查询&quot;</span><br><span class="line">        @select=&quot;handleSelect1&quot;</span><br><span class="line">      &gt;&lt;/el-autocomplete&gt;</span><br><span class="line">      &lt;!-- &lt;div id=&quot;pickerBox&quot;&gt;</span><br><span class="line">        &lt;input id=&quot;pickerInput&quot; class=&quot;decision-input&quot; placeholder=&quot;输入关键字选取地点&quot; /&gt;</span><br><span class="line">        &lt;div id=&quot;poiInfo&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;--&gt;</span><br><span class="line">      &lt;el-select v-model=&quot;type&quot; placeholder=&quot;请选择&quot; @change=&quot;changeItem&quot; class=&quot;decision-select&quot;&gt;</span><br><span class="line">        &lt;el-option</span><br><span class="line">          v-for=&quot;item in landMuOption&quot;</span><br><span class="line">          :key=&quot;item.value&quot;</span><br><span class="line">          :label=&quot;item.name&quot;</span><br><span class="line">          :value=&quot;item.value&quot;</span><br><span class="line">        &gt;&lt;/el-option&gt;</span><br><span class="line">      &lt;/el-select&gt;</span><br><span class="line">      &lt;div class=&quot;dictList&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;dict_item&quot; v-for=&quot;(items,i) in dictList&quot; :key=&quot;i&quot;&gt;</span><br><span class="line">          &lt;span class=&quot;i_btn&quot; :style=&quot;&#123;background:landMuColors[i].color,borderColor:items.color,borderStyle:&apos;solid&apos;,borderWidth:&apos;1px&apos;&#125;&quot;&gt;&lt;/span&gt;</span><br><span class="line">          &lt;span&gt;&#123;&#123;items.label&#125;&#125;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;text-position&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;text-position-first&quot;&gt;胶州市地图&lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;text-position-second&quot;&gt;企业分布经纬度坐标分布图&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;cash_box&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;cash_item&quot; @click=&quot;changeLay&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;iconfont iconweixing&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span&gt;卫星地图&lt;/span&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;span&gt;|&lt;/span&gt;</span><br><span class="line">      &lt;div class=&quot;cash_item&quot; @click=&quot;startDraw&quot; :style=&quot;pickUpStyle&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;iconfont iconbianqushibie&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span&gt;边界拾取&lt;/span&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;span&gt;|&lt;/span&gt;</span><br><span class="line">      &lt;div class=&quot;cash_item&quot; @click=&quot;resetDraw&quot;&gt;</span><br><span class="line">        &lt;span style=&quot;&quot;&gt;清除&lt;/span&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;dataset_box&quot; v-show=&quot;isShowRight&quot;&gt;</span><br><span class="line">      &lt;section class=&quot;box_head&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;left_head&quot;&gt;</span><br><span class="line">          &lt;span class=&quot;title_or1 head_item&quot;&gt;企业边界信息&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/section&gt;</span><br><span class="line">      &lt;section class=&quot;boundary_content&quot;&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          面积：</span><br><span class="line">          &lt;span&gt;&#123;&#123;boundaryInfo.mapArea&#125;&#125;&lt;/span&gt;平方米</span><br><span class="line">          &lt;span&gt;&#123;&#123;boundaryInfo.area2&#125;&#125;&lt;/span&gt;亩</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          企业名称：</span><br><span class="line">          &lt;el-autocomplete</span><br><span class="line">            v-model=&quot;boundaryInfo.entName&quot;</span><br><span class="line">            :fetch-suggestions=&quot;querySearchAsync&quot;</span><br><span class="line">            value-key=&quot;entName&quot;</span><br><span class="line">            placeholder=&quot;请搜索&quot;</span><br><span class="line">            clearable</span><br><span class="line">            :trigger-on-focus=&quot;false&quot;</span><br><span class="line">            @select=&quot;handleSelect&quot;</span><br><span class="line">          &gt;&lt;/el-autocomplete&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          经纬度范围：</span><br><span class="line">          &lt;el-input</span><br><span class="line">            type=&quot;textarea&quot;</span><br><span class="line">            :rows=&quot;4&quot;</span><br><span class="line">            placeholder=&quot;请输入经纬度范围&quot;</span><br><span class="line">            v-model=&quot;boundaryInfo.locationRange&quot;</span><br><span class="line">            disabled</span><br><span class="line">          &gt;&lt;/el-input&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          经纬度点：</span><br><span class="line">          &lt;el-input v-model=&quot;boundaryInfo.lngLat&quot; placeholder=&quot;请输入经纬度点&quot; disabled&gt;&lt;/el-input&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/section&gt;</span><br><span class="line">      &lt;section class=&quot;boundary_footer&quot;&gt;</span><br><span class="line">        &lt;span @click=&quot;cancalBind&quot;&gt;取消&lt;/span&gt;</span><br><span class="line">        &lt;span @click=&quot;confirmBind&quot;&gt;确定&lt;/span&gt;</span><br><span class="line">      &lt;/section&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></p>
+<p>1.定义楼宇图例的颜色和范围(常量)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br></pre></td><td class="code"><pre><span class="line">//楼宇样式 </span><br><span class="line">export const landMuColors = [</span><br><span class="line">    &#123;</span><br><span class="line">        color:&apos;rgba(251, 139, 16, 0.25)&apos;,//楼宇的fillColor</span><br><span class="line">        color1:&apos;FFFFDBA9&apos;,//楼顶颜色</span><br><span class="line">        borderColor:&apos;#FB8B10&apos;,//外部polygon的填充颜色和楼宇的borderColor</span><br><span class="line">        color2:&apos;FFE05100&apos;//楼面颜色</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        color:&apos;rgba(173, 198, 253, 0.5)&apos;,</span><br><span class="line">        borderColor:&apos;#4060E4&apos;,</span><br><span class="line">        color1:&apos;FFADC6FD&apos;,</span><br><span class="line">        color2:&apos;FF0036B1&apos;</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        color:&apos;rgba(231, 62, 21, 0.4)&apos;,</span><br><span class="line">        borderColor:&apos;#FF6910&apos;,</span><br><span class="line">        color1:&apos;FFFF987F&apos;,</span><br><span class="line">        color2:&apos;FFD30000&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        color:&apos;rgba(247, 181, 0, 0.4)&apos;,</span><br><span class="line">        borderColor:&apos;#FFBC04&apos;,</span><br><span class="line">        color1:&apos;FFFFE59D&apos;,</span><br><span class="line">        color2:&apos;FFD28300&apos;</span><br><span class="line">    &#125;</span><br><span class="line">];</span><br><span class="line">//专题分析图例列表</span><br><span class="line">export const landMuOption = [</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;单位用地税收&apos;,</span><br><span class="line">        value:1,</span><br><span class="line">        list:[</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;0~0.5万元/亩&apos;,</span><br><span class="line">                color:&apos;#FB8B10&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;0.5~2万元/亩&apos;,</span><br><span class="line">                color:&apos;#0091FF&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;2~5万元/亩&apos;,</span><br><span class="line">                color:&apos;#E02020&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;5万元/亩以上&apos;,</span><br><span class="line">                color:&apos;#F7B500&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;单位用地主营业务收入&apos;,</span><br><span class="line">        value:2,</span><br><span class="line">        list:[</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;0~100万元/亩&apos;,</span><br><span class="line">                color:&apos;#FB8B10&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;100~200万元/亩&apos;,</span><br><span class="line">                color:&apos;#0091FF&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;200~300万元/亩&apos;,</span><br><span class="line">                color:&apos;#E02020&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;300万元/亩以上&apos;,</span><br><span class="line">                color:&apos;#F7B500&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;单位能耗主营业务收入&apos;,</span><br><span class="line">        value:3,</span><br><span class="line">        list:[</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;0~25万元/吨标准煤&apos;,</span><br><span class="line">                color:&apos;#FB8B10&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;25~60万元/吨标准煤&apos;,</span><br><span class="line">                color:&apos;#0091FF&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;60~150万元/吨标准煤&apos;,</span><br><span class="line">                color:&apos;#E02020&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;150以上万元/吨标准煤&apos;,</span><br><span class="line">                color:&apos;#F7B500&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;单位污染物排放主营业务收入&apos;,</span><br><span class="line">        value:4,</span><br><span class="line">        list:[</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;0~3万元/当量吨&apos;,</span><br><span class="line">                color:&apos;#FB8B10&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;3~10万元/当量吨&apos;,</span><br><span class="line">                color:&apos;#0091FF&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;10~30万元/当量吨&apos;,</span><br><span class="line">                color:&apos;#E02020&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;30万元以上/当量吨&apos;,</span><br><span class="line">                color:&apos;#F7B500&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;研发经费投入占主营业务收入比重&apos;,</span><br><span class="line">        value:5,</span><br><span class="line">        list:[</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;0~4%&apos;,</span><br><span class="line">                color:&apos;#FB8B10&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;4%~5%&apos;,</span><br><span class="line">                color:&apos;#0091FF&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;5%~7%&apos;,</span><br><span class="line">                color:&apos;#E02020&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;7%以上&apos;,</span><br><span class="line">                color:&apos;#F7B500&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;全员劳动生产率&apos;,</span><br><span class="line">        value:6,</span><br><span class="line">        list:[</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;0~40万元/人·年&apos;,</span><br><span class="line">                color:&apos;#FB8B10&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;40~70万元/人·年&apos;,</span><br><span class="line">                color:&apos;#0091FF&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;70~120万元/人·年&apos;,</span><br><span class="line">                color:&apos;#E02020&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;120万元/人·年以上&apos;,</span><br><span class="line">                color:&apos;#F7B500&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;分档&apos;,</span><br><span class="line">        value:7,</span><br><span class="line">        list:[</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;A档&apos;,</span><br><span class="line">                color:&apos;#FB8B10&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;B档&apos;,</span><br><span class="line">                color:&apos;#0091FF&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;C档&apos;,</span><br><span class="line">                color:&apos;#E02020&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                label:&apos;D档&apos;,</span><br><span class="line">                color:&apos;#F7B500&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">后台返回的楼宇数据格式：</span><br><span class="line">data:[</span><br><span class="line">    &#123;</span><br><span class="line">        name:&apos;0~0.5万元/亩&apos;, //当前选择图例的第一项图例name，依次类推</span><br><span class="line">        data:[&#123;</span><br><span class="line">            allWorkRate: 607.355</span><br><span class="line">            creditCode: &quot;91370281740398747R&quot;</span><br><span class="line">            dataYear: 2018</span><br><span class="line">            entName: &quot;青岛德全食品有限公司&quot;</span><br><span class="line">            entType: &quot;B&quot;</span><br><span class="line">            id: 5803</span><br><span class="line">            lat: &quot;36.4493852655075600&quot;</span><br><span class="line">            lng: &quot;120.0681803666910500&quot;</span><br><span class="line">            locationRange: &quot;120.0681803666910500,36.4493852655075600,120.0681803666910500,36.4493852655075600,120.0681803666910500,36.4493852655075600,120.0681803666910500,36.4493852655075600&quot;</span><br><span class="line">            mapArea: null</span><br><span class="line">            muConsumeIncome: 533.3106</span><br><span class="line">            muEmissionsIncome: null</span><br><span class="line">            muMainIncome: 664.3298</span><br><span class="line">            muPerTax: 0.2605</span><br><span class="line">            rangeList: [[&quot;120.0681803666910500&quot;, &quot;36.4493852655075600&quot;], [&quot;120.0681803666910500&quot;, &quot;36.4493852655075600&quot;],…] //楼宇需要的边界值path</span><br><span class="line">            researchRate: 4.2149</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        name:&apos;0.5~2万元/亩&apos;,</span><br><span class="line">        data:[]</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        name:&apos;2~5万元/亩&apos;,</span><br><span class="line">        data:[]</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        name:&apos;5万元/亩以上&apos;,</span><br><span class="line">        data:[]</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>2.初始化地图，根据后台数据添加楼宇<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line">//初始化某个市的地图</span><br><span class="line">initSearch() &#123;</span><br><span class="line">      let that = this;</span><br><span class="line">      //卫星图层</span><br><span class="line">      this.satelliteLayer = new AMap.TileLayer.Satellite();</span><br><span class="line">      //楼块图层</span><br><span class="line">      this.buildingLayer = new AMap.Buildings(&#123;</span><br><span class="line">        zIndex: 130,</span><br><span class="line">        merge: false,</span><br><span class="line">        sort: false,</span><br><span class="line">        heightFactor: 2,</span><br><span class="line">        zooms: [16, 18]</span><br><span class="line">      &#125;);</span><br><span class="line">      this.map.setFeatures([&quot;bg&quot;, &quot;road&quot;, &quot;building&quot;, &quot;point&quot;]);</span><br><span class="line">      this.map.setLayers([new AMap.TileLayer(&#123;&#125;), this.buildingLayer]);</span><br><span class="line">      this.map.setPitch(60);</span><br><span class="line">      this.map.setRotation(35);</span><br><span class="line">      //调视角控件</span><br><span class="line">      this.map.plugin([&quot;AMap.ControlBar&quot;], function() &#123;</span><br><span class="line">        let Options = &#123;</span><br><span class="line">          position: &#123;</span><br><span class="line">            bottom: &quot;-100px&quot;,</span><br><span class="line">            right: 0</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        that.controlBar = new AMap.ControlBar(Options);</span><br><span class="line">        that.map.addControl(that.controlBar);</span><br><span class="line">      &#125;);</span><br><span class="line">      this.mouseTool = new AMap.MouseTool(this.map);</span><br><span class="line">      this.mouseTool.close();</span><br><span class="line">      //拿到所有楼块的位置并设置</span><br><span class="line">      this.getbuildingLayer();</span><br><span class="line">    &#125;,</span><br><span class="line">    //获取后台数据 设置楼宇</span><br><span class="line">    getbuildingLayer() &#123;</span><br><span class="line">      let that = this;</span><br><span class="line">      landAnalysisEntList(&#123; type: this.type, dataYear: 2018 &#125;).then(res =&gt; &#123;</span><br><span class="line">        let arr = res.data || [];</span><br><span class="line">        let options = &#123;&#125;;</span><br><span class="line">        let allData = arr.map((v, i) =&gt; &#123;</span><br><span class="line">          let eveItemData = v.data.map(val =&gt; &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">              rejectTexture: true, //是否屏蔽自定义地图的纹理</span><br><span class="line">              color1: that.landMuColors[i].color1,</span><br><span class="line">              color2: that.landMuColors[i].color2,</span><br><span class="line">              entName: val.entName,</span><br><span class="line">              creditCode: val.creditCode,</span><br><span class="line">              lng: val.lng,</span><br><span class="line">              lat: val.lat,</span><br><span class="line">              entType: val.entType,</span><br><span class="line">              fillColor: that.landMuColors[i].color,</span><br><span class="line">              borderColor: that.landMuColors[i].borderColor,</span><br><span class="line">              path: val.rangeList || []</span><br><span class="line">            &#125;;</span><br><span class="line">          &#125;);</span><br><span class="line">          return eveItemData;</span><br><span class="line">        &#125;);</span><br><span class="line">        //所有楼块的位置</span><br><span class="line">        that.areas = allData.reduce(function(a, b) &#123;</span><br><span class="line">          return a.concat(b);</span><br><span class="line">        &#125;).filter((v)=&gt;&#123;</span><br><span class="line">          return v.lng&amp;&amp;v.lat;</span><br><span class="line">        &#125;);</span><br><span class="line">        //设置楼块的位置</span><br><span class="line">        that.buildingLayer.setStyle(&#123;</span><br><span class="line">          hideWithoutStyle: false,</span><br><span class="line">          areas: that.areas</span><br><span class="line">        &#125;);</span><br><span class="line">        //所有楼块上面的地面矩形Polygon</span><br><span class="line">        this.polygonFloorList = that.areas.map((v, i) =&gt; &#123;</span><br><span class="line">          let somePolygon = new AMap.Polygon(&#123;</span><br><span class="line">            bubble: true,</span><br><span class="line">            fillColor: v.fillColor || &quot;green&quot;,</span><br><span class="line">            // fillOpacity: 0.2,</span><br><span class="line">            strokeWeight: 1,</span><br><span class="line">            strokeColor: v.borderColor,</span><br><span class="line">            strokeWeight: 2,</span><br><span class="line">            path: v.path,</span><br><span class="line">            map: that.map</span><br><span class="line">          &#125;);</span><br><span class="line">          //地面Polygon设置点击事件-清除当前楼层</span><br><span class="line">          // somePolygon.on(&quot;click&quot;, function(e) &#123;</span><br><span class="line">          //   that.currentIndex = i;</span><br><span class="line">          //   // console.log(that.currentIndex);</span><br><span class="line">          //   that.clearLayBuding();</span><br><span class="line">          // &#125;);</span><br><span class="line">          return somePolygon;</span><br><span class="line">        &#125;);</span><br><span class="line">        //给每个楼块标记点marker</span><br><span class="line">        pointShow(</span><br><span class="line">          this.map,</span><br><span class="line">          function(current) &#123;</span><br><span class="line">            iconPoint(that.map, function(curr) &#123;&#125;, [current], 2); //2表示土地的infowindow</span><br><span class="line">          &#125;,</span><br><span class="line">          that.areas,</span><br><span class="line">          2</span><br><span class="line">        );</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    clearLayBuding() &#123;</span><br><span class="line">      let that = this;</span><br><span class="line">      //清除当前楼层 - 拿不到当前polygon上的楼层- （去掉areas中当前点击的index之后重新设置style的areas）</span><br><span class="line">      let areas = [...that.areas];</span><br><span class="line">      areas.splice(that.currentIndex, 1);</span><br><span class="line">      that.buildingLayer.setStyle(&#123;</span><br><span class="line">        hideWithoutStyle: false,</span><br><span class="line">        areas</span><br><span class="line">      &#125;);</span><br><span class="line">      //清除当前楼层下polygon</span><br><span class="line">      let current = this.polygonFloorList[this.currentIndex];</span><br><span class="line">      current.setMap(null);</span><br><span class="line">      current = null;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure></p>
+<p>如下：能清晰看到楼宇效果图<br><img src="/images/web/visable/build2.png" alt="目录"></p>
+<h3 id="功能2：边界拾取"><a href="#功能2：边界拾取" class="headerlink" title="功能2：边界拾取"></a>功能2：边界拾取</h3><p>在地图上拾取一个范围边界圈出企业的范围保存楼宇到后台，改拾取的边界区域就是企业的位置和楼宇</p>
+<p><img src="/images/web/visable/build3.png" alt="目录"></p>
+<p><a href="https://lbs.amap.com/api/javascript-api/reference/plugin#AMap.MouseTool" target="_blank" rel="noopener">AMap.MouseTool 插件api文档</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">//点击拾取</span><br><span class="line">startDraw() &#123;</span><br><span class="line">      let that = this;</span><br><span class="line">      this.pickUpStyle = &#123;</span><br><span class="line">        color:&apos;#54CFFF&apos;</span><br><span class="line">      &#125;</span><br><span class="line">      //边界拾取 - 绘制polyon</span><br><span class="line">      this.mouseTool.polygon(&#123;</span><br><span class="line">        fillColor: &quot;#00b0ff&quot;,</span><br><span class="line">        strokeColor: &quot;#80d8ff&quot;</span><br><span class="line">      &#125;);</span><br><span class="line">      //   that.mouseTool.close(); //绘制结束后先关闭绘制工具   that.mouseTool.close(true)关闭绘制并清除绘制图形</span><br><span class="line">      this.mouseTool.on(&quot;draw&quot;, function(e) &#123;</span><br><span class="line">        //结束绘制</span><br><span class="line">        let obj = e.obj;</span><br><span class="line">        that.overlays.push(obj);</span><br><span class="line">        that.mouseTool.close();</span><br><span class="line">        that.pickUpStyle = &#123;</span><br><span class="line">          color:&apos;#fff&apos;</span><br><span class="line">        &#125;</span><br><span class="line">        //双击点开右侧数据栏，</span><br><span class="line">        obj.on(&quot;dblclick&quot;, function(event) &#123;</span><br><span class="line">          that.isShowRight = true;</span><br><span class="line">          //获取当前绘制的边界值范围</span><br><span class="line">          let arr = obj.getPath();</span><br><span class="line">          let lngLat =</span><br><span class="line">            arr &amp;&amp; arr.length &gt; 0</span><br><span class="line">              ? arr</span><br><span class="line">                  .map((v, i) =&gt; &#123;</span><br><span class="line">                    return v.lng + &quot;,&quot; + v.lat;</span><br><span class="line">                  &#125;)</span><br><span class="line">                  .join(&quot;,&quot;)</span><br><span class="line">              : &quot;&quot;;</span><br><span class="line">          that.boundaryInfo.locationRange = lngLat;</span><br><span class="line">          let area = obj.getArea();</span><br><span class="line">          that.boundaryInfo.mapArea = area;</span><br><span class="line">          that.boundaryInfo.area2 = (area * 0.0015).toFixed(2);</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    //把右侧的数据提交后台，再重新获取楼宇则刚才绘制的边界就显示出来</span><br><span class="line">    confirmBind() &#123;</span><br><span class="line">      let that = this;</span><br><span class="line">      let &#123;</span><br><span class="line">        id,</span><br><span class="line">        creditCode,</span><br><span class="line">        entName,</span><br><span class="line">        dataYear,</span><br><span class="line">        mapArea,</span><br><span class="line">        locationRange</span><br><span class="line">      &#125; = this.boundaryInfo;</span><br><span class="line">      let con = &#123; id, creditCode, entName, dataYear, mapArea, locationRange &#125;;</span><br><span class="line">      if (id &amp;&amp; entName) &#123;</span><br><span class="line">        landAnalysisUpdateEntRange(con).then(res =&gt; &#123;</span><br><span class="line">          if (res.code == &quot;0000&quot;) &#123;</span><br><span class="line">            that.isShowRight = false;</span><br><span class="line">            that.getbuildingLayer();</span><br><span class="line">            that.$message(&#123;</span><br><span class="line">              type: &quot;success&quot;,</span><br><span class="line">              message: &quot;绘制成功&quot;</span><br><span class="line">            &#125;);</span><br><span class="line">            that.resetBoundary();</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            that.$message(&#123;</span><br><span class="line">              type: &quot;error&quot;,</span><br><span class="line">              message: res.msg</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        that.$message(&#123;</span><br><span class="line">          type: &quot;warning&quot;,</span><br><span class="line">          message: &quot;请选择绘制范围的公司&quot;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://gitee.com/Chensanr/daily-code/blob/master/visable/jz-buildings.js" target="_blank" rel="noopener">完整代码地址</a></p>
+<p>文档:<a href="https://lbs.amap.com/api/javascript-api/reference/layer#buildings" target="_blank" rel="noopener">楼宇图层api文档</a><br>示例:<a href="https://lbs.amap.com/api/javascript-api/example/personalized-map/building-style" target="_blank" rel="noopener">楼宇图层设置楼块颜色示例</a></p>
+<h1 id="echarts图表"><a href="#echarts图表" class="headerlink" title="echarts图表"></a>echarts图表</h1><blockquote><p>用echarts实现各种效果</p>
+</blockquote>
+<h2 id="1-echarts地图-实现地图联动轮播"><a href="#1-echarts地图-实现地图联动轮播" class="headerlink" title="1.echarts地图-实现地图联动轮播"></a>1.echarts地图-实现地图联动轮播</h2><p>公司接了一个湖州绿贷通项目，项目要求实现地图showTip轮播。项目以湖州市为例，如下图所示效果：<br><img src="/images/web/GIF.gif" alt="logo"></p>
+<h3 id="先配置地图"><a href="#先配置地图" class="headerlink" title="先配置地图"></a>先配置地图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;main&quot; style=&quot;width: 600px;height:500px;&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">this.geoEchart = echarts.init(document.getElementById(&apos;geoEchart&apos;));</span><br><span class="line">echarts.registerMap(&apos;330500&apos;, jsonRegions);   //jsonRegions为湖州市区域的地图json文件</span><br><span class="line">this.geoEchart.setOption(mapOption);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//1.地图初始配置项</span><br><span class="line">var mapOption =&#123;</span><br><span class="line">    tooltip : &#123;</span><br><span class="line">        show:true,</span><br><span class="line">        padding:0,</span><br><span class="line">        borderWidth:0,</span><br><span class="line">        trigger: &apos;item&apos;,</span><br><span class="line">        formatter: function (p) &#123;</span><br><span class="line">            var authCredit = p.data.datas; //authCredit为后台获取的数据</span><br><span class="line">            var divs = &apos;&lt;div class=&quot;tooltip&quot; style=&quot;background-color: transparent;&quot;&gt;&apos; +</span><br><span class="line">                &apos;&lt;div class=&quot;credit flxc&quot;&gt;&apos; +</span><br><span class="line">                    &apos;&lt;div title=&quot;&apos;+toHtmlStr(authCredit.creditCompanyName,&apos;无&apos;)+&apos;&quot;&gt;&apos;+toHtmlStr(authCredit.creditCompanyName,&apos;无&apos;)+&apos;&lt;/div&gt;&apos; +</span><br><span class="line">                    &apos;&lt;div&gt;&apos;+toHtmlStr(authCredit.creditBankName,&apos;&apos;)+&apos;&lt;/div&gt;&apos; +</span><br><span class="line">                    &apos;&lt;div&gt;&lt;span&gt;&apos;+toHtmlStr(authCredit.creditLoanAmount,&apos;&apos;)+&apos;&lt;/span&gt;&lt;span&gt;&amp;nbsp;万元&lt;/span&gt;&lt;/div&gt;&apos; +</span><br><span class="line">                    &apos;&lt;/div&gt;&apos; +</span><br><span class="line">                &apos;&lt;div class=&quot;company flxc&quot;&gt;&apos; +</span><br><span class="line">                    &apos;&lt;div title=&quot;&apos;+toHtmlStr(authCredit.authCompanyName,&apos;无&apos;)+&apos;&quot;&gt;&apos;+toHtmlStr(authCredit.authCompanyName,&apos;无&apos;)+&apos;&lt;/div&gt;&apos; +</span><br><span class="line">                    &apos;&lt;div&gt;最新注册&lt;/div&gt;&lt;div&gt;地点：&apos;+toHtmlStr(authCredit.county,&apos;&apos;)+&apos;&lt;/div&gt;&apos; +</span><br><span class="line">                    &apos;&lt;/div&gt;&apos; +</span><br><span class="line">                &apos;&lt;/div&gt;&apos;</span><br><span class="line">            return divs;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">//2.设置后期地图配置项</span><br><span class="line">that.geoEchart.setOption(&#123;</span><br><span class="line">    series:[</span><br><span class="line">        &#123;</span><br><span class="line">            name:&apos;test&apos;,</span><br><span class="line">            itemStyle:&#123;</span><br><span class="line">                normal:&#123;</span><br><span class="line">                    areaColor:&apos;rgba(0,143,255,1)&apos;,</span><br><span class="line">                    borderColor:&apos;#00F5FF&apos;,</span><br><span class="line">                    borderWidth:1.4,</span><br><span class="line">                    borderType:&apos;solid&apos;,</span><br><span class="line">                    opacity:0.7,</span><br><span class="line">                &#125;,</span><br><span class="line">                emphasis:&#123;</span><br><span class="line">                    areaColor:&apos;rgba(0,240,255,0.9)&apos;,</span><br><span class="line">                    borderColor:&apos;#00F5FF&apos;,</span><br><span class="line">                    borderWidth:1.4,</span><br><span class="line">                    borderType:&apos;solid&apos;,</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            type:&apos;map&apos;,</span><br><span class="line">            map:&apos;330500&apos;,//湖州代码</span><br><span class="line">            data:temp,  //设置后台数据 传给formatter 的p.data</span><br><span class="line">            label:&#123;</span><br><span class="line">                normal:&#123;</span><br><span class="line">                    show:true,</span><br><span class="line">                    color:&apos;#fff&apos;,</span><br><span class="line">                    fontSize:16</span><br><span class="line">                &#125;,</span><br><span class="line">                emphasis:&#123;</span><br><span class="line">                    show:true,</span><br><span class="line">                    color:&apos;#fff&apos;,</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;]</span><br><span class="line">&#125;);</span><br><span class="line">//3.轮播</span><br><span class="line"> this.autohover();</span><br></pre></td></tr></table></figure>
+<h3 id="轮播方法"><a href="#轮播方法" class="headerlink" title="轮播方法"></a>轮播方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">自动轮播showTip的代码</span><br><span class="line"></span><br><span class="line">autohover:function(data)&#123;</span><br><span class="line">        var that =this;</span><br><span class="line">        that.count = 0;</span><br><span class="line">        that.timeTicket = null;</span><br><span class="line">        that.dataLength = 5;//此处设置的是需要轮播的次数</span><br><span class="line">        that.timeTicket &amp;&amp; clearInterval(that.timeTicket);</span><br><span class="line"></span><br><span class="line">        //默认选中第一项</span><br><span class="line">        function defaultSelect() &#123;</span><br><span class="line">            that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                type: &apos;showTip&apos;,</span><br><span class="line">                seriesIndex: 0,</span><br><span class="line">                dataIndex: 0</span><br><span class="line">            &#125;);</span><br><span class="line">            that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                type:&apos;mapSelect&apos;,</span><br><span class="line">                seriesIndex: 0,</span><br><span class="line">                dataIndex:0</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        //10s 轮播一项</span><br><span class="line">        that.timeTicket = setInterval(function() &#123;</span><br><span class="line">            that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                type: &apos;highlight&apos;,</span><br><span class="line">                seriesIndex: 0,</span><br><span class="line">                dataIndex:  (that.count) % that.dataLength</span><br><span class="line">            &#125;);</span><br><span class="line">            that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                type: &apos;showTip&apos;,</span><br><span class="line">                seriesIndex: 0,</span><br><span class="line">                dataIndex: (that.count) % that.dataLength</span><br><span class="line">            &#125;);</span><br><span class="line">            that.count++;</span><br><span class="line">        &#125;, 10000);</span><br><span class="line">        //hover时 清除轮播 showTip被选中元素</span><br><span class="line">        this.geoEchart.on(&apos;mouseover&apos;, function(params) &#123;</span><br><span class="line">            clearInterval(that.timeTicket);</span><br><span class="line">            that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                type: &apos;highlight&apos;,</span><br><span class="line">                seriesIndex: 0,</span><br><span class="line">                dataIndex: params.dataIndex</span><br><span class="line">            &#125;);</span><br><span class="line">            that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                type: &apos;showTip&apos;,</span><br><span class="line">                seriesIndex: 0,</span><br><span class="line">                dataIndex: params.dataIndex,</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        //leave时 清除被选中的（包括默认） 重新轮播</span><br><span class="line">        this.geoEchart.on(&apos;mouseout&apos;, function(params) &#123;</span><br><span class="line">            that.timeTicket &amp;&amp; clearInterval(that.timeTicket);</span><br><span class="line">            that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                type:&apos;mapUnSelect&apos;,</span><br><span class="line">                seriesIndex: 0,</span><br><span class="line">                dataIndex:params.dataIndex</span><br><span class="line">            &#125;);</span><br><span class="line">            that.timeTicket = setInterval(function() &#123;</span><br><span class="line">                that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                    type: &apos;highlight&apos;,</span><br><span class="line">                    seriesIndex: 0,</span><br><span class="line">                    dataIndex: (that.count) % that.dataLength</span><br><span class="line">                &#125;);</span><br><span class="line">                that.geoEchart.dispatchAction(&#123;</span><br><span class="line">                    type: &apos;showTip&apos;,</span><br><span class="line">                    seriesIndex: 0,</span><br><span class="line">                    dataIndex: (that.count) % that.dataLength</span><br><span class="line">                &#125;);</span><br><span class="line">                that.count++;</span><br><span class="line">            &#125;, 10000);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="2-echarts柱状图-实现不同柱体渐变色"><a href="#2-echarts柱状图-实现不同柱体渐变色" class="headerlink" title="2.echarts柱状图-实现不同柱体渐变色"></a>2.echarts柱状图-实现不同柱体渐变色</h2><p>不同柱状体之间有不同的渐变色，实现效果如下：<br><img src="/images/other/hexo/green.png" alt=""></p>
+<h3 id="先定义变量把柱状体的渐变色放进去"><a href="#先定义变量把柱状体的渐变色放进去" class="headerlink" title="先定义变量把柱状体的渐变色放进去"></a>先定义变量把柱状体的渐变色放进去</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">var series1Colors = [new echarts.graphic.LinearGradient(</span><br><span class="line">    0, 0, 0, 1,</span><br><span class="line">    [</span><br><span class="line">        &#123;offset: 0, color: &apos;#00C3FF&apos;&#125;,</span><br><span class="line">        &#123;offset: 1, color: &apos;rgba(0, 195, 255, 0.5)&apos;&#125;</span><br><span class="line">    ]</span><br><span class="line">), new echarts.graphic.LinearGradient(</span><br><span class="line">    0, 0, 0, 1,</span><br><span class="line">    [</span><br><span class="line">        &#123;offset: 0, color: &apos;#0066FF&apos;&#125;,</span><br><span class="line">        &#123;offset: 1, color: &apos;rgba(0, 102, 255, 0.6)&apos;&#125;</span><br><span class="line">    ]</span><br><span class="line">), new echarts.graphic.LinearGradient(</span><br><span class="line">    0, 0, 0, 1,</span><br><span class="line">    [</span><br><span class="line">        &#123;offset: 0, color: &apos;#FF911C&apos;&#125;,</span><br><span class="line">        &#123;offset: 1, color: &apos;rgba(255, 145, 28, 0.5)&apos;&#125;</span><br><span class="line">    ]</span><br><span class="line">), new echarts.graphic.LinearGradient(</span><br><span class="line">    0, 0, 0, 1,</span><br><span class="line">    [</span><br><span class="line">        &#123;offset: 0, color: &apos;#F15887&apos;&#125;,</span><br><span class="line">        &#123;offset: 1, color: &apos;rgba(241, 88, 135, 0.5)&apos;&#125;</span><br><span class="line">    ]</span><br><span class="line">), new echarts.graphic.LinearGradient(</span><br><span class="line">    0, 0, 0, 1,</span><br><span class="line">    [</span><br><span class="line">        &#123;offset: 0, color: &apos;#5EEB8D&apos;&#125;,</span><br><span class="line">        &#123;offset: 1, color: &apos;rgba(0, 255, 218, 0.5)&apos;&#125;</span><br><span class="line">    ]</span><br><span class="line">), new echarts.graphic.LinearGradient(</span><br><span class="line">    0, 0, 0, 1,</span><br><span class="line">    [</span><br><span class="line">        &#123;offset: 0, color: &apos;#FFDD00&apos;&#125;,</span><br><span class="line">        &#123;offset: 1, color: &apos;rgba(255, 221, 0, 0.5)&apos;&#125;</span><br><span class="line">    ]</span><br><span class="line">)];</span><br></pre></td></tr></table></figure>
+<h3 id="柱状图配置"><a href="#柱状图配置" class="headerlink" title="柱状图配置"></a>柱状图配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">this.barChart.setOption(&#123;</span><br><span class="line">    xAxis: &#123;</span><br><span class="line">        data: [] //x轴中的六个区域</span><br><span class="line">    &#125;,</span><br><span class="line">    series:[&#123;</span><br><span class="line">        type:&apos;bar&apos;,</span><br><span class="line">        data : temp.map(function (v,i) &#123;  //temp是每个x轴对应的数据</span><br><span class="line">            return &#123;</span><br><span class="line">                value: v || 0,</span><br><span class="line">                itemStyle: &#123;</span><br><span class="line">                    normal:&#123;</span><br><span class="line">                        barBorderRadius: false,</span><br><span class="line">                        color:series1Colors[i%6]  //对区域个数取余 获取对应渐变色</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                label:&#123;</span><br><span class="line">                    show:true,</span><br><span class="line">                    position:&apos;top&apos;,</span><br><span class="line">                    formatter: &apos;&#123;c&#125; 家&apos;,</span><br><span class="line">                    textStyle:&#123;</span><br><span class="line">                        color:&apos;#53F5FF&apos;,</span><br><span class="line">                        fontSize:16</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #666;font-size:14px;">-------------进度条到了&nbsp;<i class="fa fa-paw" style="color:rgb(90,85,85)"></i>&nbsp;感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+    <div>
+          
+            
+          
+    </div>
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Sanr Chen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://chensanr.gitee.io/2020/06/20/data-visual/" title="数据可视化">https://chensanr.gitee.io/2020/06/20/data-visual/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Visualization/" rel="tag"><i class="fa fa-tag"></i> Visualization</a>
+          
+            <a href="/tags/高德地图/" rel="tag"><i class="fa fa-tag"></i> 高德地图</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/13/fe-hack/" rel="next" title="前端兼容问题">
+                <i class="fa fa-chevron-left"></i> 前端兼容问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/07/12/website/" rel="prev" title="收集web项目常见的库和网站">
+                收集web项目常见的库和网站 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zOTM3NC8xNTkwMQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avar.jpg"
+                alt="Sanr Chen" />
+            
+              <p class="site-author-name" itemprop="name">Sanr Chen</p>
+              <p class="site-description motion-element" itemprop="description">少时为行 长时为恕</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chenjing123456" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1474189135@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.daqianduan.com/" title="大前端" target="_blank">大前端</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.w3cplus.com/" title="w3cplus" target="_blank">w3cplus</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#高德地图"><span class="nav-number">1.</span> <span class="nav-text">高德地图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建行政区域"><span class="nav-number">1.1.</span> <span class="nav-text">1.创建行政区域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建背景地图"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建背景地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询行政区并绘制"><span class="nav-number">1.1.2.</span> <span class="nav-text">查询行政区并绘制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-楼宇图层-AMap-Buildings"><span class="nav-number">1.2.</span> <span class="nav-text">2.楼宇图层 - AMap.Buildings</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能1：根据不同图例的范围显示楼宇不同的颜色"><span class="nav-number">1.2.1.</span> <span class="nav-text">功能1：根据不同图例的范围显示楼宇不同的颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#功能2：边界拾取"><span class="nav-number">1.2.2.</span> <span class="nav-text">功能2：边界拾取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#echarts图表"><span class="nav-number">2.</span> <span class="nav-text">echarts图表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-echarts地图-实现地图联动轮播"><span class="nav-number">2.1.</span> <span class="nav-text">1.echarts地图-实现地图联动轮播</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先配置地图"><span class="nav-number">2.1.1.</span> <span class="nav-text">先配置地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#轮播方法"><span class="nav-number">2.1.2.</span> <span class="nav-text">轮播方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-echarts柱状图-实现不同柱体渐变色"><span class="nav-number">2.2.</span> <span class="nav-text">2.echarts柱状图-实现不同柱体渐变色</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先定义变量把柱状体的渐变色放进去"><span class="nav-number">2.2.1.</span> <span class="nav-text">先定义变量把柱状体的渐变色放进去</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柱状图配置"><span class="nav-number">2.2.2.</span> <span class="nav-text">柱状图配置</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sanr Chen</span>
+
+  
+</div>
+
+
+
+  
+  <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+  </span> <span class="post-meta-divider">|</span> 
+  <span id="busuanzi_container_site_uv">总访客&nbsp;<span id="busuanzi_value_site_uv"></span></span> 
+  <span class="post-meta-divider">|</span> 
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"> 
+  </div>
+  <span class="post-count">博客全站共106.2k字</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
